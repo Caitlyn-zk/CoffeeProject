@@ -2,7 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
-		<el-button type="">按钮</el-button>
+		<el-button class="padding-10 font-36 line-36" type="">按钮</el-button>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ export default {
 </script>
 
 <style lang="less">
+@import './public.less';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

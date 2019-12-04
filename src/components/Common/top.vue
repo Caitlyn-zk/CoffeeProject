@@ -1,5 +1,5 @@
 <template>
-	<div>这里是头部</div>
+	<div class="font-18 line-20">这里是头部</div>
 </template>
 
 <script>
