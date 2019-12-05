@@ -1,25 +1,13 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-		<el-button class="padding-10 font-36 line-36 nps-public-btn" type="">按钮</el-button>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
 export default {
-  name: 'App'
+
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import './css/public.less';
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
