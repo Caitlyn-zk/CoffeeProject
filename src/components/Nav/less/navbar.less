@@ -1,0 +1,403 @@
+.nps-navbar {
+  margin-top: 100px;
+  width: 100%;
+  height: 100px;
+  background: #1b1b1b;
+  .nps-navbar-content {
+    padding-top: 10px;
+    font-size: 0;
+    position: relative;
+    .nps-navbar-list {
+      display: inline-block;
+      height: 100%;
+      width: 200px;
+      font-size: 14px;
+      padding-top: 10px;
+      text-align: center;
+      color: #fff;
+      border-right: 1px solid #fff;
+      &:last-child {
+        border-right: 0;
+      }
+      .nps-navbar-img {
+        display: inline-block;
+        width: 34px;
+        height: 40px;
+        position: relative;
+      }
+      // 优惠活动
+      .nps-navbar-img-specialOffers {
+        background: url('../img/gzt-navicon.png');
+        background-position: 0 0;
+      }
+      // 咖啡胶囊
+      .nps-navbar-img-coffeeCapsule {
+        background: url('../img/gzt-navicon.png');
+        background-position: -36px 0;
+      }
+      // 咖啡机
+      .nps-navbar-img-coffeeMachine {
+        background: url('../img/gzt-navicon.png');
+        background-position: -85px 0;
+      }
+      .nps-navbar-img-vipMember {
+        background: url('../img/gzt-navicon.png');
+        background-position: 2px -35px;
+      }
+      .nps-navbar-img-customerService {
+        background: url('../img/gzt-navicon.png');
+        background-position: -36px -32px;
+      }
+      .nps-navbar-img-contactUs {
+        background: url('../img/gzt-navicon.png');
+        background-position: -78px -39px;
+      }
+      // 二级菜单
+      .nps-navbar-secondaryMenu {
+        position: absolute;
+        left: 0;
+        display: none;
+        padding: 10px;
+      }
+      // 导航hover 事件
+      &:hover {
+        background: #fff;
+        color: #000;
+        &:first-child {
+          position: relative;
+          .nps-navbar-left-border {
+            position: absolute;
+            width: 1px;
+            height: 50px;
+            background-color: #1b1b1b;
+            left: -1px;
+            top: -10px;
+            z-index: 2;
+          }
+        }
+        // 用定位来改变差的空白
+        .nps-navbar-img {
+          .nps-navbar-filler {
+            width: 201px;
+            height: 18px;
+            background: #fff;
+            position: absolute;
+            top: -20px;
+            left: -83.5px;
+          }
+        }
+        .nps-navbar-img-specialOffers {
+          background: url('../img/gzt-navicon-gray.png');
+          background-position: 0 4px;
+        }
+        .nps-navbar-img-coffeeCapsule {
+          background: url('../img/gzt-navicon-gray.png');
+          background-position: -38px 4px;
+        }
+        .nps-navbar-img-coffeeMachine {
+          background: url('../img/gzt-navicon-gray.png');
+          background-position: -90px 6px;
+        }
+        .nps-navbar-img-vipMember {
+          background: url('../img/gzt-navicon-gray.png');
+          background-position: 34px 6px;
+        }
+        .nps-navbar-img-customerService {
+          background: url('../img/gzt-navicon-gray.png');
+          background-position: -3px -32px;
+        }
+        .nps-navbar-img-contactUs {
+          background: url('../img/gzt-navicon-gray.png');
+          background-position: -42px -32px;
+        }
+      }
+    }
+    // 优惠活动
+    .nps-navbar-specialOffers {
+      &:hover {
+        .nps-navbar-secondaryMenu-specialOffers {
+          cursor: pointer;
+          display: block;
+          width: 1202px;
+          height: 390px;
+          background: #fff;
+          border: 1px solid #e2e2e2;
+          border-top: 0;
+          .specialOffers-list {
+            float: left;
+            display: inline-bolck;
+            padding: 10px;
+            width: 295px;
+            height: 100%;
+            font-size: 18px;
+            border-left: 1px solid #e2e2e2;
+            border-top: 0;
+            &:first-child {
+              border: 0;
+            }
+            &:last-child {
+              padding-left: 0;
+              padding-right: 10px;
+            }
+            .specialOffers-img {
+              padding-top: 30px;
+              .specialOffers-img-4 {
+                padding-left: 10px;
+                max-width: 295px;
+                height: 330px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 咖啡胶囊
+    .nps-navbar-coffeeCapsule {
+      &:hover {
+        .nps-navbar-secondaryMenu-coffeeCapsule {
+          cursor: pointer;
+          display: block;
+          width: 1202px;
+          height: 390px;
+          background: #fff;
+          border: 1px solid #e2e2e2;
+          border-top: 0;
+          .coffeeCapsule-list {
+            float: left;
+            display: inline-bolck;
+            padding: 10px;
+            width: 295px;
+            height: 100%;
+            font-size: 18px;
+            border-left: 1px solid #e2e2e2;
+            &:first-child {
+              border: 0;
+            }
+            &:last-child {
+              padding-left: 0;
+              padding-right: 10px;
+            }
+            .coffeeCapsule-img {
+              padding-top: 30px;
+              .coffeeCapsule-img-4 {
+                padding-left: 10px;
+                max-width: 295px;
+                height: 330px;
+              }
+            }
+            .coffeeCapsule-list-box {
+              padding-top: 50px;
+              border-bottom: 1px solid #e2e2e2;
+              img {
+                max-width: 118px;
+                max-height: 118px;
+              }
+              .coffeeCapsule-list-box-text {
+                vertical-align: 54px;
+              }
+              &:last-child {
+                border: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 咖啡机
+    .nps-navbar-coffeeMachine {
+      &:hover {
+        .nps-navbar-secondaryMenu-coffeeMachine {
+          cursor: pointer;
+          display: block;
+          width: 1202px;
+          height: 390px;
+          background: #fff;
+          border: 1px solid #e2e2e2;
+          border-top: 0;
+          .coffeeMachine-list {
+            float: left;
+            display: inline-bolck;
+            padding: 10px;
+            width: 295px;
+            height: 100%;
+            font-size: 18px;
+            border-left: 1px solid #e2e2e2;
+            &:first-child {
+              border: 0;
+            }
+            &:last-child {
+              padding-left: 0;
+              padding-right: 10px;
+            }
+            .coffeeMachine-img {
+              padding-top: 30px;
+              .coffeeMachine-img-4 {
+                padding-left: 10px;
+                max-width: 295px;
+                height: 330px;
+              }
+            }
+            .coffeeMachine-list-box {
+              padding-top: 50px;
+              border-bottom: 1px solid #e2e2e2;
+              img {
+                max-width: 118px;
+                max-height: 118px;
+              }
+              .coffeeMachine-list-box-text {
+                vertical-align: 54px;
+              }
+              &:last-child {
+                border: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 会员有礼
+    .nps-navbar-vipMember {
+      &:hover {
+        .nps-navbar-secondaryMenu-vipMember {
+          cursor: pointer;
+          display: block;
+          width: 1202px;
+          height: 390px;
+          background: #fff;
+          border: 1px solid #e2e2e2;
+          border-top: 0;
+          .vipMember-list {
+            float: left;
+            display: inline-bolck;
+            padding: 10px;
+            width: 295px;
+            height: 100%;
+            font-size: 18px;
+            border-left: 1px solid #e2e2e2;
+            border-top: 0;
+            &:first-child {
+              border: 0;
+            }
+            &:last-child {
+              padding-left: 0;
+              padding-right: 10px;
+            }
+            .vipMember-img {
+              padding-top: 30px;
+              .vipMember-img-4 {
+                padding-left: 10px;
+                max-width: 295px;
+                height: 330px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 顾客服务
+    .nps-navbar-customerService {
+      &:hover {
+        .nps-navbar-secondaryMenu-customerService {
+          cursor: pointer;
+          display: block;
+          width: 1202px;
+          height: 390px;
+          background: #fff;
+          border: 1px solid #e2e2e2;
+          border-top: 0;
+          .customerService-list {
+            float: left;
+            display: inline-bolck;
+            padding: 10px;
+            width: 295px;
+            height: 100%;
+            font-size: 18px;
+            border-left: 1px solid #e2e2e2;
+            &:first-child {
+              border: 0;
+            }
+            &:last-child {
+              padding-left: 0;
+              padding-right: 10px;
+            }
+            .customerService-img {
+              padding-top: 30px;
+              .customerService-img-4 {
+                padding-left: 10px;
+                max-width: 295px;
+                height: 330px;
+              }
+            }
+            .customerService-list-box {
+              padding-top: 50px;
+              border-bottom: 1px solid #e2e2e2;
+              img {
+                max-width: 118px;
+                max-height: 118px;
+              }
+              .customerService-list-box-text {
+                vertical-align: 54px;
+              }
+              &:last-child {
+                border: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 联系我们
+    .nps-navbar-contactUs {
+      &:hover {
+        .nps-navbar-secondaryMenu-contactUs {
+          cursor: pointer;
+          display: block;
+          width: 1202px;
+          height: 390px;
+          background: #fff;
+          border: 1px solid #e2e2e2;
+          border-top: 0;
+          .contactUs-list {
+            float: left;
+            display: inline-bolck;
+            padding: 10px;
+            width: 295px;
+            height: 100%;
+            font-size: 18px;
+            border-left: 1px solid #e2e2e2;
+            &:first-child {
+              border: 0;
+            }
+            &:last-child {
+              padding-left: 0;
+              padding-right: 10px;
+            }
+            .contactUs-img {
+              padding-top: 30px;
+              .contactUs-img-4 {
+                padding-left: 10px;
+                max-width: 295px;
+                height: 330px;
+              }
+            }
+            .contactUs-list-box {
+              padding-top: 50px;
+              border-bottom: 1px solid #e2e2e2;
+              img {
+                max-width: 118px;
+                max-height: 118px;
+              }
+              .contactUs-list-box-text {
+                vertical-align: 54px;
+              }
+              &:last-child {
+                border: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}
