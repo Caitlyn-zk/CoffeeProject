@@ -1,25 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-		<el-button class="padding-10 font-36 line-36" type="">按钮</el-button>
+    <Nav></Nav>
+    <Navbar></Navbar>
+	<router-view />
   </div>
 </template>
 
 <script>
+import Nav from 'components/Nav/nav'
+import Navbar from 'components/Nav/navbar'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Nav,
+    Navbar
+  }
 }
 </script>
 
 <style lang="less">
 @import './public.less';
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
