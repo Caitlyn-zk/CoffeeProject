@@ -1,0 +1,109 @@
+// 侧边购物车中的样式
+@import '../../../css/public.less';
+.nps-shoppingCart-mainbar {
+	.el-drawer {
+		margin: 0;
+		position: absolute;
+		right: 0;
+		height: 100%;
+		width: 415px;
+		.el-drawer__header {
+			margin-bottom: 20px;
+			span {
+				text-align: left;
+				font-size: 20px;
+				color: #2e2e2e;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: .1em;
+				&:focus {
+					outline: none;
+				}
+			}
+			.el-drawer__close-btn {
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+		.nps-Catr-tips {
+			width: 100%;
+			background: #f9f9f9;
+			padding: 20px;
+			line-height: 24px;
+			text-align: center;
+			.nps-Catr-tips-bar {
+				background: #ebf1f1;
+				letter-spacing: 1px;
+				color: #1b1b1b;
+				font-size: 16px;
+				.nps-Cart-monys {
+					color: #cea002;
+				}
+			}
+		}
+		// 购物车商品中
+		.nps-Cart-shopping-main {
+			padding: 20px 20px 0 20px;
+			.nps-Cart-goods-main {
+				
+				text-align: left;
+				.nps-Cart-goods-title {
+					font-weight: 700;
+					display: inline-block;
+					line-height: 30px;
+					letter-spacing: .1em;
+				}
+				.nps-goods-lists {
+					height: 82px;
+					display: inline-block;
+					width: 100%;
+					line-height: 80px;
+					border-top: 1px solid #eee;
+					.nps-goods-imgs {
+						width: 20%;
+						height: 100%;
+						display: inline-block;
+						line-height: 1;
+						& img {
+							line-height: 1;
+							width: 100%;
+						}
+					}
+				}
+			}
+			.nps-Cart-Total {
+				.nps-Cart-Total-text {
+					font-weight: 700;
+				}
+				.nps-Cart-Total-mony {
+					color: #986F33;
+					font-weight: 700;
+				}
+				.nps-tart-total-tips {
+					text-align: left;
+					font-size: 12px;
+					color: #757575;
+					padding-top: 10px;
+				}
+			}
+			.demo-drawer__footer {
+				// 底部
+				text-align: center;
+				padding-top: 20px;
+				.nps-Cart-btun {
+					background: #3d8705;
+					border: 1px solid #3d8705;
+					width: 335px;
+					font-size: 14px;
+					color: #fff;
+					&:hover:not(:disabled) {
+						box-shadow: 0 3px 3px 0 rgba(0,0,0,.3);
+					}
+				}
+			}
+		}
+		
+	}
+}
+
