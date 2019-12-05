@@ -1,25 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-		<el-button class="padding-10 font-36 line-36" type="">按钮</el-button>
+      <merberHome></merberHome>
   </div>
 </template>
 
 <script>
+import backTop from './components/Common/backTop/backTop'
+import merberHome from './components/Member/merberHome'
 export default {
-  name: 'App'
+  components: {
+    backTop,
+    merberHome
+  }
 }
 </script>
 
 <style lang="less">
-@import './public.less';
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './css/public.less';
 </style>
