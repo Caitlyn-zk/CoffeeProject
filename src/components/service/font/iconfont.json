@@ -1,0 +1,37 @@
+{
+  "id": "1392209",
+  "name": "actiu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "578363",
+      "name": "电话",
+      "font_class": "002dianhua",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8348143",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "9728566",
+      "name": "锁",
+      "font_class": "suo",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "11124962",
+      "name": "门店",
+      "font_class": "8",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    }
+  ]
+}

@@ -2,18 +2,14 @@
   <div id="app">
     <Nav></Nav>
     <Navbar></Navbar>
-	<router-view></router-view>
-    <merberHome></merberHome>
-	<Cart></Cart>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Nav from 'components/Nav/nav'
 import Navbar from 'components/Nav/navbar'
-import Cart from './components/ShoppingCart'
 import backTop from './components/Common/backTop/backTop'
-import merberHome from './components/Member/merberHome'
 export default {
   name: 'App',
   data () {
@@ -23,10 +19,8 @@ export default {
 	},
   components: {
     backTop,
-    merberHome,
-	Nav,
-    Navbar,
-	Cart
+    Nav,
+    Navbar
   }
 }
 </script>

@@ -69,14 +69,14 @@
 							</div>
 						</div>
 					</div>
-				    <div class="nps-title-sping clearfix">
+					<div class="nps-title-sping clearfix">
 						<div class="fl nps-title-sping-img">
 							<img src="../../assets/sping.png" />
 						</div>
 						<div class="fl nps-sping-jiao">
 							<div class="nps-sping-font">Inissia</div>
 							<div class="nps-sping-font1 overflow">体积小，流线造型，色彩多样。Inissia能够确保机器高使用效率以及</div>
-						    <div class="nps-sping-color clearfix">
+							<div class="nps-sping-color clearfix">
 								<div class="fl nps-color">可选颜色</div>
 								<div class="fl nps-color-yuan cl-green"></div>
 								<div class="fl nps-color-yuan cl-grey"></div>
@@ -86,7 +86,7 @@
 				</div>
 			</div>
 		</div>
-	</router-link> 
+	</router-link>
 </template>
 
 <script>

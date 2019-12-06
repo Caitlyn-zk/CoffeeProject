@@ -49,6 +49,50 @@ body{
             li{
                 width: 50%;
                 float: left;
+                height: 479px;
+            }
+            .lists-oreder-list{
+                width: 50%;
+                float: left;
+                height: 479px;
+                position: relative;
+                .lists-Order-module{
+                    position: absolute;
+                    background: #000;
+                    opacity: 0.5;
+                    width: 100%;
+                    height: 479px;
+                    top: 0;
+                    color: #fff;
+                }
+                .nps-list-highest{
+                    position: absolute;
+                    top: 0;
+                    z-index: 20;
+                    .Order-pushed{
+                        width: 580px;
+                        height: 239px;
+                        text-align: center;
+                        padding-top: 50px;
+                        a{
+                            color: #8f7247;
+                        }
+                        a:hover{
+                            border-bottom: 1px solid #8f7247; 
+                        }
+                    }
+                    .Order-pushed-top{
+                        img{
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+                    .Order-pushed-bottom{
+                        .iconfont{
+                            font-size: 42px;
+                        }
+                    }
+                }
             }
             .content-lists-Order{
                 background: url('../img/xc-bg1.png') no-repeat;
@@ -99,6 +143,7 @@ body{
                         width: 580px;
                         padding: 20px;
                         ul{
+                            width: 100%;
                             li{
                                 width: 29%;
                                 height: 136px;
@@ -106,6 +151,13 @@ body{
                                 float: left;
                                 margin: 11px;
                                 border-radius: 5px;
+                                text-align: center;
+                                .iconfont {
+                                    font-size: 42px;
+                                    margin-top: 25px;
+                                    padding: 5px;
+                                    display: block;
+                                }
                             }
                             li:hover{
                                 background: #fff;
@@ -115,10 +167,157 @@ body{
                     }   
                 }
             }
-            .lists-Order-pushed{
+        }
+    }
+}
+.Promptshow{
+    .show-module{
+        position: fixed;
+        background: #000;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        opacity: 0.7;
+    }
+}
+.nps-Prompt-lists{
+    position: fixed;
+    width: 998px;
+    height: 435px;
+    z-index: 1000;
+    background: #fff;
+    left: 11%;
+    top: 20%;
+    text-align: center;
+    .Prompt-lists-Close{
+        width: 61px;
+        height: 61px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: -15%;
+        color: #000;
+        font-size: 36px;
+        line-height: 61px;
+    }
+    .Prompt-lists-Close:hover{
+        color: #fff;
+        background: #e2e2e2;
+    }
+    .nps-Prompt-content{
+        width: 100%;
+        height: 100%;
+        li{
+            width: 50%;
+            height: 100%;
+            margin: 0;
+            float: left;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+            background-color: #fff;
+          }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #ccc;
+            height: 20px;
+        }
+        .Small-navigation-rigth{
+            color: #000;
+            background: #fff;
+            padding: 48px 26px;
+            text-align: left;
+            overflow-y: scroll;
+            .adiv{
+                width: 100%;
+                height: 500px;
+                background: gold;
+            }
+            .navigation-rigth-title{
+                font-size: 18px;
+                font-weight: 800;
+                margin-bottom: 18px;
+            }
+            .navigation-rigth-buttom{
+                padding: 12px 20px;
+                background: #3d8705;
+                font-size: 14px;
+                font-weight: 700;
+                color: #fff;
+                border-radius: 5px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                display: inline-block;
+            }
+            .navigation-rigth-buttom:hover{
+                box-shadow: 0 0.25em 0.5em rgba(0,0,0,.3);
+            }
+        }
+        .Small-navigation{
+            background: url('../img/xc-bg1.png') no-repeat;
+            background-size: 100%;
+            position: relative;
+            width: 50%;
+            .mode-content{
+                width: 100%;
+                height: 100%;
                 background: #000;
-                opacity: 0.5;
-                height: 479px;
+                opacity: 0.7;
+                position: absolute;
+                top: 0;
+            }
+            .Small-list{
+                z-index: 1000;
+                position: absolute;
+                top: 0;
+            }
+            .show-content-list{
+                width: 100%;
+                color: #fff;
+                padding: 0 46px;
+                padding-bottom: 0;
+                li{
+                    border: 1px solid #fff;
+                    border-radius: 5px;
+                    width: 115px;
+                    height: 115px;
+                    margin: 10px;
+                    padding: 20px;
+                    font-size: 12px;
+                    .iconfont {
+                        font-size: 32px;
+                    }
+                    p{
+                        margin: 10px 0;
+                    }
+                }
+                li.active{
+                    color: #000;
+                    background: #fff;
+                }
+                li:hover{
+                    color: #000;
+                    background: #fff;
+                }
+            }
+            .Small-navigation-module{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.7;
+                position: relative;
+                .navigation-module-list{
+                    width: 430px;
+                    height: 290px;
+                    background: gold;
+                }
             }
         }
     }
@@ -162,11 +361,4 @@ body{
 }
 .out-leave-active, .out-enter-active{
     transition: all .2s;
-}
-
-.adiv{
-    width: 497px;
-    height: 200px;
-    margin: 0 auto;
-    background: gold;
 }
