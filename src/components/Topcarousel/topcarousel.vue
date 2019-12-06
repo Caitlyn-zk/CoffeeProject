@@ -31,16 +31,9 @@ export default {
                 {src: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575631881047&di=d29314c11390505fec4a13a8a82299b3&imgtype=0&src=http%3A%2F%2Fimg.xshuma.com%2F201301%2F162812130128558630.jpg'}
             ]
         }
-    },
-    //  methods: {
-    //     stop() {
-            
-    //     }
-    // }
+    }
 }
 </script>
-
-<style lang="less">
+<style lang="less" scoped>
 @import './less/topcarousel.less';
-@import '../../public.less';
 </style>

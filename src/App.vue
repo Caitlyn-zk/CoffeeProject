@@ -5,13 +5,14 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script>
 import Nav from 'components/Nav/nav'
 import Navbar from 'components/Nav/navbar'
+import backTop from './components/Common/backTop/backTop'
 export default {
   name: 'App',
   components: {
+    backTop,
     Nav,
     Navbar
   }
