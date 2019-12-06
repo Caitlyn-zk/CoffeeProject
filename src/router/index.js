@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Top from '@/components/Common/top'
-import Service from '../components/service/Index/Customer'
 import Machine from '@/components/Coffeemachine/index'
 import ShoppingAdd from '@/components/Order/shopping-add.vue'
+import Details from '@/components/Coffeemachine/machine-details.vue'
+import Service from '../components/service/Index/Customer'
 import Register from '@/components/Login/register.vue'
 import Order from '@/components/Order/index.vue'
 import Myorder from '@/components/Order/myorder'
@@ -15,10 +16,16 @@ Vue.use(Router)
 export default new Router({
   routes: [
 	{
-		path: '/',
-		name: 'Top',
-		component: Top
-    }, {
+	path: '/',
+	name: 'Top',
+	component: Top
+    },
+	{
+	path: '/Machine',
+	name: 'Machine',
+	component: Machine
+	},
+    {
 		path: '/service',
 		component: Service
 	}, {
@@ -52,6 +59,11 @@ export default new Router({
           component: Editaddress
         }
       ]
-    }
+    },
+	{
+	path: '/Details',
+	name: 'Details',
+	component: Details
+	}
   ]
 })

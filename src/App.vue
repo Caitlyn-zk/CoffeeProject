@@ -1,8 +1,8 @@
 <template>
   <div id="app">
 	<router-view></router-view>
-    <merberHome></merberHome>
-	<Cart></Cart>
+<!--    <merberHome></merberHome> -->
+<!-- 	<Cart></Cart> -->
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 	return {
 		centerDialogVisible: true
 		}
-	},
+   },
   components: {
     backTop,
     merberHome,

@@ -1,12 +1,6 @@
 <template>
-	<router-link to="">
-		<div class="content nps-banner">
-			<div class="nps-span">
-				<a class="font-12 color-h">
-					<el-button type="text" @click="open">活动条款</el-button>
-				</a>
-			</div>
-		</div>
+	<div>
+		<Title></Title>
 		<!--首页咖啡机列表-->
 		<div class="content clearfix">
 			<div class="fl nps-banner-left">
@@ -41,7 +35,7 @@
 				<div class="nps-title nps-public">
 					<div class="nps-title-til clearfix">
 						<div class="fl">14 咖啡机</div>
-						<div class="fr nps-title-btn">筛选</div>
+						<div class="fr nps-title-btn" @click="bnt">筛选</div>
 					</div>
 					<div class="nps-title-screen">
 						<div class="nps-title-screen-color">颜色</div>
@@ -69,38 +63,40 @@
 							</div>
 						</div>
 					</div>
-          <div class="nps-title-sping clearfix">
-						<div class="fl nps-title-sping-img">
-							<img src="../../assets/sping.png" />
-						</div>
-						<div class="fl nps-sping-jiao">
-							<div class="nps-sping-font">Inissia</div>
-							<div class="nps-sping-font1 overflow">体积小，流线造型，色彩多样。Inissia能够确保机器高使用效率以及</div>
-              <div class="nps-sping-color clearfix">
-								<div class="fl nps-color">可选颜色</div>
-								<div class="fl nps-color-yuan cl-green"></div>
-								<div class="fl nps-color-yuan cl-grey"></div>
-							</div>
-						</div>
-					</div>
+					<!--咖啡机商品列表-->
+					<lists></lists>
+					<lists></lists>
+					<lists></lists>
+					<lists></lists>
+					<lists></lists>
+					<lists></lists>
 				</div>
 			</div>
 		</div>
-	</router-link>
+	</div>
 </template>
 
 <script>
+import Title from '@/components/Coffeemachine/common/title'
+import lists from '@/components/Coffeemachine/common/lists'
 export default {
+  components: {
+	lists,
+	Title
+  },
   methods: {
 	open () {
 	this.$alert('<div class="nps-font1">全场机器,最高可减400元。</div><div class="nps-font2">● 全场机器，最高可减400元。</div><div class="nps-font2">● 活动时间：2019年11月1日至2019年12月31日。</div><div class="nps-font2">● 每笔订单中，该活动最多可享受一次优惠。活动期间，每位顾客最多可享受3次优惠。</div><div class="nps-font2">● 符合活动机制，结账时折扣自动生效。</div><div class="nps-font2">● 如发生退款，赠品需一并退还。</div>', {
 	dangerouslyUseHTMLString: true
 	})
+	},
+	bnt () {
+		console.log(111)
 	}
   }
 }
 </script>
 
-<style>
-
+<style lang="less" scoped>
+	@import './css/machine.less';
 </style>
