@@ -1,13 +1,11 @@
 <template>
 <!-- 购物车组件 -->
 	<div class="nps-shoppingCart-mainbar">
-		<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
-			点我打开
-		</el-button>
 		<el-drawer
 			title="购物袋"
 			:visible.sync="drawer"
 			:direction="direction"
+			:go="go"
 			>
 			<div class="nps-Catr-tips">
 				<div class="nps-Catr-tips-bar">
@@ -18,11 +16,30 @@
 				</div>
 			</div>
 			<div class="nps-Cart-shopping-main" v-if="Listgoods=== true">
-				<ul class="nps-Cart-goods-main">
+				<ul class="nps-Cart-goods-main padding-b-20">
 					<div class="nps-Cart-goods-title">咖啡胶囊(数量)</div>
-					<li class="nps-goods-lists">
-						<div class="nps-goods-imgs">
+					<li class="nps-goods-lists clearfix">
+						<div class="nps-goods-imgs fl margin-r-20">
 							<img src="./img/kk-Cartgoods01.jpg">
+						</div>
+						<div class="padding-tb-20 fl">
+							<p class="font-12 line-28">	Nordic Cloudberry Flavoured</p>
+							<p class="font-12 line-28 nps-text-color">CNY 47.00(10 × CNY 4.70)</p>
+						</div>
+						<div class="fr">
+							<span class="el-icon-close"></span>
+						</div>
+					</li>
+					<li class="nps-goods-lists clearfix">
+						<div class="nps-goods-imgs fl margin-r-20">
+							<img src="./img/kk-Cartgoods01.jpg">
+						</div>
+						<div class="padding-tb-20 fl">
+							<p class="font-12 line-28">	Nordic Cloudberry Flavoured</p>
+							<p class="font-12 line-28 nps-text-color">CNY 47.00(10 × CNY 4.70)</p>
+						</div>
+						<div class="fr">
+							<span class="el-icon-close"></span>
 						</div>
 					</li>
 				</ul>
@@ -51,12 +68,17 @@
 <script>
 export default {
 	data () {
-      return {
-        drawer: false,
-				direction: 'rtl',
-				Listgoods: true
-      }
-    }
+		return {
+			drawer: true,
+			direction: 'rtl',
+			Listgoods: true
+		}
+	},
+	methods: {
+		go () {
+			console.log('这是一个方法')
+		}
+	}
 }
 </script>
 

@@ -12,14 +12,13 @@ export default {
   name: 'App',
   data () {
 		return {
-			centerDialogVisible: true
 		}
 	},
   components: {
     Nav,
     Navbar,
-	Cart
-  }
+    Cart
+	}
 }
 </script>
 
