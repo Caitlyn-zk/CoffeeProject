@@ -178,5 +178,9 @@ export default {
 </script>
 
 <style lang="less">
+<<<<<<< HEAD
 @import './merberStyle/meberHome.less';
+=======
+// @import '../../css/merberStyle/meberHome.less';
+>>>>>>> b45521054d3a6617bdc0baa060b0b3fae865a721
 </style>
