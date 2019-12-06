@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <Nav></Nav>
-    <Navbar></Navbar>
-    <router-view></router-view>
+	<router-view></router-view>
   </div>
 </template>
 
@@ -16,7 +14,7 @@ export default {
 	return {
 		centerDialogVisible: true
 		}
-	},
+   },
   components: {
     backTop,
     Nav,
