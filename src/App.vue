@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <Nav></Nav>
-    <Navbar></Navbar>
 	<router-view></router-view>
     <merberHome></merberHome>
 	<Cart></Cart>
