@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Top from '@/components/Common/top'
 import Machine from '@/components/Coffeemachine/index'
 import Details from '@/components/Coffeemachine/machine-details.vue'
+import Service from '../components/service/Index/Customer'
 import Order from '@/components/Order/shopping-add.vue'
 import Register from '@/components/Login/register.vue'
 
@@ -21,11 +22,18 @@ export default new Router({
 	component: Machine
 	},
     {
+		path: '/service',
+		component: Service
+	}, {
+
+		path: '/Machine',
+		name: 'Machine',
+		component: Machine
+    }, {
       path: '/order',
       name: 'Order',
       component: Order
-    },
-    {
+    }, {
       path: '/register',
       name: 'Register',
       component: Register

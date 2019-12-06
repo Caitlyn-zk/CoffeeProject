@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-	<router-view />
-	<Cart></Cart>
+	<router-view></router-view>
+<!--    <merberHome></merberHome> -->
+<!-- 	<Cart></Cart> -->
   </div>
 </template>
 
