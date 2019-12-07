@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Top from '@/components/Common/top'
+import Topcarousel from 'components/Topcarousel/Topcarousel.vue'
 import Machine from '@/components/Coffeemachine/index'
 import ShoppingAdd from '@/components/Order/shopping-add.vue'
 import Details from '@/components/Coffeemachine/machine-details.vue'
@@ -12,15 +12,14 @@ import Myaddress from '@/components/Order/myaddress'
 import Editaddress from '@/components/Order/myaddress/editAddress'
 import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
-
+import Datai from '@/components/CapsuleB/detailsB'
+import Caphome from '@/components/CapsuleB/capsuleHome'
 Vue.use(Router)
-
 export default new Router({
   routes: [
-	{
-	path: '/',
-	name: 'Top',
-	component: Top
+		{
+			path: '/',
+			component: Topcarousel
     },
 	{
 	path: '/Machine',
