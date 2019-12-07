@@ -10,7 +10,6 @@ import Order from '@/components/Order/index.vue'
 import Myorder from '@/components/Order/myorder'
 import Myaddress from '@/components/Order/myaddress'
 import Editaddress from '@/components/Order/myaddress/editAddress'
-<<<<<<< HEAD
 import Addaddress from '@/components/Order/myaddress/addAddress'
 import Myinfo from '@/components/Order/myinfo'
 import Mymachines from '@/components/Order/mymachines'
