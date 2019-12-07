@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style lang="less">
-@import './public.less';
+@import './css/public.less';
 </style>
