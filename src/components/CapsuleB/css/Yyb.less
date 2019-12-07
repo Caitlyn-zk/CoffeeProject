@@ -1,5 +1,5 @@
 
-// 咖啡详情页样式
+// 咖啡配方详情页样式
 .nps-detai {
     width: 1200px;
     .nps-detai-top {
@@ -407,6 +407,14 @@
         width: 800px;
         .nps-right-title {
             margin: 20px 0;
+            position: relative;
+            .nps-title-x {
+                position: absolute;
+                right: 90px;
+                top: 13px;
+                font-size: 12px;
+                cursor: pointer;
+            }
             a {
                 font-size: 30px;
                 letter-spacing: 10px;
@@ -429,73 +437,135 @@
                 font-weight: bold;
                 margin: 8px 0;
             }
-            .nps-lits-conta {
+            .nps-list-lists {
                 position: relative;
                 height: 112px;
-                padding: 10px 0;
+                padding: 2px 0;
                 border-top: 1px solid #eee;
-                .nps-cont-a {
-                    img {
-                        max-width: 65px;
-                    }
+                cursor: pointer;
+                &:hover {
+                    background: #f9f9f9;
                 }
-                .nps-icon-t {
-                    position: absolute;
-                    width: 70px;
-                    height: 20px;
-                    color: #fff;
-                    background: rgb(43, 171, 231);
-                    font-weight: bold;
-                    font-size: 13px;
-                    text-align: center;
-                    line-height: 20px;
-                    top: 0;
-                    &:after {
+                .nps-lits-conta {
+                    position: relative;
+                    height: 112px;
+                    padding: 10px 0;
+                    border-top: 1px solid #eee;
+                    .nps-cont-a {
+                        img {
+                            max-width: 65px;
+                        }
+                    }
+                    .nps-icon-t {
                         position: absolute;
-                        top: 20px;
-                        left: 6px;
-                        content: "";
-                        width: 0;
-                        height: 0;
-                        border-style: solid;
-                        border-width: 10px 10px 0 0;
-                        border-color: rgb(43, 171, 231) transparent transparent transparent;
-                        transform: rotate(90deg);
+                        width: 70px;
+                        height: 20px;
+                        color: #fff;
+                        background: rgb(43, 171, 231);
+                        font-weight: bold;
+                        font-size: 13px;
+                        text-align: center;
+                        line-height: 20px;
+                        top: 0;
+                        &:after {
+                            position: absolute;
+                            top: 20px;
+                            left: 6px;
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 10px 10px 0 0;
+                            border-color: rgb(43, 171, 231) transparent transparent transparent;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                .nps-list-contb {
+                    font-size: 12px;
+                    margin-left: 30px;
+                    width: 120px;
+                    .nps-contb-list {
+                        padding-top: 8px;
+                        .into-a {
+                            display: inline-block;
+                            width: 7px;
+                            height: 7px;
+                            background-color: #656565;
+                            color: #000;
+                            border: 1px solid #656565;
+                        }
+                        .into-b {
+                            display: inline-block;
+                            width: 7px;
+                            height: 7px;
+                            background-color: #fff;
+                            color: #000;
+                            border: 1px solid #656565;
+                        }
+                    }
+                    p {
+                        height: 40px;
+                        padding-top: 7px;
+                        overflow: hidden;
+                    }
+                    
+                }
+                .nps-list-contc {
+                    padding-top: 41px;
+                    img {
+                        width: 38px;
+                    }
+                }
+                .nps-list-contd {
+                    position: absolute;
+                    right: 0;
+                    top: 37px;
+                    .nps-contd-sp {
+                        color: #3d8705;
+                        padding-right: 25px;
+                    }
+                    .nps-contd-a {
+                        background: #3d8705;
+                        border: 1px solid #3d8705;
+                        color: #fff;
+                        width: 250px;
+                        height: 40px;
+                        display: inline-block;
+                        border-radius: 4px;
+                        line-height: 40px;
+                        &:not(:disabled) {
+                            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+                        }
+                        &:hover:not(:disabled) {
+                            box-shadow: 0 3px 3px 0 rgba(0,0,0,.3);
+                        }
+                        &:active:not(:disabled) {
+                            border: 1px solid #326e04;
+                            background-color: #326e04;
+                        }
+                        .nps-a-sp {
+                            font-size: 30px;
+                            padding-top: 3px;
+                        }
+                        a {
+                            font-size: 14px;
+                            padding: 0 47px;
+                            position: relative;
+                            top: -4px;
+                        }
+                        .nps-contd-spb {
+                            font-size: 26px;
+                        }
                     }
                 }
             }
-            .nps-list-contb {
-                font-size: 12px;
-                margin-left: 30px;
-                width: 160px;
-                .nps-contb-list {
-                    .into-a {
-                        display: inline-block;
-                        width: 7px;
-                        height: 7px;
-                        background-color: #656565;
-                        color: #000;
-                        border: 1px solid #656565;
-                    }
-                    .into-b {
-                        display: inline-block;
-                        width: 7px;
-                        height: 7px;
-                        background-color: #fff;
-                        color: #000;
-                        border: 1px solid #656565;
-                    }
-                }
-                p {
-                    padding: 5px 0;
-                }
-                
-            }
+            
         }
     }
 }
 
-// pop弹出框样式
+// pop弹出框样式修改
 .el-popover {
     border: 1px solid #000;
     &.el-popper {
@@ -560,6 +630,11 @@
             &:hover {
                 border-color: #000;
                 color: #000;
+            }
+            &:active {
+                border: 1px solid #000;
+                color: #fff;
+                background-color: #000;
             }
         }
     }

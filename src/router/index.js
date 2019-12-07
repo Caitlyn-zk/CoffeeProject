@@ -70,5 +70,15 @@ export default new Router({
     }, {
       path: '/contact',
       component: Contact
-    }]
+    },
+	{
+	path: '/datai',
+	name: 'Datai',
+	component: Datai
+	},
+	{
+	path: '/caphome',
+	name: 'Caphome',
+	component: Caphome
+	}]
 })
