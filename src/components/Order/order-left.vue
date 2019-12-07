@@ -1,0 +1,49 @@
+<template>
+  <div class="nps-order-left-cont">
+    <div class="nps-order-left-top padding-l-20">
+      <h2 class="nps-order-left-title font-18">我的订单</h2>
+      <p class="font-12 padding-b-10">欢迎回来 ~~~</p>
+      <p class="font-12 padding-b-20">你的会员号：...</p>
+    </div>
+    <ul class="nps-order-left-lists padding-l-10">
+      <li class="clearfix">
+        <img src="./img/nps-order.svg">
+        <div class="nps-order-left-myorder font-12">
+          <router-link to='/order/myorder'>我的订单</router-link>
+        </div>
+      </li>
+      <li class="clearfix">
+        <img src="./img/nps-adress.svg">
+        <div class="nps-order-left-myorder font-12">
+          <router-link to='/order/address'>我的地址</router-link>
+        </div>
+      </li>
+      <li class="clearfix">
+        <img src="./img/nps-personnal.svg">
+        <div class="nps-order-left-myorder font-12">我的个人信息</div>
+      </li>
+      <li class="clearfix">
+        <img src="./img/nps-machines-ol.svg">
+        <div class="nps-order-left-myorder font-12">我的咖啡机</div>
+      </li>
+      <li class="clearfix">
+        <img src="./img/nps-alerts.svg">
+        <div class="nps-order-left-myorder font-12">提醒&订阅</div>
+      </li>
+      <li class="clearfix">
+        <img src="./img/nps-contact-pref.svg">
+        <div class="nps-order-left-myorder font-12">联系偏好设定</div>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style lang="less" scoped>
+@import './css/order.less';
+</style>

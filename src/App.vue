@@ -1,31 +1,25 @@
 <template>
   <div id="app">
-	<router-view></router-view>
-<!--    <merberHome></merberHome> -->
-<!-- 	<Cart></Cart> -->
+    <Nav></Nav>
+    <Navbar></Navbar>
+    <router-view></router-view>
   </div>
 </template>
-
 <script>
 import Nav from 'components/Nav/nav'
 import Navbar from 'components/Nav/navbar'
-import Cart from './components/ShoppingCart'
 import backTop from './components/Common/backTop/backTop'
-import merberHome from './components/Member/merberHome'
 export default {
   name: 'App',
   data () {
-	return {
-		centerDialogVisible: true
+		return {
 		}
-   },
+	},
   components: {
     backTop,
-    merberHome,
-	Nav,
-    Navbar,
-	Cart
-  }
+    Nav,
+    Navbar
+	}
 }
 </script>
 

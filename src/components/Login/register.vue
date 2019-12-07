@@ -24,7 +24,7 @@
           </div>
         </el-form-item>
         <el-form-item class="nps-register-form-box">
-           <div class="nps-register-form-item">
+          <div class="nps-register-form-item">
              <label class="nps-register-form-label">确认密码
                <span class="nps-register-asterisk">*</span>
              </label>
