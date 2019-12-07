@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "383607",
+      "name": "回收站",
+      "font_class": "huishouzhan",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
       "icon_id": "578363",
       "name": "电话",
       "font_class": "002dianhua",
@@ -13,11 +20,88 @@
       "unicode_decimal": 58881
     },
     {
+      "icon_id": "774499",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "993789",
+      "name": "运输配送",
+      "font_class": "yunshupeisong",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "1249036",
+      "name": "博士帽1",
+      "font_class": "boshimao1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5191311",
+      "name": "服务方",
+      "font_class": "fuwufang",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "5219276",
+      "name": "咖啡",
+      "font_class": "kafei",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "5222596",
+      "name": "咖啡",
+      "font_class": "icon-test",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "5387705",
+      "name": "服务",
+      "font_class": "fuwu",
+      "unicode": "eb36",
+      "unicode_decimal": 60214
+    },
+    {
+      "icon_id": "5604471",
+      "name": "咖啡机",
+      "font_class": "weibiaoti-",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "5738291",
+      "name": "物流配送-19",
+      "font_class": "wuliupeisong-",
+      "unicode": "ecea",
+      "unicode_decimal": 60650
+    },
+    {
+      "icon_id": "7767642",
+      "name": "西装",
+      "font_class": "xizhuang",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
       "icon_id": "8348143",
       "name": "手机",
       "font_class": "shouji",
       "unicode": "e71f",
       "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "9646567",
+      "name": "手提包2",
+      "font_class": "shoutibao",
+      "unicode": "e8a4",
+      "unicode_decimal": 59556
     },
     {
       "icon_id": "9728566",
@@ -32,6 +116,13 @@
       "font_class": "8",
       "unicode": "e614",
       "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "11758219",
+      "name": "回收",
+      "font_class": "huishou",
+      "unicode": "e74f",
+      "unicode_decimal": 59215
     }
   ]
 }

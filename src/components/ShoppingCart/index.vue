@@ -5,7 +5,6 @@
 			title="购物袋"
 			:visible.sync="drawer"
 			:direction="direction"
-			:go="go"
 			>
 			<div class="nps-Catr-tips">
 				<div class="nps-Catr-tips-bar">
@@ -15,33 +14,23 @@
 					<strong>包邮。</strong>
 				</div>
 			</div>
-			<div class="nps-Cart-shopping-main" v-if="Listgoods=== true">
+			<div class="nps-Cart-shopping-main" v-if="goodslist.length > 0">
 				<ul class="nps-Cart-goods-main padding-b-20">
-					<div class="nps-Cart-goods-title">咖啡胶囊(数量)</div>
-					<li class="nps-goods-lists clearfix">
-						<div class="nps-goods-imgs fl margin-r-20">
-							<img src="./img/kk-Cartgoods01.jpg">
-						</div>
-						<div class="padding-tb-20 fl">
-							<p class="font-12 line-28">	Nordic Cloudberry Flavoured</p>
-							<p class="font-12 line-28 nps-text-color">CNY 47.00(10 × CNY 4.70)</p>
-						</div>
-						<div class="fr">
-							<span class="el-icon-close"></span>
-						</div>
-					</li>
-					<li class="nps-goods-lists clearfix">
-						<div class="nps-goods-imgs fl margin-r-20">
-							<img src="./img/kk-Cartgoods01.jpg">
-						</div>
-						<div class="padding-tb-20 fl">
-							<p class="font-12 line-28">	Nordic Cloudberry Flavoured</p>
-							<p class="font-12 line-28 nps-text-color">CNY 47.00(10 × CNY 4.70)</p>
-						</div>
-						<div class="fr">
-							<span class="el-icon-close"></span>
-						</div>
-					</li>
+					<div :key="item.idext" v-for="item in goodslist">
+						<div class="nps-Cart-goods-title">{{item.title}}</div>
+						<li class="nps-goods-lists clearfix">
+							<div class="nps-goods-imgs fl margin-r-20">
+								<img src="item.images">
+							</div>
+							<div class="padding-tb-20 fl">
+								<p class="font-12 line-28">{{item.textcontent}}</p>
+								<p class="font-12 line-28 nps-text-color">{{item.money}}</p>
+							</div>
+							<div class="fr nps-cart-delete" >
+								<span @click="Delete()" class="el-icon-close"></span>
+							</div>
+						</li>
+					</div>
 				</ul>
 				<div class="nps-Cart-Total">
 					<div class="clearfix">
@@ -65,17 +54,40 @@
 	</div>
 </template>
 <script>
+// 图片
+import shopgoods from './img/kk-Cartgoods01.jpg'
 export default {
+	components: {
+		shopgoods
+	},
 	data () {
 		return {
 			drawer: true,
 			direction: 'rtl',
-			Listgoods: true
+			Listgoods: true,
+			goodslist: [{
+					id: 1,
+					title: '咖啡胶囊(数量)',
+					images: shopgoods,
+					textcontent: 'Nordic Cloudberry Flavoured',
+					money: 'CNY 47.00(10 × CNY 4.70)'
+				}, {
+					id: 2,
+					title: '咖啡胶囊(数量)',
+					images: shopgoods,
+					textcontent: 'Nordic Cloudberry Flavoured',
+					money: 'CNY 47.00(10 × CNY 4.70)'
+				}
+			]
 		}
 	},
+	mounted () {
+		// console.log()
+	},
 	methods: {
-		go () {
-			console.log('这是一个方法')
+		Delete: function () {
+			console.log('哈哈哈')
+			this.goodslist.splice(this.id, 1)
 		}
 	}
 }
