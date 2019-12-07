@@ -10,6 +10,8 @@ import Order from '@/components/Order/index.vue'
 import Myorder from '@/components/Order/myorder'
 import Myaddress from '@/components/Order/myaddress'
 import Editaddress from '@/components/Order/myaddress/editAddress'
+import info from '@/components/service/Index/Info'
+import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
 Vue.use(Router)
@@ -58,21 +60,25 @@ export default new Router({
           component: Editaddress
         }
       ]
+    }, {
+      path: '/Details',
+      name: 'Details',
+      component: Details
+    }, {
+      path: '/info',
+      component: info
+    }, {
+      path: '/contact',
+      component: Contact
     },
 	{
-	path: '/Details',
-	name: 'Details',
-	component: Details
+	path: '/datai',
+	name: 'Datai',
+	component: Datai
 	},
 	{
 	path: '/caphome',
 	name: 'Caphome',
 	component: Caphome
-	},
-	{
-	path: '/datai',
-	name: 'Datai',
-	component: Datai
-	}
-  ]
+	}]
 })

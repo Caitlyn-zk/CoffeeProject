@@ -34,34 +34,43 @@
 				<!--nps-public 添加点击改变样式-->
 				<div class="nps-title nps-public">
 					<div class="nps-title-til clearfix">
-						<div class="fl">14 咖啡机</div>
-						<div class="fr nps-title-btn" @click="bnt">筛选</div>
-					</div>
-					<div class="nps-title-screen">
-						<div class="nps-title-screen-color">颜色</div>
-						<div class="clearfix">
-							<div class="nps-yuan cl-white fl" title="white">
-								<div class="nps-yuanyuan dis"></div>
+						<div class="fl">
+							<!--咖啡机筛选数量-->
+							<span>14</span>
+							<span>咖啡机</span>
 							</div>
-							<div class="nps-yuan cl-grey fl" title="grey">
-								<div class="nps-yuanyuan dis"></div>
+						  <el-popover
+						    placement="bottom"
+						    width="931"
+						    v-model="visible">
+							<div class="nps-vis">
+								<div class="nps-title-screen-color">颜色</div>
+								<div class="clearfix">
+									<div class="nps-yuan cl-white fl" title="white">
+										<div class="nps-yuanyuan dis"></div>
+									</div>
+									<div class="nps-yuan cl-grey fl" title="grey">
+										<div class="nps-yuanyuan dis"></div>
+									</div>
+									<div class="nps-yuan cl-red fl" title="red">
+										<div class="nps-yuanyuan dis"></div>
+									</div>
+									<div class="nps-yuan cl-green fl" title="green">
+										<div class="nps-yuanyuan dis"></div>
+									</div>
+									<div class="nps-yuan cl-brown fl" title="brown">
+										<div class="nps-yuanyuan dis"></div>
+									</div>
+									<div class="nps-yuan cl-black fl" title="black">
+										<div class="nps-yuanyuan dis"></div>
+									</div>
+									<div class="nps-yuan cl-silver fl" title="silver">
+										<div class="nps-yuanyuan dis"></div>
+									</div>
+								</div>
 							</div>
-							<div class="nps-yuan cl-red fl" title="red">
-								<div class="nps-yuanyuan dis"></div>
-							</div>
-							<div class="nps-yuan cl-green fl" title="green">
-								<div class="nps-yuanyuan dis"></div>
-							</div>
-							<div class="nps-yuan cl-brown fl" title="brown">
-								<div class="nps-yuanyuan dis"></div>
-							</div>
-							<div class="nps-yuan cl-black fl" title="black">
-								<div class="nps-yuanyuan dis"></div>
-							</div>
-							<div class="nps-yuan cl-silver fl" title="silver">
-								<div class="nps-yuanyuan dis"></div>
-							</div>
-						</div>
+						    <el-button slot="reference">筛选</el-button>
+						  </el-popover>
 					</div>
 					<!--咖啡机商品列表-->
 					<lists></lists>
@@ -97,6 +106,6 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 	@import './css/machine.less';
 </style>

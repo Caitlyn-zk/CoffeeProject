@@ -11,11 +11,15 @@ import Navbar from 'components/Nav/navbar'
 import backTop from './components/Common/backTop/backTop'
 export default {
   name: 'App',
+  data () {
+		return {
+		}
+	},
   components: {
     backTop,
     Nav,
     Navbar
-  }
+	}
 }
 </script>
 

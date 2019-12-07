@@ -1,9 +1,6 @@
 <template>
 <!-- 购物车组件 -->
 	<div class="nps-shoppingCart-mainbar">
-		<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
-			点我打开
-		</el-button>
 		<el-drawer
 			title="购物袋"
 			:visible.sync="drawer"
@@ -17,14 +14,23 @@
 					<strong>包邮。</strong>
 				</div>
 			</div>
-			<div class="nps-Cart-shopping-main" v-if="Listgoods=== true">
-				<ul class="nps-Cart-goods-main">
-					<div class="nps-Cart-goods-title">咖啡胶囊(数量)</div>
-					<li class="nps-goods-lists">
-						<div class="nps-goods-imgs">
-							<img src="./img/kk-Cartgoods01.jpg">
-						</div>
-					</li>
+			<div class="nps-Cart-shopping-main" v-if="goodslist.length > 0">
+				<ul class="nps-Cart-goods-main padding-b-20">
+					<div :key="item.idext" v-for="item in goodslist">
+						<div class="nps-Cart-goods-title">{{item.title}}</div>
+						<li class="nps-goods-lists clearfix">
+							<div class="nps-goods-imgs fl margin-r-20">
+								<img src="item.images">
+							</div>
+							<div class="padding-tb-20 fl">
+								<p class="font-12 line-28">{{item.textcontent}}</p>
+								<p class="font-12 line-28 nps-text-color">{{item.money}}</p>
+							</div>
+							<div class="fr nps-cart-delete" >
+								<span @click="Delete()" class="el-icon-close"></span>
+							</div>
+						</li>
+					</div>
 				</ul>
 				<div class="nps-Cart-Total">
 					<div class="clearfix">
@@ -48,14 +54,42 @@
 	</div>
 </template>
 <script>
+// 图片
+import shopgoods from './img/kk-Cartgoods01.jpg'
 export default {
+	components: {
+		shopgoods
+	},
 	data () {
-      return {
-        drawer: false,
-				direction: 'rtl',
-				Listgoods: true
-      }
-    }
+		return {
+			drawer: true,
+			direction: 'rtl',
+			Listgoods: true,
+			goodslist: [{
+					id: 1,
+					title: '咖啡胶囊(数量)',
+					images: shopgoods,
+					textcontent: 'Nordic Cloudberry Flavoured',
+					money: 'CNY 47.00(10 × CNY 4.70)'
+				}, {
+					id: 2,
+					title: '咖啡胶囊(数量)',
+					images: shopgoods,
+					textcontent: 'Nordic Cloudberry Flavoured',
+					money: 'CNY 47.00(10 × CNY 4.70)'
+				}
+			]
+		}
+	},
+	mounted () {
+		// console.log()
+	},
+	methods: {
+		Delete: function () {
+			console.log('哈哈哈')
+			this.goodslist.splice(this.id, 1)
+		}
+	}
 }
 </script>
 
