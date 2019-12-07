@@ -1,6 +1,6 @@
 <template>
-  <div class="content">
-    <div class="nps-order-top">顶部</div>
+  <div class="content padding-t-10">
+    <!-- <div class="nps-order-top">顶部</div> -->
     <div class="nps-order-content clearfix">
       <div class="nps-order-left fl">
         <OrderLeft></OrderLeft>

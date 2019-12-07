@@ -15,16 +15,20 @@
       <li class="clearfix">
         <img src="./img/nps-adress.svg">
         <div class="nps-order-left-myorder font-12">
-          <router-link to='/order/address'>我的地址</router-link>
+          <router-link to='/order/myaddress'>我的地址</router-link>
         </div>
       </li>
       <li class="clearfix">
         <img src="./img/nps-personnal.svg">
-        <div class="nps-order-left-myorder font-12">我的个人信息</div>
+        <div class="nps-order-left-myorder font-12">
+          <router-link to="/order/myinfo">我的个人信息</router-link>
+        </div>
       </li>
       <li class="clearfix">
         <img src="./img/nps-machines-ol.svg">
-        <div class="nps-order-left-myorder font-12">我的咖啡机</div>
+        <div class="nps-order-left-myorder font-12">
+          <router-link to="/order/mymachines">我的咖啡机</router-link>
+        </div>
       </li>
       <li class="clearfix">
         <img src="./img/nps-alerts.svg">
