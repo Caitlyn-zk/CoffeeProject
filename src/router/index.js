@@ -10,11 +10,16 @@ import Order from '@/components/Order/index.vue'
 import Myorder from '@/components/Order/myorder'
 import Myaddress from '@/components/Order/myaddress'
 import Editaddress from '@/components/Order/myaddress/editAddress'
+import Addaddress from '@/components/Order/myaddress/addAddress'
+import Myinfo from '@/components/Order/myinfo'
+import Mymachines from '@/components/Order/mymachines'
+import Addmachines from '@/components/Order/mymachines/addmachines'
 import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
 import Formula from '@/components/CapsuleB/formula'
+import Problem from '@/components/service/Index/problem'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -52,13 +57,29 @@ export default new Router({
           name: 'Myorder',
           component: Myorder
         }, {
-          path: '/order/address',
+          path: '/order/myaddress',
           name: 'Myaddress',
           component: Myaddress
         }, {
           path: '/order/editaddress',
           name: 'Editaddress',
           component: Editaddress
+        }, {
+          path: '/order/addAddress',
+          name: 'Addaddress',
+          component: Addaddress
+        }, {
+          path: '/order/myinfo',
+          name: 'Myinfo',
+          component: Myinfo
+        }, {
+          path: '/order/mymachines',
+          name: 'Mymachines',
+          component: Mymachines
+        }, {
+          path: '/order/addmachines',
+          name: 'Addmachines',
+          component: Addmachines
         }
       ]
     }, {
@@ -72,19 +93,19 @@ export default new Router({
       path: '/contact',
       component: Contact
     },
-	{
-	path: '/datai',
-	name: 'Datai',
-	component: Datai
-	},
-	{
-	path: '/caphome',
-	name: 'Caphome',
-	component: Caphome
-  },
   {
   path: '/formula',
   name: 'Formula',
   component: Formula
   }]
+    }, {
+      path: '/datai',
+      component: Datai
+    }, {
+      path: '/caphome',
+      component: Caphome
+    }, {
+      path: '/problem',
+      component: Problem
+    }]
 })

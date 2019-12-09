@@ -1,10 +1,10 @@
 <template>
-  <div class="nps-order-cont font-12">
+  <div class="nps-order-cont nps-edit-main font-12">
     <h2 class="nps-order-cont-title font-16 padding-20">编辑地址</h2>
     <div class="nps-order-info  padding-20 clearfix">
       <p>您想更新下您的个人信息吗？在下方填写更新您的信息（标*的必填）</p>
-      <div>
-        <p>带 * 标记的为必填字段</p>
+      <div class="nps-editaddress-form-box padding-20">
+        <p class="nps-order-editaddress-explain padding-tb-10">带 * 标记的为必填字段</p>
         <div>
           <el-form ref="form">
             <el-form-item class="nps-order-edit-form">
@@ -15,35 +15,84 @@
               </div>
             </el-form-item>
             <el-form-item class="nps-order-edit-form">
-              <div class="nps-order-edit-item">
-                  <label class="nps-edit-form-label">密码
-                    <span class="nps-edit-asterisk">*</span>
-                  </label>
-                <input class="nps-edit-input" type="password"/>
+              <div class="nps-order-edit-item nps-editaddress-select-box padding-b-15">
+                <label class="nps-edit-form-label">称谓
+                  <span class="nps-edit-asterisk">*</span>
+                </label>
+                <el-select v-model="value" placeholder="请选择">
+                  <el-option
+                    v-for="item in options"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                  </el-option>
+                </el-select>
               </div>
             </el-form-item>
             <el-form-item class="nps-order-edit-form">
               <div class="nps-order-edit-item">
-                  <label class="nps-edit-form-label">密码
-                    <span class="nps-edit-asterisk">*</span>
-                  </label>
-                <input class="nps-edit-input" type="password"/>
+                <label class="nps-edit-form-label nps-edit-areatext margin-t-10">备注</label>
+                <textarea class="nps-edit-remarks" type="textarea"></textarea>
               </div>
             </el-form-item>
             <el-form-item class="nps-order-edit-form">
               <div class="nps-order-edit-item">
-                  <label class="nps-edit-form-label">密码
-                    <span class="nps-edit-asterisk">*</span>
-                  </label>
-                <input class="nps-edit-input" type="password"/>
+                <label class="nps-edit-form-label">姓氏
+                  <span class="nps-edit-asterisk">*</span>
+                </label>
+                <input class="nps-edit-input" type="text"/>
+              </div>
+            </el-form-item>
+            <el-form-item class="nps-order-edit-form nps-edit-name padding-b-15">
+              <div class="nps-order-edit-item">
+                <label class="nps-edit-form-label">名字
+                  <span class="nps-edit-asterisk">*</span>
+                </label>
+                <input class="nps-edit-input" type="text"/>
+              </div>
+            </el-form-item>
+            <el-form-item class="nps-order-edit-form">
+              <div class="nps-order-edit-item">
+                <label class="nps-edit-form-label">电话号码1
+                  <span class="nps-edit-asterisk">*</span>
+                </label>
+                <input class="nps-edit-input" type="text"/>
+              </div>
+            </el-form-item>
+            <el-form-item class="nps-order-edit-form">
+              <div class="nps-order-edit-item nps-editaddress-select-box padding-b-40">
+                <label class="nps-edit-form-label">输入国家</label>
+                <el-select class="nps-editaddress-select" v-model="value" placeholder="请选择">
+                  <el-option
+                    v-for="item in options2"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                  </el-option>
+                </el-select>
+                <el-select class="nps-editaddress-select" v-model="value" placeholder="请选择">
+                  <el-option
+                    v-for="item in options3"
+                    :key="item.value"
+                    :label="item.label"
+                    :value="item.value">
+                  </el-option>
+                </el-select>
               </div>
             </el-form-item>
           </el-form>
         </div>
+        <div class="nps-editaddress-bottom clearfix">
+          <div class="fl">
+            <router-link to='/order/myaddress' class="nps-address-edit-btn btn clearfix">
+              <span class="fl"><i class="el-icon-arrow-left cancel font-16"></i></span>
+            取消</router-link>
+          </div>
+          <div class="fr">
+            <router-link to='/order/myaddress' class="nps-address-edit-btn btn">保存我的信息</router-link>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="nps-order-address-add clearfix">
-      <a class="nps-address-edit-btn fr">添加地址</a>
     </div>
   </div>
 </template>
@@ -52,7 +101,48 @@
 export default {
   data () {
     return {
-      radio: '1'
+      radio: '1',
+      options: [{
+          value: '选项1',
+          label: '先生'
+        }, {
+          value: '选项2',
+          label: '太太'
+        }, {
+          value: '选项3',
+          label: '小姐'
+        }, {
+          value: '选项4',
+          label: '女士'
+        }, {
+          value: '选项5',
+          label: '博士'
+        }, {
+          value: '选项6',
+          label: '夫妇'
+        }],
+        options2: [{
+          value: '选项1',
+          label: '个人'
+        }, {
+          value: '选项2',
+          label: '公司'
+        }, {
+          value: '选项4',
+          label: '手机'
+        }, {
+          value: '选项5',
+          label: '传真'
+        }, {
+          value: '选项6',
+          label: 'SECRET'
+        }],
+        options3: [{
+          value: '选项1',
+          label: '中国/China'
+        }],
+        value: '',
+        textarea2: ''
     }
   }
 }

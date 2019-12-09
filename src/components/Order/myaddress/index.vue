@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="nps-order-address-add clearfix">
-      <a class="nps-address-edit-btn fr">添加地址</a>
+      <router-link to='/order/addAddress' class="nps-address-edit-btn fr">添加地址</router-link>
     </div>
   </div>
 </template>
