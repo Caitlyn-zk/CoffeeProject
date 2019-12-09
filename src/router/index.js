@@ -18,6 +18,9 @@ import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
+import Repair from '@/components/Coffeemachine/repair'
+import Hellp from '@/components/Coffeemachine/hellp'
+import Hellpdetails from '@/components/Coffeemachine/hellp-details'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -100,5 +103,20 @@ export default new Router({
 	path: '/caphome',
 	name: 'Caphome',
 	component: Caphome
+	},
+	{
+	path: '/Repair',
+	name: 'Repair',
+	component: Repair
+	},
+	{
+	path: '/Hellp',
+	name: 'Hellp',
+	component: Hellp
+	},
+	{
+	path: '/Hellpdetails',
+	name: 'Hellpdetails',
+	component: Hellpdetails
 	}]
 })
