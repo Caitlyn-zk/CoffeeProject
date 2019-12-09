@@ -14,6 +14,7 @@ import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
+import Problem from '@/components/service/Index/problem'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -70,5 +71,14 @@ export default new Router({
     }, {
       path: '/contact',
       component: Contact
+    }, {
+      path: '/datai',
+      component: Datai
+    }, {
+      path: '/caphome',
+      component: Caphome
+    }, {
+      path: '/problem',
+      component: Problem
     }]
 })
