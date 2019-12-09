@@ -1,7 +1,5 @@
 <template>
   <div>
-      <Nav></Nav>
-      <Navbar></Navbar>
       <Tips></Tips>
       <div class="info-data-content">
           <div class="content">
@@ -251,8 +249,6 @@
 import Tips from '../Tips'
 import Support from '../Support'
 import Footer from '../Footer'
-import Navbar from '../../Nav/navbar'
-import Nav from '../../Nav/nav'
 export default {
     data () {
         return {
@@ -296,9 +292,7 @@ export default {
     components: {
         Tips,
         Support,
-        Footer,
-        Navbar,
-        Nav
+        Footer
     }
 }
 </script>

@@ -13,6 +13,13 @@
       "unicode_decimal": 58896
     },
     {
+      "icon_id": "577318",
+      "name": "问号-fill",
+      "font_class": "wenhaofill",
+      "unicode": "e72c",
+      "unicode_decimal": 59180
+    },
+    {
       "icon_id": "578363",
       "name": "电话",
       "font_class": "002dianhua",
@@ -20,11 +27,25 @@
       "unicode_decimal": 58881
     },
     {
+      "icon_id": "593516",
+      "name": "右箭头",
+      "font_class": "weibiaoti40",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
       "icon_id": "774499",
       "name": "维修",
       "font_class": "weixiu",
       "unicode": "e693",
       "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "791882",
+      "name": "品牌认证",
+      "font_class": "ai-r",
+      "unicode": "e644",
+      "unicode_decimal": 58948
     },
     {
       "icon_id": "993789",
@@ -39,6 +60,13 @@
       "font_class": "boshimao1",
       "unicode": "e603",
       "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "2155089",
+      "name": "信息",
+      "font_class": "xinxi",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
     },
     {
       "icon_id": "5191311",
@@ -81,6 +109,20 @@
       "font_class": "wuliupeisong-",
       "unicode": "ecea",
       "unicode_decimal": 60650
+    },
+    {
+      "icon_id": "6400870",
+      "name": "WIFI",
+      "font_class": "weibiaoti--",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "7715234",
+      "name": "wifi",
+      "font_class": "wifi",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
     },
     {
       "icon_id": "7767642",
