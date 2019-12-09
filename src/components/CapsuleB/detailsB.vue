@@ -111,10 +111,12 @@
             </a>
             <a class="nps-cecmd-ab">发现更多优选咖啡</a>
         </div>
+        <Bottom></Bottom>
     </div>
 </template>
 
 <script>
+import Bottom from './bottom'
 import starOffImg from './img/xx01.png'
 import starOnImg from './img/xx02.png'
 export default {
@@ -194,6 +196,9 @@ export default {
                 this.starNum = count
             }
         }
+    },
+    components: {
+        Bottom
     }
 }
 </script>

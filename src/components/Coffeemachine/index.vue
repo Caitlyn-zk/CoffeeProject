@@ -38,11 +38,11 @@
 							<!--咖啡机筛选数量-->
 							<span>14</span>
 							<span>咖啡机</span>
-							</div>
-							<el-popover
+						</div>
+						<el-popover
 							placement="bottom"
 							width="931"
-							v-model="visible">
+							model="visible">
 							<div class="nps-vis">
 								<div class="nps-title-screen-color">颜色</div>
 								<div class="clearfix">
@@ -70,7 +70,7 @@
 								</div>
 							</div>
 							<el-button slot="reference">筛选</el-button>
-							</el-popover>
+						</el-popover>
 					</div>
 					<!--咖啡机商品列表-->
 					<lists></lists>
