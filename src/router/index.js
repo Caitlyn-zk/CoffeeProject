@@ -10,6 +10,10 @@ import Order from '@/components/Order/index.vue'
 import Myorder from '@/components/Order/myorder'
 import Myaddress from '@/components/Order/myaddress'
 import Editaddress from '@/components/Order/myaddress/editAddress'
+import Addaddress from '@/components/Order/myaddress/addAddress'
+import Myinfo from '@/components/Order/myinfo'
+import Mymachines from '@/components/Order/mymachines'
+import Addmachines from '@/components/Order/mymachines/addmachines'
 import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
@@ -52,13 +56,29 @@ export default new Router({
           name: 'Myorder',
           component: Myorder
         }, {
-          path: '/order/address',
+          path: '/order/myaddress',
           name: 'Myaddress',
           component: Myaddress
         }, {
           path: '/order/editaddress',
           name: 'Editaddress',
           component: Editaddress
+        }, {
+          path: '/order/addAddress',
+          name: 'Addaddress',
+          component: Addaddress
+        }, {
+          path: '/order/myinfo',
+          name: 'Myinfo',
+          component: Myinfo
+        }, {
+          path: '/order/mymachines',
+          name: 'Mymachines',
+          component: Mymachines
+        }, {
+          path: '/order/addmachines',
+          name: 'Addmachines',
+          component: Addmachines
         }
       ]
     }, {

@@ -70,7 +70,7 @@
 								</div>
 							</div>
 							<el-button slot="reference">筛选</el-button>
-						</el-popover>
+							</el-popover>
 					</div>
 					<!--咖啡机商品列表-->
 					<lists></lists>
