@@ -21,6 +21,17 @@ import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Repair from '@/components/Coffeemachine/repair'
+import Hellp from '@/components/Coffeemachine/hellp'
+import Hellpdetails from '@/components/Coffeemachine/hellp-details'
+=======
+=======
+import Formula from '@/components/CapsuleB/formula'
+>>>>>>> 69fcb6e3da367f40abbd14180d6b77dd1640ac55
+import Problem from '@/components/service/Index/problem'
+>>>>>>> b44fdc5b5c98b8f5222b248d8daa9d51fe067f14
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -105,6 +116,8 @@ export default new Router({
     }, {
       path: '/contact',
       component: Contact
+<<<<<<< HEAD
+<<<<<<< HEAD
     },
 	{
 	path: '/datai',
@@ -115,5 +128,40 @@ export default new Router({
 	path: '/caphome',
 	name: 'Caphome',
 	component: Caphome
+	},
+	{
+	path: '/Repair',
+	name: 'Repair',
+	component: Repair
+	},
+	{
+	path: '/Hellp',
+	name: 'Hellp',
+	component: Hellp
+	},
+	{
+	path: '/Hellpdetails',
+	name: 'Hellpdetails',
+	component: Hellpdetails
 	}]
+=======
+=======
+    },
+  {
+  path: '/formula',
+  name: 'Formula',
+  component: Formula
+  }]
+>>>>>>> 69fcb6e3da367f40abbd14180d6b77dd1640ac55
+    }, {
+      path: '/datai',
+      component: Datai
+    }, {
+      path: '/caphome',
+      component: Caphome
+    }, {
+      path: '/problem',
+      component: Problem
+    }]
+>>>>>>> b44fdc5b5c98b8f5222b248d8daa9d51fe067f14
 })

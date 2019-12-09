@@ -16,8 +16,8 @@
 		<div class="fl nps-sping-two">
 			<div class="nps-btn-lijian fr">立减100元</div>
 			<div class="text-r nps-sping-jiage">CNY 766.00</div>
-			<div class="text-r font-12">售价</div>
-			<div class="text-r font-12 text-del">CNY 866.00</div>
+			<div class="text-r font-12 cl-65">售价</div>
+			<div class="text-r font-12 cl-65 text-del">CNY 866.00</div>
 		</div>
 		<div class="fl margin-t-25 nps-margin">
 			<a class="nps-btn-xijie">查看细节&amp;购买</a>

@@ -1,51 +1,152 @@
 
+// 咖啡配方样式
+.nps-formlua {
+    .nps-img-box {
+        height: 344px;
+        background: url('../img/bg02.png') no-repeat center center;
+        background-size: cover;
+        border-top: 1px solid #dfdfdf;
+        .nps-img-list {
+            widows: 100%;
+            text-align: center;
+            font-size: 25px;
+            padding-top: 100px;
+            span {
+                color: #000;
+            }
+            a {
+                color: #CD9B44;
+                cursor: initial;
+            }
+        }
+    }
+    .nps-middle {
+        background: #fbfdff;
+        padding: 110px 70px 140px;
+        .nps-middle-title {
+            font-size: 25px;
+            text-align: center;
+            padding-bottom: 67px;
+            span {
+                color: #000;
+            }
+            a {
+                color: #CD9B44;
+                font-style: italic;
+                cursor: initial;
+            }
+        }
+        .nps-middle-cont {
+            .nps-cont-lists {
+                width: 250px;
+                background: #fff;
+                box-shadow: 0 0 1.5em 0 #c0c4cc;
+                margin: 0 7px 10px;
+                cursor: pointer;
+                color: #050608;
+                .nps-list-img {
+                    img {
+                        max-width: 250px;
+                    }
+                }
+                .nps-list-title {
+                    padding: 20px 20px 10px;
+                    font-size: 16px;
+                    font-style: italic;
+                }
+                .nps-list-lists {
+                    padding: 10px 20px 10px;
+                    font-size: 14px;
+                    font-style: italic;
+                }
+                .nps-list-cont {
+                    padding: 10px 20px 20px;;
+                    font-size: 15px;
+                    span {
+                        font-size: 25px;
+                        color: #CD9B44;
+                    }
+                    a {
+                        font-style: italic;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+        .nps-middle-more {
+            text-align: center;
+            padding: 40px 0 16px;
+            a {
+                border: 1px solid #181D27;
+                width: 180px;
+                height: 40px;
+                display: inline-block;
+                line-height: 38px;
+                font-style: italic;
+                font-size: 12px;
+                color: #000;
+                text-align: center;
+                opacity: .7;
+                i {
+                    line-height: 38px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+// 咖啡配方详情页与配方共有头部搜索
+.nps-detai-top {
+    height: 78px;
+    .nps-top-icon {
+        float: left;
+        width: 78px;
+        height: 78px;
+        text-align: center;
+        line-height: 78px;
+        color: #CD9B44;
+        font-size: 27px;
+    }
+    .nps-top-inpt {
+        float: left;
+        width: 850px;
+        input {
+            height: 78px;
+            border-radius: 0;
+            line-height: 78px;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+        }
+    }
+    .nps-top-iconb {
+        float: left;
+        width: 78px;
+        height: 78px;
+        text-align: center;
+        line-height: 78px;
+        color: #dfdfdf;
+        font-size: 27px;
+        cursor: pointer;
+    }
+    .nps-top-a {
+        display: block;
+        float: left;
+        width: 194px;
+        height: 78px;
+        text-align: center;
+        line-height: 78px;
+        background: #CD9B44;
+        color: #fff;
+    }
+}
+
+
 // 咖啡配方详情页样式
 .nps-detai {
     width: 1200px;
-    .nps-detai-top {
-        height: 78px;
-        .nps-top-icon {
-            float: left;
-            width: 78px;
-            height: 78px;
-            text-align: center;
-            line-height: 78px;
-            color: #CD9B44;
-            font-size: 27px;
-        }
-        .nps-top-inpt {
-            float: left;
-            width: 850px;
-            input {
-                height: 78px;
-                border-radius: 0;
-                line-height: 78px;
-                border-top: none;
-                border-bottom: none;
-                border-right: none;
-            }
-        }
-        .nps-top-iconb {
-            float: left;
-            width: 78px;
-            height: 78px;
-            text-align: center;
-            line-height: 78px;
-            color: #dfdfdf;
-            font-size: 27px;
-            cursor: pointer;
-        }
-        .nps-top-a {
-            display: block;
-            float: left;
-            width: 194px;
-            height: 78px;
-            text-align: center;
-            line-height: 78px;
-            background: #CD9B44;
-            color: #fff;
-        }
-    }
     .nps-cont {
         overflow: hidden;
         position: relative;
@@ -635,6 +736,50 @@
                 border: 1px solid #000;
                 color: #fff;
                 background-color: #000;
+            }
+        }
+    }
+}
+
+// 配方、配方详情页底部
+.nps-botm {
+    background: #050608;
+    color: #fff;
+    padding: 40px 80px;
+    span {
+        font-size: 16px;
+    }
+    .nps-botm-lista {
+        padding-left: 60px;
+        li {
+            font-size: 12px;
+            list-style: none;
+            float: left;
+            padding: 0 10px;
+            font-style: italic;
+        }
+    }
+    .nps-botm-listb {
+        padding-left: 450px;
+        li {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: white;
+            float: left;
+            margin: 0 8px;
+            opacity: .46;
+            overflow: hidden;
+            text-align: center;
+            .nps-listb-imga {
+                width: 28px;
+            }
+            .nps-listb-imgb {
+                width: 20px;
+                padding-top: 23%;
+            }
+            .nps-listb-imgc {
+                width: 26px;
             }
         }
     }

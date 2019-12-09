@@ -19,13 +19,80 @@
           }        
         }
         .nps-bannerleftbottom {
-
+          .nps-l {
+            width: 50%;
+            padding: 10px;
+          }
+          .nps-r {
+            width: 50%;
+            padding: 10px;
+          }
         }
       }
       .nps-bannerright {
         margin-left: 20px;
         flex: 2;
         width: 800px;
+        .el-row {
+          border-bottom:1px solid #d3dce6 ;
+          height: 210px;
+          .nps-col-two {
+            border-left:1px solid #d3dce6 ;
+          }
+          .nps-col-two  {
+            border-right:1px solid #d3dce6 ;
+          }
+          .el-col {  
+            position: relative;
+            padding: 10px;
+            .nps-addshop {
+              position: absolute;
+              bottom: 5px;
+              right: 15px;
+            }
+            .nps-track {
+              display: block;
+              text-align: center;
+              position: relative;
+              .nps-icon-new {
+                display: block;
+                padding: 4px 8px 4px 10px;
+                height: 26px;
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                background-color: rgb(187, 75, 49);
+              }
+              .nps-icon-new:after {
+                position: absolute;
+                top: 0;
+                right: -14px;
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 26px 14px 0 0;
+                border-color: rgb(187, 75, 49) transparent transparent transparent;
+              }
+            
+            
+            
+            }
+            .nps-pcont {
+              font-weight: 700;
+              color: white !important;
+              margin-bottom: 5px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              line-height: 1.4em;
+              max-width: 125px;
+            }
+          }
+        }
       }
     }
     .nps-bannerimg {
@@ -51,7 +118,7 @@
     left: 20px;
     max-width: 360px;
     height: 310px;
-    .btn {
+    .nps-btn {
       background: black;
       border: 2px solid white;
     }
@@ -68,7 +135,19 @@
             border: none;
             padding: 10px;
           }
-          .el-button:hover, .el-button:focus {
+          .nps-start {
+            position: absolute;
+            left: 54%;
+            bottom: 0px;
+            font-size: 30px;
+            height: 50px;
+            width: 50px;
+            z-index: 10;
+            background: transparent;
+            border: none;
+            padding: 10px;
+          }
+          .nps-btn:hover, .nps-btn:focus {
             color: white;
             background: transparent;
           }
