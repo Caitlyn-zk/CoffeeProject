@@ -14,6 +14,7 @@ import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
+import Formula from '@/components/CapsuleB/formula'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -80,5 +81,10 @@ export default new Router({
 	path: '/caphome',
 	name: 'Caphome',
 	component: Caphome
-	}]
+  },
+  {
+  path: '/formula',
+  name: 'Formula',
+  component: Formula
+  }]
 })
