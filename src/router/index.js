@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Topcarousel from 'components/Topcarousel/Topcarousel.vue'
 import Machine from '@/components/Coffeemachine/index'
-import ShoppingAdd from '@/components/Order/shopping-add.vue'
 import Details from '@/components/Coffeemachine/machine-details.vue'
 import Service from '../components/service/Index/Customer'
 import Register from '@/components/Login/register.vue'
@@ -17,6 +16,7 @@ import Addmachines from '@/components/Order/mymachines/addmachines'
 import Editmachines from '@/components/Order/mymachines/editmachines'
 import Alerts from '@/components/Order/alerts'
 import Fondness from '@/components/Order/fondness'
+import Orderstep from '@/components/Orderstep/step'
 import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
@@ -49,10 +49,6 @@ export default new Router({
       path: '/register',
       name: 'Register',
       component: Register
-    }, {
-      path: '/shopping-add',
-      name: 'ShoppingAdd',
-      component: ShoppingAdd
     }, {
       path: '/order',
       name: 'Order',
@@ -101,6 +97,10 @@ export default new Router({
         }
       ]
     }, {
+      path: '/orderstep',
+      name: 'Orderstep',
+      component: Orderstep
+    }, {
       path: '/Details',
       name: 'Details',
       component: Details
@@ -111,36 +111,36 @@ export default new Router({
       path: '/contact',
       component: Contact
     },
-	{
-	path: '/datai',
-	name: 'Datai',
-	component: Datai
-	},
-	{
-	path: '/caphome',
-	name: 'Caphome',
-	component: Caphome
-	},
-	{
-	path: '/Repair',
-	name: 'Repair',
-	component: Repair
-	},
-	{
-	path: '/Hellp',
-	name: 'Hellp',
-	component: Hellp
-	},
-	{
-	path: '/Hellpdetails',
-	name: 'Hellpdetails',
-	component: Hellpdetails
+    {
+    path: '/datai',
+    name: 'Datai',
+    component: Datai
     },
-  {
-  path: '/formula',
-  name: 'Formula',
-  component: Formula
-  }]
+    {
+    path: '/caphome',
+    name: 'Caphome',
+    component: Caphome
+    },
+    {
+    path: '/Repair',
+    name: 'Repair',
+    component: Repair
+    },
+    {
+    path: '/Hellp',
+    name: 'Hellp',
+    component: Hellp
+    },
+    {
+    path: '/Hellpdetails',
+    name: 'Hellpdetails',
+    component: Hellpdetails
+      },
+    {
+    path: '/formula',
+    name: 'Formula',
+    component: Formula
+    }]
     }, {
       path: '/datai',
       component: Datai
@@ -150,4 +150,5 @@ export default new Router({
     }, {
       path: '/problem',
       component: Problem
-})
+    }
+)
