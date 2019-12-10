@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Topcarousel from 'components/Topcarousel/Topcarousel.vue'
+import Topcarousel from 'components/Topcarousel/topcarousel.vue'
+import Offline from 'components/Topcarousel/offline/offline.vue'
 import Machine from '@/components/Coffeemachine/index'
 import ShoppingAdd from '@/components/Order/shopping-add.vue'
 import Details from '@/components/Coffeemachine/machine-details.vue'
@@ -18,23 +19,22 @@ import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Repair from '@/components/Coffeemachine/repair'
 import Hellp from '@/components/Coffeemachine/hellp'
 import Hellpdetails from '@/components/Coffeemachine/hellp-details'
-=======
-=======
 import Formula from '@/components/CapsuleB/formula'
->>>>>>> 69fcb6e3da367f40abbd14180d6b77dd1640ac55
 import Problem from '@/components/service/Index/problem'
->>>>>>> b44fdc5b5c98b8f5222b248d8daa9d51fe067f14
 Vue.use(Router)
 export default new Router({
   routes: [
 		{
-			path: '/',
-			component: Topcarousel
+      path: '/',
+      component: Topcarousel
+    },
+    {
+      path: '/offline',
+      name: 'offline',
+      component: Offline
     },
 	{
 	path: '/Machine',
@@ -101,10 +101,7 @@ export default new Router({
     }, {
       path: '/contact',
       component: Contact
-<<<<<<< HEAD
-<<<<<<< HEAD
-    },
-	{
+    }, {
 	path: '/datai',
 	name: 'Datai',
 	component: Datai
@@ -128,17 +125,13 @@ export default new Router({
 	path: '/Hellpdetails',
 	name: 'Hellpdetails',
 	component: Hellpdetails
-	}]
-=======
-=======
-    },
+	},
   {
   path: '/formula',
   name: 'Formula',
   component: Formula
-  }]
->>>>>>> 69fcb6e3da367f40abbd14180d6b77dd1640ac55
-    }, {
+  },
+     {
       path: '/datai',
       component: Datai
     }, {
@@ -148,5 +141,4 @@ export default new Router({
       path: '/problem',
       component: Problem
     }]
->>>>>>> b44fdc5b5c98b8f5222b248d8daa9d51fe067f14
 })

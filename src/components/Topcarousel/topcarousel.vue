@@ -78,12 +78,12 @@
                         <el-col :span="8" class="nps-col-two">
                               <a class="nps-track" href="">
                                 <div class="padding-t-30">
-                                    <img src="./img/smallbook.png" alt="" width="100px" height="100px">
+                                    <img src="./img/red.png" alt="" width="100px" height="100px">
                                 </div>
                                 <span class="nps-icon-new text-white">新上市</span>
                             </a>
-                            <p class="nps-pcont margin-b-5 font-12">节日精选限量版风味咖啡5条装</p>
-                            <p class="text-white font-12">RMB 229.00</p>
+                            <p class="nps-pcont margin-b-5 font-12">Nordic Cloudberry Flavoured</p>
+                            <p class="text-white font-12">RMB 4.70</p>
                             <div class="nps-addshop">
                                 <Shoppingadd></Shoppingadd>
                             </div>
@@ -91,12 +91,77 @@
                         <el-col :span="8" class="nps-col-three">
                               <a class="nps-track" href="">
                                 <div class="padding-t-30">
-                                    <img src="./img/smallbook.png" alt="" width="100px" height="100px">
+                                    <img src="./img/whiteblack.png" alt="" width="100px" height="100px">
                                 </div>
                                 <span class="nps-icon-new text-white">新上市</span>
                             </a>
-                            <p class="nps-pcont margin-b-5 font-12">节日精选限量版风味咖啡5条装</p>
-                            <p class="text-white font-12">RMB 229.00</p>
+                            <p class="nps-pcont margin-b-5 font-12">Almond Cake Flavoured
+</p>
+                            <p class="text-white font-12">RMB 4.70</p>
+                            <div class="nps-addshop">
+                                <Shoppingadd></Shoppingadd>
+                            </div>
+                        </el-col>
+                         <el-col :span="16" class="nps-mid margin-t-15">
+                              <a class="nps-track" href="">
+                                <div class="padding-t-30">
+                                    <img src="./img/use.jpg" alt="" width="280px" height="280px">
+                                </div>
+                                <span class="nps-icon-new text-white">立减400元</span>
+                            </a>
+                            <p class="nps-pcont margin-b-5 font-12">Creatista Plus</p>
+                            <p class="text-white font-12">RMB 4166.00</p>
+                            <div class="nps-addshop">
+                                <Shoppingadd></Shoppingadd>
+                            </div>
+                        </el-col>
+                        <el-col :span="8" class="nps-col-three">
+                              <a class="nps-track" href="">
+                                <div class="padding-t-30">
+                                    <img src="./img/blueblack.png" alt="" width="100px" height="100px">
+                                </div>
+                                <span class="nps-icon-new text-white">新上市</span>
+                            </a>
+                            <p class="nps-pcont margin-b-5 font-12">Nordic Black</p>
+                            <p class="text-white font-12">RMB 4.70 </p>
+                            <div class="nps-addshop">
+                                <Shoppingadd></Shoppingadd>
+                            </div>
+                        </el-col>
+                        <el-col :span="8" class="nps-col-three">
+                              <a class="nps-track" href="">
+                                <div class="padding-t-30">
+                                    <img src="./img/coffecup.png" alt="" width="100px" height="100px">
+                                </div>
+                                <span class="nps-icon-new text-white">新上市</span>
+                            </a>
+                            <p class="nps-pcont margin-b-5 font-12">Aeroccino 4 奶沫机</p>
+                            <p class="text-white font-12">RMB 900.00</p>
+                            <div class="nps-addshop">
+                                <Shoppingadd></Shoppingadd>
+                            </div>
+                        </el-col>
+                         <el-col :span="16" class="nps-mid margin-t-15 nps-bottom">
+                              <a class="nps-track" href="">
+                                <div class="padding-t-30">
+                                    <img src="./img/coffemike.png" alt="" width="200px" height="100px">
+                                </div>
+                                <span class="nps-icon-new text-white">立减300元</span>
+                            </a>
+                            <p class="nps-pcont margin-b-5 font-12">Essenza Mini C30 白色 咖啡机奶沫机套装</p>
+                            <p class="text-white font-12">RMB 1666.00</p>
+                            <div class="nps-addshop">
+                                <Shoppingadd></Shoppingadd>
+                            </div>
+                        </el-col>
+                         <el-col :span="8" class="nps-col-three nps-lastbottom">
+                              <a class="nps-track" href="">
+                                <div class="padding-t-30">
+                                    <img src="./img/black.png" alt="" width="100px" height="100px">
+                                </div>
+                            </a>
+                            <p class="nps-pcont margin-b-5 font-12">黄砂糖</p>
+                            <p class="text-white font-12">RMB 50.00</p>
                             <div class="nps-addshop">
                                 <Shoppingadd></Shoppingadd>
                             </div>
