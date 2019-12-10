@@ -28,6 +28,8 @@ import Formula from '@/components/CapsuleB/formula'
 import Problem from '@/components/service/Index/problem'
 import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
+import Caplists from '@/components/CapsuleB/capsuleLists'
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -159,7 +161,8 @@ export default new Router({
   path: '/formula',
   name: 'Formula',
   component: Formula
-    }, {
+    },
+	{
       path: '/datai',
       component: Datai
     }, {
@@ -168,5 +171,8 @@ export default new Router({
     }, {
       path: '/problem',
       component: Problem
+    }, {
+      path: '/caplists',
+      component: Caplists
     }]
 })
