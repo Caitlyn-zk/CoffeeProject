@@ -143,10 +143,11 @@ export default new Router({
     path: '/formula',
     name: 'Formula',
     component: Formula
+    }]
     }, {
-    path: '/datai',
-    name: 'Datai',
-    component: Datai
+	path: '/datai',
+	name: 'Datai',
+	component: Datai
 	},
 	{
 	path: '/caphome',
@@ -205,15 +206,19 @@ export default new Router({
     }, {
       path: '/problem',
       component: Problem
-    }, {
+    }
+)
+    },
+     {
       path: '/caplists',
       component: Caplists
+    }
     }, {
       path: '/aa',
       component: Active
     }, {
-      path: '/caplists',
-      component: Caplists
+	  path: '/caplists',
+     component: Caplists
   }
 ]
 })
