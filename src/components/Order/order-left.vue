@@ -9,34 +9,38 @@
       <li class="clearfix">
         <img src="./img/nps-order.svg">
         <div class="nps-order-left-myorder font-12">
-          <router-link to='/order/myorder'>我的订单</router-link>
+          <router-link class="nps-order-left-router" to='/order/myorder'>我的订单</router-link>
         </div>
       </li>
       <li class="clearfix">
         <img src="./img/nps-adress.svg">
         <div class="nps-order-left-myorder font-12">
-          <router-link to='/order/myaddress'>我的地址</router-link>
+          <router-link class="nps-order-left-router" to='/order/myaddress'>我的地址</router-link>
         </div>
       </li>
       <li class="clearfix">
         <img src="./img/nps-personnal.svg">
         <div class="nps-order-left-myorder font-12">
-          <router-link to="/order/myinfo">我的个人信息</router-link>
+          <router-link class="nps-order-left-router" to="/order/myinfo">我的个人信息</router-link>
         </div>
       </li>
       <li class="clearfix">
         <img src="./img/nps-machines-ol.svg">
         <div class="nps-order-left-myorder font-12">
-          <router-link to="/order/mymachines">我的咖啡机</router-link>
+          <router-link class="nps-order-left-router" to="/order/mymachines">我的咖啡机</router-link>
         </div>
       </li>
       <li class="clearfix">
         <img src="./img/nps-alerts.svg">
-        <div class="nps-order-left-myorder font-12">提醒&订阅</div>
+        <div class="nps-order-left-myorder font-12">
+          <router-link class="nps-order-left-router" to="/order/alerts">提醒&订阅</router-link>
+        </div>
       </li>
       <li class="clearfix">
         <img src="./img/nps-contact-pref.svg">
-        <div class="nps-order-left-myorder font-12">联系偏好设定</div>
+        <div class="nps-order-left-myorder font-12">
+          <router-link class="nps-order-left-router" to="/order/fondness">联系偏好设定</router-link>
+        </div>
       </li>
     </ul>
   </div>

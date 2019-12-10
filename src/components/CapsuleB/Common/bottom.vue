@@ -9,9 +9,9 @@
                 <li><a>条款及细则</a></li>
             </ul>
             <ul class="nps-botm-listb fl clearfix">
-                <li><img class="nps-listb-imga" src="./img/botmT01.png" /></li>
-                <li><img class="nps-listb-imgb" src="./img/botmT02.png" /></li>
-                <li><img class="nps-listb-imgc" src="./img/botmT03.png" /></li>
+                <li><img class="nps-listb-imga" src="../img/botmT01.png" /></li>
+                <li><img class="nps-listb-imgb" src="../img/botmT02.png" /></li>
+                <li><img class="nps-listb-imgc" src="../img/botmT03.png" /></li>
             </ul>
         </div>
     </div>
@@ -23,6 +23,6 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import './css/Yyb.less';
+<style>
+
 </style>

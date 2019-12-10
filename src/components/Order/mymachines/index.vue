@@ -1,11 +1,11 @@
 <template>
   <div class="nps-order-cont nps-edit-main font-12">
-    <h2 class="nps-order-cont-title font-16 padding-20">编辑地址</h2>
+    <h2 class="nps-order-cont-title font-16 padding-20">我的咖啡机</h2>
     <div class="nps-order-info  padding-20 clearfix">
       <div class="nps-editaddress-form-box padding-20">
         <div class="nps-machines-info-box clearfix padding-b-20">
           <div class="nps-order-machines-info fl clearfix">
-            <img src="https://www.nespresso.com/ecom/medias/sys_master/public/10229447491614/M-0263-machineRegisterSelection-243x307.png?impolicy=product&imwidth=240">
+            <img src="../img/nps-order-machines9.jpg" />
             <div class=" nps-machines-detail">
               <span class="line-30">经典</span>
               <div class="nps-machines-detail-name font-14">Inissia D40 黑色套装(黑色奶沫机)</div>
@@ -20,13 +20,28 @@
             </div>
           </div>
           <div class="fr padding-t-30">
-            <div><router-link to='/order/myaddress' class="nps-address-edit-btn btn">编辑咖啡机</router-link></div>
-            <div class="padding-t-20"><router-link to='/order/myaddress' class="nps-address-edit-btn btn">移除咖啡机</router-link></div>
+            <div><router-link to='/order/editmachines' class="nps-address-edit-btn btn">编辑咖啡机</router-link></div>
+            <div class="padding-t-20">
+              <a @click="dialogVisible = true" class="nps-address-edit-btn btn">移除咖啡机</a>
+              <el-dialog
+                :visible="dialogVisible"
+                :show-close="true"
+                width="60%">
+                <div class="text-center">
+                  <div class="nps-dialog-title nps-editmachines-confirm font-20">确认删除</div>
+                  <p class="margin-tb-30">你是否希望删除咖啡机</p>
+                  <span slot="footer" class="dialog-footer">
+                    <el-button @click="dialogVisible = false" class="nps-address-edit-btn nps-editmachines-dialog-btn">取 消</el-button>
+                    <el-button type="primary" @click="dialogVisible = false" class="nps-address-edit-btn nps-editmachines-dialog-btn">确 定</el-button>
+                  </span>
+                </div>
+              </el-dialog>
+            </div>
           </div>
         </div>
         <div class="nps-editaddress-bottom clearfix padding-t-20">
           <div class="fr">
-            <router-link to='/order/myaddress' class="nps-address-edit-btn btn">添加咖啡机</router-link>
+            <router-link to='/order/addmachines' class="nps-address-edit-btn btn">添加咖啡机</router-link>
           </div>
         </div>
       </div>
@@ -38,6 +53,7 @@
 export default {
   data () {
     return {
+      dialogVisible: false,
       radio: '1',
       options: [{
           value: '选项1',

@@ -1,4 +1,365 @@
 
+
+// 咖啡胶囊主页样式
+.nps-cpl-home {
+    padding: 0 60px;
+    background: #fff;
+    .nps-home-left {
+        width: 230px;
+        margin-top: 45px;
+        .nps-left-a {
+            width: 230px;
+            height: 220px;
+            margin-bottom: 20px;
+            img {
+                max-width: 230px;
+            }
+        }
+        .nps-left-b {
+            width: 230px;
+            height: 256px;
+            border-top: 1px solid #dfdfdf;
+            margin-bottom: 50px;
+            padding-top: 20px;
+            a {
+                display: block;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            img {
+                max-width: 100px;
+            }
+            .nps-b-title {
+                font-size: 12px;
+                padding-bottom: 10px;
+            }
+            .nps-b-lists {
+                color: #986f38;
+                font-size: 12px;
+                a {
+                    font-size: 24px;
+                    width: 40px;
+                    height: 40px;
+                    padding-right: 0;
+                    position: relative;
+                    left: 183px;
+                    top: -9px;
+                    background: #3d8705;
+                    border: 1px solid #3d8705;
+                    line-height: 38px;
+                    color: #fff;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+    .nps-home-right {
+        padding: 10px 20px;
+        width: 800px;
+        .nps-right-title {
+            margin: 20px 0;
+            position: relative;
+            .nps-title-x {
+                position: absolute;
+                right: 90px;
+                top: 13px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+            a {
+                font-size: 30px;
+                letter-spacing: 10px;
+                font-weight: bold;
+                cursor: initial;
+                display: block;
+                float: left;
+            }
+            .nps-el-pop {
+                display: block;
+                float: right;
+                button {
+                    border: 1px solid #000;
+                }
+            }
+        }
+        .nps-right-list {
+            .nps-list-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 8px 0;
+            }  
+        }
+    }
+}
+
+
+// 咖啡胶囊列表样式
+.nps-list-lists {
+    position: relative;
+    height: 112px;
+    padding: 2px 0;
+    border-top: 1px solid #eee;
+    cursor: pointer;
+    &:hover {
+        background: #f9f9f9;
+    }
+    .nps-lits-conta {
+        position: relative;
+        height: 112px;
+        padding: 10px 0;
+        border-top: 1px solid #eee;
+        .nps-cont-a {
+            img {
+                max-width: 65px;
+            }
+        }
+        .nps-icon-t {
+            position: absolute;
+            width: 70px;
+            height: 20px;
+            color: #fff;
+            background: rgb(43, 171, 231);
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            line-height: 20px;
+            top: 0;
+            &:after {
+                position: absolute;
+                top: 20px;
+                left: 6px;
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 10px 0 0;
+                border-color: rgb(43, 171, 231) transparent transparent transparent;
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .nps-list-contb {
+        font-size: 12px;
+        margin-left: 30px;
+        width: 120px;
+        p {
+            color: #656565;
+        }
+        .nps-contb-p {
+            font-weight: bold;
+            color: #000;
+        }
+        .nps-contb-list {
+            padding-top: 8px;
+            .into-a {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                background-color: #656565;
+                color: #000;
+                border: 1px solid #656565;
+            }
+            .into-b {
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                background-color: #fff;
+                color: #000;
+                border: 1px solid #656565;
+            }
+        }
+        p {
+            height: 40px;
+            padding-top: 7px;
+            overflow: hidden;
+        }
+        
+    }
+    .nps-list-contc {
+        padding-top: 41px;
+        img {
+            width: 38px;
+        }
+    }
+    .nps-list-contd {
+        position: absolute;
+        right: 0;
+        top: 37px;
+        .nps-contd-sp {
+            color: #3d8705;
+            padding-right: 25px;
+        }
+    }
+}
+
+// 添加购物车样式
+.nps-contd-a {
+    background: #3d8705;
+    border: 1px solid #3d8705;
+    color: #fff;
+    width: 250px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 4px;
+    line-height: 40px;
+    &:not(:disabled) {
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+    }
+    &:hover:not(:disabled) {
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,.3);
+    }
+    &:active:not(:disabled) {
+        border: 1px solid #326e04;
+        background-color: #326e04;
+    }
+    .nps-a-sp {
+        font-size: 30px;
+        padding-top: 3px;
+    }
+    a {
+        font-size: 14px;
+        padding: 0 47px;
+        position: relative;
+        top: -4px;
+    }
+    .nps-contd-spb {
+        font-size: 26px;
+    }
+}
+
+// 咖啡胶囊详情页
+.nps-cpslts {
+    .nps-cpslts-table {
+        background: #fff;
+        height: 608px;
+        padding: 0 60px;
+        .nps-table-left {
+            overflow: hidden;
+            position: relative;
+            height: 608px;
+            img {
+                position: absolute;
+                top: 0;
+                right: 215px;
+                height: 608px;
+            }
+            a {
+                position: absolute;
+                z-index: 1;
+                top: 20px;
+                letter-spacing: 1.5px;
+                left: 34px;
+                color: #986f38;
+                font-size: 14px;
+            }
+        }
+        .nps-table-right {
+            width: 400px;
+            position: relative;
+            height: 608px;
+            left: 674px;
+            top: -608px;
+            padding: 50px 0 50px 60px;
+            .nps-tab-spa {
+                background-color: rgb(43, 171, 231);
+                display: inline-block;
+                height: 20px;
+                padding: 0 5px;
+                line-height: 20px;
+                color: #fff;
+                border-radius: 3px;
+                font-size: 12px;
+            }
+            .nps-tab-spb {
+                color: #757575;
+                font-size: 14px;
+                letter-spacing: 2px;
+                margin-bottom: 5px;
+            }
+            .nps-tab-spc {
+                font-size: 30px;
+                letter-spacing: 2px;
+                color: #000;
+                font-weight: bold;
+            }
+            .nps-tab-spd {
+                color: #3d8705;
+                font-size: 18px;
+                margin: 40px 0 20px;
+            }
+        }
+    }
+    .nps-middle {
+        color: #fff;
+        background: #000;
+        .nps-middle-title {
+            padding: 0 100px;
+            height: 77px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            .nps-title-cont {
+                margin: 12px;
+                text-align: center;
+                .nps-middle-icon {
+                    font-size: 28px;
+                }
+                p {
+                    overflow: hidden;
+                }
+            }
+        }
+        .nps-middle-list {
+            padding: 30px 100px 20px;
+            .nps-list-cont {
+                font-size: 16px;
+                margin-bottom: 22px;
+                font-weight: 700;
+            }
+            .nps-list-contb {
+                font-size: 13px;
+            }
+            .nps-list-contc {
+                margin: 40px 0 20px;
+                font-size: 12px;
+            }
+        }
+    }
+    .nps-reomd {
+        background: #1b1b1b;
+        color: #fff;
+        padding: 20px 100px;
+        .nps-reomd-title {
+            margin-bottom: 10px;
+        }
+        .nps-reomd-list {
+            overflow: hidden;
+            .nps-reomd-lists {
+                width: 160px;
+                margin-top: 45px;
+                text-align: center;
+                cursor: pointer;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    display: inline-block;
+                    transition: all .25s ease-out;
+                    &:hover {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+                span {
+                    font-size: 12px;
+                    display: block;
+                    margin: 0 25px;
+                    letter-spacing: 3px;
+                }
+            }
+        }
+    }
+}
+
+
 // 咖啡配方样式
 .nps-formlua {
     .nps-img-box {
@@ -36,43 +397,6 @@
                 cursor: initial;
             }
         }
-        .nps-middle-cont {
-            .nps-cont-lists {
-                width: 250px;
-                background: #fff;
-                box-shadow: 0 0 1.5em 0 #c0c4cc;
-                margin: 0 7px 10px;
-                cursor: pointer;
-                color: #050608;
-                .nps-list-img {
-                    img {
-                        max-width: 250px;
-                    }
-                }
-                .nps-list-title {
-                    padding: 20px 20px 10px;
-                    font-size: 16px;
-                    font-style: italic;
-                }
-                .nps-list-lists {
-                    padding: 10px 20px 10px;
-                    font-size: 14px;
-                    font-style: italic;
-                }
-                .nps-list-cont {
-                    padding: 10px 20px 20px;;
-                    font-size: 15px;
-                    span {
-                        font-size: 25px;
-                        color: #CD9B44;
-                    }
-                    a {
-                        font-style: italic;
-                        padding-right: 15px;
-                    }
-                }
-            }
-        }
         .nps-middle-more {
             text-align: center;
             padding: 40px 0 16px;
@@ -95,54 +419,6 @@
         }
     }
 }
-
-
-// 咖啡配方详情页与配方共有头部搜索
-.nps-detai-top {
-    height: 78px;
-    .nps-top-icon {
-        float: left;
-        width: 78px;
-        height: 78px;
-        text-align: center;
-        line-height: 78px;
-        color: #CD9B44;
-        font-size: 27px;
-    }
-    .nps-top-inpt {
-        float: left;
-        width: 850px;
-        input {
-            height: 78px;
-            border-radius: 0;
-            line-height: 78px;
-            border-top: none;
-            border-bottom: none;
-            border-right: none;
-        }
-    }
-    .nps-top-iconb {
-        float: left;
-        width: 78px;
-        height: 78px;
-        text-align: center;
-        line-height: 78px;
-        color: #dfdfdf;
-        font-size: 27px;
-        cursor: pointer;
-    }
-    .nps-top-a {
-        display: block;
-        float: left;
-        width: 194px;
-        height: 78px;
-        text-align: center;
-        line-height: 78px;
-        background: #CD9B44;
-        color: #fff;
-    }
-}
-
 
 // 咖啡配方详情页样式
 .nps-detai {
@@ -316,6 +592,7 @@
     }
     .nps-step {
         padding: 64px 70px;
+        background: #fff;
         .nps-step-title {
             text-align: center;
             font-size: 25px;
@@ -362,6 +639,7 @@
     }
     .nps-recmd {
         padding: 60px 64px;
+        background: #fff;
         .nps-recmd-title {
             font-size: 25px;
             text-align: center;
@@ -449,219 +727,105 @@
             margin: 74px 434px 0;
         }
     }
-}
-
-// 咖啡胶囊主页样式
-.nps-cpl-home {
-    margin: 0 60px;
-    .nps-home-left {
-        width: 230px;
-        margin-top: 45px;
-        .nps-left-a {
-            width: 230px;
-            height: 220px;
-            margin-bottom: 20px;
-            img {
-                max-width: 230px;
-            }
+    .nps-perhaps {
+        padding: 60px 64px;
+        background: #f6f6f6;
+        .nps-perhaps-title {
+            text-align: center;
+            font-size: 25px;
+            padding-bottom: 64px;
         }
-        .nps-left-b {
-            width: 230px;
-            height: 256px;
-            border-top: 1px solid #dfdfdf;
-            margin-bottom: 50px;
-            padding-top: 20px;
-            a {
-                display: block;
-                text-align: center;
-                margin-bottom: 50px;
-            }
-            img {
-                max-width: 100px;
-            }
-            .nps-b-title {
-                font-size: 12px;
-                padding-bottom: 10px;
-            }
-            .nps-b-lists {
-                color: #986f38;
-                font-size: 12px;
-                a {
-                    font-size: 24px;
-                    width: 40px;
-                    height: 40px;
-                    padding-right: 0;
-                    position: relative;
-                    left: 183px;
-                    top: -9px;
-                    background: #3d8705;
-                    border: 1px solid #3d8705;
-                    line-height: 38px;
-                    color: #fff;
-                    border-radius: 4px;
-                }
-            }
+        .nps-perhaps-list {
+            height: 338px;
         }
     }
-    .nps-home-right {
-        padding: 10px 20px;
-        width: 800px;
-        .nps-right-title {
-            margin: 20px 0;
-            position: relative;
-            .nps-title-x {
-                position: absolute;
-                right: 90px;
-                top: 13px;
-                font-size: 12px;
-                cursor: pointer;
-            }
-            a {
-                font-size: 30px;
-                letter-spacing: 10px;
-                font-weight: bold;
-                cursor: initial;
-                display: block;
-                float: left;
-            }
-            .nps-el-pop {
-                display: block;
-                float: right;
-                button {
-                    border: 1px solid #000;
-                }
+}
+
+// 下面是有公共需要的样式！下面是有公共需要的样式！下面是有公共需要的样式！
+
+// 咖啡配方详情页与配方共有头部搜索
+.nps-detai-top {
+    height: 78px;
+    .nps-top-icon {
+        float: left;
+        width: 78px;
+        height: 78px;
+        text-align: center;
+        line-height: 78px;
+        color: #CD9B44;
+        font-size: 27px;
+        background: #fff;
+    }
+    .nps-top-inpt {
+        float: left;
+        width: 850px;
+        input {
+            height: 78px;
+            border-radius: 0;
+            line-height: 78px;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+        }
+    }
+    .nps-top-iconb {
+        float: left;
+        width: 78px;
+        height: 78px;
+        text-align: center;
+        line-height: 78px;
+        color: #dfdfdf;
+        font-size: 27px;
+        cursor: pointer;
+        background: #fff;
+    }
+    .nps-top-a {
+        display: block;
+        float: left;
+        width: 194px;
+        height: 78px;
+        text-align: center;
+        line-height: 78px;
+        background: #CD9B44;
+        color: #fff;
+    }
+}
+
+// 配方列表样式
+.nps-formulelist {
+    .nps-cont-lists {
+        width: 250px;
+        background: #fff;
+        box-shadow: 0 0 1.5em 0 #c0c4cc;
+        margin: 0 7px 10px;
+        cursor: pointer;
+        color: #050608;
+        .nps-list-img {
+            img {
+                max-width: 250px;
             }
         }
-        .nps-right-list {
-            .nps-list-title {
-                font-size: 18px;
-                font-weight: bold;
-                margin: 8px 0;
+        .nps-list-title {
+            padding: 20px 20px 10px;
+            font-size: 16px;
+            font-style: italic;
+        }
+        .nps-list-lists {
+            padding: 10px 20px 10px;
+            font-size: 14px;
+            font-style: italic;
+        }
+        .nps-list-cont {
+            padding: 10px 20px 20px;;
+            font-size: 15px;
+            span {
+                font-size: 25px;
+                color: #CD9B44;
             }
-            .nps-list-lists {
-                position: relative;
-                height: 112px;
-                padding: 2px 0;
-                border-top: 1px solid #eee;
-                cursor: pointer;
-                &:hover {
-                    background: #f9f9f9;
-                }
-                .nps-lits-conta {
-                    position: relative;
-                    height: 112px;
-                    padding: 10px 0;
-                    border-top: 1px solid #eee;
-                    .nps-cont-a {
-                        img {
-                            max-width: 65px;
-                        }
-                    }
-                    .nps-icon-t {
-                        position: absolute;
-                        width: 70px;
-                        height: 20px;
-                        color: #fff;
-                        background: rgb(43, 171, 231);
-                        font-weight: bold;
-                        font-size: 13px;
-                        text-align: center;
-                        line-height: 20px;
-                        top: 0;
-                        &:after {
-                            position: absolute;
-                            top: 20px;
-                            left: 6px;
-                            content: "";
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 10px 10px 0 0;
-                            border-color: rgb(43, 171, 231) transparent transparent transparent;
-                            transform: rotate(90deg);
-                        }
-                    }
-                }
-                .nps-list-contb {
-                    font-size: 12px;
-                    margin-left: 30px;
-                    width: 120px;
-                    .nps-contb-list {
-                        padding-top: 8px;
-                        .into-a {
-                            display: inline-block;
-                            width: 7px;
-                            height: 7px;
-                            background-color: #656565;
-                            color: #000;
-                            border: 1px solid #656565;
-                        }
-                        .into-b {
-                            display: inline-block;
-                            width: 7px;
-                            height: 7px;
-                            background-color: #fff;
-                            color: #000;
-                            border: 1px solid #656565;
-                        }
-                    }
-                    p {
-                        height: 40px;
-                        padding-top: 7px;
-                        overflow: hidden;
-                    }
-                    
-                }
-                .nps-list-contc {
-                    padding-top: 41px;
-                    img {
-                        width: 38px;
-                    }
-                }
-                .nps-list-contd {
-                    position: absolute;
-                    right: 0;
-                    top: 37px;
-                    .nps-contd-sp {
-                        color: #3d8705;
-                        padding-right: 25px;
-                    }
-                    .nps-contd-a {
-                        background: #3d8705;
-                        border: 1px solid #3d8705;
-                        color: #fff;
-                        width: 250px;
-                        height: 40px;
-                        display: inline-block;
-                        border-radius: 4px;
-                        line-height: 40px;
-                        &:not(:disabled) {
-                            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
-                        }
-                        &:hover:not(:disabled) {
-                            box-shadow: 0 3px 3px 0 rgba(0,0,0,.3);
-                        }
-                        &:active:not(:disabled) {
-                            border: 1px solid #326e04;
-                            background-color: #326e04;
-                        }
-                        .nps-a-sp {
-                            font-size: 30px;
-                            padding-top: 3px;
-                        }
-                        a {
-                            font-size: 14px;
-                            padding: 0 47px;
-                            position: relative;
-                            top: -4px;
-                        }
-                        .nps-contd-spb {
-                            font-size: 26px;
-                        }
-                    }
-                }
+            a {
+                font-style: italic;
+                padding-right: 15px;
             }
-            
         }
     }
 }
