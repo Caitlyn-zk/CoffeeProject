@@ -20,6 +20,8 @@ import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
 import Formula from '@/components/CapsuleB/formula'
 import Problem from '@/components/service/Index/problem'
+import Caplists from '@/components/CapsuleB/capsuleLists'
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -97,8 +99,7 @@ export default new Router({
   path: '/formula',
   name: 'Formula',
   component: Formula
-  }]
-    }, {
+  }, {
       path: '/datai',
       component: Datai
     }, {
@@ -107,5 +108,8 @@ export default new Router({
     }, {
       path: '/problem',
       component: Problem
+    }, {
+      path: '/caplists',
+      component: Caplists
     }]
 })
