@@ -13,6 +13,13 @@
       "unicode_decimal": 58896
     },
     {
+      "icon_id": "551615",
+      "name": "五角星",
+      "font_class": "star_full",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
       "icon_id": "577318",
       "name": "问号-fill",
       "font_class": "wenhaofill",

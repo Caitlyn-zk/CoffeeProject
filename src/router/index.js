@@ -19,6 +19,7 @@ import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
 import Problem from '@/components/service/Index/problem'
+import Active from '@/components/service/aa.vue'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -100,5 +101,8 @@ export default new Router({
     }, {
       path: '/problem',
       component: Problem
+    }, {
+      path: '/aa',
+      component: Active
     }]
 })
