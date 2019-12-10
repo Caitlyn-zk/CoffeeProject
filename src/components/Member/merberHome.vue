@@ -117,9 +117,10 @@
       <div class="slide-box">
         <slide></slide>
       </div>
+     </div>
       <!-- 咖啡水果 -->
       <div class="content bg-fruts">
-        <div class="main-content">
+        <div class="main-content text-center">
           <div class="title-con"><h1>鼓励可持续消费</h1></div>
           <div class="title-con-description">
             为了确保您咖啡的品质和可持续性，自2003年以来，我们与非政府组织雨林联盟携手开展AAA可持续品质项目。因为，可持续是各种方式的最终目的。
@@ -157,7 +158,7 @@
       <!-- 咖啡机滑动轮播 -->
       <div class="content bg-slide-mathine">
         <div class="mathine-slide-content">
-          <div class="coffee-mate-box">
+          <div class="coffee-mate-box text-center">
             <span class="coffee-mate-text">您的咖啡伴侣</span>
             <ul class="mathine-introduce-text">
               <li>
@@ -166,7 +167,6 @@
               <li>
                 <p>对于而言，确保始终如一的优秀浓缩咖啡品质对我们而言至关重要。现在，由您来选择适合您的一款Nespresso咖啡机?</p>
               </li>
-              <a @click="active" ref="btn">点击</a>
             </ul>
         </div>
           <div class="slide-content mathine">
@@ -174,7 +174,112 @@
           </div>
         </div>
       </div>
-    </div>
+      <!-- 咖啡配件 -->
+      <div class="coffee-accessories-box content">
+        <div class="coffee-accessories-content">
+          <span>咖啡配件</span>
+          <ul>
+            <li class="coffee-accessories-introduce">不只是实用的功能，更具有优美的外观。您可以根据自己的风格和心情选择喜欢的配件。从咖啡支架到随行杯，从浓缩咖啡套装到卡布奇诺咖啡杯，可从实用的配件和现代设计的系列中随意组合搭配。</li>
+            <li class="coffee-accessories-link">
+              <a>从各式各样的Nespresso配件中选择中意的一款<i> > </i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 咖啡房子 -->
+      <div class="content coffee-home-box">
+        <div class="coffee-home-content">
+          <span class="">专享的个性化服务</span>
+          <p>Nespresso咖啡专员和专家每天24小时在线。您可以随时通过Nespresso移动应用联系我们，或者拨打我们的免费电话，拜访店铺了解我们的解决方案。</p>
+        </div>
+      </div>
+      <!-- 咖啡常见问题 -->
+      <div class="content coffee-women-box">
+        <div class="coffee-women-content">
+          <div class="problem-solving-box">
+            <span class="problem-solving-title">常见问题解答</span>
+            <ul class="collapse-box">
+              <li v-for="(item, index) in dateLists" :key="index" >
+                <a class="collapse-title-abtn" @click="changeClass(index)">
+                  <span class="icon-btn-collapse">{{icon}}</span>
+                  <span class="title-btn-collapse">{{item.collapseTitle}}</span>
+                </a>
+                <div class="collapse-detail oneCollapse" :class="{active:index == isActive}">
+                  {{item.collapseDetail}}
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 立即订购 -->
+      <div class="content coffee-order-box">
+        <div class="coffee-order-content">
+          <span class="coffee-order-title">选择您需要的：</span>
+          <ul class="order-coffee-content-ul">
+            <li class="order-coffee-li">
+              <span class="order-top">Nespresso咖啡机</span>
+              <img src="./meberImg/lyk-coffee-order-mathine.png" class="order-img"/>
+              <span class="order-bottom">选择合适您的咖啡机</span>
+              <div class="order-buy-btn">
+                <a>立即订购</a>
+              </div>
+            </li>
+            <li class="order-coffee-li border">
+              <span class="order-top">Nespresso咖啡胶囊</span>
+              <img src="./meberImg/lyk-coffee-order-mathine1.png" class="order-img"/>
+              <span class="order-bottom">选择合适您喜欢口味的咖啡胶囊</span>
+              <div class="order-buy-btn">
+                <a>立即订购</a>
+              </div>
+            </li>
+            <li class="order-coffee-li">
+              <span class="order-top">Nespresso咖啡配件</span>
+              <img src="./meberImg/lyk-coffee-order-mathine2.png" class="order-img"/>
+              <span class="order-bottom">选择合适您最喜爱的咖啡配件</span>
+              <div class="order-buy-btn">
+                <a>立即订购</a>
+              </div>
+            </li>
+          </ul>
+          <div class="tip text-center">图片仅供参考</div>
+        </div>
+      </div>
+      <!-- 帮助中心 -->
+      <div class="meber-help-box content">
+        <div class="coffee-help-content">
+          <ul class="coffee-help-lists">
+            <li class="coffee-help-list">
+              <div>
+                <img src=""/>
+              </div>
+              <span></span>
+              <p></p>
+            </li>
+            <li>
+              <div>
+                <img src=""/>
+              </div>
+              <span></span>
+              <p></p>
+            </li>
+            <li>
+              <div>
+                <img src=""/>
+              </div>
+              <span></span>
+              <p></p>
+            </li>
+            <li>
+              <div>
+                <img src=""/>
+              </div>
+              <span></span>
+              <p></p>
+            </li>
+          </ul>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -190,12 +295,48 @@ export default {
   },
   data () {
     return {
+      icon: '+',
+      isActive: 0,
+      dateLists: [
+        {
+          collapseicon: '+',
+          collapseTitle: '适合我的Nespresso咖啡机是哪一款？',
+          collapseDetail: '无论您喜欢我们的经典浓缩咖啡或者是更大杯咖啡，欢迎浏览我们的Nespresso咖啡机系列。选择最适合您的一款。'
+        },
+        {
+          collapseicon: '+',
+          collapseTitle: '在何处购买Nespresso咖啡胶囊或咖啡机？',
+          collapseDetail: '可通过三种方式购买： 登陆<a>online</a> on the <a>Nespresso网站</a> 或者移动应用、电话订购或者拜访店铺。'
+        },
+        {
+          collapseicon: '+',
+          collapseTitle: '最适合制备拿铁或者浓缩咖啡的咖啡机是哪一款？',
+          collapseDetail: '对于浓缩咖啡或更大杯型的爱好者而言，均有适合每个人的咖啡机型。查看哪一款适合您'
+        },
+        {
+          collapseicon: '+',
+          collapseTitle: 'Nespresso咖啡胶囊或优选咖啡的价格如何？',
+          collapseDetail: '您可以了解 您中意的口味然后放入咖啡机即可。'
+        },
+        {
+          collapseicon: '+',
+          collapseTitle: '有哪些Nespresso咖啡胶囊口味可选？',
+          collapseDetail: '每款Nespresso咖啡胶囊的口味是不同的。无论浓烈顺滑，细腻爽口，整个世界都是您的。'
+        },
+        {
+          collapseicon: '+',
+          collapseTitle: 'Nespresso的咖啡机如何工作？',
+          collapseDetail: ' 欢迎查看包装盒上的指导说明，了解更多Machine Assistance页面或者联系我们的客服团队。'
+        }
+      ]
     }
   },
   methods: {
-    active () {
-      console.log(1)
-      console.log(this.$refs.btn)
+    changeClass (value) {
+      console.log(value)
+      this.isActive = value
+      console.log(this.dateLists.collapseicon)
+      console.log(this.isActive)
     }
   },
   // 节点挂载完成
