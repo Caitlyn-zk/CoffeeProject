@@ -6,7 +6,7 @@ import ShoppingAdd from '@/components/Order/shopping-add.vue'
 import Details from '@/components/Coffeemachine/machine-details.vue'
 import Service from '../components/service/Index/Customer'
 import Register from '@/components/Login/register.vue'
-import Order from '@/components/Order/index.vue'
+import Order from '@/components/Order'
 import Myorder from '@/components/Order/myorder'
 import Myaddress from '@/components/Order/myaddress'
 import Editaddress from '@/components/Order/myaddress/editAddress'
@@ -14,10 +14,16 @@ import Addaddress from '@/components/Order/myaddress/addAddress'
 import Myinfo from '@/components/Order/myinfo'
 import Mymachines from '@/components/Order/mymachines'
 import Addmachines from '@/components/Order/mymachines/addmachines'
+import Editmachines from '@/components/Order/mymachines/editmachines'
+import Alerts from '@/components/Order/alerts'
+import Fondness from '@/components/Order/fondness'
 import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
 import Caphome from '@/components/CapsuleB/capsuleHome'
+import Repair from '@/components/Coffeemachine/repair'
+import Hellp from '@/components/Coffeemachine/hellp'
+import Hellpdetails from '@/components/Coffeemachine/hellp-details'
 import Formula from '@/components/CapsuleB/formula'
 import Problem from '@/components/service/Index/problem'
 import Caplists from '@/components/CapsuleB/capsuleLists'
@@ -82,6 +88,18 @@ export default new Router({
           path: '/order/addmachines',
           name: 'Addmachines',
           component: Addmachines
+        }, {
+          path: '/order/editmachines',
+          name: 'Editmachines',
+          component: Editmachines
+        }, {
+          path: '/order/alerts',
+          name: 'Alerts',
+          component: Alerts
+        }, {
+          path: '/order/fondness',
+          name: 'Fondness',
+          component: Fondness
         }
       ]
     }, {
@@ -94,6 +112,31 @@ export default new Router({
     }, {
       path: '/contact',
       component: Contact
+    },
+	{
+	path: '/datai',
+	name: 'Datai',
+	component: Datai
+	},
+	{
+	path: '/caphome',
+	name: 'Caphome',
+	component: Caphome
+	},
+	{
+	path: '/Repair',
+	name: 'Repair',
+	component: Repair
+	},
+	{
+	path: '/Hellp',
+	name: 'Hellp',
+	component: Hellp
+	},
+	{
+	path: '/Hellpdetails',
+	name: 'Hellpdetails',
+	component: Hellpdetails
     },
   {
   path: '/formula',
