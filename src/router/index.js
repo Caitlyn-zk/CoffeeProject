@@ -26,14 +26,17 @@ import Hellp from '@/components/Coffeemachine/hellp'
 import Hellpdetails from '@/components/Coffeemachine/hellp-details'
 import Formula from '@/components/CapsuleB/formula'
 import Problem from '@/components/service/Index/problem'
+import Active from '@/components/service/aa.vue'
+import Hellpright from '@/components/Coffeemachine/common/hellpright'
+import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
+import Caplists from '@/components/CapsuleB/capsuleLists'
 Vue.use(Router)
 export default new Router({
   routes: [
 		{
 			path: '/',
 			component: Topcarousel
-    },
-	{
+    }, {
 	path: '/Machine',
 	name: 'Machine',
 	component: Machine
@@ -140,8 +143,60 @@ export default new Router({
     path: '/formula',
     name: 'Formula',
     component: Formula
-    }]
     }, {
+    path: '/datai',
+    name: 'Datai',
+    component: Datai
+	},
+	{
+	path: '/caphome',
+	name: 'Caphome',
+	component: Caphome
+	},
+	{
+	path: '/Repair',
+	name: 'Repair',
+	component: Repair
+	}, {
+	path: '/Hellp',
+	name: 'Hellp',
+	component: Hellp
+	},
+	{
+	path: '/Hellpdetails',
+	name: 'Hellpdetails',
+	component: Hellpdetails
+	}, {
+  path: '/formula',
+  name: 'Formula',
+  component: Formula
+  }, {
+
+	component: Hellpdetails,
+	children: [
+		{
+		path: '/',
+		name: 'Hellpright',
+		component: Hellpright
+		},
+		{
+		path: '/Hellpguide',
+		name: 'Hellpguide',
+		component: Hellpguide
+		}
+	]
+    },
+	{
+	path: '/formula',
+	name: 'Formula',
+	component: Formula
+	},
+	{
+  path: '/formula',
+  name: 'Formula',
+  component: Formula
+    },
+	{
       path: '/datai',
       component: Datai
     }, {
@@ -150,5 +205,15 @@ export default new Router({
     }, {
       path: '/problem',
       component: Problem
-    }
-)
+    }, {
+      path: '/caplists',
+      component: Caplists
+    }, {
+      path: '/aa',
+      component: Active
+    }, {
+      path: '/caplists',
+      component: Caplists
+  }
+]
+})
