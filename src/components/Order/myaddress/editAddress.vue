@@ -24,7 +24,8 @@
                     v-for="item in options"
                     :key="item.value"
                     :label="item.label"
-                    :value="item.value">
+                    :value="item.value"
+                    :show-close="true">
                   </el-option>
                 </el-select>
               </div>

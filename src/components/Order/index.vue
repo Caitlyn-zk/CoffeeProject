@@ -7,7 +7,7 @@
       </div>
       <div class="nps-order-right fr">
         <!-- <OrderRight></OrderRight> -->
-        <router-view></router-view>
+        <div class="nps-order-coffee"><router-view></router-view></div>
       </div>
     </div>
     <div class="nps-order-bottom">底部</div>
