@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import List from './formulelist'
-import Bottom from './bottom'
+import List from './Common/formulelist'
+import Bottom from './Common/bottom'
 export default {
     data () {
         return {

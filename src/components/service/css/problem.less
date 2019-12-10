@@ -1,0 +1,91 @@
+.nps-problem{
+    width: 100%;
+    background: #fff;
+    .nps-Controll.active{
+        background: #fff;
+        .el-collapse{
+            .el-collapse-item__header{
+                background: #fff;
+           }
+           .el-collapse-item__wrap{
+                background: #fff;
+           }
+        }
+    }
+    .nps-Controll{
+        width: 100%;
+        background: #f4f4f4;
+        padding: 20px 30px;
+        .el-collapse{
+            border: none;
+            .el-collapse-item__header{
+                background: #f4f4f4;
+                border: none;
+                padding: 0 0 0 50px;
+                font-size: 16px;
+                color: black;
+                &.is-active{
+                    font-weight: 800;
+                }
+            }
+            .el-collapse-item__wrap{
+                background-color: #f4f4f4;
+            }
+            .el-collapse-item__content{
+                padding: 0 0 0 50px;
+                p{
+                    margin: 14px 0;
+                    color: #6E6E6E;
+                }
+            }
+            .el-collapse-item__arrow{
+                position: absolute;
+                left: 73px;
+            }
+        }
+        .nps-Controll-title{
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            .iconfont{
+                font-size: 34px;
+                padding-right: 15px; 
+            }
+        }
+    }
+    .el-input__inner:focus{
+        outline: none;
+        border-color: #000; 
+    }
+    .el-input_suffix{
+        display: block;
+    }
+    .nps-problem-search{
+        position: relative;
+        .el-icon-search{
+            display: inline-block;
+            position: absolute;
+            right: 15px;
+            top: 32px;
+            font-weight: 800;
+        }
+        .el-icon-close{
+            display: inline-block;
+            position: absolute;
+            right: 33px;
+            top: 32px;
+            font-weight: 800;
+        }
+    }
+    .nps-details-translate{
+        width: 100%;
+        border-top: 1px solid #000;
+        margin-top: 20px; 
+        a{
+            color: #986F38;
+        } 
+        a:hover{
+            border-bottom: 1px solid #986F38;
+        }
+    }
+}

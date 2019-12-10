@@ -66,72 +66,12 @@
                         <!-- 列表头部 -->
                         <div class="nps-list-title">热卖胶囊咖啡</div>
                         <!-- 列表单个 -->
-                        <div class="nps-list-lists">
-                            <div class="nps-lits-conta fl">
-                                <span class="nps-icon-t">新品上市</span>
-                                <div class="nps-cont-a">
-                                    <img src="./img/home06.jpg" />
-                                </div>
-                            </div>
-                            <div class="nps-list-contb fl">
-                                <p>Nordic Black</p>
-                                <p>北欧大杯黑咖啡</p>
-                                <div class="nps-contb-list">
-                                    <!-- into-a为黑色背景样式 into-b为白色 into-c为数字 -->
-                                    <span class="into-a"></span>
-                                    <span class="into-c">1</span>
-                                    <span class="into-b"></span>
-                                </div>
-                            </div>
-                            <div class="nps-list-contc fl">
-                                <img src="./img/beizi01.png" />
-                            </div>
-                            <div class="nps-list-contd fl">
-                                <span class="nps-contd-sp">CNY 4.70</span>
-                                <a class="nps-contd-a">
-                                    <span class="nps-a-sp el-icon-shopping-bag-2"></span>
-                                    <a>添加至购物车</a>
-                                    <span class="nps-contd-spb el-icon-plus"></span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="nps-list-lists">
-                            <div class="nps-lits-conta fl">
-                                <span class="nps-icon-t">新品上市</span>
-                                <div class="nps-cont-a">
-                                    <img src="./img/home06.jpg" />
-                                </div>
-                            </div>
-                            <div class="nps-list-contb fl">
-                                <p>Nordic Black</p>
-                                <p>北欧大杯黑咖啡</p>
-                                <div class="nps-contb-list">
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-c">5</span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                </div>
-                            </div>
-                            <div class="nps-list-contc fl">
-                                <img src="./img/beizi01.png" />
-                                <img src="./img/beizi01.png" />
-                            </div>
-                            <div class="nps-list-contd fl">
-                                <span class="nps-contd-sp">CNY 4.70</span>
-                                <a class="nps-contd-a">
-                                    <span class="nps-a-sp el-icon-shopping-bag-2"></span>
-                                    <a>添加至购物车</a>
-                                    <span class="nps-contd-spb el-icon-plus"></span>
-                                </a>
-                            </div>
-                        </div>
+                        <caphomeList></caphomeList>
+                        <caphomeList></caphomeList>
+                        <caphomeList></caphomeList>
+                        <div class="nps-list-title">咖啡套装</div>
+                        <caphomeList></caphomeList>
+                        <caphomeList></caphomeList>
                     </div>
                 </div>
             </div>
@@ -140,11 +80,15 @@
 </template>
 
 <script>
+import caphomeList from './Common/caphomeList'
 export default {
     data () {
         return {
             visible: false
         }
+    },
+    components: {
+        caphomeList
     }
 }
 </script>
