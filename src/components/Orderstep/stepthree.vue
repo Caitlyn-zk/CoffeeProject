@@ -12,21 +12,37 @@
           <p class="nps-step-address-info">中国/China</p>
           <p class="nps-step-address-info margin-tb-10">当前设置为你的默认地址</p>
           <div class="nps-step-next">
-            <a>编辑地址</a>
-            <span><i class="el-icon-arrow-right"></i></span>
+            <span @click="dialogVisible1 = true">
+              <a>编辑地址</a>
+              <span><i class="el-icon-arrow-right"></i></span>
+            </span>
+            <el-dialog
+              :visible="dialogVisible1"
+              :show-close="true"
+              :closeOnClickModal="true"
+              width="60%">
+              <div class="">
+                <Editaddress></Editaddress>
+              </div>
+            </el-dialog>
           </div>
         </div>
         <div class="fr padding-r-40 padding-b-20">
-          <a class="nps-address-edit-btn">添加账单地址</a>
+          <a @click="dialogVisible2 = true" class="nps-address-edit-btn">添加账单地址</a>
+          <el-dialog
+            :visible="dialogVisible2"
+            :show-close="true"
+            width="60%">
+            <div class="">
+              <Editaddress></Editaddress>
+            </div>
+          </el-dialog>
         </div>
       </div>
       <div class="nps-orderstep-cont clearfix">
         <p class="nps-steptwo-title font-20 padding-lr-20">支付方式</p>
         <p class="nps-step-two padding-lr-20">送至办公室或者家里</p>
         <div class="nps-steptwo-distribute clearfix padding-20">
-          <!-- <div class="nps-stepthree-checkbox">
-            <input type="checkbox">
-          </div> -->
           <div class="nps-orderstep-distribute-box">
             <div class="nps-stepthree-checkbox fl margin-t-15">
               <input type="radio">
@@ -69,9 +85,9 @@
       <div class="nps-step-btn-box clearfix">
         <span class="fl nps-step-next clearfix">
           <span class="fl font-14"><i class="el-icon-arrow-left"></i></span>
-          <a @click="changeS">返回配送</a>
+          <a @click="Delivery">返回配送</a>
         </span>
-        <a @click="changeS" class="nps-step-btn fr clearfix">下订单
+        <a @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment nps-remove-button">下订单
           <span class="fr font-16"><i class="el-icon-arrow-right"></i></span>
         </a>
       </div>
@@ -132,19 +148,27 @@
 
 <script>
 import Steponeadd from '../Order/shopping-add'
+import Editaddress from 'components/Order/myaddress/comeditAddress'
+// import Addaddress from 'components/Order/myaddress/comaddAddress'
 export default {
   data () {
     return {
-      dialogVisible: false
+      dialogVisible: false,
+      dialogVisible1: false,
+      dialogVisible2: false
     }
   },
   components: {
-    Steponeadd
+    Steponeadd,
+    Editaddress
   },
   props: {
     changeStep: Function
   },
   methods: {
+    Delivery () {
+      this.changeStep(2)
+    },
     changeS () {
       this.changeStep(4)
     }

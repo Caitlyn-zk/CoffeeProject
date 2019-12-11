@@ -1,5 +1,21 @@
 @import '~components/Order/css/order.less';
-// 步骤一
+
+// 购物车下单步骤顶部
+.step-box {
+  width: 100%;
+  background: #1b1b1b;
+}
+/deep/ .el-step__head.is-finish {
+  color: #3d8705;
+  border-color: #3d8705;
+}
+/deep/ .el-step__title.is-finish {
+  color: #3d8705;
+}
+/deep/ .el-step__title.is-process {
+  color: #C0C4CC;
+}
+// 步骤一购物车汇总
 // 左边部分
 .nps-orderstep-left {
   width: 70%;
@@ -104,6 +120,7 @@
   width: 30%;
   height: 600px;
   padding: 20px;
+  padding-right: 0;
   .nps-orderstep-right-cont {
     width: 100%;
     padding: 20px;
@@ -165,7 +182,7 @@
 }
 
 
-// 步骤二
+// 步骤二配送设置
 // 左边部分
 .nps-steptwo-title {
   height: 64px;
@@ -258,7 +275,7 @@
   font-weight: bolder;
 }
 
-// 步骤三
+// 步骤三支付
 .nps-stepthree-dist-info {
   padding-left: 120px;
 }
@@ -267,7 +284,7 @@
   padding-left: 0;
 }
 
-// 步骤四
+// 步骤四订单汇总
 // 步骤四左边部分
 .nps-stepfour-left {
   width: 30%;
@@ -305,6 +322,7 @@
 // 步骤四右边部分
 .nps-stepfour-bag-box {
   background: none;
+  padding-right: 0;
 }
 .nps-orderstep-four-bag {
   background: #f9f9f9;
@@ -317,4 +335,49 @@
 }
 .nps-stepfour-clause {
   vertical-align: middle;
+}
+.nps-stepfour-modify {
+  line-height: 35px;
+}
+.nps-stepfour-payment {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+// 步骤五订单确认
+.nps-stepfive-title {
+  width: 100%;
+  height: 80px;
+  line-height: 40px;
+  color: #fff;
+  background: #858585;
+}
+.nps-stepfive-cont {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  color: rgb(247, 248, 242);
+  font-size: 40px;
+  font-weight: bolder;
+  font-style: italic;
+  background: rgb(111, 141, 137);
+}
+.nps-stepfive-return {
+  width: 100%;
+  height: 80px;
+  line-height: 40px;
+  background: #f9f9f9;
+}
+
+// 添加地址
+.nps-order-cont {
+  border: none;
+  background: #fff;
+}
+/deep/ .nps-new-address {
+  background: #fff;
+}
+.nps-new-default {
+  border-bottom: 1px solid #ccc;
 }

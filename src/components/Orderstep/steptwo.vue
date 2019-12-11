@@ -12,12 +12,23 @@
           <p class="nps-step-address-info">中国/China</p>
           <p class="nps-step-address-info margin-tb-10">当前设置为你的默认地址</p>
           <div class="nps-step-next">
-            <a>编辑地址</a>
-            <span><i class="el-icon-arrow-right"></i></span>
+            <span @click="dialogVisible = false">
+              <a>编辑地址</a>
+              <span><i class="el-icon-arrow-right"></i></span>
+            </span>
           </div>
         </div>
         <div class="fr padding-r-40 padding-b-20">
-          <a class="nps-address-edit-btn">添加其他配送地址</a>
+          <a @click="dialogVisible2 = true" class="nps-address-edit-btn">添加其他配送地址</a>
+          <el-dialog
+            :visible="dialogVisible2"
+            :show-close="true"
+            :closeOnClickModal="true"
+            width="60%">
+            <div class="">
+              <Addaddress></Addaddress>
+            </div>
+          </el-dialog>
         </div>
       </div>
       <div class="nps-orderstep-cont clearfix">
@@ -59,9 +70,9 @@
       <div class="nps-step-btn-box clearfix">
         <span class="fl nps-step-next clearfix">
           <span class="fl font-14"><i class="el-icon-arrow-left"></i></span>
-          <a @click="changeS">返回购物车</a>
+          <a @click="Returncart">返回购物车</a>
         </span>
-        <a @click="changeS" class="nps-step-btn fr clearfix">继续付款
+        <a @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment nps-remove-button">继续支付
           <span class="fr font-16"><i class="el-icon-arrow-right"></i></span>
         </a>
       </div>
@@ -113,7 +124,7 @@
           </li>
         </ul>
         <div class="nps-stepone-addpresent">
-          <a class="nps-stepone-add font-14">修改</a>
+          <a @click="Revise" class="nps-stepone-add font-14">修改</a>
         </div>
       </div>
     </div>
@@ -122,21 +133,32 @@
 
 <script>
 import Steponeadd from '../Order/shopping-add'
+import Editaddress from 'components/Order/myaddress/editAddress'
+import Addaddress from 'components/Order/myaddress/comaddAddress'
 export default {
   data () {
     return {
-      dialogVisible: false
+      dialogVisible: false,
+      dialogVisible2: false
     }
   },
   components: {
-    Steponeadd
+    Steponeadd,
+    Editaddress,
+    Addaddress
   },
   props: {
     changeStep: Function
   },
   methods: {
+    Returncart () {
+      this.changeStep(1)
+    },
     changeS () {
       this.changeStep(3)
+    },
+    Revise () {
+      this.changeStep(1)
     }
   }
 }

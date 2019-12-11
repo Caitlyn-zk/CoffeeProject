@@ -1,6 +1,6 @@
 <template>
   <div class="nps-step-box content">
-    <div class="step-box">
+    <div class="step-box padding-40 text-left">
 			<el-steps :active="stepActive">
 				<el-step class="first-step" title="购物车汇总" icon="el-icon-success"></el-step>
 				<el-step class="second-step" title="配送设置" icon="el-icon-success"></el-step>
@@ -52,4 +52,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+@import './css/orderstep.less';
+</style>

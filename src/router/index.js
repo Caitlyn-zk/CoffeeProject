@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Topcarousel from 'components/Topcarousel/Topcarousel.vue'
+import Topcarousel from 'components/Topcarousel/topcarousel.vue'
+import Offline from 'components/Topcarousel/offline/offline.vue'
 import Machine from '@/components/Coffeemachine/index'
+import ShoppingAdd from '@/components/Order/shopping-add.vue'
 import Details from '@/components/Coffeemachine/machine-details.vue'
 import Service from '../components/service/Index/Customer'
 import Register from '@/components/Login/register.vue'
@@ -10,6 +12,7 @@ import Myorder from '@/components/Order/myorder'
 import Myaddress from '@/components/Order/myaddress'
 import Editaddress from '@/components/Order/myaddress/editAddress'
 import Addaddress from '@/components/Order/myaddress/addAddress'
+import ComaddAddress from '@/components/Order/myaddress/comaddAddress'
 import Myinfo from '@/components/Order/myinfo'
 import Mymachines from '@/components/Order/mymachines'
 import Addmachines from '@/components/Order/mymachines/addmachines'
@@ -33,25 +36,28 @@ import Caplists from '@/components/CapsuleB/capsuleLists'
 Vue.use(Router)
 export default new Router({
   routes: [
-		{
-			path: '/',
-			component: Topcarousel
-    }, {
-	path: '/Machine',
-	name: 'Machine',
-	component: Machine
-	},
     {
-		path: '/service',
-		component: Service
-	}, {
-		path: '/Machine',
-		name: 'Machine',
-		component: Machine
+      path: '/',
+      component: Topcarousel
     }, {
+      path: '/offline',
+      name: 'offline',
+      component: Offline
+    }, {
+			path: '/Machine',
+			name: 'Machine',
+			component: Machine
+		}, {
+			path: '/service',
+			component: Service
+		}, {
       path: '/register',
       name: 'Register',
       component: Register
+    }, {
+      path: '/shopping-add',
+      name: 'ShoppingAdd',
+      component: ShoppingAdd
     }, {
       path: '/order',
       name: 'Order',
@@ -113,112 +119,75 @@ export default new Router({
     }, {
       path: '/contact',
       component: Contact
-    },
-    {
-    path: '/datai',
-    name: 'Datai',
-    component: Datai
-    },
-    {
-    path: '/caphome',
-    name: 'Caphome',
-    component: Caphome
-    },
-    {
-    path: '/Repair',
-    name: 'Repair',
-    component: Repair
-    },
-    {
-    path: '/Hellp',
-    name: 'Hellp',
-    component: Hellp
-    },
-    {
-    path: '/Hellpdetails',
-    name: 'Hellpdetails',
-    component: Hellpdetails
-      },
-    {
-    path: '/formula',
-    name: 'Formula',
-    component: Formula
-    }]
     }, {
-	path: '/datai',
-	name: 'Datai',
-	component: Datai
-	},
-	{
-	path: '/caphome',
-	name: 'Caphome',
-	component: Caphome
-	},
-	{
-	path: '/Repair',
-	name: 'Repair',
-	component: Repair
-	}, {
-	path: '/Hellp',
-	name: 'Hellp',
-	component: Hellp
-	},
-	{
-	path: '/Hellpdetails',
-	name: 'Hellpdetails',
-	component: Hellpdetails
-	}, {
-  path: '/formula',
-  name: 'Formula',
-  component: Formula
-  }, {
-
-	component: Hellpdetails,
-	children: [
-		{
-		path: '/',
-		name: 'Hellpright',
-		component: Hellpright
-		},
-		{
-		path: '/Hellpguide',
-		name: 'Hellpguide',
-		component: Hellpguide
-		}
+			path: '/datai',
+			name: 'Datai',
+			component: Datai
+		}, {
+			path: '/caphome',
+			name: 'Caphome',
+			component: Caphome
+		}, {
+			path: '/Repair',
+			name: 'Repair',
+			component: Repair
+		}, {
+			path: '/Hellp',
+			name: 'Hellp',
+			component: Hellp
+		}, {
+			path: '/Hellpdetails',
+			name: 'Hellpdetails',
+			component: Hellpdetails,
+			children: [
+				{
+				path: '/',
+				name: 'Hellpright',
+				component: Hellpright
+			}, {
+				path: '/Hellpguide',
+				name: 'Hellpguide',
+				component: Hellpguide
+			}
+			]
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/datai',
+			component: Datai
+		}, {
+			path: '/caphome',
+			component: Caphome
+		}, {
+			path: '/problem',
+			component: Problem
+		}, {
+			path: '/caplists',
+			component: Caplists
+		}, {
+			path: '/aa',
+			component: Active
+		}, {
+			path: '/caplists',
+			component: Caplists
+		}, {
+      path: '/comaddAddress',
+      name: 'ComaddAddress',
+      component: ComaddAddress
+    }
 	]
-    },
-	{
-	path: '/formula',
-	name: 'Formula',
-	component: Formula
-	},
-	{
-  path: '/formula',
-  name: 'Formula',
-  component: Formula
-    },
-	{
-      path: '/datai',
-      component: Datai
-    }, {
-      path: '/caphome',
-      component: Caphome
-    }, {
-      path: '/problem',
-      component: Problem
-    }
-)
-    },
-     {
-      path: '/caplists',
-      component: Caplists
-    }
-    }, {
-      path: '/aa',
-      component: Active
-    }, {
-	  path: '/caplists',
-     component: Caplists
-  }
-]
 })

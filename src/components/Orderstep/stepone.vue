@@ -21,13 +21,25 @@
               <span>Original咖啡胶囊</span>
             </div>
           </li>
-          <li class="text-center nps-stepone-list">RMB 401.00</li>
+          <li class="text-center nps-stepone-list">
+            <span class="nps-stepfour-pop">
+              <span>RMB 401.00</span>
+              <span class="font-20 padding-l-20"><i class="el-icon-close"></i></span>
+            </span>
+          </li>
           <li class="text-center nps-stepone-list">1</li>
-          <li class="text-center nps-stepone-list">RMB 401.00 <span class="font-20"><i class="el-icon-close"></i></span></li>
+          <li class="text-center nps-stepone-list">
+            <span class="nps-stepfour-pop font-16">
+              <span>RMB 401.00</span>
+              <span class="font-20 padding-l-20"><i class="el-icon-close"></i></span>
+            </span>
+          </li>
         </ul>
         <div class="nps-orderstep-return-box">
-          <span><i class="el-icon-arrow-left"></i></span>
-          <a>返回在线商店</a>
+          <span class="nps-step-next">
+            <span><i class="el-icon-arrow-left"></i></span>
+            <a>返回在线商店</a>
+          </span>
         </div>
         <ul class="nps-stepone-detail-lists">
           <li class="padding-20 nps-stepone-num">
@@ -60,7 +72,7 @@
         </ul>
       </div>
       <div class="nps-step-btn-box clearfix">
-        <a @click="changeS" class="nps-step-btn fr clearfix">继续支付
+        <a @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment nps-remove-button">继续支付
           <span class="fr font-16"><i class="el-icon-arrow-right"></i></span>
         </a>
       </div>
