@@ -31,6 +31,7 @@ import Active from '@/components/service/aa.vue'
 import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
 import Caplists from '@/components/CapsuleB/capsuleLists'
+import Best from '@/components/Coffeemachine/best-sellers'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -139,6 +140,10 @@ export default new Router({
 				name: 'Hellpright',
 				component: Hellpright
 			}, {
+				path: '/Hellpright',
+				name: 'Hellpright',
+				component: Hellpright
+			}, {
 				path: '/Hellpguide',
 				name: 'Hellpguide',
 				component: Hellpguide
@@ -178,6 +183,10 @@ export default new Router({
 		}, {
 			path: '/caplists',
 			component: Caplists
+		}, {
+			path: '/Best',
+			name: 'Best',
+			component: Best
 		}
 	]
 })

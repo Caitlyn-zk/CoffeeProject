@@ -5,7 +5,7 @@
 			<div class="clearfix">
 				<div class="fl nps-back-deta"></div>
 				<div class="fl nps-width-derails">
-					<div class="margin-b-5">指示灯不亮</div>
+					<div class="margin-b-5 font-16">指示灯不亮</div>
 					<div class="nps-details-hover">
 						<i class="el-icon-right nps-hellp-cl"></i>
 						<router-link to="/Hellpguide">
@@ -20,10 +20,12 @@
 			<div class="clearfix">
 				<div class="fl nps-back-deta"></div>
 				<div class="fl nps-width-derails">
-					<div class="margin-b-5">指示灯不亮</div>
+					<div class="margin-b-5 font-16">指示灯不亮</div>
 					<div class="nps-details-hover">
 						<i class="el-icon-right nps-hellp-cl"></i>
-						<a>介绍指南</a>
+						<router-link to="/Hellpguide">
+						介绍指南
+						</router-link>
 					</div>
 				</div>
 			</div>
