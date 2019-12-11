@@ -30,6 +30,9 @@ import Active from '@/components/service/aa.vue'
 import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
 import Caplists from '@/components/CapsuleB/capsuleLists'
+import enligne from '@/components/service/Index/assembly/en-ligne'
+import reparation from '@/components/service/Index/assembly/reparation'
+import delivery from '@/components/service/Index/assembly/delivery'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -44,7 +47,7 @@ export default new Router({
 	},
     {
 		path: '/service',
-		component: Service
+    component: Service
 	}, {
 		path: '/Machine',
 		name: 'Machine',
@@ -175,7 +178,16 @@ export default new Router({
       path: '/aa',
       component: Active
     }, {
-	  path: '/caplists',
+      path: '/caplists',
       component: Caplists
-	}]
+	}, {
+    path: '/en-ligne',
+    component: enligne
+  }, {
+    path: '/reparation',
+    component: reparation
+  }, {
+    path: '/delivery',
+    component: delivery
+  }]
 })

@@ -1,50 +1,116 @@
-<template>
-  <div>
-    <input v-model='search' />
-    <ul v-if="searchData.length > 0">
-        <li :key="item.index" v-for="item in searchData">
-            <p>{{item.name}}</p>
-            <p>{{item.price}}</p>
-        </li>
-    </ul>
-    <div v-else>暂无数据</div>
-  </div>
+ <template>
+    <div class="safetyInfo">
+        <el-input placeText="请输入详细地址/门牌号/"
+                       v-model="search"
+                       @input="submitFun"
+                       ref='searchInput'></el-input>
+        <ul v-for="(list,index) in searchData"
+            :key="index">
+            <li>
+                <span>{{list.phoneName}}</span>
+                <span>{{list.ascriptionPhone}}</span>
+                <p>{{list.provinceName+''+list.cityName+''+list.areaName}}</p>
+            </li>
+        </ul>
+    </div>
 </template>
-
 <script>
 export default {
+    name: 'HelloWorld',
     data () {
         return {
-          search: '',
-          products: [{
-            name: '雪梨',
-            price: 65,
-            category: '水果'
-            }, {
-            name: '宝马',
-            price: 2500,
-            category: '汽车'
-            }]
+            search: '',
+            searchData: '',
+            products: [
+                // 假数据
+                {
+                    'addressId': '6554536248428871691',
+                    'address': 'e通世界南区',
+                    'provinceCode': '310000',
+                    'provinceName': '上海',
+                    'cityCode': '310100',
+                    'cityName': '上海市',
+                    'areaCode': '310118',
+                    'areaName': '青浦区',
+                    'creater': 'system@yimidida',
+                    'createTime': '2019-07-15T10:00:39Z',
+                    'isDelete': 1,
+                    'isDefault': 1,
+                    'ascriptionPhone': '17000000000',
+                    'phoneName': '张三',
+                    'customerCode': 'WXKY11500216249',
+                    'channelType': 1,
+                    'modifier': 'system@yimidida',
+                    'modifierTime': '2019-07-15T02:02:05Z',
+                    'recordVersion': 0
+                },
+                {
+                    'addressId': '6554536248428871691',
+                    'address': 'e通世界南区',
+                    'provinceCode': '310000',
+                    'provinceName': '上海',
+                    'cityCode': '310100',
+                    'cityName': '上海市',
+                    'areaCode': '310118',
+                    'areaName': '青浦区',
+                    'creater': 'system@yimidida',
+                    'createTime': '2019-07-15T10:00:39Z',
+                    'isDelete': 1,
+                    'isDefault': 1,
+                    'ascriptionPhone': '18000000000',
+                    'phoneName': '李四',
+                    'customerCode': 'WXKY11500216249',
+                    'channelType': 1,
+                    'modifier': 'system@yimidida',
+                    'modifierTime': '2019-07-15T02:02:05Z',
+                    'recordVersion': 0
+                },
+                {
+                    'addressId': '6554536248428871691',
+                    'address': 'e通世界南区',
+                    'provinceCode': '310000',
+                    'provinceName': '上海',
+                    'cityCode': '310100',
+                    'cityName': '上海市',
+                    'areaCode': '310118',
+                    'areaName': '青浦区',
+                    'creater': 'system@yimidida',
+                    'createTime': '2019-07-15T10:00:39Z',
+                    'isDelete': 1,
+                    'isDefault': 1,
+                    'ascriptionPhone': '18000000000',
+                    'phoneName': '王麻子',
+                    'customerCode': 'WXKY11500216249',
+                    'channelType': 1,
+                    'modifier': 'system@yimidida',
+                    'modifierTime': '2019-07-15T02:02:05Z',
+                    'recordVersion': 0
+                }
+            ]
         }
     },
-    computed: {
-        searchData: function () {
-            var search = this.search
-            if (search) {
-                return this.products.filter(function (product) {
-                    return Object.keys(product).some(function (key) {
-                        return String(product[key]).toLowerCase().indexOf(search) > -1
-                    })
+    created: function () {
+        this.inintData()
+    },
+    methods: {
+        inintData () {
+            this.searchData = this.products
+        },
+        submitFun () {
+            let search = this.search
+            this.searchData = this.products.filter(function (product) {
+                let searchField = { phoneName: product.phoneName, ascriptionPhone: product.ascriptionPhone }
+                return Object.keys(searchField).some(function (key) {
+                    return String(product[key]).toLowerCase().indexOf(search) > -1
                 })
-            }
-            return this.products
+            })
         }
     }
 }
 </script>
 
 <style>
-body {
+body{
     background: #fff;
 }
 </style>
