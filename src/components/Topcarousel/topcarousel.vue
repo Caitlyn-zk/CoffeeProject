@@ -1,5 +1,8 @@
 <template>
     <div class="nps-mycarousel">
+        <div class="padding-15">
+            <Tips></Tips>
+        </div>
         <div class="nps-block">
         <el-carousel trigger="click" :autoplay="autoname">
             <el-button class="nps-start" @click="start">
@@ -95,8 +98,7 @@
                                 </div>
                                 <span class="nps-icon-new text-white">新上市</span>
                             </a>
-                            <p class="nps-pcont margin-b-5 font-12">Almond Cake Flavoured
-</p>
+                            <p class="nps-pcont margin-b-5 font-12">Almond Cake Flavoured</p>
                             <p class="text-white font-12">RMB 4.70</p>
                             <div class="nps-addshop">
                                 <Shoppingadd></Shoppingadd>
@@ -170,11 +172,16 @@
                 </div>
             </div>
         </div>
+        <Support></Support>
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
 import Shoppingadd from '.././Order/shopping-add'
+import Support from '.././service/Support'
+import Footer from '.././service/Footer'
+import Tips from '.././service/Tips'
 export default {
     data () {
         return {
@@ -201,7 +208,10 @@ export default {
         }
     },
     components: {
-        Shoppingadd
+        Shoppingadd,
+        Footer,
+        Support,
+        Tips
     },
     methods: {
         start () {

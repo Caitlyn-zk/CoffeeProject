@@ -34,31 +34,21 @@ import Caplists from '@/components/CapsuleB/capsuleLists'
 Vue.use(Router)
 export default new Router({
   routes: [
-		{
+    {
       path: '/',
       component: Topcarousel
-    },
-    {
+    }, {
       path: '/offline',
       name: 'offline',
       component: Offline
-    },
-	{
-			path: '/',
-			component: Topcarousel
     }, {
-	path: '/Machine',
-	name: 'Machine',
-	component: Machine
-	},
-    {
-		path: '/service',
-		component: Service
-	}, {
-		path: '/Machine',
-		name: 'Machine',
-		component: Machine
-    }, {
+			path: '/Machine',
+			name: 'Machine',
+			component: Machine
+		}, {
+			path: '/service',
+			component: Service
+		}, {
       path: '/register',
       name: 'Register',
       component: Register
@@ -124,88 +114,70 @@ export default new Router({
       path: '/contact',
       component: Contact
     }, {
-    },
-	{
-	path: '/datai',
-	name: 'Datai',
-	component: Datai
-	},
-	{
-	path: '/caphome',
-	name: 'Caphome',
-	component: Caphome
-	},
-	{
-	path: '/Repair',
-	name: 'Repair',
-	component: Repair
-	}, {
-	path: '/Hellp',
-	name: 'Hellp',
-	component: Hellp
-	},
-	{
-	path: '/Hellpdetails',
-	name: 'Hellpdetails',
-	component: Hellpdetails
-	},
-  {
-  path: '/formula',
-  name: 'Formula',
-  component: Formula
-  },
-     {
-	}, {
-  path: '/formula',
-  name: 'Formula',
-  component: Formula
-  }, {
-
-	component: Hellpdetails,
-	children: [
-		{
-		path: '/',
-		name: 'Hellpright',
-		component: Hellpright
-		},
-		{
-		path: '/Hellpguide',
-		name: 'Hellpguide',
-		component: Hellpguide
+			path: '/datai',
+			name: 'Datai',
+			component: Datai
+		}, {
+			path: '/caphome',
+			name: 'Caphome',
+			component: Caphome
+		}, {
+			path: '/Repair',
+			name: 'Repair',
+			component: Repair
+		}, {
+			path: '/Hellp',
+			name: 'Hellp',
+			component: Hellp
+		}, {
+			path: '/Hellpdetails',
+			name: 'Hellpdetails',
+			component: Hellpdetails,
+			children: [
+				{
+				path: '/',
+				name: 'Hellpright',
+				component: Hellpright
+			}, {
+				path: '/Hellpguide',
+				name: 'Hellpguide',
+				component: Hellpguide
+			}
+			]
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/datai',
+			component: Datai
+		}, {
+			path: '/caphome',
+			component: Caphome
+		}, {
+			path: '/problem',
+			component: Problem
+		}, {
+			path: '/caplists',
+			component: Caplists
+		}, {
+			path: '/aa',
+			component: Active
+		}, {
+			path: '/caplists',
+			component: Caplists
 		}
 	]
-    },
-	{
-	path: '/formula',
-	name: 'Formula',
-	component: Formula
-	},
-	{
-  path: '/formula',
-  name: 'Formula',
-  component: Formula
-    },
-	{
-      path: '/datai',
-      component: Datai
-    }, {
-      path: '/caphome',
-      component: Caphome
-    }, {
-      path: '/problem',
-      component: Problem
-    }]
-    },
-     {
-      path: '/caplists',
-      component: Caplists
-    }
-    }, {
-      path: '/aa',
-      component: Active
-    }, {
-	  path: '/caplists',
-     component: Caplists
-  }
-]
 })
