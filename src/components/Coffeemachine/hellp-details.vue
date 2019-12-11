@@ -57,7 +57,7 @@
 										<div class="clearfix">
 											<div class="fl nps-back-deta"></div>
 											<div class="fl nps-width-derails">
-												<div class="margin-b-5">指示灯不亮</div>
+												<div class="margin-b-5 font-16">指示灯不亮</div>
 												<div>
 													<ul>
 														<li class="nps-li">- 检查供电，插头，电压和保险丝。 问题未解决，请致电Nespresso会员俱乐部。</li>
@@ -71,7 +71,7 @@
 										<div class="clearfix">
 											<div class="fl nps-back-deta"></div>
 											<div class="fl nps-width-derails">
-												<div class="margin-b-5">指示灯不亮</div>
+												<div class="margin-b-5 font-16">指示灯不亮</div>
 												<div>
 													<ul>
 														<li class="nps-li">- 检查供电，插头，电压和保险丝。 问题未解决，请致电Nespresso会员俱乐部。</li>
@@ -87,14 +87,14 @@
 							<!-- 概述 -->
 							<el-tab-pane label="概述" name="third">
 								<div class="padding-20">
-									<div class="text-center nps-beijian">备件</div>
-									<div class="text-center font-16">规格说明</div>
+									<div class="text-center nps-beijian font-16">备件</div>
+									<div class="text-center font-16 font-16">规格说明</div>
 									<div class="clearfix padding-tb-20 nps-position">
 										<div class="fl nps-width">
 											<div class="clearfix">
 												<div class="fl nps-back-deta"></div>
 												<div class="fl nps-width-derails">
-													<div class="margin-b-5">指示灯不亮</div>
+													<div class="margin-b-5 font-16">指示灯不亮</div>
 													<div>
 														<ul>
 															<li class="nps-li">- 检查供电，插头，电压和保险丝。 问题未解决，请致电Nespresso会员俱乐部。</li>
@@ -108,7 +108,7 @@
 											<div class="clearfix">
 												<div class="fl nps-back-deta"></div>
 												<div class="fl nps-width-derails">
-													<div class="margin-b-5">指示灯不亮</div>
+													<div class="margin-b-5 font-16">指示灯不亮</div>
 													<div>
 														<ul>
 															<li class="nps-li">- 检查供电，插头，电压和保险丝。 问题未解决，请致电Nespresso会员俱乐部。</li>
@@ -127,6 +127,7 @@
 				</div>
 			</div>
 		</div>
+		<Recommend></Recommend>
 		<Hellpbottom></Hellpbottom>
 	</div>
 </template>
@@ -134,10 +135,12 @@
 <script>
 import Full from '@/components/Coffeemachine/common/full'
 import Hellpbottom from '@/components/Coffeemachine/common/hellpbottom'
+import Recommend from '@/components/Coffeemachine/common/hellprecommend'
  export default {
 	components: {
 		Full,
-		Hellpbottom
+		Hellpbottom,
+		Recommend
 	},
 	data () {
 		return {

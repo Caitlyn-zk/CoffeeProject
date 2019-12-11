@@ -3,7 +3,7 @@
 	<Title></Title>
 	<div class="content">
 		<div class="nps-details margin-t-10 clearfix">
-			<Carousel></Carousel>
+			<Activitytwo></Activitytwo>
 			<Detailsright></Detailsright>
 		</div>
 		<div class="nps-details-explain">
@@ -23,6 +23,7 @@ import Activity from '@/components/Coffeemachine/common/activity'
 import Activity1 from '@/components/Coffeemachine/common/activity1'
 import Activity2 from '@/components/Coffeemachine/common/activity2'
 import Activity3 from '@/components/Coffeemachine/common/activity3'
+import Activitytwo from '@/components/Coffeemachine/common/activitytwo'
 import Activityone from '@/components/Coffeemachine/common/activityone'
 import Carousel from '@/components/Coffeemachine/common/carousel'
 import Detailsright from '@/components/Coffeemachine/common/detailsright'
@@ -37,7 +38,8 @@ export default {
 		Detailsright,
 		Activity2,
 		Activity3,
-		Activityone
+		Activityone,
+		Activitytwo
 	}
 }
 </script>

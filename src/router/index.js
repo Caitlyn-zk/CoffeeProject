@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Topcarousel from 'components/Topcarousel/Topcarousel.vue'
+import Topcarousel from 'components/Topcarousel/topcarousel.vue'
+import Offline from 'components/Topcarousel/offline/offline.vue'
 import Machine from '@/components/Coffeemachine/index'
 import ShoppingAdd from '@/components/Order/shopping-add.vue'
 import Details from '@/components/Coffeemachine/machine-details.vue'
@@ -33,26 +34,26 @@ import Caplists from '@/components/CapsuleB/capsuleLists'
 import enligne from '@/components/service/Index/assembly/en-ligne'
 import reparation from '@/components/service/Index/assembly/reparation'
 import delivery from '@/components/service/Index/assembly/delivery'
+import Best from '@/components/Coffeemachine/best-sellers'
+import Seekfit from '@/components/CapsuleB/seekfit'
 Vue.use(Router)
 export default new Router({
   routes: [
-		{
-			path: '/',
-			component: Topcarousel
-    },
-	{
-	path: '/Machine',
-	name: 'Machine',
-	component: Machine
-	},
     {
-		path: '/service',
-    component: Service
-	}, {
+      path: '/',
+      component: Topcarousel
+    }, {
+      path: '/offline',
+      name: 'offline',
+      component: Offline
+    }, {
 		path: '/Machine',
 		name: 'Machine',
 		component: Machine
-    }, {
+	}, {
+		path: '/service',
+		component: Service
+	}, {
       path: '/register',
       name: 'Register',
       component: Register
@@ -117,77 +118,74 @@ export default new Router({
     }, {
       path: '/contact',
       component: Contact
-    },
-	{
-	path: '/datai',
-	name: 'Datai',
-	component: Datai
-	},
-	{
-	path: '/caphome',
-	name: 'Caphome',
-	component: Caphome
-	},
-	{
-	path: '/Repair',
-	name: 'Repair',
-	component: Repair
-	},
-	{
-	path: '/Hellp',
-	name: 'Hellp',
-	component: Hellp
-	},
-	{
-	path: '/Hellpdetails',
-	name: 'Hellpdetails',
-	component: Hellpdetails,
-	children: [
-		{
-		path: '/',
-		name: 'Hellpright',
-		component: Hellpright
-		},
-		{
-		path: '/Hellpguide',
-		name: 'Hellpguide',
-		component: Hellpguide
-		}
-	]
-    },
-	{
-	path: '/formula',
-	name: 'Formula',
-	component: Formula
-	},
-	{
-  path: '/formula',
-  name: 'Formula',
-  component: Formula
-    },
-	{
-      path: '/datai',
-      component: Datai
     }, {
-      path: '/caphome',
-      component: Caphome
-    }, {
-      path: '/problem',
-      component: Problem
-    }, {
-      path: '/aa',
-      component: Active
-    }, {
-      path: '/caplists',
-      component: Caplists
-	}, {
-    path: '/en-ligne',
-    component: enligne
-  }, {
-    path: '/reparation',
-    component: reparation
-  }, {
-    path: '/delivery',
-    component: delivery
-  }]
+			path: '/datai',
+			name: 'Datai',
+			component: Datai
+		}, {
+			path: '/caphome',
+			name: 'Caphome',
+			component: Caphome
+		}, {
+			path: '/Repair',
+			name: 'Repair',
+			component: Repair
+		}, {
+			path: '/Hellp',
+			name: 'Hellp',
+			component: Hellp
+		}, {
+			path: '/Hellpdetails',
+			name: 'Hellpdetails',
+			component: Hellpdetails,
+			children: [
+				{
+				path: '/',
+				name: 'Hellpright',
+				component: Hellpright
+			}, {
+				path: '/Hellpright',
+				name: 'Hellpright',
+				component: Hellpright
+			}, {
+				path: '/Hellpguide',
+				name: 'Hellpguide',
+				component: Hellpguide
+			}]
+		}, {
+			path: '/formula',
+			name: 'Formula',
+			component: Formula
+		}, {
+			path: '/datai',
+			component: Datai
+		}, {
+			path: '/caphome',
+			component: Caphome
+		}, {
+			path: '/problem',
+			component: Problem
+		}, {
+			path: '/caplists',
+			component: Caplists
+		}, {
+			path: '/aa',
+			component: Active
+		}, {
+			path: '/Best',
+			name: 'Best',
+			component: Best
+		}, {
+			path: '/seekfit',
+			component: Seekfit
+		}, {
+			path: '/en-ligne',
+			component: enligne
+		}, {
+			path: '/reparation',
+			component: reparation
+		}, {
+			path: '/delivery',
+			component: delivery
+		}]
 })

@@ -2,7 +2,13 @@
 .nps-mycarousel  {
   font-size: 20px;
   position: relative;
-  background: url(.././img/nps-topback.jpg);
+  background: url(.././img/nps-topback.jpg) no-repeat;
+  .back-box {
+    display: block;
+    margin:  0 auto;
+    font-size: 15px;
+    color: #ffffff;
+  }
   .nps-banner {
     .nps-bannerMid {
       width: 100%;
@@ -13,11 +19,6 @@
         line-height: 1.125rem;
         flex: 1;
         width: 400px;
-        .nps-bannerlefttop {
-          .nps-bannerleftcont {
-            
-          }        
-        }
         .nps-bannerleftbottom {
           .nps-l {
             width: 50%;
@@ -34,17 +35,23 @@
         flex: 2;
         width: 800px;
         .el-row {
-          border-bottom:1px solid #d3dce6 ;
-          height: 210px;
+          
           .nps-col-two {
             border-left:1px solid #d3dce6 ;
           }
-          .nps-col-two  {
-            border-right:1px solid #d3dce6 ;
+          .nps-col-three {
+            border-left:1px solid #d3dce6 ;
+          }
+          .nps-bottom {
+            border-bottom:none !important ;
+          }
+          .nps-lastbottom {
+            border-bottom:none !important ;
           }
           .el-col {  
             position: relative;
             padding: 10px;
+            border-bottom: 1px solid #d3dce6;
             .nps-addshop {
               position: absolute;
               bottom: 5px;
@@ -174,3 +181,4 @@
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
+  
