@@ -31,6 +31,7 @@ import Active from '@/components/service/aa.vue'
 import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
 import Caplists from '@/components/CapsuleB/capsuleLists'
+import Seekfit from '@/components/CapsuleB/seekfit'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -178,6 +179,9 @@ export default new Router({
 		}, {
 			path: '/caplists',
 			component: Caplists
+		}, {
+			path: '/seekfit',
+			component: Seekfit
 		}
 	]
 })
