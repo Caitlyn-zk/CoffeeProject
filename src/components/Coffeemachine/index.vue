@@ -16,6 +16,9 @@
 					</div>
 					<div class="nps-name-goumai clearfix">
 						<div class="fl">CNY 3.80</div>
+						<div class="fr">
+							<Spping></Spping>
+						</div>
 					</div>
 				</div>
 				<div class="nps-coffee-be">
@@ -27,6 +30,9 @@
 					</div>
 					<div class="nps-name-goumai clearfix">
 						<div class="fl">CNY 3.80</div>
+						<div class="fr">
+							<Spping></Spping>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -88,10 +94,12 @@
 <script>
 import Title from '@/components/Coffeemachine/common/title'
 import lists from '@/components/Coffeemachine/common/lists'
+import Spping from '@/components/Order/shopping-add'
 export default {
   components: {
 	lists,
-	Title
+	Title,
+	Spping
   },
   methods: {
 	open () {

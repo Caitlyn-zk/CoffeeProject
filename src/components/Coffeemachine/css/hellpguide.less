@@ -3,6 +3,7 @@
 	padding: 22px;
 	color: #fff;
 	font-size: 14px;
+	position: relative;
 }
 .nps-guide-back{
 	background: url(../../../assets/wei2.png);
@@ -13,6 +14,71 @@
 	height: 42px;
 }
 .nps-guide-back-linheight{
-	line-height: 40px;
 	cursor: pointer;
+	position: absolute;
+	left: 10%;
+	top: 39%;
+}
+.nps-guide-back-linheight1{
+	position: absolute;
+	left: 85%;
+	top: 39%;
+}
+.nps-guide-back-linheight1 a{
+	color: #fff;
+}
+.nps-guide-back-linheight1 a:hover{
+	color: #986f38;
+	display: inline-block;
+	text-decoration: underline;
+}
+.nps-guide-content{
+	background: #ededed;
+}
+.nps-guide-title{
+	padding: 20px 10px;
+	margin-bottom: 7px;
+	color: #000000;
+	font-size: 14px;
+}
+.nps-guide-bottom{
+	border-bottom: 1px solid #d8d8d8;
+	position: relative;
+}
+.nps-guide-hen{
+	position: absolute;
+	width: 40px;
+	border-bottom: 3px solid #000;
+	top: 65%;
+	left: 3%;
+}
+.nps-guide-margin{
+	width: 50%;
+	padding-top: 42px;
+}
+.nps-guide-li{
+	padding: 15px 10px 15px 30px;
+	font-size: 14px;
+	color: #CCCCCC;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+	position: relative;
+}
+.font-cl{
+	color: #000000;
+}
+.nps-guide-li:hover{
+	color: #000000;
+}
+//自动排序
+.nps-guide-ul{
+	counter-reset: list;
+}
+.nps-guide-li:before {
+	counter-increment: list;
+	content: " " counter(list) " ";
+	font-size: 20px;
+	position: absolute;
+	left: 0;
+	top: 26%;
 }

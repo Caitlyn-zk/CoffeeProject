@@ -67,15 +67,17 @@
               {{item.title}}
             </p>
           </div>
-          <el-collapse accordion >
-            <el-collapse-item :key="list.index" v-for="list in item.list">
-              <template slot="title"  >
-                {{list.title}}
-              </template>
-              <p>123</p>
-              <p></p>
-            </el-collapse-item>
-          </el-collapse>
+          <div :key="list.index" v-for="list in item.list">
+            <el-collapse accordion >
+              <el-collapse-item >
+                <template slot="title">
+                  {{list.title}}
+                </template>
+                <p>123</p>
+                <p></p>
+              </el-collapse-item>
+            </el-collapse>
+          </div>
         </div>
       </div>
     </div>
@@ -222,6 +224,7 @@ export default {
                     })
                 })
             }
+            console.log(this.problem)
             return this.problem
         }
     }

@@ -33,6 +33,11 @@ import Active from '@/components/service/aa.vue'
 import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
 import Caplists from '@/components/CapsuleB/capsuleLists'
+import enligne from '@/components/service/Index/assembly/en-ligne'
+import reparation from '@/components/service/Index/assembly/reparation'
+import delivery from '@/components/service/Index/assembly/delivery'
+import Best from '@/components/Coffeemachine/best-sellers'
+import Seekfit from '@/components/CapsuleB/seekfit'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -44,13 +49,13 @@ export default new Router({
       name: 'offline',
       component: Offline
     }, {
-			path: '/Machine',
-			name: 'Machine',
-			component: Machine
-		}, {
-			path: '/service',
-			component: Service
-		}, {
+		path: '/Machine',
+		name: 'Machine',
+		component: Machine
+	}, {
+		path: '/service',
+		component: Service
+	}, {
       path: '/register',
       name: 'Register',
       component: Register
@@ -148,6 +153,10 @@ export default new Router({
 				path: '/Hellpguide',
 				name: 'Hellpguide',
 				component: Hellpguide
+			}, {
+				path: '/Hellpright',
+				name: 'Hellpright',
+				component: Hellpright
 			}
 			]
 		}, {
@@ -182,12 +191,25 @@ export default new Router({
 			path: '/aa',
 			component: Active
 		}, {
-			path: '/caplists',
-			component: Caplists
-		}, {
       path: '/comaddAddress',
       name: 'ComaddAddress',
       component: ComaddAddress
-    }
+    }, {
+		path: '/Best',
+			name: 'Best',
+			component: Best
+		}, {
+			path: '/seekfit',
+			component: Seekfit
+		}, {
+			path: '/en-ligne',
+			component: enligne
+		}, {
+			path: '/reparation',
+			component: reparation
+		}, {
+			path: '/delivery',
+			component: delivery
+		}
 	]
 })
