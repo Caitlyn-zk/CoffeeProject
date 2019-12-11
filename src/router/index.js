@@ -32,6 +32,7 @@ import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
 import Caplists from '@/components/CapsuleB/capsuleLists'
 import Best from '@/components/Coffeemachine/best-sellers'
+import Seekfit from '@/components/CapsuleB/seekfit'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -187,6 +188,9 @@ export default new Router({
 			path: '/Best',
 			name: 'Best',
 			component: Best
+		}, {
+			path: '/seekfit',
+			component: Seekfit
 		}
 	]
 })

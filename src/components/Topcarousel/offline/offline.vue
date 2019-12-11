@@ -1,6 +1,12 @@
 <template>
 <div>
+    <div class="margin-b-20">
+        <Tips></Tips>
+    </div>
     <div class="nps-main-box">
+        <div class="nps-h" >
+            <div class="text-white padding-t-40 padding-b-40">NESPRESSO专享活动 ></div>
+        </div>
         <div class="nps-img">
             <div class="nps-trans"></div>
             <div class="nps-txt text-white">
@@ -10,8 +16,8 @@
                 <img src="../img/cap.jpg" alt="" width="250px">
             </div>
         </div>
-  </div>
-  <div class="nps-main">
+    </div>
+    <div class="nps-main">
       <div class="nps-main-content content">
           <h2>陶醉在咖啡的美妙世界</h2>
           <div class="nps-hr"></div>
@@ -37,19 +43,58 @@
                         <p>Nespresso为顾客准备了一系列感官体验和美味品鉴活动。通过咖啡品鉴会，您将与我们知识丰富、充满激情的咖啡专员一起，“回到”咖啡原产地，看到、闻到、尝到Nespresso浓醇咖啡，并体验亲手制作各种咖啡，带走专属于您的愉悦咖啡体验</p>
                     </div>
                     <div class="padding-t-80">
-                        <el-button type="info">了解更多&注册</el-button>
+                        <el-button type="info" plain>了解更多&注册</el-button>
                     </div>
                  </div>
               </div>
+              <div class="nps-cup">
+                  <img src="../img/cup.jpg" alt="" width="100%">
+              </div>
+          </div>
+          <div class="nps-city nps-bj">
+              <div class="nps-shanghaicontent nps-beijingcontent fl">
+                 <div class="nps-shanghaitxt">
+                    <div class="nps-shanghaiicon margin-b-20">
+                      <i class="nps-icon el-icon-s-custom"></i>
+                    </div>
+                    <div class="nps-txts">
+                        <p class="font-18">咖啡大师课</p>
+                        <p class="font-24"><b>咖啡品鉴会</b></p>
+                    </div>
+                    <div class="nps-txta padding-t-30">
+                        <p>Nespresso为顾客准备了一系列感官体验和美味品鉴活动。通过咖啡品鉴会，您将与我们知识丰富、充满激情的咖啡专员一起，“回到”咖啡原产地，看到、闻到、尝到Nespresso浓醇咖啡，并体验亲手制作各种咖啡，带走专属于您的愉悦咖啡体验</p>
+                    </div>
+                    <div class="padding-t-80">
+                        <el-button type="info" plain>了解更多&注册</el-button>
+                    </div>
+                 </div>
+              </div>
+              <div class="nps-beijing fl">
+              </div>
           </div>
       </div>
-  </div>
+    </div>
+    <div class="nps-background">
+      <div class="nps-backtxt">
+          <h2>发现新活动</h2>
+          <div class="nps-find">
+              <el-button>发现全部活动</el-button>
+          </div>
+      </div>
+    </div>
+    <div class="padding-20">
+        <Footer></Footer>
+    </div>
 </div>
 </template>
-
 <script>
+import Tips from '../.././service/Tips'
+import Footer from '../.././service/Footer'
 export default {
-
+    components: {
+        Tips,
+        Footer
+    }
 }
 </script>
 

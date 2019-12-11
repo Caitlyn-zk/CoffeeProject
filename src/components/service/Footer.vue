@@ -29,6 +29,9 @@
                 <li><a>京ICP备11046978号-1</a></li>
             </ul>
         </div>
+        <div class="back-top" @click="backTop">
+            <a>回到顶部 <i class="el-icon-arrow-up back-top-i"></i></a>
+        </div>
     </div>
 </template>
 
@@ -44,6 +47,19 @@ export default {
                 label: 'English'
             }],
             value: ''
+        }
+    },
+    methods: {
+        backTop () {
+            let top = document.documentElement.scrollTop || document.body.scrollTop
+            const timeTop = setInterval(() => {
+            document.body.scrollTop -= 50
+            document.documentElement.scrollTop -= 50
+            top -= 50
+            if (top <= 0) {
+            clearInterval(timeTop)
+            }
+        }, 10)
         }
     }
 }

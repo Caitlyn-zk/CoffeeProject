@@ -1,5 +1,182 @@
 
 
+// 选择我的优选咖啡页面
+.nps-seek {
+    height: 611px;
+    background-color: #fff;
+    color: #fff;
+    background: url(../img/bg03.jpg) no-repeat center center;
+    background-position: top;
+    background-size: 1920px auto;
+    transition: all .8s ease-in-out .2s;
+    padding: 0 40px;
+}
+// 选择我的优选咖啡页面第一页
+.nps-first {
+    .nps-title {
+        height: 100px;
+        line-height: 100px;
+        color: #fff;
+        .nps-title-right {
+            display: inline-block;
+            span {
+                font-size: 16px;
+                letter-spacing: 4px;
+                display: inline-block;
+            }
+            a {
+                font-size: 14px;
+                // float: right;
+                margin-left: 40px;
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -3px;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 1px;
+                    background: #fff;
+                    transition: all .2s ease-in-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+            .nps-title-lists {
+                &:after {
+                    width: 100%;
+                }
+            }
+        } 
+    }
+    .nps-middle {
+        margin-top: 70px;
+        color: #fff;
+        text-align: center;
+        .nps-middle-title {
+            font-size: 48px;
+        }
+        .nps-middle-list {
+            margin: 36px 0;
+            font-size: 18px;
+        }
+        .nps-middle-btn {
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+            width: 160px;
+            height: 50px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 48px;
+            border: 1px solid #986f38;
+            background: #986f38;
+        }
+
+        
+    }
+}
+// 选择我的优选咖啡页面第一页过渡
+.slide-leave-active {
+    transition: all .8s;
+}
+.slide-leave-to {
+    opacity: 0;
+    transform: translateY(-30%);
+}
+.span-leave-active {
+    transition: all .8s;
+}
+.span-leave-to {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+.aa-leave-active {
+    transition: all .8s;
+}
+.aa-leave-to {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+// 选择我的优选咖啡页面第二页
+.nps-second {
+    padding-top: 100px;
+    .nps-second-title {
+        margin-bottom: 60px;
+        font-size: 30px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    .nps-second-middle {
+        margin: 0 50px;
+        height: 362px;
+        .nps-middle-lista {
+            height: 100%;
+            width: 33.3%;
+            padding: 0 14px;
+            position: relative;
+            .nps-lista-sp {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                font-size: 21px;
+            }
+            &:hover .nps-lista-img{
+                transform: scale(1.1);
+            }
+            &:hover .nps-lista-lists {
+                background: #fff;
+                color: #000;
+            }
+            .nps-lista-box {
+                width: 100%;
+                overflow: hidden;
+                .nps-lista-img {
+                    // background-image: url(../img/qiaokeli01.png);
+                    width: 100%;
+                    height: 300px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    transition: all .4s ease-in-out;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        z-index: 10;
+                        top: -5px;
+                        bottom: -5px;
+                        left: -5px;
+                        right: -5px;
+                        opacity: .8;
+                        transition: opacity .4s ease-in-out;
+                        background-color: transparent;
+                        background-image: linear-gradient(90deg,#000,transparent);
+                    }
+                }
+            }
+            .nps-lista-lists {
+                padding: 10px 25px;
+                text-align: center;
+                font-size: 14px;
+                color: hsla(0,0%,100%,.8);
+                background: #3c3635;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
 // 咖啡胶囊主页样式
 .nps-cpl-home {
     padding: 0 60px;

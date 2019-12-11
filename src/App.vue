@@ -8,7 +8,6 @@
 <script>
 import Nav from 'components/Nav/nav'
 import Navbar from 'components/Nav/navbar'
-import backTop from './components/Common/backTop/backTop'
 export default {
   name: 'App',
   data () {
@@ -16,7 +15,6 @@ export default {
 		}
 	},
   components: {
-    backTop,
     Nav,
     Navbar
 	}
