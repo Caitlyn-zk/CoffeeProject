@@ -6,11 +6,22 @@
 			<Activitytwo></Activitytwo>
 			<Detailsright></Detailsright>
 		</div>
-		<div class="nps-details-explain">
-			<Activity></Activity>
-			<Activity1></Activity1>
-			<Activityone></Activityone>
-			<Activity2></Activity2>
+		<div class="nps-details-explain clearfix">
+			<div class="fl nps-best-width">
+				<Activity></Activity>
+				<Activity1></Activity1>
+				<Best1></Best1>
+				<Best2></Best2>
+				<Best3></Best3>
+				<Activity2></Activity2>
+			</div>
+			<div class="cl-1b fr">
+				<Bestright></Bestright>
+				<Bestright></Bestright>
+			</div>
+			<div class="fr">
+				<Besthover></Besthover>
+			</div>
 		</div>
 		<Activity3></Activity3>
 	</div>
@@ -28,6 +39,11 @@ import Activityone from '@/components/Coffeemachine/common/activityone'
 import Carousel from '@/components/Coffeemachine/common/carousel'
 import Detailsright from '@/components/Coffeemachine/common/detailsright'
 import Spping from '@/components/Order/shopping-add'
+import Bestright from '@/components/Coffeemachine/common/best-rightlists'
+import Best1 from '@/components/Coffeemachine/common/best1'
+import Best2 from '@/components/Coffeemachine/common/best2'
+import Best3 from '@/components/Coffeemachine/common/best3'
+import Besthover from '@/components/Coffeemachine/common/besthover'
 export default {
 	components: {
 		Title,
@@ -39,7 +55,12 @@ export default {
 		Activity2,
 		Activity3,
 		Activityone,
-		Activitytwo
+		Activitytwo,
+		Bestright,
+		Best1,
+		Best2,
+		Best3,
+		Besthover
 	}
 }
 </script>

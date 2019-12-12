@@ -14,13 +14,19 @@
 				<a>了解更多</a>
 			</div>
 			<div class="font-cl-6f font-14 margin-b-18">CNY 800.00</div>
-			<div class="cl-black" style="width: 130px; height: 30px;"></div>
+			<div class="padding-lr-15">
+				<Spping></Spping>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import Spping from '@/components/Coffeemachine/common/shopingbtn'
 export default {
+	components: {
+		Spping
+	}
 }
 </script>
 

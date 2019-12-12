@@ -20,20 +20,16 @@
 			<div class="text-l font-12 margin-t-5 cl-65">售价</div>
 			<div class="text-l font-12 text-del cl-65">CNY 866.00</div>
 			<div class="nps-goumai">
-				<a class="nps-btn-xijie nps-pa clearfix">
-					<i class="el-icon-goods nps-i"></i>
-					<span>添加至购物车</span>
-					<span class="fr">
-						<Spping></Spping>
-					</span>
-				</a>
+				<div style="width: 255px;">
+					<Spping></Spping>
+				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import Spping from '@/components/Order/shopping-add'
+import Spping from '@/components/Coffeemachine/common/shopingbtn'
 export default {
 	components: {
 		Spping

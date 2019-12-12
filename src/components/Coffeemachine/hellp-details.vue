@@ -54,9 +54,9 @@
 							<el-tab-pane label="故障排除" name="second">
 								<div class="clearfix padding-20 nps-position">
 									<div class="fl nps-width">
-										<div class="clearfix">
-											<div class="fl nps-back-deta"></div>
-											<div class="fl nps-width-derails">
+										<div class="clearfix position-r">
+											<div class="fl nps-back-deta position-a"></div>
+											<div class="fl nps-width-derails margin-l-50">
 												<div class="margin-b-5 font-16">指示灯不亮</div>
 												<div>
 													<ul>
@@ -68,9 +68,9 @@
 										<div class="nps-hen"></div>
 									</div>
 									<div class="fl nps-width">
-										<div class="clearfix">
-											<div class="fl nps-back-deta"></div>
-											<div class="fl nps-width-derails">
+										<div class="clearfix position-r">
+											<div class="fl nps-back-deta position-a"></div>
+											<div class="fl nps-width-derails margin-l-50">
 												<div class="margin-b-5 font-16">指示灯不亮</div>
 												<div>
 													<ul>
@@ -91,9 +91,9 @@
 									<div class="text-center font-16 font-16">规格说明</div>
 									<div class="clearfix padding-tb-20 nps-position">
 										<div class="fl nps-width">
-											<div class="clearfix">
-												<div class="fl nps-back-deta"></div>
-												<div class="fl nps-width-derails">
+											<div class="clearfix position-r">
+												<div class="fl nps-back-deta position-a"></div>
+												<div class="fl nps-width-derails margin-l-50">
 													<div class="margin-b-5 font-16">指示灯不亮</div>
 													<div>
 														<ul>
@@ -105,9 +105,9 @@
 											<div class="nps-hen"></div>
 										</div>
 										<div class="fl nps-width">
-											<div class="clearfix">
-												<div class="fl nps-back-deta"></div>
-												<div class="fl nps-width-derails">
+											<div class="clearfix position-r">
+												<div class="fl nps-back-deta position-a"></div>
+												<div class="fl nps-width-derails margin-l-50">
 													<div class="margin-b-5 font-16">指示灯不亮</div>
 													<div>
 														<ul>
