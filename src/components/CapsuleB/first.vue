@@ -17,7 +17,7 @@
             <div v-if="show" class="nps-middle">
                 <div class="nps-middle-title">寻找适合您口味的咖啡</div>
                 <div class="nps-middle-list">通过简单的测验，开始寻找适合您口味的咖啡</div>
-                <a @click="show = !show" class="nps-middle-btn" >开始测验</a>
+                <a @click="changeSt" class="nps-middle-btn" >开始测验</a>
             </div>
         </transition>
     </div>
@@ -25,12 +25,25 @@
 
 <script>
 export default {
+    props: {
+        changeStep: Function
+    },
     data () {
         return {
-            show: true
+            show: true,
+            aa: ''
         }
     },
     methods: {
+        changeSt () {
+            this.show = !this.show
+            this.aa = setInterval(() => {
+                this.changeStep(2)
+            }, 800)
+        }
+    },
+    beforeDestroy () {
+        clearInterval(this.aa)
     }
 }
 </script>
