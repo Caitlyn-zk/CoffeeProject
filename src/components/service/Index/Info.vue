@@ -8,7 +8,7 @@
                   <p class="info-personal font-16"><span class="margin-b-10">个人资料</span></p>
               </div>
               <div class="info-data-form">
-                  <form>
+                  <el-form>
                       <div class="info-form clearfix">
                           <div class="col-xs-12 fl padding-lr-10 clearfix font-14">
                               <ul>
@@ -21,7 +21,7 @@
                                           <template>
                                             <el-select v-model="value" placeholder=" ">
                                                 <el-option
-                                                v-for="item in select"
+                                                v-for="item in selectList"
                                                 :key="item.value"
                                                 :label="item.label"
                                                 :value="item.value">
@@ -36,9 +36,12 @@
                                           <span class="text-brown">*</span>
                                        </div>
                                        <div class="fl">
-                                          <template>
-                                            <el-input v-model="input" ></el-input>
-                                          </template>
+                                          <!-- <template >
+                                            <el-input v-model="name" prop="name"></el-input>
+                                          </template> -->
+                                          <el-form-item>
+                                            <el-input v-model="name"></el-input>
+                                          </el-form-item>
                                        </div>
                                   </li>
                                   <li>
@@ -48,7 +51,7 @@
                                        </div>
                                        <div class="fl">
                                           <template>
-                                            <el-input v-model="input" ></el-input>
+                                            <el-input v-model="surname" ></el-input>
                                           </template>
                                        </div>
                                   </li>
@@ -59,7 +62,7 @@
                                        </div>
                                        <div class="fl">
                                           <template>
-                                            <el-input v-model="input" ></el-input>
+                                            <el-input v-model="vip"></el-input>
                                           </template>
                                        </div>
                                   </li>
@@ -74,12 +77,12 @@
                                        </div>
                                        <div class="fl">
                                           <template>
-                                            <el-select v-model="value" placeholder=" ">
+                                            <el-select v-model="areaCode" placeholder=" ">
                                                 <el-option
-                                                v-for="item in select"
-                                                :key="item.value"
-                                                :label="item.label"
-                                                :value="item.value">
+                                                v-for="item in PlaceList"
+                                                :key="item.areaCode"
+                                                :label="item.name"
+                                                :value="item.areaCode">
                                                 </el-option>
                                             </el-select>
                                           </template>
@@ -92,7 +95,7 @@
                                        </div>
                                        <div class="fl">
                                           <template>
-                                            <el-input v-model="input" ></el-input>
+                                            <el-input v-model="email" ></el-input>
                                           </template>
                                        </div>
                                   </li>
@@ -103,7 +106,7 @@
                                        </div>
                                        <div class="fl">
                                           <template>
-                                            <el-input v-model="input" ></el-input>
+                                            <el-input v-model="call" ></el-input>
                                           </template>
                                        </div>
                                   </li>
@@ -114,7 +117,7 @@
                                        </div>
                                        <div class="fl">
                                           <template>
-                                            <el-input v-model="input" ></el-input>
+                                            <el-input v-model="Code" ></el-input>
                                           </template>
                                        </div>
                                   </li>
@@ -131,12 +134,12 @@
                                        </div>
                                        <div class="fl">
                                           <template>
-                                            <el-select v-model="value" placeholder=" ">
+                                            <el-select v-model="infos" placeholder=" ">
                                                 <el-option
-                                                v-for="item in info"
-                                                :key="item.value"
+                                                v-for="item in infoList"
+                                                :key="item.infos"
                                                 :label="item.label"
-                                                :value="item.value">
+                                                :value="item.infos">
                                                 </el-option>
                                             </el-select>
                                           </template>
@@ -151,7 +154,7 @@
                                           <template>
                                             <el-select v-model="values" placeholder=" ">
                                                 <el-option
-                                                v-for="item in language"
+                                                v-for="item in languageList"
                                                 :key="item.values"
                                                 :label="item.label"
                                                 :value="item.values">
@@ -236,7 +239,7 @@
                           <span>所有信息将被严格保密。欲知详情，请阅读浓遇咖啡<a class="text-brown">隐私保护政策</a>。</span>
                           <a class="info-form-btn">发送<span class="el-icon-arrow-right"></span></a>
                       </div>
-                  </form>
+                  </el-form>
               </div>
           </div>
       </div>
@@ -249,44 +252,28 @@
 import Tips from '../Tips'
 import Support from '../Support'
 import Footer from '../Footer'
+import {place, select, info, language} from '../js/info'
 export default {
     data () {
         return {
+            PlaceList: place,
+            selectList: select,
+            infoList: info,
+            languageList: language,
             input: '',
             radio: '1',
+            name: '',
+            surname: '',
+            vip: '',
+            email: '',
+            call: '',
+            Office: '',
             textarea: '',
-            select: [{
-                value: '1',
-                label: '先生'
-            }, {
-                value: '2',
-                label: '女士'
-            }, {
-                value: '3',
-                label: '小姐'
-            }, {
-                value: '4',
-                label: '太太'
-            }, {
-                value: '5',
-                label: '博士'
-            }],
-            info: [{
-                value: '1',
-                label: '产品信息'
-            }, {
-                value: '2',
-                label: '订单信息与查询'
-            }],
-            language: [{
-                values: 1,
-                label: '中文'
-            }, {
-                values: 2,
-                label: '英文'
-            }],
             value: '',
-            values: ''
+            values: '',
+            areaCode: '',
+            infos: '',
+            Code: ''
         }
     },
     components: {

@@ -201,7 +201,7 @@
             <ul class="collapse-box">
               <li v-for="(item, index) in dateLists" :key="index" >
                 <a class="collapse-title-abtn" @click="changeClass(index)">
-                  <span class="icon-btn-collapse">{{index === isActive ? '-' : icon}}</span>
+                  <span class="icon-btn-collapse">{{icon}}</span>
                   <span class="title-btn-collapse">{{item.collapseTitle}}</span>
                 </a>
                 <div class="collapse-detail oneCollapse" :class="{active:index == isActive}">
@@ -227,7 +227,7 @@
             </li>
             <li class="order-coffee-li border">
               <span class="order-top">Nespresso咖啡胶囊</span>
-              <img src="./meberImg/lyk-coffee-order-mathine2.png" class="order-img"/>
+              <img src="./meberImg/lyk-coffee-order-mathine1.png" class="order-img"/>
               <span class="order-bottom">选择合适您喜欢口味的咖啡胶囊</span>
               <div class="order-buy-btn">
                 <a>立即订购</a>
@@ -235,7 +235,7 @@
             </li>
             <li class="order-coffee-li">
               <span class="order-top">Nespresso咖啡配件</span>
-              <img src="./meberImg/lyk-coffee-order-mathine1.png" class="order-img"/>
+              <img src="./meberImg/lyk-coffee-order-mathine2.png" class="order-img"/>
               <span class="order-bottom">选择合适您最喜爱的咖啡配件</span>
               <div class="order-buy-btn">
                 <a>立即订购</a>
@@ -248,34 +248,34 @@
       <!-- 帮助中心 -->
       <div class="meber-help-box content">
         <div class="coffee-help-content">
-          <ul class="coffee-help-lists clearfix">
+          <ul class="coffee-help-lists">
             <li class="coffee-help-list">
-              <div class="cofffee-introduce-img">
-                <img src="./meberImg/lyk-coffee-gift-icon.png"/>
+              <div>
+                <img src=""/>
               </div>
-              <span class="coffee-help-introduce">Nespresso 快速到货</span>
-              <p>下午4点前下单，北京和上海区域两天内到货。</p>
+              <span></span>
+              <p></p>
             </li>
-            <li class="coffee-help-list">
-              <div class="cofffee-introduce-img">
-                <img src="./meberImg/lyk-coffee-address-icon.png"/>
+            <li>
+              <div>
+                <img src=""/>
               </div>
-              <span class="coffee-help-introduce">免运费</span>
-              <p>购物满100颗胶囊，购买任何机器或消费满350元。</p>
+              <span></span>
+              <p></p>
             </li>
-            <li class="coffee-help-list">
-              <div class="cofffee-introduce-img">
-                <img src="./meberImg/lyk-coffee-help-icon.png"/>
+            <li>
+              <div>
+                <img src=""/>
               </div>
-              <span class="coffee-help-introduce">咖啡机使用帮助</span>
-              <p>关于您的咖啡机有什么需要帮助的吗？我们的专家会为您服务</p>
+              <span></span>
+              <p></p>
             </li>
-            <li class="coffee-help-list">
-              <div class="cofffee-introduce-img">
-                <img src="./meberImg/lyk-coffee-yinhang-icon.png"/>
+            <li>
+              <div>
+                <img src=""/>
               </div>
-              <span class="coffee-help-introduce">安全交易</span>
-              <p>SSL 加密保证交易安全</p>
+              <span></span>
+              <p></p>
             </li>
           </ul>
         </div>
@@ -304,7 +304,7 @@ export default {
           collapseDetail: '无论您喜欢我们的经典浓缩咖啡或者是更大杯咖啡，欢迎浏览我们的Nespresso咖啡机系列。选择最适合您的一款。'
         },
         {
-          collapseicon: '-',
+          collapseicon: '+',
           collapseTitle: '在何处购买Nespresso咖啡胶囊或咖啡机？',
           collapseDetail: '可通过三种方式购买： 登陆<a>online</a> on the <a>Nespresso网站</a> 或者移动应用、电话订购或者拜访店铺。'
         },

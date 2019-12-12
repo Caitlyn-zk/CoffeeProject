@@ -3,7 +3,7 @@
       <Tips></Tips>
       <div class="nps-en-ligne">
           <ul class="clearfix">
-              <li class="nps-en-left delivery">
+              <li class="nps-en-left recovery">
                   <div class="nps-en-modu"></div>
                   <div class="nps-en-list">
                       <p class="iconfont icon-yunshupeisong"></p>

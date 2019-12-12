@@ -2,7 +2,7 @@
   <div class="nps-navbar">
     <ul class="nps-navbar-content content">
       <!-- 特惠活动 -->
-      <li class="nps-navbar-list nps-navbar-specialOffers">
+      <li class="nps-navbar-list nps-navbar-specialOffers active">
         <!-- 左侧白边突出，加1px左边框 -->
         <div class="nps-navbar-left-border"></div>
         <div class="nps-navbar-img nps-navbar-img-specialOffers">

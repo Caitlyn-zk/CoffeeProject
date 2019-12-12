@@ -12,14 +12,12 @@ import Myorder from '@/components/Order/myorder'
 import Myaddress from '@/components/Order/myaddress'
 import Editaddress from '@/components/Order/myaddress/editAddress'
 import Addaddress from '@/components/Order/myaddress/addAddress'
-import ComaddAddress from '@/components/Order/myaddress/comaddAddress'
 import Myinfo from '@/components/Order/myinfo'
 import Mymachines from '@/components/Order/mymachines'
 import Addmachines from '@/components/Order/mymachines/addmachines'
 import Editmachines from '@/components/Order/mymachines/editmachines'
 import Alerts from '@/components/Order/alerts'
 import Fondness from '@/components/Order/fondness'
-import Orderstep from '@/components/Orderstep/step'
 import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
@@ -38,6 +36,8 @@ import reparation from '@/components/service/Index/assembly/reparation'
 import delivery from '@/components/service/Index/assembly/delivery'
 import Best from '@/components/Coffeemachine/best-sellers'
 import Seekfit from '@/components/CapsuleB/seekfit'
+import Recovery from '@/components/service/Index/assembly/recovery'
+import address from '@/components/service/Index/address'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -111,10 +111,6 @@ export default new Router({
         }
       ]
     }, {
-      path: '/orderstep',
-      name: 'Orderstep',
-      component: Orderstep
-    }, {
       path: '/Details',
       name: 'Details',
       component: Details
@@ -150,27 +146,14 @@ export default new Router({
 				name: 'Hellpright',
 				component: Hellpright
 			}, {
-				path: '/Hellpguide',
-				name: 'Hellpguide',
-				component: Hellpguide
-			}, {
 				path: '/Hellpright',
 				name: 'Hellpright',
 				component: Hellpright
-			}
-			]
-		}, {
-			path: '/formula',
-			name: 'Formula',
-			component: Formula
-		}, {
-			path: '/formula',
-			name: 'Formula',
-			component: Formula
-		}, {
-			path: '/formula',
-			name: 'Formula',
-			component: Formula
+			}, {
+				path: '/Hellpguide',
+				name: 'Hellpguide',
+				component: Hellpguide
+			}]
 		}, {
 			path: '/formula',
 			name: 'Formula',
@@ -191,11 +174,7 @@ export default new Router({
 			path: '/aa',
 			component: Active
 		}, {
-      path: '/comaddAddress',
-      name: 'ComaddAddress',
-      component: ComaddAddress
-    }, {
-		path: '/Best',
+			path: '/Best',
 			name: 'Best',
 			component: Best
 		}, {
@@ -210,6 +189,11 @@ export default new Router({
 		}, {
 			path: '/delivery',
 			component: delivery
-		}
-	]
+		}, {
+			path: '/recovery',
+			component: Recovery
+		}, {
+			path: '/address',
+			component: address
+		}]
 })

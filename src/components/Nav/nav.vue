@@ -2,7 +2,7 @@
   <div class="nps-nav">
       <div class="nps-nav-top content clearfix">
         <div class="fl nps-logo-img">
-          <img src="./img/gzt-logo.png" alt="">
+          <img src="./img/xc-logo.png" alt="">
         </div>
         <div class="nps-user-btn-group fr">
           <button class="nps-user-btn nps-login-account"><i class="nps-login-account-icon"></i>请登陆你的账户 </button>
