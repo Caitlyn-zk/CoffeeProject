@@ -24,7 +24,7 @@
 					</div>
 				</div>
 				<div class="fl clearfix">
-					<div class="fl nps-repair-center"v-for="(v,k) in list" :key="key" :class="activeClass ==k?'i-item':''">
+					<div class="fl nps-repair-center" v-for="(v,k) in list" :key="k" :class="activeClass ==k?'i-item':''">
 						<div class="nps-hover-it" @click="IsActive(k)">
 							<div class="nps-centen-img">
 								<img :src="v.idView" class="image"  />
@@ -85,19 +85,20 @@ export default {
 	components: {
 		Full
 	},
-	data() {
+	data () {
 		return {
-			activeClass: 0,// 0为默认选择第一个，-1为不选择
-			 list: [
+		// 0为默认选择第一个，-1为不选择
+			activeClass: 0,
+			list: [
 				{title: '加入', title1: 'NESPERSSO 会员俱乐部', idView: require('../../assets/lopo2.png.png')},
 				{title: '如何注册', title1: '我是咖啡机', idView: require('../../assets/lopo2.png.png')},
 				{title: '第一次', title1: '使用咖啡机', idView: require('../../assets/lopo2.png.png')},
-				{title: '维护', title1: '建议', idView: require('../../assets/lopo2.png.png')},
+				{title: '维护', title1: '建议', idView: require('../../assets/lopo2.png.png')}
 			]
 		}
 	},
 	methods: {
-		IsActive(k) {
+		IsActive (k) {
 			this.activeClass = k
 		}
 	}
