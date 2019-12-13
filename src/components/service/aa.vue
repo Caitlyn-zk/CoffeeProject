@@ -1,109 +1,78 @@
- <template>
-    <div class="safetyInfo">
-        <el-input placeText="请输入详细地址/门牌号/"
-                       v-model="search"
-                       @input="submitFun"
-                       ref='searchInput'></el-input>
-        <ul v-for="(list,index) in searchData"
-            :key="index">
-            <li>
-                <span>{{list.phoneName}}</span>
-                <span>{{list.ascriptionPhone}}</span>
-                <p>{{list.provinceName+''+list.cityName+''+list.areaName}}</p>
-            </li>
-        </ul>
+<template>
+    <div>
+        <!-- @open="handleOpen"
+  @close="handleClose" -->
+       <el-menu
+  default-active="2"
+  class="el-menu-vertical-demo"
+  background-color="#fff"
+  text-color="#000"
+  active-text-color="#ffd04b"
+  v-for="(menu, index) in navData"
+  :key="menu.value">
+    <el-submenu v-bind:index="index.toString()">
+      <template slot="title">
+        <span slot="title">{{menu.title}}</span>
+      </template>
+      <el-menu-item-group
+        v-bind:index="index + '-' + subIndex"
+        v-for="(threeMenu, subIndex) in menu.children"
+        :key="threeMenu.value"
+      >
+        <el-menu-item @click='menuClick(threeMenu)' >
+          <i v-bind:class="threeMenu.icon"></i>
+          <span slot="title">{{threeMenu.title}}2</span>
+        </el-menu-item>
+      </el-menu-item-group>
+    </el-submenu>
+</el-menu>
     </div>
 </template>
+
 <script>
 export default {
-    name: 'HelloWorld',
     data () {
         return {
-            search: '',
-            searchData: '',
-            products: [
-                // 假数据
-                {
-                    'addressId': '6554536248428871691',
-                    'address': 'e通世界南区',
-                    'provinceCode': '310000',
-                    'provinceName': '上海',
-                    'cityCode': '310100',
-                    'cityName': '上海市',
-                    'areaCode': '310118',
-                    'areaName': '青浦区',
-                    'creater': 'system@yimidida',
-                    'createTime': '2019-07-15T10:00:39Z',
-                    'isDelete': 1,
-                    'isDefault': 1,
-                    'ascriptionPhone': '17000000000',
-                    'phoneName': '张三',
-                    'customerCode': 'WXKY11500216249',
-                    'channelType': 1,
-                    'modifier': 'system@yimidida',
-                    'modifierTime': '2019-07-15T02:02:05Z',
-                    'recordVersion': 0
-                },
-                {
-                    'addressId': '6554536248428871691',
-                    'address': 'e通世界南区',
-                    'provinceCode': '310000',
-                    'provinceName': '上海',
-                    'cityCode': '310100',
-                    'cityName': '上海市',
-                    'areaCode': '310118',
-                    'areaName': '青浦区',
-                    'creater': 'system@yimidida',
-                    'createTime': '2019-07-15T10:00:39Z',
-                    'isDelete': 1,
-                    'isDefault': 1,
-                    'ascriptionPhone': '18000000000',
-                    'phoneName': '李四',
-                    'customerCode': 'WXKY11500216249',
-                    'channelType': 1,
-                    'modifier': 'system@yimidida',
-                    'modifierTime': '2019-07-15T02:02:05Z',
-                    'recordVersion': 0
-                },
-                {
-                    'addressId': '6554536248428871691',
-                    'address': 'e通世界南区',
-                    'provinceCode': '310000',
-                    'provinceName': '上海',
-                    'cityCode': '310100',
-                    'cityName': '上海市',
-                    'areaCode': '310118',
-                    'areaName': '青浦区',
-                    'creater': 'system@yimidida',
-                    'createTime': '2019-07-15T10:00:39Z',
-                    'isDelete': 1,
-                    'isDefault': 1,
-                    'ascriptionPhone': '18000000000',
-                    'phoneName': '王麻子',
-                    'customerCode': 'WXKY11500216249',
-                    'channelType': 1,
-                    'modifier': 'system@yimidida',
-                    'modifierTime': '2019-07-15T02:02:05Z',
-                    'recordVersion': 0
-                }
-            ]
+            // nav添加
+navData: [
+  {
+    title: '页签操作',
+    children: [
+      {
+        title: '刷新当前'
+      },
+      {
+        title: '关闭当前'
+      },
+      {
+        title: '全部关闭'
+      },
+      {
+        title: '除此之外全部关闭'
+      }
+    ]
+  }
+]
         }
     },
-    created: function () {
-        this.inintData()
-    },
     methods: {
-        inintData () {
-            this.searchData = this.products
-        },
-        submitFun () {
-            let search = this.search
-            this.searchData = this.products.filter(function (product) {
-                let searchField = { phoneName: product.phoneName, ascriptionPhone: product.ascriptionPhone }
-                return Object.keys(searchField).some(function (key) {
-                    return String(product[key]).toLowerCase().indexOf(search) > -1
-                })
-            })
+        menuClick (menu) {
+            switch (menu.title) {
+            case '刷新当前':
+                console.log('刷新当前')
+                break
+            case '关闭当前':
+                console.log('关闭当前')
+                break
+            case '全部关闭':
+                console.log('全部关闭')
+                break
+            case '除此之外全部关闭':
+                console.log('除此之外全部关闭')
+                break
+            default:
+                break
+            }
         }
     }
 }

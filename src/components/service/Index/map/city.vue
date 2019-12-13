@@ -1,49 +1,65 @@
 <template>
-<div>
-    <baidu-map class="bm-view" v-bind="mapOptions">
-        <bm-control :offset="{width: '10px', height: '10px'}">
-            <bm-auto-complete v-model="content" :sugStyle="{zIndex: 1}" />
-        </bm-control>
-        <bm-local-search :keyword="content" :auto-viewport="true" ></bm-local-search>
-    </baidu-map>
-</div>
+  <div>
+    <!-- 组件 -->
+        <baidu-map
+          class="baidu-view"
+          ak='TG5moDeE12H5vZQeeXEemRB5gUaSyldG'
+          :center="center"
+          :zoom="zoom"
+          @ready="handler"
+          :scroll-wheel-zoom="true"
+        >
+          <!-- 地图;类型 -->
+          <bm-map-type
+            :map-types="['BMAP_HYBRID_MAP','BMAP_NORMAL_MAP']"
+            anchor="BMAP_ANCHOR_TOP_RIGHT"
+          ></bm-map-type>
+          <!-- 城市 搜索 列表 -->
+          <bm-city-list anchor="BMAP_ANCHOR_TOP_RIGHT" :offset="{width:100,height:10}"></bm-city-list>
+         <!-- 定位-->
+          <bm-geolocation
+            anchor="BMAP_ANCHOR_BOTTOM_RIGHT"
+            :showAddressBar="true"
+            :autoLocation="true"
+          ></bm-geolocation>
+        </baidu-map>
+  </div>
 </template>
 
 <script>
-import {BaiduMap, BmControl, BmView, BmAutoComplete, BmLocalSearch} from 'vue-baidu-map'
+import BaiduMap from 'vue-baidu-map/components/Map/Map.vue'
+import BmGeolocation from 'vue-baidu-map/components/controls/Geolocation.vue'
+import BmMapType from 'vue-baidu-map/components/controls/MapType.vue'
+import BmCityList from 'vue-baidu-map/components/controls/CityList.vue'
+import BmMarker from 'vue-baidu-map/components/overlays/Marker.vue'
 export default {
+  name: 'mapNum',
   components: {
     BaiduMap,
-    BmView,
-    BmControl,
-    BmAutoComplete,
-    BmLocalSearch
+    BmGeolocation,
+    BmMapType,
+    BmCityList,
+    BmMarker
   },
-  data () {
+ data () {
     return {
-        mapOptions: {
-            ak: 'ak',
-            center: '成都',
-            scrollWheelZoom: true
-        },
-        content: ''
-        }
-	}
+      center: { lng: 0, lat: 0 },
+      zoom: 3
+      }
+   },
+  methods: {
+    handler ({BMap, map}) {
+      console.log(BMap, map)
+      this.center = '浙江'
+      this.zoom = 15
+    }
+  }
 }
 </script>
 
 <style>
-.bm-view {
+.baidu-view{
   width: 100%;
   height: 600px;
-}
-.BMap_noprint input{
-    width: 500px;
-    height: 32px;
-    border-radius: 5px;
-    border: 1px solid #000;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding-left: 20px;
 }
 </style>

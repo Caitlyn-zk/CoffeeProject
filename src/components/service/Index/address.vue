@@ -43,6 +43,7 @@
                 </el-tabs>
           </div>
       </div>
+      <Footer></Footer>
   </div>
 </template>
 
@@ -51,12 +52,14 @@ import Tips from '../Tips'
 import AddIndex from '../Index/map/addressIndex'
 import Province from '../Index/map/province'
 import City from '../Index/map/city'
+import Footer from '../Footer'
 export default {
     components: {
         Tips,
         AddIndex,
         Province,
-        City
+        City,
+        Footer
     }
 }
 </script>

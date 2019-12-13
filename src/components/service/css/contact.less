@@ -4,47 +4,52 @@ body{
 .info-data-list{
     width: 100%;
     background: #fff;
-    .el-dialog{
-        top: 15%;
-        position: fixed;
-        left: 11%;
-        width: 996px;
-        padding: 60px;
-        .el-icon-close{
-            position: absolute;
-            right: 10px;
-            top: 15px;
+    .nps-listbox-content{
+        .nps-module{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            background: #000;
+            opacity: 0.7;
         }
-        .el-dialog__header{
-            display: none;
-        }
-        .el-dialog__body{
-            padding: 0;
-        }
-        .nps-details-title{
-            font-size: 24px;
-            font-weight: 800;
-            color: #000;
-            margin: 16px 0 36px;
-        }
-        .nps-details-list{
-            font-size: 14px;
-            color: #000;
-            letter-spacing: 1.5px;
-            line-height: 24px;
-            margin: 14px 0;
-        }
-        .nps-details-translate{
-            border-top: 1px solid #000;
-            margin-top: 30px;
-            margin-bottom:  10px; 
+        .lightbox-content{
+            width: 996px;
+            padding: 60px;
+            background: #fff;
+            top: 25%;
+            position: fixed;
+            left: 11%;
+            .el-icon-close{
+                position: absolute;
+                right: 10px;
+                top: 15px;
+            }
+            .nps-details-title{
+                font-size: 24px;
+                font-weight: 800;
+                color: #000;
+                margin: 16px 0 36px;
+            }
             .nps-details-list{
-                color: #6e6e6e;
-                a{
-                    color: #986F38;
-                }
-                a:hover{
-                    border-bottom: 1px solid #986F38;
+                font-size: 14px;
+                color: #000;
+                letter-spacing: 1.5px;
+                line-height: 24px;
+                margin: 14px 0;
+            }
+            .nps-details-translate{
+                border-top: 1px solid #000;
+                margin-top: 30px;
+                margin-bottom:  10px; 
+                .nps-details-list{
+                    color: #6e6e6e;
+                    a{
+                        color: #986F38;
+                    }
+                    a:hover{
+                        border-bottom: 1px solid #986F38;
+                    }
                 }
             }
         }
