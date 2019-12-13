@@ -17,46 +17,26 @@
 		</div>
 			<!-- 咖啡机维修tab切换图 -->
 		<div class="nps-repair-tab">
-			<div class="content clearfix">
+			<div class="content clearfix list">
 				<div class="fl">
 					<div class="nps-repair-left">
 						<i class="el-icon-arrow-left"></i>
 					</div>
 				</div>
-				<div class="fl nps-repair-center">
-					<div class="nps-centen-img">
-						<img src="../../assets/lopo2.png.png" />
-					</div>
-					<div class="font-14">
-						<div>如何注册</div>
-						<div>我的咖啡机？</div>
-					</div>
-				</div>
-				<div class="fl nps-repair-center">
-					<div class="nps-centen-img">
-						<img src="../../assets/lopo2.png.png" />
-					</div>
-					<div class="font-14">
-						<div>如何注册</div>
-						<div>我的咖啡机？</div>
-					</div>
-				</div>
-				<div class="fl nps-repair-center">
-					<div class="nps-centen-img">
-						<img src="../../assets/lopo2.png.png" />
-					</div>
-					<div class="font-14">
-						<div>如何注册</div>
-						<div>我的咖啡机？</div>
-					</div>
-				</div>
-				<div class="fl nps-repair-center">
-					<div class="nps-centen-img">
-						<img src="../../assets/lopo2.png.png" />
-					</div>
-					<div class="font-14">
-						<div>如何注册</div>
-						<div>我的咖啡机？</div>
+				<div class="fl clearfix">
+					<div class="fl nps-repair-center"v-for="(v,k) in list" :key="key" :class="activeClass ==k?'i-item':''">
+						<div class="nps-hover-it" @click="IsActive(k)">
+							<div class="nps-centen-img">
+								<img :src="v.idView" class="image"  />
+							</div>
+							<div class="font-14">
+								<span>{{v.title}}</span>
+								<div>
+									<span>{{v.title1}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="nps-bottom-san"></div>
 					</div>
 				</div>
 				<div class="fl">
@@ -101,11 +81,27 @@
 
 <script>
 import Full from '@/components/Coffeemachine/common/full'
- export default {
+export default {
 	components: {
 		Full
+	},
+	data() {
+		return {
+			activeClass: 0,// 0为默认选择第一个，-1为不选择
+			 list: [
+				{title: '加入', title1: 'NESPERSSO 会员俱乐部', idView: require('../../assets/lopo2.png.png')},
+				{title: '如何注册', title1: '我是咖啡机', idView: require('../../assets/lopo2.png.png')},
+				{title: '第一次', title1: '使用咖啡机', idView: require('../../assets/lopo2.png.png')},
+				{title: '维护', title1: '建议', idView: require('../../assets/lopo2.png.png')},
+			]
+		}
+	},
+	methods: {
+		IsActive(k) {
+			this.activeClass = k
+		}
 	}
-  }
+}
 </script>
 
 <style lang="less">

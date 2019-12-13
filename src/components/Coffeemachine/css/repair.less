@@ -69,10 +69,32 @@
 }
 .nps-repair-center{
 	width: 270px;
-	height: 110px;
+	height: 150px;
 	text-align: center;
 	padding: 0 14px;
 	cursor: pointer;
+	position: relative;
+	transform: all 0.5s;
+}
+.nps-hover-it{
+	transition: all 0.5s;
+}
+.nps-hover-it:hover{
+	color: #986d38;
+	transform: scale(1.1);
+}
+//点击显示的底部三角
+.i-item .nps-bottom-san{
+	position: absolute;
+	border-top: 20px solid #fff;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -20px;
+}
+.i-item{
+	color: #986f38;
 }
 .nps-centen-img{
 	width: 80px;
