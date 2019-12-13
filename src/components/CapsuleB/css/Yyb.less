@@ -2,14 +2,14 @@
 
 // 选择我的优选咖啡页面
 .nps-seek {
-    height: 811px;
+    // height: 811px;
     background-color: #fff;
     color: #fff;
     background: url(../img/bg03.jpg) no-repeat center center;
     background-position: top;
     background-size: 1920px auto;
     transition: all .8s ease-in-out .2s;
-    padding: 0 40px;
+    overflow: hidden;
 }
 // .boom-leave-active {
 //     transition: all .8s;
@@ -25,6 +25,7 @@
 
 // 选择我的优选咖啡页面第一页
 .nps-first {
+    padding: 0 40px;
     .nps-title {
         height: 100px;
         line-height: 100px;
@@ -116,7 +117,7 @@
 
 // 选择我的优选咖啡页面第二页
 .nps-second {
-    padding-top: 100px;
+    padding: 100px 40px 0;
     .nps-second-title {
         margin-bottom: 60px;
         font-size: 30px;
@@ -182,6 +183,8 @@
                 color: hsla(0,0%,100%,.8);
                 background: #3c3635;
                 cursor: pointer;
+            }
+            .coom {
                 height: 62px;
             }
         }
@@ -261,12 +264,13 @@
 .cc-leave-to {
     opacity: 0;
     transform: translateX(100%);
+    position: relative;
 }
 
 
 // 第三页
 .nps-third {
-    padding-top: 100px;
+    padding: 100px 40px 0;
     .nps-second-title {
         margin-bottom: 60px;
         font-size: 30px;
@@ -365,7 +369,221 @@
     }
 }
 
-
+// 第八页 
+.nps-eighth {
+    .nps-eighth-title {
+        padding: 77px 0;
+        text-align: center;
+        font-size: 48px;
+    }
+    .nps-eighth-cont {
+        // height: 900px;
+        background: #fff;
+        .nps-cont-posn-a {
+            background: #fff;
+            color: #000;
+            display: block;
+            width: 63px;
+            height: 63px;
+            position: relative;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 63px;
+            font-size: 29px;
+            z-index: 12;
+            left: 48%;
+            top: -30px;
+            transition: all .4s;
+            span {
+                font-weight: bold;
+            }
+            &:hover {
+                line-height: 87px;
+            }
+        }
+        .nps-cont-lists {
+            padding: 25px 80px 50px;
+            border-bottom: 1px solid #f1f1f1;
+            .nps-lists-list {
+                width: 20%;
+                height: 230px;
+                padding: 0 14px;
+                cursor: pointer;
+                .nps-list-img {
+                    text-align: center;
+                    transition: all .4s;
+                    img {
+                        height: 95px;
+                        transition: all .4s;
+                    }
+                }
+                .nps-list-title {
+                    font-size: 14px;
+                    color: #000;
+                    text-align: center;
+                    overflow: hidden;
+                    margin-bottom: 32px;
+                }
+                .nps-list-store {
+                    color: #986f38;
+                    font-size: 14px;
+                    overflow: hidden;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-bottom: 14px;
+                }
+                .nps-list-car {
+                    background: #387d12;
+                    height: 33px;
+                    line-height: 29px;
+                    color: #fff;
+                    border: 1px solid rgba(0,0,0,.75);
+                    border-radius: 4px;
+                    margin: 0 21px;
+                    cursor: pointer;
+                    .nps-car-i {
+                        text-align: center;
+                        display: inline-block;
+                        width: 30px;
+                        text-align: center;
+                        font-weight: bold;
+                        height: 30px;
+                        border-right: 1px solid rgba(0,0,0,.75);
+                    }
+                    .nps-car-sp {
+                        text-align: center;
+                        display: inline-block;
+                        width: 98px;
+                        font-weight: bold;
+                        font-size: 12px;
+                    }
+                    &:hover {
+                        background: #2c541c;
+                    }
+                }
+                &:hover .nps-img {
+                    transform: scale(1.1)
+                }
+            }
+        }
+        .nps-cont-middle {
+            padding: 50px 70px 100px;
+            height: 520px;
+            .nps-middle-left {
+                width: 50%;
+                height: 370px;
+                position: relative;
+                background: #f1f1f1;
+                padding: 20px;
+                .nps-left-img {
+                    position: absolute;
+                    width: 356px;
+                    height: 264px;
+                    left: -120px;
+                    top: 53px;
+                }
+                .nps-left-cont {
+                    padding-left: 240px;
+                    .nps-cont-tatle {
+                        font-size: 16px;
+                        color: #000;
+                        margin-bottom: 18px;
+                    }
+                    .nps-cont-con {
+                        color: #000;
+                        .nps-lists-li {
+                            overflow: hidden;
+                            font-size: 14px;
+                            margin-bottom: 5px;
+                            img {
+                                width: 19px;
+                                height: 19px;
+                            }
+                        }
+                    }
+                    .nps-content-stor {
+                        color: #986f38;
+                        font-size: 14px;
+                        margin-bottom: 4px;
+                    }
+                    .nps-content-car {
+                        width: 200px;
+                        height: 32px;
+                        line-height: 28px;
+                        border: 1px solid rgba(0,0,0,.75);
+                        background: #387d12;
+                        color: #fff;
+                        font-weight: bold;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        &:hover {
+                            background: #2c541c;
+                        }
+                        .nps-car-spa {
+                            border-right: 1px solid rgba(0,0,0,.75);
+                            width: 34px;
+                            height: 28px;
+                            display: inline-block;
+                            text-align: center;
+                        }
+                        .nps-car-spb {
+                            font-size: 12px;
+                            text-align: center;
+                            display: inline-block;
+                            width: 140px;
+                        }
+                    }
+                    .nps-contnet-sin {
+                        font-size: 12px;
+                        color: #000;
+                        margin-top: 18px;
+                    }
+                }
+            }
+            .nps-middle-right {
+                width: 50%;
+                padding-left: 30px;
+                .nps-right-title {
+                    font-size: 30px;
+                    color: #000;
+                    margin-bottom: 15px;
+                }
+                .nps-right-list {
+                    color: rgba(0,0,0,.8);
+                    font-size: 14px;
+                    margin-bottom: 18px;
+                }
+                .nps-right-cont {
+                    padding: 20px 0;
+                    a {
+                        color: #986f38;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        .pobp {
+                            font-size: 20px;
+                        }
+                    }
+                    .nps-right-cont-a {
+                        padding-right: 15px;
+                        &:hover {
+                            color: #b07d3a;
+                            text-decoration: underline;
+                        }
+                    }
+                    .el-button {
+                        border: none;
+                        color: #986f38;
+                        padding: 0;
+                        &:hover {
+                            background: none;
+                            color: #b07d3a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 // 咖啡胶囊主页样式
 .nps-cpl-home {

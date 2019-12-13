@@ -1,37 +1,37 @@
 <template>
     <div class="nps-second">
         <transition name="bb-tit">
-            <div v-if="shows" class="nps-second-title">4. 对于您，咖啡是：</div>
+            <div v-if="shows" class="nps-second-title">6. 在早上您更喜欢哪种类型的咖啡，主要是？</div>
         </transition>
         <transition name="bb">
             <div v-if="shows">
                 <transition name="cc">
                     <div v-if="show" class="nps-second-middle clearfix">
                         <div @click="changeSt" class="nps-middle-lista fl">
-                            <span class="nps-lista-sp">一天美好的开始</span>
+                            <span class="nps-lista-sp">小杯</span>
                             <div class="nps-lista-box">
                                 <div class="nps-lista-img" :style="imagea"></div>
                             </div>
-                            <div class="nps-lista-lists coom">
-                                <span>没有什么比用一杯大杯咖啡开启一天更美好</span>
+                            <div class="nps-lista-lists">
+                                <span>意式浓咖啡</span>
                             </div>
                         </div>
                         <div @click="changeSt" class="nps-middle-lista fl">
-                            <span class="nps-lista-sp">愉悦的片刻</span>
+                            <span class="nps-lista-sp">中杯</span>
                             <div class="nps-lista-box">
                                 <div class="nps-lista-img" :style="imageb"></div>
                             </div>
-                            <div class="nps-lista-lists coom">
-                                <span>下午喝一杯咖啡享受纯粹的快乐</span>
+                            <div class="nps-lista-lists">
+                                <span>大杯咖啡</span>
                             </div>
                         </div>
                         <div @click="changeSt" class="nps-middle-lista fl">
-                            <span class="nps-lista-sp">两者都有</span>
+                            <span class="nps-lista-sp">大杯</span>
                             <div class="nps-lista-box">
                                 <div class="nps-lista-img" :style="imagec"></div>
                             </div>
-                            <div class="nps-lista-lists coom">
-                                <span>一杯美味的咖啡时刻享受</span>
+                            <div class="nps-lista-lists">
+                                <span>美式咖啡</span>
                             </div>
                         </div>
                     </div>
@@ -54,15 +54,15 @@ export default {
             bb: '',
             imagea: {
                 /* eslint-disable */
-                backgroundImage: "url(" + require('./img/step05.png') + ")"
+                backgroundImage: "url(" + require('./img/step10.png') + ")"
             },
             imageb: {
                 /* eslint-disable */
-                backgroundImage: "url(" + require('./img/step06.png') + ")"
+                backgroundImage: "url(" + require('./img/step11.png') + ")"
             },
             imagec: {
                 /* eslint-disable */
-                backgroundImage: "url(" + require('./img/step07.png') + ")"
+                backgroundImage: "url(" + require('./img/step12.png') + ")"
             }
         }
     },
@@ -70,13 +70,13 @@ export default {
         changeSt () {
             this.shows = !this.shows
             this.bb = setInterval(() => {
-                this.changeStep(6)
+                this.changeStep(8)
             }, 800)
         },
         changess () {
             this.show = !this.show
             this.bb = setInterval(() => {
-                this.changeStep(4)
+                this.changeStep(6)
             }, 800);
         }
     },

@@ -15,6 +15,8 @@ import Third from './third'
 import Fourth from './fourth'
 import Fifth from './fifth'
 import Sixth from './sixth'
+import Seventh from './seventh'
+import Eighth from './eighth'
 export default {
     props: {
         changeSt: Function
@@ -38,6 +40,10 @@ export default {
                this.view = 'Fifth'
            } else if (step === 6) {
                this.view = 'Sixth'
+           } else if (step === 7) {
+               this.view = 'Seventh'
+           } else if (step === 8) {
+               this.view = 'Eighth'
            }
        }
    },
@@ -47,7 +53,9 @@ export default {
         Third,
         Fourth,
         Fifth,
-        Sixth
+        Sixth,
+        Seventh,
+        Eighth
     }
 }
 </script>

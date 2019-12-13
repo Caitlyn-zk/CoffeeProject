@@ -3,7 +3,7 @@
         <transition name="bb-tit">
             <div v-if="show" class="nps-second-title">2. 您更喜欢哪一种苹果？</div>
         </transition>
-        <transition name="cc">
+        <transition name="cc" mode="out-in">
             <div v-if="shows">
                 <transition name="bb">
                     <div v-if="show" class="nps-second-middle clearfix">
