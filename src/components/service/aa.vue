@@ -1,85 +1,85 @@
 <template>
-    <div>
-        <!-- @open="handleOpen"
-  @close="handleClose" -->
-       <el-menu
-  default-active="2"
-  class="el-menu-vertical-demo"
-  background-color="#fff"
-  text-color="#000"
-  active-text-color="#ffd04b"
-  v-for="(menu, index) in navData"
-  :key="menu.value">
-    <el-submenu v-bind:index="index.toString()">
-      <template slot="title">
-        <span slot="title">{{menu.title}}</span>
-      </template>
-      <el-menu-item-group
-        v-bind:index="index + '-' + subIndex"
-        v-for="(threeMenu, subIndex) in menu.children"
-        :key="threeMenu.value"
-      >
-        <el-menu-item @click='menuClick(threeMenu)' >
-          <i v-bind:class="threeMenu.icon"></i>
-          <span slot="title">{{threeMenu.title}}2</span>
-        </el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
-</el-menu>
-    </div>
+  <div id="app">
+      <input v-model='search' />
+      <ul v-if="searchData.length > 0">
+          <li :key="item.index" v-for="item in searchData">
+              <p>{{item.title}}</p>
+              <p>{{item.list}}</p>
+          </li>
+      </ul>
+      <div v-else>暂无数据</div>
+      <div class="nps-Controll active margin-t-10" :key="item.index" v-for="item in searchData">
+          <div>
+            <p class="nps-Controll-title">
+              <span v-html="item.inco"></span>
+              {{item.title}}
+            </p>
+          </div>
+          <div>
+            <el-collapse accordion >
+              <el-collapse-item >
+                <template slot="title">
+                  {{item.list}}
+                </template>
+                <p></p>
+                <p></p>
+              </el-collapse-item>
+            </el-collapse>
+          </div>
+        </div>
+  </div>
 </template>
 
 <script>
 export default {
-    data () {
-        return {
-            // nav添加
-navData: [
-  {
-    title: '页签操作',
-    children: [
-      {
-        title: '刷新当前'
-      },
-      {
-        title: '关闭当前'
-      },
-      {
-        title: '全部关闭'
-      },
-      {
-        title: '除此之外全部关闭'
-      }
-    ]
-  }
-]
-        }
-    },
-    methods: {
-        menuClick (menu) {
-            switch (menu.title) {
-            case '刷新当前':
-                console.log('刷新当前')
-                break
-            case '关闭当前':
-                console.log('关闭当前')
-                break
-            case '全部关闭':
-                console.log('全部关闭')
-                break
-            case '除此之外全部关闭':
-                console.log('除此之外全部关闭')
-                break
-            default:
-                break
-            }
-        }
+  data () {
+    return {
+      search: '',
+      products: [
+              [{
+                inco: '<span class="iconfont icon-xinxi"></span>',
+                title: '产品信息',
+                list: '怎样购买Nespresso优选咖啡？'
+              }, {
+                list: '怎样购买Nespresso优选咖啡？'
+              }],
+              [{
+                inco: '<span class="iconfont icon-xinxi"></span>',
+                title: '产品信息sss',
+                list: '怎样购买Nespresso优选咖啡？111'
+              }, {
+                list: '怎样购买Nespresso优选咖啡？222'
+              }]
+          ],
+          arr: []
     }
+  },
+  computed: {
+      searchData: function () {
+          var search = this.search
+          if (search) {
+              console.log(JSON.stringify(this.arr))
+              return this.arr.filter(function (product) {
+                  return Object.keys(product).some(function (key) {
+                      return String(product[key]).toLowerCase().indexOf(search) > -1
+                  })
+              })
+          }
+          return this.arr
+      }
+  },
+  created () {
+      for (var i = 0; i < this.products.length; i++) {
+        for (var j = 0; j < this.products[i].length; j++) {
+              this.arr.push(this.products[i][j])
+          }
+      }
+  }
 }
 </script>
 
 <style>
 body{
-    background: #fff;
+  background: #ffffff;
 }
 </style>

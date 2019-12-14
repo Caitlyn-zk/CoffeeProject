@@ -14,12 +14,12 @@
               <div class="nps-info-lists">
                   <p class="font-14 padding-tb-20 margin-l-10 ">请参考以下奈斯派索常见问题。为了能直接解答您的疑问。</p>
                   <ul class="nps-info-list clearfix">
-                      <li :key="item.index" v-for="item in InfoList" >
+                      <li :key="item.index" v-for="(item, itemIndex) in InfoList" >
                           <div class="padding-lr-10">
                               <div class="nps-infp-content">
                                   <p v-html="item.icon"></p>
                                   <p class="font-16 info-news">{{item.title}}</p>
-                                  <div @click="details"  :key="list.index" v-for="list in item.List"><a>{{list.list}}</a></div>
+                                  <div @click="details({item:itemIndex,list:listIndex})"  :key="list.index" v-for="(list, listIndex) in item.List"><a>{{list.list}}</a></div>
                                   <!-- -->
                                   <a class="nps-info-link"><span class="iconfont icon-weibiaoti40"></span>了解更多</a>
                               </div>
@@ -56,7 +56,8 @@ export default {
     data () {
         return {
             InfoList: infolist,
-            show: false
+            show: false,
+            showIndex: 0
         }
     },
     components: {
@@ -65,16 +66,9 @@ export default {
         Footer
     },
     methods: {
-        details () {
+        details (param) {
             this.show = true
-            for (let i in this.InfoList) {
-                let list = this.InfoList[i]
-                for (let aa in list) {
-                    console.log(aa)
-                    console.log('------------------------')
-                    console.log(list.List)
-                }
-            }
+           console.log(param)
         },
         close () {
             this.show = false
