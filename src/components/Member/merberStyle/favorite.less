@@ -31,7 +31,7 @@
     li {
         float: left;
         width: 15%;
-        margin: 10px 9px;
+        margin: 10px 7px;
         height: 185px;
         padding-top: 30px;
         border: 1px solid #fff;
@@ -44,12 +44,68 @@
         }
     }
 }
-.favorite-step.first {
-    display: none;
+@keyframes myfirst 
+{
+from {
+    transform: translateX(100px);
+    opacity: 0;
+}
+to {
+    transform: translateX(0);
+    opacity: 1;
+}
+}
+.favorite-gift.fove {
+    width: 48%;
+    margin: 0 5px;
+    transition: all 0.5s;
+    img {
+        transition: all 0.5s;
+    }
+}
+.favorite-gift.three {
+    transition: all 0.5s;
+    img {
+        transition: all 0.5s;
+    }
+}
+.favorite-gift.seconed {
+    transition: all 0.5s;
+    img {
+        transition: all 0.5s;
+    }
+}
+.favorite-gift.seconed{
+    img:hover {
+        transform: scale(1.2);
+    }
+}
+.favorite-gift {
+    height: 170px;
+}
+.favorite-title-top-bottom.first {
+    margin-top: 0;
+}
+.favorite-step.first.active {
+    display: block;
+}
+.favorite-step.seconed.active {
+    animation: myfirst 2s;
+    display: block;
+}
+.favorite-step.thired.active {
+    display: block;
+    animation: myfirst 2s; 
+}
+.favorite-step.fove.active {
+    display: block;
+    animation: myfirst 2s;
 }
 .favorite-step {
     width: 996px;
     margin: 0 auto;
+    display: none;
+    transition:  all 0.5s;
 }
 .progress-bar-box {
     text-align: left;
@@ -58,14 +114,49 @@
 }
 .progress-bar {
     width: 100%;
-    height: 10px;
-    border-radius: 2px;
+    height: 12px;
+    border-radius: 4px;
     border: 1px solid #fff;
+    line-height: 0;
+    padding-left: 1px;
+}
+.progress-bar-son {
+    width: 300px;
+    height: 10px;
+    display: inline-block;
+    background: #8f7247;
+    border-radius: 4px;
+}
+.progress-bar-son.three {
+    width: 600px;
+} 
+.progress-bar-son.fove {
+    width: 750px;
+}
+.favorite-title-top-bottom {
+    margin-top: 100px;
+}
+.favorite-gift-list:after {
+    clear: both;
+    display: block;
+    content: '';
+}
+.favorite-gift-list {
+    display: block;
+    text-align: center;
+    margin: 25px;
+    padding-bottom: 100px;
+    li {
+        float: left;
+        width: 23%;
+        margin: 8px;
+        border: 1px solid #fff;
+        padding: 38px;
+    }
 }
 .progress-bar-title {
     margin: 15px;
     font-weight: 700;
-    
 }
 .favorite-gift:hover {
     background: #fff;
