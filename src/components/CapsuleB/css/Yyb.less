@@ -2,7 +2,7 @@
 
 // 选择我的优选咖啡页面
 .nps-seek {
-    // height: 811px;
+    min-height: 811px;
     background-color: #fff;
     color: #fff;
     background: url(../img/bg03.jpg) no-repeat center center;
@@ -11,17 +11,7 @@
     transition: all .8s ease-in-out .2s;
     overflow: hidden;
 }
-// .boom-leave-active {
-//     transition: all .8s;
-// }
-// .boom-leave {
-//     opacity: 0;
-//     transform: translateX(-100%)
-// }
-// .boom-leave-to {
-//     opacity: 1;
-//     transform: translateX(0)
-// }
+
 
 // 选择我的优选咖啡页面第一页
 .nps-first {
@@ -579,6 +569,35 @@
                             color: #b07d3a;
                         }
                     }
+                }
+            }
+        }
+    }
+    .nps-bottom {
+        height: 190px;
+        background-image: url(../img/bg03.jpg);
+        background-position: bottom;
+        background-size: 1920px auto;
+        overflow: hidden;
+        line-height: 190px;
+        .nps-bottom-cont {
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            a {
+                background: #418200;
+                width: 161px;
+                height: 35px;
+                display: inline-block;
+                text-align: center;
+                line-height: 35px;
+                border-radius: 3px;
+                font-weight: bold;
+                margin: 0 28px;
+                color: #fff;
+                &:hover {
+                    background: #2c541c;
                 }
             }
         }

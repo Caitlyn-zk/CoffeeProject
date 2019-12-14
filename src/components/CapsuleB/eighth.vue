@@ -2,7 +2,7 @@
     <div class="nps-eighth">
         <div class="nps-eighth-title">获得为您做的选择</div>
         <div class="nps-eighth-cont">
-            <a class="nps-cont-posn-a">
+            <a @click="changeIn" class="nps-cont-posn-a">
                 <span class="el-icon-arrow-down"></span>
             </a>
             <div class="nps-cont-lists clearfix">
@@ -101,13 +101,13 @@
                     <div class="nps-right-title">为什么这是合适您的选择？</div>
                     <div class="nps-right-list">根据你的答案，我们已经确定了Nespresso优选咖啡中较为合适您的香气喜好和品尝习惯的咖啡</div>
                     <div class="nps-right-cont">
-                        <a class="nps-right-cont-a"><span class="pobp el-icon-refresh"></span>重新开始选择我的咖啡</a>
+                        <a @click="changeSt" class="nps-right-cont-a"><span class="pobp el-icon-refresh"></span>重新开始选择我的咖啡</a>
                         <a>
                             <span class="el-icon-share pobp"></span>
                         </a>
                         <el-tooltip placement="top">
                             <div slot="content">
-                                <span class="el-icon-s-promotion">11</span>
+                                <span class="el-icon-s-promotion"><a>  飞信</a></span>
                             </div>
                             <el-button>分享到</el-button>
                         </el-tooltip>
@@ -115,12 +115,34 @@
                 </div>
             </div>
         </div>
+        <div class="nps-bottom">
+            <div class="nps-bottom-cont">
+                <router-link to="/caphome">继续购物</router-link>
+                <span>或</span>
+                <a class="nps-btm-b">结账</a>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
+    props: {
+        changeStep: Function
+    },
+    data () {
+        return {
 
+        }
+    },
+    methods: {
+        changeSt () {
+            this.changeStep(2)
+        },
+        changeIn () {
+            document.documentElement.scrollTop = 330
+        }
+    }
 }
 </script>
 
