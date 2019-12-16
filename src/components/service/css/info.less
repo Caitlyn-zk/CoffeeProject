@@ -38,9 +38,18 @@ body{
                     margin-bottom: 20px;
                     height: 40px;
                     .info-list{
-                        width: 275px;
+                        width: 320px;
                         height: 38px;
                         padding: 12px 6px 10px 0;
+                    }
+                    .info-list-input{
+                        input{
+                            width: 377px;
+                            height: 47px;
+                            border: 1px solid #000;
+                            border-radius: 5px;
+                            padding: 10px 20px;
+                        }
                     }
                 }
                 .capsule-list{
@@ -99,18 +108,70 @@ body{
                 height: 40px;
                 background: #3d8705;
                 border-radius: 5px;
-                padding: 0 50px;
+                padding: 0 35px;
                 line-height: 40px;
                 color: #fff;
                 font-weight: 800;
                 .el-icon-arrow-right{
                     font-size: 18px;
-                    margin-left: 58px;
+                    margin-left: 87px;
                 }
             }
             .info-form-btn:hover{
                 box-shadow: rgba(0, 0, 0, 0.3) 0 3px 3px 0;
             }
+        }
+    }
+}
+.info-data-form{
+    .el-form-item__error{
+        left: 219px;
+    }
+    .nps-from-info{
+        margin-top: 15px;
+        margin-left: 320px;
+    }
+    .el-form-item__content{
+        padding-left: 220px;
+    }
+    .el-form-item__label{
+        color: #000;
+    }
+    .el-form-item__label{
+        width: 191px !important;
+        text-align: left;
+    }
+    .el-radio__input.is-checked .el-radio__inner {
+        border-color: #000;
+        background: #000;
+    }
+    .el-radio__input.is-checked + .el-radio__label {
+        color: #000;
+    }
+    .form-control{
+        .el-input__inner{
+            width: 377px;
+        }
+        .el-textarea__inner{
+            width: 377px;
+            height: 220px;
+        }
+        .el-textarea__inner:focus{
+            border-color: #000; 
+        }
+    }
+}
+.el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before, .el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label-wrap > .el-form-item__label:before{
+    content: ''
+}
+
+.info-form.active{
+    height: 720px;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+    .IndexForm{
+        .el-input__suffix{
+            left: -50px;
         }
     }
 }
