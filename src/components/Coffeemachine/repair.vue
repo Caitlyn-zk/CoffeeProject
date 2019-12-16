@@ -43,7 +43,7 @@
 					<div class="content">
 						<div class="nps-repair-font fr cl-font-white">
 								<div class="nps-font-man1">{{v.title3}}</div>
-							<div>拥有一台Nespresso咖啡机，您可以尽情享受浓醇咖啡带来的生活愉悦，爱不释手。</div>
+							<div v-html="v.title2"></div>
 						</div>
 					</div>
 				</li>
@@ -81,23 +81,33 @@ export default {
 				{title: '加入',
 				title1: 'NESPERSSO 会员俱乐部',
 				idView: require('../../assets/lopo2.png.png'),
-				title2: '第一页',
+				title2: "<p style='margin-bottom:20px'>加入 Nespresso 会员俱乐部，了解更多关于Nespresso产品系列.</p><p style='margin-bottom:20px'>The Nespresso 会员俱乐部每周七天24小时服务。拨打热线电话 4001 200600 或者加入我们 在线 提升您的咖啡体验。购买超过100颗胶囊，享受免运费服务。</p><p style='margin-bottom:20px'>如果您有任何关于Nespresso或者您的会员信息的疑问，请<a style='color:#986f38'>点击这里</a> 联系我们</p>",
 				title3: '我如何加入Nespresso会员俱乐部?'
 				},
 				{title: '如何注册',
 				title1: '我是咖啡机',
-				idView: require('../../assets/lopo2.png.png'),
-				title2: '第二页',
+				idView: require('../../assets/lopo1.png'),
+				title2: "<p style='margin-bottom:20px'>作为俱乐部会员，您将终身受益于我们的电话服务支持和机器故障排除服务。当您第一次注册的时候，请提供您的新机的序列号，以帮助我们为您提供个性化的客户帮助。您可以在机器的滴水托盘或机器背面找到这19位数的代码。</p><p style='margin-bottom:20px'>如何注册:</p><p style='margin-bottom:20px;font-size:24px'><i class='el-icon-success' style='font-size:24px;color:#986f38'></i>拨打免费热线电话: 4001 200600</p><p style='margin-bottom:20px;font-size:24px'><i class='el-icon-success' style='font-size:24px;color:#986f38'></i>访问 Nespresso 精品店</p><p style='margin-bottom:20px;font-size:24px'><i class='el-icon-success' style='font-size:24px;color:#986f38'></i>在线注册</p>",
 				title3: '我为什么需要注册/如何注册我的咖啡机?'
 				},
 				{title: '第一次',
 				title1: '使用咖啡机',
-				idView: require('../../assets/lopo2.png.png'),
-				title2: '第三页',
+				idView: require('../../assets/lopo1.png'),
+				title2: "<p style='margin-bottom:20px'>第一次使用贴士</p>",
 				title3: '第一次使用您的Nespresso咖啡机'
 				},
-				{title: '维护', title1: '建议', idView: require('../../assets/lopo2.png.png'), title2: '第四页'},
-				{title: '维护', title1: '建议', idView: require('../../assets/lopo2.png.png'), title2: '第五页'}
+				{title: '维护',
+				title1: '建议',
+				idView: require('../../assets/lopo2.png.png'),
+				title2: 'Nespresso 系统邀您畅享美妙的咖啡时光，杯杯爱不释手。为帮助您保持高品质的咖啡体验，请注意下面的维护建议：',
+				title3: '咖啡机维护建议'
+				},
+				{title: '故障排除',
+				title1: '解决方案',
+				idView: require('../../assets/lopo2.png.png'),
+				title2: '第五页',
+				title3: '故障排除'
+				}
 			]
 		}
 	},
