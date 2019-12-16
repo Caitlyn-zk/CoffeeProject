@@ -1,6 +1,6 @@
 <template>
     <router-link to="/caplists">
-        <div class="nps-list-lists">
+        <div class="nps-list-lists" v-for="(item, index) in data" :key="index">
             <div class="nps-lits-conta fl">
                 <span class="nps-icon-t">新品上市</span>
                 <div class="nps-cont-a">
@@ -39,6 +39,28 @@
 <script>
 import cartList from './cartList'
 export default {
+    data () {
+        return {
+            data: {}
+        }
+    },
+    methods: {
+        getData () {
+            var that = this
+            this.$axios.post('http://192.168.97.240:3000/addCoffcap')
+            .then(res => {
+                console.log(res.data)
+                that.data = res.data
+            })
+            .catch(res => {
+                console.log(res)
+            })
+        }
+    },
+    mounted () {
+        this.getData()
+        console.log(this.data)
+    },
     components: {
         cartList
     }
