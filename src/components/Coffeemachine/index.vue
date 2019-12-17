@@ -80,11 +80,6 @@
 					</div>
 					<!--咖啡机商品列表-->
 					<lists></lists>
-					<lists></lists>
-					<lists></lists>
-					<lists></lists>
-					<lists></lists>
-					<lists></lists>
 				</div>
 			</div>
 		</div>

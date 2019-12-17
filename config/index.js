@@ -11,9 +11,9 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api': {
+			'/api': {
 				// 代理地址
-				target: 'http://192.168.97.222:3000/',
+				target: 'http://192.168.97.240:3000/',
 				// 是否跨域
 				changeOrigin: true,
 				// 地址重写
