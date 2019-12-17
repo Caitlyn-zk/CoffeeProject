@@ -116,6 +116,7 @@
 <script>
 import caphomeList from './Common/caphomeList'
 import cartList from './Common/cartList'
+
 export default {
     data () {
         return {
@@ -125,15 +126,6 @@ export default {
     },
     methods: {
         getData () {
-            var that = this
-            this.$axios.post('http://192.168.97.240:3000/addCoffcap')
-            .then(res => {
-                console.log(res.data)
-                that.data = res.data
-            })
-            .catch(res => {
-                console.log(res)
-            })
         }
     },
     mounted () {
