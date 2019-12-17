@@ -5,6 +5,7 @@ body{
     width: 100%;
     background: #fff;
     .nps-listbox-content{
+        display: none;
         .nps-module{
             width: 100%;
             position: fixed;
@@ -17,7 +18,7 @@ body{
             width: 996px;
             padding: 60px;
             background: #fff;
-            top: 25%;
+            top: 20%;
             position: fixed;
             left: 11%;
             .el-icon-close{
@@ -31,18 +32,36 @@ body{
                 color: #000;
                 margin: 16px 0 36px;
             }
+            .nps-details-list::-webkit-scrollbar {
+                width: 5px;
+                height: 6px;
+                background-color: #e2e2e2;
+              }
+            .nps-details-list::-webkit-scrollbar-thumb {
+                background-color: #6e6e6e;
+                height: 20px;
+            }
             .nps-details-list{
                 font-size: 14px;
                 color: #000;
                 letter-spacing: 1.5px;
                 line-height: 24px;
                 margin: 14px 0;
+                overflow-y: auto;
+                height: 200px;
+                p{
+                    padding-bottom:  5px;
+                }
             }
             .nps-details-translate{
                 border-top: 1px solid #000;
                 margin-top: 30px;
                 margin-bottom:  10px; 
-                .nps-details-list{
+                .nps-details-lists{
+                    font-size: 14px;
+                    letter-spacing: 1.5px;
+                    line-height: 24px;
+                    margin: 14px 0;
                     color: #6e6e6e;
                     a{
                         color: #986F38;
@@ -53,6 +72,12 @@ body{
                 }
             }
         }
+    }
+    .font-border:hover{
+        border-bottom: 1px solid #986F38; 
+    }
+    .padding-b-0{
+        padding-bottom: 0;
     }
     .nps-info-lists{
         .nps-info-list{
@@ -115,4 +140,7 @@ body{
             color: #fff;
         }
     }
+}
+.text-weight{
+    font-weight: 800;
 }
