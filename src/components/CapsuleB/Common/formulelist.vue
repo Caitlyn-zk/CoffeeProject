@@ -18,7 +18,16 @@
 
 <script>
 export default {
+    data () {
+        return {
+            dataList: {}
+        }
+    },
+    methods: {
 
+    },
+    mounted () {
+    }
 }
 </script>
 

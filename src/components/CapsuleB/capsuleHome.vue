@@ -66,46 +66,7 @@
                         <!-- 列表头部 -->
                         <div class="nps-list-title">热卖胶囊咖啡</div>
                         <!-- 列表单个 -->
-                        <div class="nps-list-lists">
-                            <div class="nps-lits-conta fl">
-                                <span class="nps-icon-t">新品上市</span>
-                                <div class="nps-cont-a">
-                                    <img src="./img/home06.jpg" />
-                                </div>
-                            </div>
-                            <div class="nps-list-contb fl">
-                                <p class="nps-contb-p">Nordic Black</p>
-                                <p>北欧大杯黑咖啡</p>
-                                <div class="nps-contb-list">
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-c">5</span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                </div>
-                            </div>
-                            <div class="nps-list-contc fl">
-                                <img src="./img/beizi01.png" />
-                                <img src="./img/beizi01.png" />
-                            </div>
-                            <div class="nps-list-contd fl">
-                                <span class="nps-contd-sp">CNY 4.70</span>
-                                <cartList></cartList>
-                            </div>
-                        </div>
                         <caphomeList></caphomeList>
-                        <!-- <caphomeList></caphomeList>
-                        <caphomeList></caphomeList>
-                        <caphomeList></caphomeList>
-                        <div class="nps-list-title">咖啡套装</div>
-                        <caphomeList></caphomeList>
-                        <caphomeList></caphomeList> -->
                     </div>
                 </div>
             </div>
@@ -116,20 +77,15 @@
 <script>
 import caphomeList from './Common/caphomeList'
 import cartList from './Common/cartList'
-
 export default {
     data () {
         return {
-            visible: false,
-            data: {}
+            visible: false
         }
     },
     methods: {
-        getData () {
-        }
     },
     mounted () {
-        this.getData()
     },
     components: {
         caphomeList,
