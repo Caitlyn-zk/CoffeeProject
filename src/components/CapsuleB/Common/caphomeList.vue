@@ -1,6 +1,6 @@
 <template>
     <router-link to="/caplists">
-        <div class="nps-list-lists" v-for="(item, index) in data" :key="index">
+        <div class="nps-list-lists" v-for="(item, index) in dataList" :key="index">
             <div class="nps-lits-conta fl">
                 <span class="nps-icon-t">新品上市</span>
                 <div class="nps-cont-a">
@@ -9,7 +9,7 @@
             </div>
             <div class="nps-list-contb fl">
                 <p class="nps-contb-p">Nordic Black</p>
-                <p>北欧大杯黑咖啡</p>
+                <p>{{item.name}}</p>
                 <div class="nps-contb-list">
                     <span class="into-a"></span>
                     <span class="into-a"></span>
@@ -29,7 +29,7 @@
                 <img src="../img/beizi01.png" />
             </div>
             <div class="nps-list-contd fl">
-                <span class="nps-contd-sp">CNY 4.70</span>
+                <span class="nps-contd-sp">CNY {{item.price}}</span>
                 <cartList></cartList>
             </div>
         </div>
@@ -38,28 +38,27 @@
 
 <script>
 import cartList from './cartList'
+import {capsuleHome} from 'commonjs/Requestaxios'
 export default {
     data () {
         return {
-            data: {}
+            dataList: {}
         }
     },
     methods: {
-        getData () {
-            var that = this
-            this.$axios.post('http://192.168.97.240:3000/addCoffcap')
-            .then(res => {
-                console.log(res.data)
-                that.data = res.data
-            })
-            .catch(res => {
-                console.log(res)
+        getLists () {
+            capsuleHome({
+                success: (res) => {
+                    if (res.status === 200) {
+                        console.log(res.data)
+                        this.dataList = res.data
+                    }
+                }
             })
         }
     },
     mounted () {
-        this.getData()
-        console.log(this.data)
+        this.getLists()
     },
     components: {
         cartList

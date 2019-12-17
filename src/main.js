@@ -12,7 +12,6 @@ Vue.config.productionTip = false
 Vue.prototype.$request = axiosRequest
 Vue.prototype.$get = get
 Vue.prototype.$post = post
-console.log(axiosRequest)
 
 /* eslint-disable no-new */
 new Vue({
