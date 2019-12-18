@@ -8,7 +8,7 @@
           <el-form ref="form">
             <el-form-item class="nps-order-edit-form">
               <div class="nps-order-edit-item">
-                <label class="nps-edit-form-label">我的地址是</label>
+                <label class="nps-edit-form-label">我的配送地址是</label>
                 <el-radio v-model="radio" label="1">个人</el-radio>
                 <el-radio v-model="radio" label="2">公司</el-radio>
               </div>
@@ -126,7 +126,7 @@
         </div>
         <div class="nps-editaddress-bottom clearfix">
           <div class="fl">
-            <router-link to='' class="nps-address-edit-btn btn clearfix">取消</router-link>
+            <router-link to='' class="nps-address-edit-btn btn" v-show="barShow">取消</router-link>
           </div>
           <div class="fr">
             <router-link to="" class="nps-address-edit-btn btn">保存我的信息</router-link>
@@ -141,6 +141,7 @@
 export default {
   data () {
     return {
+      barShow: false,
       radio: '1',
       options: [{
           value: '选项1',
@@ -194,6 +195,9 @@ export default {
 .nps-order-cont {
   background: #fff;
   margin: 0 auto;
+}
+.nps-order-info {
+  padding-top: 0;
 }
 /deep/ .nps-new-address {
   background: #fff;

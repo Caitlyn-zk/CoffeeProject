@@ -34,7 +34,7 @@
             :show-close="true"
             width="60%">
             <div class="">
-              <Editaddress></Editaddress>
+              <Addaddress></Addaddress>
             </div>
           </el-dialog>
         </div>
@@ -85,11 +85,11 @@
       <div class="nps-step-btn-box clearfix">
         <span class="fl nps-step-next clearfix">
           <span class="fl font-14"><i class="el-icon-arrow-left"></i></span>
-          <a @click="Delivery">返回配送</a>
+          <el-button @click="Delivery" disabled>返回配送</el-button>
         </span>
-        <a @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment nps-remove-button">下订单
+        <el-button @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment nps-remove-button" disabled>下订单
           <span class="fr font-16"><i class="el-icon-arrow-right"></i></span>
-        </a>
+        </el-button>
       </div>
     </div>
     <!-- 右边部分 -->
@@ -149,7 +149,7 @@
 <script>
 import Steponeadd from '../Order/shopping-add'
 import Editaddress from 'components/Order/myaddress/comeditAddress'
-// import Addaddress from 'components/Order/myaddress/comaddAddress'
+import Addaddress from 'components/Order/myaddress/comaddAddress'
 export default {
   data () {
     return {
@@ -160,7 +160,8 @@ export default {
   },
   components: {
     Steponeadd,
-    Editaddress
+    Editaddress,
+    Addaddress
   },
   props: {
     changeStep: Function
