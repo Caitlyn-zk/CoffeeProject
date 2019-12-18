@@ -147,15 +147,10 @@ export default new Router({
 			component: Hellp
 		}, {
 			path: '/Hellpdetails',
-			name: 'Hellpdetails',
 			component: Hellpdetails,
 			children: [
 				{
 				path: '/',
-				name: 'Hellpright',
-				component: Hellpright
-			}, {
-				path: '/Hellpright',
 				name: 'Hellpright',
 				component: Hellpright
 			}, {

@@ -1,8 +1,8 @@
 <template>
 	<router-link to="/Details">
-	<div class="nps-title-sping clearfix" :key="Lists" v-for="Lists in machineLists">
+	<div class="nps-title-sping clearfix" :key="id" v-for="(Lists,id) in machineLists">
 		<div class="fl nps-title-sping-img">
-			<img :src="Lists.img" class="image"  />
+			<img :src="Lists.img" alt="列表图片" />
 		</div>
 		<div class="fl nps-sping-jiao">
 			<div class="nps-sping-font">{{Lists.name}}</div>
@@ -14,10 +14,10 @@
 			</div>
 		</div>
 		<div class="fl nps-sping-two">
-			<div class="nps-btn-lijian fr">立减100元</div>
-			<div class="text-r nps-sping-jiage">{{Lists.price}}</div>
+			<div class="nps-btn-lijian fr"><span>立减</span><span>100</span><span>元</span></div>
+			<div class="text-r nps-sping-jiage"><span>CNY</span><span class="margin-l-5">{{Lists.price}}</span></div>
 			<div class="text-r font-12 cl-65">售价</div>
-			<div class="text-r font-12 cl-65 text-del">{{Lists.discountPrice}}</div>
+			<div class="text-r font-12 cl-65 text-del"><span>CNY</span><span class="margin-l-5">{{Lists.discountPrice}}</span></div>
 		</div>
 		<div class="fl margin-t-25 nps-margin">
 			<a class="nps-btn-xijie">查看细节&amp;购买</a>
