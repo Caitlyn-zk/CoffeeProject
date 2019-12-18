@@ -160,7 +160,7 @@ export default {
         details (data) {
             var divset = document.getElementsByClassName('bt')
 			// 使用 for in循环遍历所有的组
-			for (var index = 0; index < divset.length; index++) {
+			for (var i = 0; i < divset.length; i++) {
 				divset[data].style.display = 'block'
             }
         },

@@ -38,7 +38,7 @@
 
 <script>
 import cartList from './cartList'
-import {capsuleHome} from 'commonjs/Requestaxios'
+import {MachineLists} from 'commonjs/Requestaxios'
 export default {
     data () {
         return {
@@ -47,7 +47,7 @@ export default {
     },
     methods: {
         getLists () {
-            capsuleHome({
+            MachineLists({
                 success: (res) => {
                     if (res.status === 200) {
                         console.log(res.data)
