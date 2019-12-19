@@ -1,0 +1,49 @@
+// 登陆弹窗的样式表
+.nps-login {
+  margin-top: -18px;
+  width: 288px;
+  height: 500px;
+  background-color: white;
+  line-height: 36px;
+  padding: 15px;
+  .nps-login-form{
+    border-bottom: 1px solid #c3c3c3;
+    padding-bottom: 30px;
+  }
+  .nps-logintxt {
+    font-weight: bolder;
+  }
+  .nps-logon-form-item {
+    position: relative;
+    .nps-login-label {
+      color: #656565;
+      font-size: 18px;
+      position: absolute;
+      bottom: 5px;
+      z-index: 2;
+      left: 15px;
+    }
+  }
+  .nps-forget-txt{
+    color: sienna;
+  }
+  .nps-login-input{
+    /deep/input {
+      height: 50px;
+      line-height: 24px;
+      padding-top: 15px;
+      outline: none;
+    }
+  }
+  .nps-login-btn {
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-color: black;
+    &:hover{
+      background-color: black;
+      color: white;
+      border-color: black;
+    }
+  }
+}
