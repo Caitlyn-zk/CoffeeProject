@@ -8,7 +8,9 @@
       <el-form class="nps-editmachines-form" label-width="80px">
         <div class="nps-order-edit-item">
           <label class="nps-edit-form-label nps-editmachines-label">咖啡机序列号:</label>
-          <input class="nps-edit-input nps-editmachines-input" type="text"/>
+          <el-tooltip class="item" effect="dark" content="咖啡机序列号" placement="right-start">
+            <input class="nps-edit-input nps-editmachines-input" type="text"/>
+          </el-tooltip>
           <div class="nps-editmachines-inspect">
             <a @click="dialogVisible = true" class="nps-editmachines-inspect-btn">帮我查找我的序列号</a>
             <el-dialog
@@ -34,24 +36,28 @@
       <el-form class="margin-tb-40" label-width="80px">
         <div class="nps-order-edit-item">
           <label class="nps-edit-form-label nps-editmachines-label">购买日期*</label>
-          <el-date-picker
-            type="dates"
-            v-model="value1"
-            placeholder="选择一个或多个日期">
-          </el-date-picker>
+          <el-tooltip class="item" effect="dark" content="购买日期" placement="right-start">
+            <el-date-picker
+              type="dates"
+              v-model="value1"
+              placeholder="选择一个或多个日期">
+            </el-date-picker>
+          </el-tooltip>
         </div>
       </el-form>
       <el-form class="nps-editmachines-form" label-width="80px">
         <div class="nps-order-edit-item">
           <label class="nps-edit-form-label nps-editmachines-label">您是如何获得您的咖啡机的？*</label>
-          <el-select class="nps-editmachines-select" v-model="value" placeholder="请选择">
-            <el-option
-              v-for="item in options"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value">
-            </el-option>
-          </el-select>
+          <el-tooltip class="item" effect="dark" content="咖啡机获得方式" placement="right-start">
+            <el-select class="nps-editmachines-select" v-model="value" placeholder="请选择">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+              </el-option>
+            </el-select>
+          </el-tooltip>
         </div>
       </el-form>
     </div>
