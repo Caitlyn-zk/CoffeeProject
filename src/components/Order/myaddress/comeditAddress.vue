@@ -126,7 +126,7 @@
         </div>
         <div class="nps-editaddress-bottom clearfix">
           <div class="fl">
-            <router-link to='' class="nps-address-edit-btn btn clearfix">取消</router-link>
+            <router-link to='' class="nps-address-edit-btn btn">取消</router-link>
           </div>
           <div class="fr">
             <router-link to="" class="nps-address-edit-btn btn">保存我的信息</router-link>
@@ -194,6 +194,9 @@ export default {
 .nps-order-cont {
   background: #fff;
   margin: 0 auto;
+}
+.nps-order-info {
+  padding-top: 0;
 }
 /deep/ .nps-new-address {
   background: #fff;

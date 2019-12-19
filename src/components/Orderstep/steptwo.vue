@@ -12,10 +12,22 @@
           <p class="nps-step-address-info">中国/China</p>
           <p class="nps-step-address-info margin-tb-10">当前设置为你的默认地址</p>
           <div class="nps-step-next">
-            <span @click="dialogVisible = false">
-              <a>编辑地址</a>
-              <span><i class="el-icon-arrow-right"></i></span>
+            <span class="fl nps-step-next clearfix">
+              <a @click="dialogVisible1 = true">编辑地址</a>
+              <i class="el-icon-arrow-right"></i>
             </span>
+            <el-dialog
+              :visible="dialogVisible1"
+              :show-close="true"
+              :close-on-click-modal="true"
+              width="60%">
+              <div class="">
+                <Editaddress></Editaddress>
+              </div>
+              <span slot="footer" class="dialog-footer">
+                  <el-button @click="dialogVisible = false">取 消</el-button>
+                </span>
+            </el-dialog>
           </div>
         </div>
         <div class="fr padding-r-40 padding-b-20">
@@ -49,6 +61,7 @@
               </div>
               <el-dialog
                 :visible="dialogVisible"
+                :before-close="handleDialogClose"
                 :show-close="true"
                 width="60%">
                 <div class="text-center">
@@ -133,12 +146,13 @@
 
 <script>
 import Steponeadd from '../Order/shopping-add'
-import Editaddress from 'components/Order/myaddress/editAddress'
+import Editaddress from 'components/Order/myaddress/comeditAddress'
 import Addaddress from 'components/Order/myaddress/comaddAddress'
 export default {
   data () {
     return {
       dialogVisible: false,
+      dialogVisible1: false,
       dialogVisible2: false
     }
   },
@@ -151,6 +165,13 @@ export default {
     changeStep: Function
   },
   methods: {
+    handleDialogClose (done) {
+      // this.$confirm('确认关闭？')
+      //   .then(_ => {
+      //     done()
+      //   })
+      //   .catch(_ => {})
+    },
     Returncart () {
       this.changeStep(1)
     },

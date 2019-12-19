@@ -18,6 +18,7 @@ import Addmachines from '@/components/Order/mymachines/addmachines'
 import Editmachines from '@/components/Order/mymachines/editmachines'
 import Alerts from '@/components/Order/alerts'
 import Fondness from '@/components/Order/fondness'
+import Orderstep from '@/components/Orderstep/step'
 import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
@@ -69,6 +70,10 @@ export default new Router({
       component: Order,
       children: [
         {
+          path: '/',
+          name: 'Myorder',
+          component: Myorder
+        }, {
           path: '/order/myorder',
           name: 'Myorder',
           component: Myorder
@@ -111,6 +116,10 @@ export default new Router({
         }
       ]
     }, {
+      path: '/orderstep',
+      name: 'Orderstep',
+      component: Orderstep
+    }, {
       path: '/Details',
       name: 'Details',
       component: Details
@@ -138,15 +147,10 @@ export default new Router({
 			component: Hellp
 		}, {
 			path: '/Hellpdetails',
-			name: 'Hellpdetails',
 			component: Hellpdetails,
 			children: [
 				{
 				path: '/',
-				name: 'Hellpright',
-				component: Hellpright
-			}, {
-				path: '/Hellpright',
 				name: 'Hellpright',
 				component: Hellpright
 			}, {
