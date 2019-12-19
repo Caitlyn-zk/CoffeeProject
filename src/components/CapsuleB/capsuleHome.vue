@@ -45,10 +45,25 @@
                                 <span>强度</span>
                                 <ul class="clearfix">
                                     <li>
-                                        <a class="nps-pop-a">1</a>
+                                        <a class="nps-pop-b">1</a>
                                     </li>
                                     <li>
                                         <a class="nps-pop-b">2</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">3</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">4</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">5</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">6</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">7</a>
                                     </li>
                                 </ul>
                                 <span>咖啡香调</span>
@@ -66,7 +81,32 @@
                         <!-- 列表头部 -->
                         <div class="nps-list-title">热卖胶囊咖啡</div>
                         <!-- 列表单个 -->
-                        <caphomeList></caphomeList>
+                        <!-- <caphomeList></caphomeList> -->
+                        <div class="nps-list-lists" v-for="(item, index) in dataList" :key="index">
+                            <div class="nps-lits-conta fl">
+                                <span class="nps-icon-t">新品上市</span>
+                                <div class="nps-cont-a">
+                                    <img :src="url + JSON.parse(item.img)[0] "/>
+                                </div>
+                            </div>
+                            <div class="nps-list-contb fl">
+                                <p class="nps-contb-p">{{item.name}}</p>
+                                <p>{{item.title}}</p>
+                                <div class="nps-contb-list">
+                                    <span class="into-a" v-for="(syl, index) in (item.strength)" :key="index"></span>
+                                    <span class="into-c">{{item.strength}}</span>
+                                    <!-- <span class="into-b"></span> -->
+                                </div>
+                            </div>
+                            <div class="nps-list-contc fl">
+                                <img src="./img/beizi01.png" />
+                                <img src="./img/beizi01.png" />
+                            </div>
+                            <div class="nps-list-contd fl">
+                                <span class="nps-contd-sp">CNY {{item.price}}</span>
+                                <cartList></cartList>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,15 +117,29 @@
 <script>
 import caphomeList from './Common/caphomeList'
 import cartList from './Common/cartList'
+import {capsuleHome} from 'commonjs/Requestaxios'
 export default {
     data () {
         return {
-            visible: false
+            visible: false,
+            dataList: {},
+            url: 'http://192.168.97.240:3000/'
         }
     },
     methods: {
+        getLists () {
+            capsuleHome({
+                success: (res) => {
+                    if (res.status === 200) {
+                        console.log(res.data)
+                        this.dataList = res.data
+                    }
+                }
+            })
+        }
     },
     mounted () {
+        this.getLists()
     },
     components: {
         caphomeList,

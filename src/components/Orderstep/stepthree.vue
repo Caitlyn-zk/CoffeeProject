@@ -85,9 +85,9 @@
       <div class="nps-step-btn-box clearfix">
         <span class="fl nps-step-next clearfix">
           <span class="fl font-14"><i class="el-icon-arrow-left"></i></span>
-          <el-button @click="Delivery" disabled>返回配送</el-button>
+          <a @click="Delivery" disabled>返回配送</a>
         </span>
-        <el-button @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment nps-remove-button" disabled>下订单
+        <el-button @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment" disabled>下订单
           <span class="fr font-16"><i class="el-icon-arrow-right"></i></span>
         </el-button>
       </div>
