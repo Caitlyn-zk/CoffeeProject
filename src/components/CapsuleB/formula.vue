@@ -20,7 +20,6 @@
             <div class="nps-middle-cont clearfix">
                 <router-link v-for="(item,index) in count" :key="index" to="/datai">
                     <List></List>
-                    <List></List>
                 </router-link>
             </div>
             <div class="nps-middle-more">
@@ -42,22 +41,26 @@ export default {
         return {
             show: true,
             pick: false,
-            count: [List]
+            count: [List],
+            timer: null
         }
     },
     methods: {
         showDD () {
             this.show = !this.show
             this.pick = !this.pick
-            this.pick = setInterval(() => {
+            this.timer = setInterval(() => {
                 this.pick = false
                 this.show = true
+                this.count.push({})
             }, 1000)
-            this.count.push({})
+            this.$once('hook:beforeDestroy', () => {
+                clearInterval(timer)
+            })
         }
     },
-    beforeDestrioy () {
-        clearInterval(this.pick)
+    beforeDestroy () {
+        clearInterval(this.timer)
     },
     components: {
         Bottom,
