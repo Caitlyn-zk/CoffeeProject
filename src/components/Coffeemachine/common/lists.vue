@@ -1,16 +1,15 @@
 <template>
 	<router-link to="/Details">
-	<div class="nps-title-sping clearfix" :key="id" v-for="(Lists,id) in machineLists">
+	<div class="nps-title-sping clearfix" :key="index" v-for="(Lists,index) in machineLists">
 		<div class="fl nps-title-sping-img">
-			<img :src="Lists.img" alt="列表图片" />
+			<img :src="url + JSON.parse(Lists.img)[0]" alt="列表图片" />
 		</div>
 		<div class="fl nps-sping-jiao">
 			<div class="nps-sping-font">{{Lists.name}}</div>
-			<div class="nps-sping-font1 overflow">体积小，流线造型，色彩多样。Inissia能够确保机器高使用效率以及</div>
+			<div class="nps-sping-font1 overflow">{{Lists.manual}}</div>
 			<div class="nps-sping-color clearfix">
 				<div class="fl nps-color">可选颜色</div>
-				<div class="fl nps-color-yuan cl-green"></div>
-				<div class="fl nps-color-yuan cl-grey"></div>
+				<div class="fl nps-color-yuan" :class="sstt[index]"></div>
 			</div>
 		</div>
 		<div class="fl nps-sping-two">
@@ -31,7 +30,9 @@ import { MachineLists } from 'commonjs/Requestaxios'
 export default {
 	data () {
 		return {
-			machineLists: {}
+			machineLists: {},
+			url: 'http://192.168.97.240:3000/',
+			sstt: ['cl-black', 'cl-grey']
 		}
 	},
 	methods: {
