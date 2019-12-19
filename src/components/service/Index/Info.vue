@@ -13,8 +13,8 @@
                             <div class="col-xs-12 fl padding-lr-10 clearfix font-14 padding-b-30">
                                 <ul>
                                     <li>
-                                        <el-form-item label="称谓*" prop="value">
-                                            <el-select v-model="ruleForm.value">
+                                        <el-form-item label="称谓*"  prop="value">
+                                            <el-select name="value" v-model="ruleForm.value">
                                                 <el-option
                                                 v-for="item in selectList"
                                                 :key="item.value"
@@ -24,13 +24,13 @@
                                             </el-select>
                                         </el-form-item>
                                         <el-form-item label="姓名*" prop="name">
-                                            <el-input type="text" v-model="ruleForm.name" autocomplete="off"></el-input>
+                                            <el-input type="text" name="name" v-model="ruleForm.name" autocomplete="off"></el-input>
                                         </el-form-item>
                                         <el-form-item label="姓氏*" prop="surname">
-                                            <el-input v-model="ruleForm.surname"></el-input>
+                                            <el-input name="surname" v-model="ruleForm.surname"></el-input>
                                         </el-form-item>
                                         <el-form-item label="会员编号*" prop="vip">
-                                            <el-input v-model="ruleForm.vip"></el-input>
+                                            <el-input name="vip" v-model="ruleForm.vip"></el-input>
                                         </el-form-item>
                                     </li>
                                 </ul>
@@ -39,7 +39,7 @@
                                 <ul>
                                     <li>
                                         <el-form-item label="选着您的地点" prop="SelectValue">
-                                            <el-select v-model="ruleForm.areaCode" placeholder=" ">
+                                            <el-select name="areaCode" v-model="ruleForm.areaCode" placeholder=" ">
                                                 <el-option
                                                 v-for="item in PlaceList"
                                                 :key="item.areaCode"
@@ -49,13 +49,13 @@
                                             </el-select>
                                           </el-form-item>
                                         <el-form-item label="电子邮件地址*" prop="email">
-                                            <el-input v-model="ruleForm.email"></el-input>
+                                            <el-input name="email" v-model="ruleForm.email"></el-input>
                                         </el-form-item>
                                         <el-form-item label="电话号码*" prop="call">
-                                            <el-input v-model.number="ruleForm.call"></el-input>
+                                            <el-input name="call" v-model.number="ruleForm.call"></el-input>
                                         </el-form-item>
                                         <el-form-item label="邮政编码*" prop="Office">
-                                            <el-input v-model.number="ruleForm.Office"></el-input>
+                                            <el-input name="Office" v-model.number="ruleForm.Office"></el-input>
                                         </el-form-item>
                                     </li>
                                 </ul>
@@ -66,7 +66,7 @@
                                 <ul>
                                     <li>
                                         <el-form-item label="消息类别*">
-                                            <el-select v-model="ruleForm.infos" placeholder=" ">
+                                            <el-select name="infos" v-model="ruleForm.infos" placeholder=" ">
                                                 <el-option
                                                 v-for="item in infoList"
                                                 :key="item.infos"
@@ -76,7 +76,7 @@
                                             </el-select>
                                         </el-form-item>
                                         <el-form-item label="选择回复的语言*">
-                                            <el-select v-model="ruleForm.values" placeholder=" ">
+                                            <el-select name="values" v-model="ruleForm.values" placeholder=" ">
                                                 <el-option
                                                 v-for="item in languageList"
                                                 :key="item.values"
@@ -87,28 +87,28 @@
                                         </el-form-item>
                                         <el-form-item label="您使用的是什么样的胶囊？*" prop="">
                                             <p class="margin-b-10">
-                                                <el-radio v-model="ruleForm.radio" label="1">
+                                                <el-radio name="radio" v-model="ruleForm.radio" label="1">
                                                     <span class="margin-l-10 iconfont icon-shoutibao"></span>
                                                     <span>Nespresso经典</span>
                                                 </el-radio>
                                             </p>
                                             <p  class="margin-b-10">
-                                                <el-radio v-model="ruleForm.radio" label="2">
+                                                <el-radio name="radio" v-model="ruleForm.radio" label="2">
                                                     <span class="margin-l-10 iconfont icon-xizhuang"></span>
                                                     <span>Nespresso专业</span>
                                                 </el-radio>
                                             </p>
                                             <p  class="margin-b-10">
-                                                <el-radio v-model="ruleForm.radio" label="3">
+                                                <el-radio name="radio" v-model="ruleForm.radio" label="3">
                                                     <span class="margin-l-30">不知道</span>
                                                 </el-radio>
                                             </p>
                                         </el-form-item>
                                         <el-form-item label="消息主题*" prop="InfoIndex" class="form-control IndexForm">
-                                            <el-input v-model="ruleForm.InfoIndex"></el-input>
+                                            <el-input name="InfoIndex" v-model="ruleForm.InfoIndex"></el-input>
                                         </el-form-item>
                                         <el-form-item label="输入信息*" prop="desc" class="form-control IndexForm">
-                                            <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+                                            <el-input name="desc" type="textarea" v-model="ruleForm.desc"></el-input>
                                         </el-form-item>
                                         <div class="clearfix">
                                             <div class="info-list fl">
@@ -116,7 +116,7 @@
                                                 <span class="text-brown">*</span>
                                             </div>
                                             <div class="fl info-list-input">
-                                                <input class=""  type="file"/>
+                                                <input name="file" class=""  type="file"/>
                                             </div>
                                         </div>
                                         <div class="nps-from-info font-12">
@@ -146,6 +146,7 @@ import Tips from '../Tips'
 import Support from '../Support'
 import Footer from '../Footer'
 import {place, select, info, language} from '../js/info'
+import {addInfo} from 'commonjs/Requestaxios'
 export default {
     data () {
         // 三个参数
@@ -238,10 +239,6 @@ export default {
                 desc: [
                     { required: true, message: '请输入内容', trigger: 'blur' }
                 ],
-                vip: [
-                    { required: true, message: '请输入会员编号', trigger: 'blur' },
-                    { min: 5, max: 10, message: '长度在 5 到 10 个字符', trigger: 'blur' }
-                ],
                 InfoIndex: [
                     { required: true, message: '请输入主题', trigger: 'blur' }
                 ]
@@ -256,16 +253,49 @@ export default {
     methods: {
       submitForm (formName) {
         this.$refs[formName].validate((valid) => {
-          if (valid) {
-            this.$message({
-                showClose: true,
-                message: '提交成功',
-                type: 'success'
-            })
-          } else {
-            this.$message.error('您还没有填完哦！')
-            return false
-          }
+            console.log(valid)
+            if (valid) {
+                // this.$message({
+                //     showClose: true,
+                //     message: '提交成功',
+                //     type: 'success'
+                // })
+                let addCoffeeCapForm = document.querySelector('.demo-ruleForm')
+                let addCoffeeCapFormData = new FormData(addCoffeeCapForm)
+                addCoffeeCapFormData.append('se', 1)
+                console.log(addCoffeeCapForm)
+                // 请求表的数据
+                addInfo({
+                    data: addCoffeeCapFormData,
+                    error: () => {
+                        // this.loginLoading = false
+                        // console.log(1232)
+                    },
+                    success: (res) => {
+                        if (res.status === 200) {
+                            console.log(res)
+                            console.log(res.data.id)
+                            this.$message({
+                                message: '数据发送成功',
+                                showClose: true,
+                                duration: 1000,
+                                onClose: () => {
+                                }
+                            })
+                        } else {
+                            this.$message({
+                                message: res.message,
+                                type: 'error',
+                                showClose: true,
+                                duration: 3000
+                            })
+                        }
+                    }
+                })
+            } else {
+                this.$message.error('您还没有填完哦！')
+                return false
+            }
         })
       },
       resetForm (formName) {

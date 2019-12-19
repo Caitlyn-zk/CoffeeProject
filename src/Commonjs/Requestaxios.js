@@ -99,6 +99,19 @@ let MachineLists = (params) => {
 		params.error(error)
 	})
 }
+// 添加个人用户信息
+let addInfo = (params) => {
+	axiosRequest('infor', 'post', params.data, {
+		headers: { 'Content-Type': 'multipart/form-data' }
+	}).then(function (res) {
+		params.success(res)
+		console.log(res)
+		console.log('res: ', res)
+	}).catch((error) => {
+		console.log(error)
+		params.error(error)
+	})
+}
 export {
 	// loginRequest,
 	// codeRequest,
@@ -109,5 +122,6 @@ export {
 	// updatecoffGoodsRequest,
 	// aromaGoodsRequest,
 	// UserRequest,
-	MachineLists
+	MachineLists,
+	addInfo
 }
