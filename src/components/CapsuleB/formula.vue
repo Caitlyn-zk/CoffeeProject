@@ -55,7 +55,7 @@ export default {
                 this.count.push({})
             }, 1000)
             this.$once('hook:beforeDestroy', () => {
-                clearInterval(timer)
+                clearInterval(this.timer)
             })
         }
     },
