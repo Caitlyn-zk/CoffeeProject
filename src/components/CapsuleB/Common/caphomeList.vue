@@ -4,24 +4,16 @@
             <div class="nps-lits-conta fl">
                 <span class="nps-icon-t">新品上市</span>
                 <div class="nps-cont-a">
-                    <img src="../img/home06.jpg" />
+                    <img :src="url + JSON.parse(item.img)[0] "/>
                 </div>
             </div>
             <div class="nps-list-contb fl">
-                <p class="nps-contb-p">Nordic Black</p>
-                <p>{{item.name}}</p>
+                <p class="nps-contb-p">{{item.name}}</p>
+                <p>{{item.title}}</p>
                 <div class="nps-contb-list">
-                    <span class="into-a"></span>
-                    <span class="into-a"></span>
-                    <span class="into-a"></span>
-                    <span class="into-a"></span>
-                    <span class="into-a"></span>
-                    <span class="into-c">5</span>
-                    <span class="into-b"></span>
-                    <span class="into-b"></span>
-                    <span class="into-b"></span>
-                    <span class="into-b"></span>
-                    <span class="into-b"></span>
+                    <span class="into-a" v-for="(syl, index) in (item.strength)" :key="index"></span>
+                    <span class="into-c">{{item.strength}}</span>
+                    <!-- <span class="into-b"></span> -->
                 </div>
             </div>
             <div class="nps-list-contc fl">
@@ -38,16 +30,17 @@
 
 <script>
 import cartList from './cartList'
-import {MachineLists} from 'commonjs/Requestaxios'
+import {capsuleHome} from 'commonjs/Requestaxios'
 export default {
     data () {
         return {
-            dataList: {}
+            dataList: {},
+            url: 'http://192.168.97.240:3000/'
         }
     },
     methods: {
         getLists () {
-            MachineLists({
+            capsuleHome({
                 success: (res) => {
                     if (res.status === 200) {
                         console.log(res.data)

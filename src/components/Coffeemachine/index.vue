@@ -51,28 +51,15 @@
 							model="visible">
 							<div class="nps-vis">
 								<div class="nps-title-screen-color">颜色</div>
-								<div class="clearfix">
-									<div class="nps-yuan cl-white fl" title="white">
-										<div class="nps-yuanyuan dis"></div>
-									</div>
-									<div class="nps-yuan cl-grey fl" title="grey">
-										<div class="nps-yuanyuan dis"></div>
-									</div>
-									<div class="nps-yuan cl-red fl" title="red">
-										<div class="nps-yuanyuan dis"></div>
-									</div>
-									<div class="nps-yuan cl-green fl" title="green">
-										<div class="nps-yuanyuan dis"></div>
-									</div>
-									<div class="nps-yuan cl-brown fl" title="brown">
-										<div class="nps-yuanyuan dis"></div>
-									</div>
-									<div class="nps-yuan cl-black fl" title="black">
-										<div class="nps-yuanyuan dis"></div>
-									</div>
-									<div class="nps-yuan cl-silver fl" title="silver">
-										<div class="nps-yuanyuan dis"></div>
-									</div>
+								<div class="clearfix footer-tab">
+									<div class="tab-item fl margin-l-5 cl-red" title="red"></div>
+									<div class="tab-item fl margin-l-5 cl-white" title="white"></div>
+									<div class="tab-item fl margin-l-5 cl-black" title="black"></div>
+									<div class="tab-item fl margin-l-5 cl-silver" title="silver"></div>
+									<div class="tab-item fl margin-l-5 cl-brown" title="brown"></div>
+									<div class="tab-item fl margin-l-5 cl-green" title="green"></div>
+									<div class="tab-item fl margin-l-5 cl-grey" title="grey"></div>
+									<div class="tab-item fl margin-l-5 cl-crimson" title="crimson"></div>
 								</div>
 							</div>
 							<el-button slot="reference">筛选</el-button>
@@ -96,15 +83,28 @@ export default {
 		Title,
 		Spping
   },
+	mounted () {
+		let _this = this
+		document.querySelector('.footer-tab').addEventListener('click', function (e) {
+			let target = e.target
+			let nodeList = e.target.parentNode.children
+			let targetIndex = _this.tabIndex(target, nodeList) + 1
+			console.log(targetIndex)
+		})
+	},
   methods: {
 		open () {
-		this.$alert('<div class="nps-font1">全场机器,最高可减400元。</div><div class="nps-font2">● 全场机器，最高可减400元。</div><div class="nps-font2">● 活动时间：2019年11月1日至2019年12月31日。</div><div class="nps-font2">● 每笔订单中，该活动最多可享受一次优惠。活动期间，每位顾客最多可享受3次优惠。</div><div class="nps-font2">● 符合活动机制，结账时折扣自动生效。</div><div class="nps-font2">● 如发生退款，赠品需一并退还。</div>', {
-		dangerouslyUseHTMLString: true
-	})
-	},
-	bnt () {
-		console.log(111)
-	}
+			this.$alert('<div class="nps-font1">全场机器,最高可减400元。</div><div class="nps-font2">● 全场机器，最高可减400元。</div><div class="nps-font2">● 活动时间：2019年11月1日至2019年12月31日。</div><div class="nps-font2">● 每笔订单中，该活动最多可享受一次优惠。活动期间，每位顾客最多可享受3次优惠。</div><div class="nps-font2">● 符合活动机制，结账时折扣自动生效。</div><div class="nps-font2">● 如发生退款，赠品需一并退还。</div>', {
+			dangerouslyUseHTMLString: true
+			})
+		},
+		tabIndex (target, nodeList) {
+			for (let i = 0; i < nodeList.length; i++) {
+				if (target === nodeList[i]) {
+					return i
+				}
+			}
+		}
   }
 }
 </script>

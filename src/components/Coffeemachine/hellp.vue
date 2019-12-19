@@ -4,7 +4,7 @@
 		<div class="nps-hellp-title">
 			<div class="content">
 				<div class="text-center">
-					<p class="nps-font-cl">咖啡机保养及维护</p>
+					<p class="nps-font-cl">咖啡机保养及维护2222</p>
 					<p class="font-16 nps-font-p">Nespresso会员俱乐部提供详细的产品使用说明与入门指南，协助您使用咖啡机及奶泡机。请在以下产品中选择您的机型，即可查询相关信息。</p>
 					<div class="nps-input">
 						<input type="text" v-model="search" placeholder="输入机器名字或者序列号"/>
@@ -51,6 +51,14 @@ export default {
 			// 存放输入的文字
 			search: '',
 			list: [
+			{msg: 'aaa1'},
+			{msg: 'bbb2'},
+			{msg: 'ccc1'},
+			{msg: 'ddd2'},
+			{msg: 'aaa1'},
+			{msg: 'bbb2'},
+			{msg: 'ccc1'},
+			{msg: 'ddd2'},
 			{msg: 'aaa1'},
 			{msg: 'bbb2'},
 			{msg: 'ccc1'},

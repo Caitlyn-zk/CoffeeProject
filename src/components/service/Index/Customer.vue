@@ -58,7 +58,7 @@
                         <div class="Order-pushed Order-pushed-top">
                             <img  src="../img/xc-suo.png"/>
                             <p class="font-16 margin-tb-10">在线订购</p>
-                            <a>现在订购咖啡 <span class="el-icon-arrow-right"></span></a>
+                            <router-link to="/">现在订购咖啡 <span class="el-icon-arrow-right"></span></router-link>
                         </div>
                         <div class="Order-pushed Order-pushed-bottom">
                             <p class="iconfont icon-002dianhua"></p>
@@ -212,19 +212,19 @@
                                             <img  src="../img/xc-suo.png" style="width: 109px; height: 109px;"/>
                                             <h2 class=" font-24 margin-tb-10 text-white">订购</h2>
                                             <ul class="clearfix show-content-list">
-                                                <li class="active">
+                                                <li @click="cur=0" :class="{active:cur==0}">
                                                     <span class="iconfont icon-suo"></span>
                                                     <p>线上</p>
                                                 </li>
-                                                <li>
+                                                <li @click="cur=1" :class="{active:cur==1}">
                                                     <span class="iconfont icon-shouji"></span>
                                                     <p>手机订购</p>
                                                 </li>
-                                                <li>
+                                                <li @click="cur=2" :class="{active:cur==2}">
                                                     <span class="iconfont icon-8"></span>
                                                     <p>精品店订购</p>
                                                 </li>
-                                                <li  class="nps-list-content">
+                                                <li  class="nps-list-content" @click="cur=3" :class="{active:cur==3}">
                                                     <span class="iconfont icon-002dianhua"></span>
                                                     <p>电话订购</p>
                                                 </li>
@@ -275,11 +275,11 @@
                                         <p class="iconfont icon-yunshupeisong text-white font-84"></p>
                                         <h2 class=" font-24 margin-tb-10 text-white">配送</h2>
                                         <ul class="clearfix show-content-list">
-                                            <li class="active">
+                                            <li @click="cur=4" :class="{active:cur==4}">
                                                 <span class="iconfont icon-yunshupeisong"></span>
                                                 <p>标准配送</p>
                                             </li>
-                                            <li>
+                                            <li @click="cur=5" :class="{active:cur==5}">
                                                 <span class="iconfont icon-wuliupeisong-"></span>
                                                 <p>两个工作日快速到货</p>
                                             </li>
@@ -313,15 +313,15 @@
                                         <p class="iconfont icon-yunshupeisong text-white font-84"></p>
                                         <h2 class=" font-24 margin-tb-10 text-white">配送</h2>
                                         <ul class="clearfix show-content-list">
-                                            <li class="active">
+                                            <li @click="cur=6" :class="{active:cur==6}">
                                                 <span class="iconfont icon-weibiaoti-"></span>
                                                 <p>咖啡机技术支持</p>
                                             </li>
-                                            <li>
+                                            <li @click="cur=7" :class="{active:cur==7}">
                                                 <span class="iconfont icon-fuwu"></span>
                                                 <p>24/7客户服务</p>
                                             </li>
-                                            <li>
+                                            <li @click="cur=8" :class="{active:cur==8}">
                                                 <span class="iconfont icon-weixiu"></span>
                                                 <p>维修服务/租赁</p>
                                             </li>
@@ -363,7 +363,7 @@
                                         <p class="iconfont icon-huishou text-white font-84"></p>
                                         <h2 class=" font-24 margin-tb-10 text-white">回收</h2>
                                         <ul class="clearfix show-content-list">
-                                            <li class="active">
+                                            <li @click="cur=9" :class="{active:cur==9}">
                                                 <span class="iconfont icon-huishou"></span>
                                                 <p>回收点</p>
                                             </li>
@@ -398,11 +398,11 @@
                                         <p class="iconfont icon-boshimao1 text-white font-84"></p>
                                         <h2 class=" font-24 margin-tb-10 text-white">咖啡品鉴课</h2>
                                         <ul class="clearfix show-content-list">
-                                            <li class="active">
+                                            <li  @click="cur=10" :class="{active:cur==10}">
                                                 <span class="iconfont icon-boshimao1"></span>
                                                 <p>咖啡品鉴课</p>
                                             </li>
-                                            <li>
+                                            <li @click="cur=11" :class="{active:cur==11}">
                                                 <span class="iconfont icon-icon-test"></span>
                                                 <p>咖啡品鉴</p>
                                             </li>
@@ -461,7 +461,8 @@ export default {
             service: false,
             Delivery: false,
             recovery: false,
-            Taste: false
+            Taste: false,
+            cur: 0
         }
     },
     components: {

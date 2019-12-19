@@ -72,8 +72,7 @@
                 <template slot="title">
                   {{item.list}}
                 </template>
-                <p>我们的咖啡专员会全天候为您挑选咖啡提供建议，并根据您的需求确保订购和配送的便利。您可以拨打我们的免费电话，或随时通过网络订购，也可以来访Nespresso店铺。
-购买任何咖啡机或不少于100粒咖啡粉囊，即可享受免费配送服务，优惠全年有效。</p>
+                <div v-html="item.content"></div>
                 <div class="nps-details-translate"><p class="nps-details-list">Did this answer your question? If not, <a>ask us your question</a>, we will be pleased to help you.</p></div>
               </el-collapse-item>
             </el-collapse>
