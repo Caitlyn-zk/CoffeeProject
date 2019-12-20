@@ -7,7 +7,9 @@
 					<div class="text-center font-14 padding-b-10">两年联保，维修提供免费替代机</div>
 					<div class="nps-hover-item1">
 						<span class="text-center padding-b-10 font-14">你无需担心没有咖啡的日子，美好咖啡体验不断</span>
-						<a class="nps-hover-a padding-b-10">了解更多</a>
+						<router-link to="/repair" class="nps-hover-a padding-b-10">
+						了解更多
+						</router-link>
 					</div>
 				</div>
 			</li>
@@ -37,7 +39,7 @@
 					<div class="text-center font-14 padding-b-10">400 1200 600</div>
 					<div class="nps-hover-item1">
 						<span class="text-center padding-b-10 font-14">咖啡挑选建议、咖啡机诊断与技术支持。</span>
-						<a class="nps-hover-a padding-b-10">了解更多</a>
+						<router-link to="/service" class="nps-hover-a padding-b-10">了解更多</router-link>
 					</div>
 				</div>
 			</li>
