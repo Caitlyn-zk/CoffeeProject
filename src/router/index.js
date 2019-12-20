@@ -18,6 +18,7 @@ import Addmachines from '@/components/Order/mymachines/addmachines'
 import Editmachines from '@/components/Order/mymachines/editmachines'
 import Alerts from '@/components/Order/alerts'
 import Fondness from '@/components/Order/fondness'
+import Orderstep from '@/components/Orderstep/step'
 import info from '@/components/service/Index/Info'
 import Contact from '@/components/service/Index/Contact'
 import Datai from '@/components/CapsuleB/detailsB'
@@ -27,7 +28,7 @@ import Hellp from '@/components/Coffeemachine/hellp'
 import Hellpdetails from '@/components/Coffeemachine/hellp-details'
 import Formula from '@/components/CapsuleB/formula'
 import Problem from '@/components/service/Index/problem'
-import Active from '@/components/service/aa.vue'
+import Active from '@/components/service/glossary'
 import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
 import Caplists from '@/components/CapsuleB/capsuleLists'
@@ -38,9 +39,11 @@ import Best from '@/components/Coffeemachine/best-sellers'
 import Seekfit from '@/components/CapsuleB/seekfit'
 import Recovery from '@/components/service/Index/assembly/recovery'
 import address from '@/components/service/Index/address'
+
 import Favorite from '../components/Member/favoriteGift'
 import Polite from '../components/Member/MembersPolite'
 import Member from '../components/Member/merberHome'
+import News from '@/components/Coffeemachine/new'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -72,6 +75,10 @@ export default new Router({
       component: Order,
       children: [
         {
+          path: '/',
+          name: 'Myorder',
+          component: Myorder
+        }, {
           path: '/order/myorder',
           name: 'Myorder',
           component: Myorder
@@ -114,6 +121,10 @@ export default new Router({
         }
       ]
     }, {
+      path: '/orderstep',
+      name: 'Orderstep',
+      component: Orderstep
+    }, {
       path: '/Details',
       name: 'Details',
       component: Details
@@ -141,15 +152,10 @@ export default new Router({
 			component: Hellp
 		}, {
 			path: '/Hellpdetails',
-			name: 'Hellpdetails',
 			component: Hellpdetails,
 			children: [
 				{
 				path: '/',
-				name: 'Hellpright',
-				component: Hellpright
-			}, {
-				path: '/Hellpright',
 				name: 'Hellpright',
 				component: Hellpright
 			}, {
@@ -174,7 +180,7 @@ export default new Router({
 			path: '/caplists',
 			component: Caplists
 		}, {
-			path: '/aa',
+			path: '/glossary',
 			component: Active
 		}, {
 			path: '/Best',
@@ -207,5 +213,8 @@ export default new Router({
 		}, {
 			path: '/favorite',
 			component: Favorite
+		}, {
+			path: '/News',
+			component: News
 		}]
 })

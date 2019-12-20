@@ -18,8 +18,7 @@
                 <a>NESPRESSO配方</a>
             </div>
             <div class="nps-middle-cont clearfix">
-                <router-link v-for="(item,index) in count" :key="index" to="/datai">
-                    <List></List>
+                <router-link v-for="(item, index) in count" :key="index" to="/datai">
                     <List></List>
                 </router-link>
             </div>
@@ -42,22 +41,26 @@ export default {
         return {
             show: true,
             pick: false,
-            count: [List]
+            count: [List],
+            timer: null
         }
     },
     methods: {
         showDD () {
             this.show = !this.show
             this.pick = !this.pick
-            this.pick = setInterval(() => {
+            this.timer = setInterval(() => {
                 this.pick = false
                 this.show = true
             }, 1000)
-            this.count.push({})
+            this.count.push([List])
         }
     },
-    beforeDestrioy () {
-        clearInterval(this.pick)
+    mounted () {
+        window.clearInterval(this.timer)
+    },
+    beforeDestroy () {
+        clearInterval(this.timer)
     },
     components: {
         Bottom,

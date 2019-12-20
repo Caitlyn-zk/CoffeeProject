@@ -21,10 +21,8 @@
             </div>
           </div>
           <div class="nps-step-next">
-            <span>
-              <a @class="Returnsteptwo">编辑</a>
-              <span><i class="el-icon-arrow-right"></i></span>
-            </span>
+            <a @click="Returnsteptwo" class="nps-step-next">编辑</a>
+            <span><i class="el-icon-arrow-right"></i></span>
           </div>
         </div>
       </div>
@@ -45,7 +43,7 @@
               <span class="padding-l-10">在线借记卡/信用卡支付 - 支付宝</span>
             </div>
             <div class="nps-step-next margin-t-20">
-              <a class="Returnstep">编辑</a>
+              <a @click="Returnstepthree" class="nps-step-next">编辑</a>
               <span><i class="el-icon-arrow-right"></i></span>
             </div>
           </div>
@@ -92,7 +90,7 @@
             </li>
           </ul>
           <div class="nps-orderstep-return-box nps-step-next">
-            <a @class="Returnstepone">编辑</a>
+            <a @click="Returnstepone" class="nps-step-next">编辑</a>
             <span><i class="el-icon-arrow-right"></i></span>
           </div>
           <ul class="nps-stepone-detail-lists">
@@ -235,13 +233,16 @@ export default {
       this.changeStep(5)
     },
     Returncart () {
+      this.changeStep(2)
+    },
+    Returnstepone () {
       this.changeStep(1)
     },
     Returnsteptwo () {
       this.changeStep(2)
     },
-    Returnstepone () {
-      this.changeStep(1)
+    Returnstepthree () {
+      this.changeStep(3)
     }
   }
 }

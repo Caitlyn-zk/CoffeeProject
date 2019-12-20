@@ -1,6 +1,6 @@
 <template>
     <div class="nps-tips font-16 text-white">
-        <a >购物满340元即可尊享免费配送</a>
+        <router-link to="/caphome">购物满340元即可尊享免费配送</router-link>
         <span class="margin-lr-15">|</span>
         <span>北京/上海/广州/深圳</span>
         <span class="deliveryTime">2个工作日内</span>

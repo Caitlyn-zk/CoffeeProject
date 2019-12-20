@@ -5,7 +5,7 @@
 			<div class="fl nps-guide-back-linheight font-16">首次使用或者长期停用</div>
 			<div class="fr nps-guide-back-linheight1">
 				<i class="el-icon-right nps-hellp-cl"></i>
-				<router-link to="/Hellpright"><span>选择其他分类</span></router-link>
+				<router-link to="/Hellpdetails"><span>选择其他分类</span></router-link>
 			</div>
 		</div>
 		<div class="nps-guide-content">

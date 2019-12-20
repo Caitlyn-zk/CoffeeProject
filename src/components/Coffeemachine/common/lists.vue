@@ -1,23 +1,22 @@
 <template>
 	<router-link to="/Details">
-	<div class="nps-title-sping clearfix" :key="Lists" v-for="Lists in machineLists">
+	<div class="nps-title-sping clearfix" :key="index" v-for="(Lists,index) in machineLists">
 		<div class="fl nps-title-sping-img">
-			<img :src="Lists.idView" class="image"  />
+			<img :src="url + JSON.parse(Lists.img)[0]" alt="列表图片" />
 		</div>
 		<div class="fl nps-sping-jiao">
-			<div class="nps-sping-font">{{Lists.title}}</div>
-			<div class="nps-sping-font1 overflow">体积小，流线造型，色彩多样。Inissia能够确保机器高使用效率以及</div>
+			<div class="nps-sping-font">{{Lists.name}}</div>
+			<div class="nps-sping-font1 overflow">{{Lists.manual}}</div>
 			<div class="nps-sping-color clearfix">
 				<div class="fl nps-color">可选颜色</div>
-				<div class="fl nps-color-yuan cl-green"></div>
-				<div class="fl nps-color-yuan cl-grey"></div>
+				<div class="fl nps-color-yuan" :class="sstt[index]"></div>
 			</div>
 		</div>
 		<div class="fl nps-sping-two">
-			<div class="nps-btn-lijian fr">立减100元</div>
-			<div class="text-r nps-sping-jiage">CNY 766.00</div>
+			<div class="nps-btn-lijian fr"><span>立减</span><span>100</span><span>元</span></div>
+			<div class="text-r nps-sping-jiage"><span>CNY</span><span class="margin-l-5">{{Lists.price}}</span></div>
 			<div class="text-r font-12 cl-65">售价</div>
-			<div class="text-r font-12 cl-65 text-del">CNY 866.00</div>
+			<div class="text-r font-12 cl-65 text-del"><span>CNY</span><span class="margin-l-5">{{Lists.discountPrice}}</span></div>
 		</div>
 		<div class="fl margin-t-25 nps-margin">
 			<a class="nps-btn-xijie">查看细节&amp;购买</a>
@@ -27,18 +26,33 @@
 </template>
 
 <script>
+import { MachineLists } from 'commonjs/Requestaxios'
 export default {
 	data () {
 		return {
-			machineLists: [{
-				idView: require('../../../assets/sping.png'),
-				title: 'dfhiuhg'
-			}]
+			machineLists: {},
+			url: 'http://192.168.97.240:3000/',
+			sstt: ['cl-black', 'cl-grey', 'cl-green']
 		}
+	},
+	methods: {
+		datalists () {
+			MachineLists({
+				success: (res) => {
+					console.log(res.data)
+					if (res.status === 200) {
+						console.log(res)
+						this.machineLists = res.data
+					}
+				}
+			})
+		}
+	},
+	mounted () {
+		this.datalists()
 	}
 }
 </script>
-
 <style lang="less">
 	@import '../css/machine.less';
 </style>

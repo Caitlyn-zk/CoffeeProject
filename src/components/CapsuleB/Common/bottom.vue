@@ -3,9 +3,9 @@
         <div class="nps-botm clearfix">
             <span class="fl">NESPRESSO.</span>
             <ul class="nps-botm-lista fl clearfix">
-                <li><a>Nespresso</a></li>
-                <li><a>店铺地址</a></li>
-                <li><a>联系我们</a></li>
+                <li><router-link to="/">Nespresso</router-link></li>
+                <li><router-link to="/address">店铺地址</router-link></li>
+                <li><router-link to="/contact">联系我们</router-link></li>
                 <li><a>条款及细则</a></li>
             </ul>
             <ul class="nps-botm-listb fl clearfix">

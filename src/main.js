@@ -8,11 +8,15 @@ import '../theme/index.css'
 import axios from 'axios'
 // 引入store 文件
 import store from './store'
+import { axiosRequest, get, post } from 'commonjs/axios'
+
 Vue.use(ElementUi)
 // 定义一个全局事件
-Vue.prototype.information = new Vue()
 Vue.config.productionTip = false
-Vue.prototype.$axios = axios
+Vue.prototype.$request = axiosRequest
+Vue.prototype.$get = get
+Vue.prototype.$post = post
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

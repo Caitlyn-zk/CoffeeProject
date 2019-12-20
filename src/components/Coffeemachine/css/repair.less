@@ -1,3 +1,32 @@
+//颜色选择的圆
+.nps-rop{
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+}
+.nps-rop:after{
+	border: 1px solid rgba(0,0,0,.2);
+	display: block;
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 0;
+	height: 0;
+	border-radius: 100%;
+	background: #fff;
+	opacity: 0;
+	transition: all .4s ease-in-out;
+}
+.nps-rop:hover:not(nps-rop):after{
+	opacity: 1;
+	width: 12px;
+	height: 12px;
+}
+// 热卖页其余的样式
 .nps-repair-title{
 	background: #313131;
 	margin: 10px 0;
@@ -91,7 +120,12 @@
 }
 .nps-font-man{
 	font-size: 48px;
+	transition: all 0.5s;
 	margin: 48px 0 36px 0;
+	transform: scale(1.2);
+}
+.nps-repair-font .nps-font-man{
+	transform: scale(1);
 }
 .nps-font-man1{
 	font-size: 30px;
@@ -177,4 +211,16 @@
 }
 .nps-repair-btn:hover{
 	background: #FFFFFF;
+}
+.nps-p{
+	margin-bottom: 20px;
+}
+.cl{
+	color: #986f38;
+	margin-right: 20px;
+}
+.nps-cll{
+	margin-bottom: 20px;
+	font-size: 18px;
+	color: #fff;
 }

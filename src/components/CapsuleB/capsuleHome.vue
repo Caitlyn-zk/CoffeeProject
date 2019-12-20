@@ -45,10 +45,25 @@
                                 <span>强度</span>
                                 <ul class="clearfix">
                                     <li>
-                                        <a class="nps-pop-a">1</a>
+                                        <a class="nps-pop-b">1</a>
                                     </li>
                                     <li>
                                         <a class="nps-pop-b">2</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">3</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">4</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">5</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">6</a>
+                                    </li>
+                                    <li>
+                                        <a class="nps-pop-b">7</a>
                                     </li>
                                 </ul>
                                 <span>咖啡香调</span>
@@ -66,49 +81,11 @@
                         <!-- 列表头部 -->
                         <div class="nps-list-title">热卖胶囊咖啡</div>
                         <!-- 列表单个 -->
-                        <div class="nps-list-lists">
-                            <div class="nps-lits-conta fl">
-                                <span class="nps-icon-t">新品上市</span>
-                                <div class="nps-cont-a">
-                                    <img src="./img/home06.jpg" />
-                                </div>
-                            </div>
-                            <div class="nps-list-contb fl">
-                                <p class="nps-contb-p">Nordic Black</p>
-                                <p>北欧大杯黑咖啡</p>
-                                <div class="nps-contb-list">
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-a"></span>
-                                    <span class="into-c">5</span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                    <span class="into-b"></span>
-                                </div>
-                            </div>
-                            <div class="nps-list-contc fl">
-                                <img src="./img/beizi01.png" />
-                                <img src="./img/beizi01.png" />
-                            </div>
-                            <div class="nps-list-contd fl">
-                                <span class="nps-contd-sp">CNY 4.70</span>
-                                <cartList></cartList>
-                            </div>
-                        </div>
                         <caphomeList></caphomeList>
-                        <!-- <caphomeList></caphomeList>
-                        <caphomeList></caphomeList>
-                        <caphomeList></caphomeList>
-                        <div class="nps-list-title">咖啡套装</div>
-                        <caphomeList></caphomeList>
-                        <caphomeList></caphomeList> -->
                     </div>
                 </div>
             </div>
+            <bottom></bottom>
         </div>
     </div>
 </template>
@@ -116,32 +93,21 @@
 <script>
 import caphomeList from './Common/caphomeList'
 import cartList from './Common/cartList'
+import bottom from '../service/Footer'
 export default {
     data () {
         return {
-            visible: false,
-            data: {}
+            visible: false
         }
     },
     methods: {
-        getData () {
-            var that = this
-            this.$axios.post('http://192.168.97.240:3000/addCoffcap')
-            .then(res => {
-                console.log(res.data)
-                that.data = res.data
-            })
-            .catch(res => {
-                console.log(res)
-            })
-        }
     },
     mounted () {
-        this.getData()
     },
     components: {
         caphomeList,
-        cartList
+        cartList,
+        bottom
     }
 }
 </script>
