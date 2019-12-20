@@ -45,7 +45,7 @@
         <div class="nps-steptwo-distribute clearfix padding-20">
           <div class="nps-orderstep-distribute-box">
             <div class="nps-stepthree-checkbox fl margin-t-15">
-              <input type="radio">
+              <input type="radio" @click="isDisabled">
             </div>
             <div class="nps-orderstep-distribute-img margin-t-20">
               <img src="./img/AliPay-logo.svg">
@@ -87,7 +87,7 @@
           <span class="fl font-14"><i class="el-icon-arrow-left"></i></span>
           <a @click="Delivery" disabled>返回配送</a>
         </span>
-        <el-button @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment" disabled>下订单
+        <el-button @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment" :disabled="disabled">下订单
           <span class="fr font-16"><i class="el-icon-arrow-right"></i></span>
         </el-button>
       </div>
@@ -155,7 +155,8 @@ export default {
     return {
       dialogVisible: false,
       dialogVisible1: false,
-      dialogVisible2: false
+      dialogVisible2: false,
+      disabled: true
     }
   },
   components: {
@@ -172,6 +173,9 @@ export default {
     },
     changeS () {
       this.changeStep(4)
+    },
+    isDisabled () {
+      this.disabled = false
     }
   }
 }

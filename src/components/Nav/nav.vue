@@ -8,7 +8,7 @@
           <button class="nps-user-btn nps-login-account"><i class="nps-login-account-icon"></i>请登陆你的账户 </button>
           <button @click="goodsTable()" class="nps-user-btn nps-shopping-cart"><i class="nps-shopping-cart-icon"></i>您的购物车(0) </button>
           <!-- 登陆弹窗 -->
-          <Login></Login>
+          <!-- <Login></Login> -->
         </div>
       </div>
 			<!-- 侧边购物车 -->

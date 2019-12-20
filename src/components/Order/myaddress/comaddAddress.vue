@@ -129,9 +129,9 @@
           </el-form>
         </div>
         <div class="nps-editaddress-bottom clearfix">
-          <!-- <div class="fl">
+          <div class="fl">
             <router-link to='' class="nps-address-edit-btn btn" v-show="barShow">取消</router-link>
-          </div> -->
+          </div>
           <div class="fr">
             <a @click="submitForm('ruleForm')" class="nps-address-edit-btn btn">保存我的信息</a>
           </div>
@@ -155,7 +155,7 @@ export default {
       }
     }
     return {
-      barShow: false,
+      barShow: true,
       radio: '1',
       options: [{
           value: '选项1',
