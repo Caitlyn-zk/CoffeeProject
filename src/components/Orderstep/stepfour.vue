@@ -213,6 +213,7 @@
 
 <script>
 import Steponeadd from '../Order/shopping-add'
+import {order} from 'commonjs/Requestaxios'
 export default {
   data () {
     return {
@@ -231,7 +232,31 @@ export default {
       this.changeStep(3)
     },
     changeS () {
-      this.changeStep(5)
+      console.log(222)
+      order({
+        data:{
+          userId: 1,
+          status: 1,
+          goods: '[{"npscommodity":36,"commodity":1,"quantity":10}]'
+        },
+        success: (res) => {
+          console.log(res)
+          if (res.status === 200) {
+            window.location.href = res.result
+          } else {
+            this.$message({
+              type: 'warning',
+              message: '订单生成失败',
+              showClose: 'true',
+              offset: 100,
+            })
+          }
+        },
+        error: (err) => {
+          console.log(err)
+        }
+      })
+      // this.changeStep(5)
     },
     Returncart () {
       this.changeStep(2)

@@ -54,11 +54,20 @@ let register = (params) => {
     params.error(error)
   })
 }
+// 添加订单
+let order = (params) => {
+	axiosRequest('addUserOrder', 'post', params.data).then((res) => {
+		params.success(res)
+	}).catch((error) => {
+		params.error(error)
+	})
+}
 export {
 	MachineLists,
 	addInfo,
   capsuleHome,
   login,
   backRetrieve,
-  register
+	register,
+	order
 }
