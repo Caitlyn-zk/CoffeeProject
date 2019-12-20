@@ -255,11 +255,11 @@ export default {
         this.$refs[formName].validate((valid) => {
             console.log(valid)
             if (valid) {
-                // this.$message({
-                //     showClose: true,
-                //     message: '提交成功',
-                //     type: 'success'
-                // })
+                this.$message({
+                    showClose: true,
+                    message: '提交成功',
+                    type: 'success'
+                })
                 let addCoffeeCapForm = document.querySelector('.demo-ruleForm')
                 let addCoffeeCapFormData = new FormData(addCoffeeCapForm)
                 addCoffeeCapFormData.append('se', 1)
@@ -274,11 +274,12 @@ export default {
                     success: (res) => {
                         if (res.status === 200) {
                             console.log(res)
-                            console.log(res.data.id)
+                            // console.log(res.data.id)
                             this.$message({
                                 message: '数据发送成功',
                                 showClose: true,
                                 duration: 1000,
+                                type: 'success',
                                 onClose: () => {
                                 }
                             })

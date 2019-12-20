@@ -19,13 +19,13 @@
             <ul class="footer-list">
                 <li><a href="https://www.nespresso.com/careers/?m=CN&l=ZH#/">工作机会</a></li>
                 <li><a>法律条款</a></li>
-                <li><a>联系我们</a></li>
+                <li><router-link to="/info">联系我们</router-link></li>
                 <li><a>专业商用咖啡</a></li>
             </ul>
             <ul class="footer-list gary">
-                <li><a>咖啡词汇</a></li>
+                <li><router-link to="/glossary">咖啡词汇</router-link></li>
                 <li><a>关于我们的企业</a></li>
-                <li><a>网站地图</a></li>
+                <li><router-link to="/address">网站地图</router-link></li>
                 <li><a>京ICP备11046978号-1</a></li>
             </ul>
         </div>

@@ -28,7 +28,7 @@ import Hellp from '@/components/Coffeemachine/hellp'
 import Hellpdetails from '@/components/Coffeemachine/hellp-details'
 import Formula from '@/components/CapsuleB/formula'
 import Problem from '@/components/service/Index/problem'
-import Active from '@/components/service/aa.vue'
+import Active from '@/components/service/glossary'
 import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
 import Caplists from '@/components/CapsuleB/capsuleLists'
@@ -176,7 +176,7 @@ export default new Router({
 			path: '/caplists',
 			component: Caplists
 		}, {
-			path: '/aa',
+			path: '/glossary',
 			component: Active
 		}, {
 			path: '/Best',

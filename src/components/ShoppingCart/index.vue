@@ -1,6 +1,9 @@
 <template>
 <!-- 购物车组件 -->
 	<div class="nps-shoppingCart-mainbar">
+		<el-button class="el-icon-shopping-bag-1" @click="drawer = true">
+			您的购物车(0)
+		</el-button>
 		<el-drawer
 			title="购物袋"
 			:visible.sync="drawer"
@@ -40,7 +43,7 @@
 					<div class="nps-tart-total-tips">不含配送费用和活动促销折扣</div>
 				</div>
 				<div class="demo-drawer__footer">
-					<el-button class="nps-Cart-btun" type="" @click="centerDialogVisible = false">前往购物车</el-button>
+					<router-link to = "/orderstep" class="nps-Cart-btun" type="" @click="centerDialogVisible = false">前往购物车</router-link>
 				</div>
 			</div>
 			<!-- 没有商品 -->
@@ -62,7 +65,7 @@ export default {
 	},
 	data () {
 		return {
-			drawer: true,
+			drawer: false,
 			direction: 'rtl',
 			Listgoods: true,
 			goodslist: [{
