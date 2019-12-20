@@ -1,5 +1,5 @@
 <template>
-  <div class="content clearfix font-12 margin-b-60">
+  <div class="content clearfix font-12 padding-b-20">
     <!-- 左边部分 -->
     <div class="nps-orderstep-left fl margin-t-20 nps-stepfour-left">
       <div class="nps-orderstep-cont clearfix">
@@ -134,7 +134,7 @@
                 <span class="nps-orderstep-total font-16">条款确认</span>
               </div>
               <div class="padding-tb-20">
-                <input class="nps-stepfour-clause" type="checkbox">
+                <input class="nps-stepfour-clause" @click="isContinue" type="checkbox">
                 <span>
                   我确认已阅读并接受Nespresso
                   <span>
@@ -201,9 +201,9 @@
               <span><i class="el-icon-arrow-left"></i></span>
               <a @click="Modify">修改订单</a>
             </div>
-            <a @click="changeS" class="nps-step-btn fr clearfix nps-stepfour-payment nps-remove-button">继续支付
+            <el-button @click="changeS" :disabled="disabled" class="nps-step-btn fr clearfix nps-stepfour-payment nps-remove-button">继续支付
               <span class="fr font-16"><i class="el-icon-arrow-right"></i></span>
-            </a>
+            </el-button>
           </div>
         </div>
       </div>
@@ -216,7 +216,8 @@ import Steponeadd from '../Order/shopping-add'
 export default {
   data () {
     return {
-      dialogVisible: false
+      dialogVisible: false,
+      disabled: true
     }
   },
   components: {
@@ -243,6 +244,9 @@ export default {
     },
     Returnstepthree () {
       this.changeStep(3)
+    },
+    isContinue () {
+      this.disabled = false
     }
   }
 }

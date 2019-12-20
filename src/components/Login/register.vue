@@ -7,23 +7,33 @@
             请填写下方表格。标记为*的为必填字段。
           </div>
         </el-form-item>
-        <el-form-item class="nps-register-form-box" prop="name">
+        <el-form-item class="nps-register-form-box" prop="surname">
           <div class="nps-register-form-item">
-            <label class="nps-register-form-label">姓名
+            <label class="nps-register-form-label">姓氏
               <span class="nps-register-asterisk">*</span>
             </label>
-            <el-tooltip class="item" effect="dark" content="姓名" placement="right-start">
+            <el-tooltip class="item" effect="dark" content="姓氏" placement="right-start">
+              <input v-model="ruleForm.surname" class="nps-register-input" type="text"/>
+            </el-tooltip>
+          </div>
+        </el-form-item>
+        <el-form-item class="nps-register-form-box" prop="name">
+          <div class="nps-register-form-item">
+            <label class="nps-register-form-label">名字
+              <span class="nps-register-asterisk">*</span>
+            </label>
+            <el-tooltip class="item" effect="dark" content="名字" placement="right-start">
               <input v-model="ruleForm.name" class="nps-register-input" type="text"/>
             </el-tooltip>
           </div>
         </el-form-item>
-        <el-form-item class="nps-register-form-box" prop="username">
+        <el-form-item class="nps-register-form-box" prop="email">
           <div class="nps-register-form-item">
             <label class="nps-register-form-label">电子邮箱地址
               <span class="nps-register-asterisk">*</span>
             </label>
             <el-tooltip class="item" effect="dark" content="邮箱" placement="right-start">
-              <input v-model="ruleForm.username" class="nps-register-input" type="text"/>
+              <input v-model="ruleForm.email" class="nps-register-input" type="text"/>
             </el-tooltip>
           </div>
         </el-form-item>
@@ -34,16 +44,6 @@
              </label>
              <el-tooltip class="item" effect="dark" content="密码" placement="right-start">
               <input v-model="ruleForm.password" class="nps-register-input" type="password"/>
-            </el-tooltip>
-          </div>
-        </el-form-item>
-        <el-form-item class="nps-register-form-box" prop="repassword">
-           <div class="nps-register-form-item">
-             <label class="nps-register-form-label">确认密码
-               <span class="nps-register-asterisk">*</span>
-             </label>
-             <el-tooltip class="item" effect="dark" content="确认密码" placement="right-start">
-              <input v-model="ruleForm.repassword" class="nps-register-input" type="password"/>
             </el-tooltip>
           </div>
         </el-form-item>
@@ -71,6 +71,9 @@
 </template>
 
 <script>
+import {register} from 'commonjs/Requestaxios'
+import {createNamespacedHelpers} from 'vuex'
+const {mapState: registerState, mapMutations: registerMutations} = createNamespacedHelpers('Register')
 export default {
   data () {
     var testEmail = (rule, value, callback) => {
@@ -83,26 +86,22 @@ export default {
         return callback()
       }
     }
-    var validatePass = (rule, value, callback) => {
-      if (value === '') {
-        callback(new Error('请再次输入密码'))
-      } else if (value !== this.ruleForm.password) {
-        callback(new Error('两次密码不一致'))
-      } else {
-        callback()
-      }
-    }
     return {
       ruleForm: {
-        name: '',
-        username: '',
-        password: '',
-        repassword: ''
+        surname: '郭',
+        name: '治涛',
+        email: '2943439858@qq.com',
+        password: '000000'
       },
       rules: {
+        surname: [
+          {
+            required: true, message: '请输入姓氏', trigger: 'blur'
+          }
+        ],
         name: [
           {
-            required: true, message: '请输入姓名', trigger: 'blur'
+            required: true, message: '请输入名字', trigger: 'blur'
           }
         ],
         password: [
@@ -113,12 +112,7 @@ export default {
             min: 6, max: 18, message: '密码长度为6~18个字符', trigger: 'blur'
           }
         ],
-        repassword: [
-          {
-            required: true, validator: validatePass, trigger: 'blur'
-          }
-        ],
-        username: [
+        email: [
           {
             validator: testEmail, trigger: 'blur'
           }
@@ -127,18 +121,51 @@ export default {
     }
   },
   methods: {
+    ...registerMutations(['addRegisterinfo']),
     submitForm (formName) {
       // 验证表单
       this.$refs[formName].validate((valid) => {
         // 表单验证成功
         if (valid) {
-          alert('submit!')
+          this.addRegisterinfo(this.ruleForm)
+          register({
+            data: this.registerInfo,
+            success: (res) => {
+              if (res.status === 200) {
+                 this.$message({
+                  type: 'success',
+                  message: '注册成功',
+                  showClose: 'true',
+                  duration: 1000,
+                  offset: 100,
+                  onClose: () => {
+                    this.$router.push('/')
+                  }
+                })
+              } else {
+                this.$message({
+                  type: 'warning',
+                  message: res.message,
+                  showClose: 'true',
+                  duration: 1000,
+                  offset: 100
+                })
+              }
+            },
+            error: (err) => {
+              console.log(err)
+            }
+          })
+          console.log(this.registerInfo)
         } else {
           console.log('error submit!!')
           return false
         }
       })
     }
+  },
+  computed: {
+    ...registerState(['registerInfo'])
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="nps-order-cont nps-edit-main font-12">
-    <h2 class="nps-order-cont-title font-16 padding-20">编辑地址</h2>
+    <h2 class="nps-order-cont-title font-16 padding-20">我的咖啡机</h2>
     <div class="nps-addmachines-box">
       <div class="nps-addmachines-step font-16 padding-l-20">
         <span>步骤1/3 输入你的类别</span>

@@ -10,16 +10,20 @@
         <div class="nps-order-coffee"><router-view></router-view></div>
       </div>
     </div>
-    <div class="nps-order-bottom">底部</div>
+    <div class="">
+      <Orderfooter></Orderfooter>
+    </div>
   </div>
 </template>
 <script>
 import OrderLeft from './order-left.vue'
 import OrderRight from './order-right.vue'
+import Orderfooter from '@/components/service/Footer'
 export default {
   components: {
     OrderLeft,
-    OrderRight
+    OrderRight,
+    Orderfooter
   }
 }
 </script>

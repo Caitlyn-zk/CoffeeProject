@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import ElementUi from 'element-ui'
 import '../theme/index.css'
 import { axiosRequest, get, post } from 'commonjs/axios'
@@ -16,6 +17,7 @@ Vue.prototype.$post = post
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'

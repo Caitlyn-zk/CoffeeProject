@@ -1,6 +1,6 @@
 <template>
   <div class="nps-order-cont">
-    <h2 class="nps-order-cont-title font-16 padding-20">我的咖啡机</h2>
+    <h2 class="nps-order-cont-title font-16 padding-20">编辑咖啡机</h2>
     <div class="nps-order-info nps-order-address-main padding-20 clearfix">
       <p class="nps-editmachines-title font-16">
         编辑 Inissia bundles Inissia D40 黑色套装(黑色奶沫机)
