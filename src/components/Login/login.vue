@@ -64,6 +64,7 @@ export default {
     back (event) {
       let span = event.target.parentNode.parentNode.firstChild
       span.style.fontSize = '14px'
+      span.style.color = '#CCC'
     },
     submitLogin (formName) {
       this.$refs[formName].validate((valid) => {
