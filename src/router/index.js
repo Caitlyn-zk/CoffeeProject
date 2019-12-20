@@ -28,7 +28,7 @@ import Hellp from '@/components/Coffeemachine/hellp'
 import Hellpdetails from '@/components/Coffeemachine/hellp-details'
 import Formula from '@/components/CapsuleB/formula'
 import Problem from '@/components/service/Index/problem'
-import Active from '@/components/service/aa.vue'
+import Active from '@/components/service/glossary'
 import Hellpright from '@/components/Coffeemachine/common/hellpright'
 import Hellpguide from '@/components/Coffeemachine/common/hellpguide'
 import Caplists from '@/components/CapsuleB/capsuleLists'
@@ -39,6 +39,11 @@ import Best from '@/components/Coffeemachine/best-sellers'
 import Seekfit from '@/components/CapsuleB/seekfit'
 import Recovery from '@/components/service/Index/assembly/recovery'
 import address from '@/components/service/Index/address'
+
+import Favorite from '../components/Member/favoriteGift'
+import Polite from '../components/Member/MembersPolite'
+import Member from '../components/Member/merberHome'
+import News from '@/components/Coffeemachine/new'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -175,7 +180,7 @@ export default new Router({
 			path: '/caplists',
 			component: Caplists
 		}, {
-			path: '/aa',
+			path: '/glossary',
 			component: Active
 		}, {
 			path: '/Best',
@@ -199,5 +204,17 @@ export default new Router({
 		}, {
 			path: '/address',
 			component: address
+		}, {
+			path: '/member',
+			component: Member
+		}, {
+			path: '/polite',
+			component: Polite
+		}, {
+			path: '/favorite',
+			component: Favorite
+		}, {
+			path: '/News',
+			component: News
 		}]
 })

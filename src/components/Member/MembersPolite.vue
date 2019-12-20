@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="polite content">
       <div class="polite-title-box content">
         <div class="polite-title-content">
             <ul class="polite-title-text-lists">
@@ -81,7 +81,9 @@
               </div>
           </div>
       </div>
-
+      <div class="content">
+        <lastFooter></lastFooter>
+      </div>
   </div>
 </template>
 
@@ -89,7 +91,7 @@
 import beloved from './politeSon/beloved'
 import alcohol from './politeSon/alcohol'
 import enjoyment from './politeSon/enbjoyment'
-
+import lastFooter from '../service/Footer'
 export default {
     data () {
         return {
@@ -100,7 +102,8 @@ export default {
     components: {
         beloved,
         alcohol,
-        enjoyment
+        enjoyment,
+        lastFooter
     },
     methods: {
         changeTab (value) {
@@ -121,6 +124,6 @@ export default {
 }
 </script>
 
-<style lang="less" scope>
+<style lang="less" scoped>
 @import './merberStyle/polite.less';
 </style>

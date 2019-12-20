@@ -15,7 +15,7 @@
             <div class="nps-cont-text clearfix">
                 <div class="nps-text-list fl">
                     <div class="nps-list-tatle font-28">草莓大杯咖啡</div>
-                    <div class="nps-list-lists">
+                    <div class="nps-list-listsk">
                         <span class="nps-el-icon el-icon-time"></span>
                         <span class="nps-el-icon el-icon-document-remove"></span>
                         <span>简单</span>
@@ -115,9 +115,6 @@
             <div class="nps-perhaps-title">您可能还会喜欢这些配方</div>
             <div class="nps-perhaps-list">
                 <router-link to="/datai">
-                    <List></List>
-                    <List></List>
-                    <List></List>
                     <List></List>
                 </router-link>
             </div>

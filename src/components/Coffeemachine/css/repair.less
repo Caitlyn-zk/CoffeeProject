@@ -1,3 +1,32 @@
+//颜色选择的圆
+.nps-rop{
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+}
+.nps-rop:after{
+	border: 1px solid rgba(0,0,0,.2);
+	display: block;
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 0;
+	height: 0;
+	border-radius: 100%;
+	background: #fff;
+	opacity: 0;
+	transition: all .4s ease-in-out;
+}
+.nps-rop:hover:not(nps-rop):after{
+	opacity: 1;
+	width: 12px;
+	height: 12px;
+}
+// 热卖页其余的样式
 .nps-repair-title{
 	background: #313131;
 	margin: 10px 0;

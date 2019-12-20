@@ -121,7 +121,7 @@
         </div>
     </div>
     <!-- 下部的图片 -->
-    <div class="content">
+    <div class="content mathine-detail">
         <div class="mathine-detail-box">
             <div class="mathine-detail-one">
                 <div class="favorite-img-box">
@@ -132,7 +132,8 @@
                     <div class="favorite-one-introduce-bottom">愿礼品中的纯臻美味伴随他们每一次的旅途。</div>
                     <div class="order-btn-box">
                         <span>cny2,366.00</span>
-                        <a class="el-icon-goods order-btn">添加至购物车<i class="el-icon-plus"></i> </a>
+                        <a class="el-icon-goods order-btn" :class="{show:showBtn==1}" @click="changeBuyCart(0)">添加至购物车<i class="el-icon-plus"></i></a>
+                        <a class="el-icon-goods order-btn" :class="{show:showBtn==0}" @click="changeBuyCart(1)">更新好购物车<i class="el-icon-plus"></i> </a>
                     </div>
                 </div>
             </div>
@@ -143,7 +144,8 @@
                     <div class="favorite-one-introduce-bottom">愿礼品中的纯臻美味伴随他们每一次的旅途</div>
                     <div class="order-btn-box">
                         <span>cny886.00</span>
-                        <a class="el-icon-goods order-btn">添加至购物车<i class="el-icon-plus"></i></a>
+                        <a class="el-icon-goods order-btn" :class="{show:showBtnTwo==1}" @click="changeBuyCartTwo(0)">添加至购物车<i class="el-icon-plus"></i></a>
+                        <a class="el-icon-goods order-btn" :class="{show:showBtnTwo==0}" @click="changeBuyCartTwo(1)">更新好购物车<i class="el-icon-plus"></i> </a>
                     </div>
                 </div>
                  <div class="favorite-img-box">
@@ -160,7 +162,8 @@
                     <div class="favorite-one-introduce-bottom">愿礼品中的纯臻美味伴随他们每一次的旅途。</div>
                     <div class="order-btn-box">
                         <span>cny2,366.00</span>
-                        <a class="el-icon-goods order-btn">添加至购物车<i class="el-icon-plus"></i> </a>
+                        <a class="el-icon-goods order-btn" :class="{show:showBtnThree==1}" @click="changeBuyCartThree(0)">添加至购物车<i class="el-icon-plus"></i></a>
+                        <a class="el-icon-goods order-btn" :class="{show:showBtnThree==0}" @click="changeBuyCartThree(1)">更新好购物车<i class="el-icon-plus"></i> </a>
                     </div>
                 </div>
             </div>
@@ -190,17 +193,29 @@
             </ul>
         </div>
     </div>
+    <!-- 底部 -->
+    <div class="content">
+      <lastFooter></lastFooter>
+    </div>
   </div>
 </template>
 
 <script>
+import lastFooter from '../service/Footer'
 export default {
+    components: {
+      lastFooter
+    },
     data () {
         return {
             isActive: 1,
             message: '',
             money: '',
-            moneyTow: ''
+            moneyTow: '',
+            showBtn: 1,
+            showBtnTwo: 1,
+            showBtnThree: 1,
+            total: 0
         }
     },
     methods: {
@@ -256,12 +271,24 @@ export default {
                 this.money = '3000'
                 this.moneyTow = '2000~5000'
             }
+        },
+        changeBuyCart (btnNum) {
+            console.log(this.$store)
+            this.$store.commit('changeBuyCartIndex', btnNum)
+            this.showBtn = btnNum
+        },
+        changeBuyCartTwo (btnNum) {
+            this.showBtnTwo = btnNum
+            this.$store.commit('changeBuyCartTwoIndex', btnNum)
+        },
+         changeBuyCartThree (btnNum) {
+            this.showBtnThree = btnNum
+            this.$store.commit('changeBuyCartTwoIndex', btnNum)
         }
     }
 
 }
 </script>
-
-<style lang="less" scope>
+<style lang="less" scoped>
 @import './merberStyle/favorite.less';
 </style>

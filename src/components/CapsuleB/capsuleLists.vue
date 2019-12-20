@@ -63,14 +63,17 @@
                 </div>
             </div>
         </div>
+        <bottom></bottom>
     </div>
 </template>
 
 <script>
 import cartList from './Common/cartList'
+import bottom from '../service/Footer'
 export default {
     components: {
-        cartList
+        cartList,
+        bottom
     }
 }
 </script>

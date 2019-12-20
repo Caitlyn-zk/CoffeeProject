@@ -81,35 +81,11 @@
                         <!-- 列表头部 -->
                         <div class="nps-list-title">热卖胶囊咖啡</div>
                         <!-- 列表单个 -->
-                        <!-- <caphomeList></caphomeList> -->
-                        <div class="nps-list-lists" v-for="(item, index) in dataList" :key="index">
-                            <div class="nps-lits-conta fl">
-                                <span class="nps-icon-t">新品上市</span>
-                                <div class="nps-cont-a">
-                                    <img :src="url + JSON.parse(item.img)[0] "/>
-                                </div>
-                            </div>
-                            <div class="nps-list-contb fl">
-                                <p class="nps-contb-p">{{item.name}}</p>
-                                <p>{{item.title}}</p>
-                                <div class="nps-contb-list">
-                                    <span class="into-a" v-for="(syl, index) in (item.strength)" :key="index"></span>
-                                    <span class="into-c">{{item.strength}}</span>
-                                    <!-- <span class="into-b"></span> -->
-                                </div>
-                            </div>
-                            <div class="nps-list-contc fl">
-                                <img src="./img/beizi01.png" />
-                                <img src="./img/beizi01.png" />
-                            </div>
-                            <div class="nps-list-contd fl">
-                                <span class="nps-contd-sp">CNY {{item.price}}</span>
-                                <cartList></cartList>
-                            </div>
-                        </div>
+                        <caphomeList></caphomeList>
                     </div>
                 </div>
             </div>
+            <bottom></bottom>
         </div>
     </div>
 </template>
@@ -117,33 +93,21 @@
 <script>
 import caphomeList from './Common/caphomeList'
 import cartList from './Common/cartList'
-import {capsuleHome} from 'commonjs/Requestaxios'
+import bottom from '../service/Footer'
 export default {
     data () {
         return {
-            visible: false,
-            dataList: {},
-            url: 'http://192.168.97.240:3000/'
+            visible: false
         }
     },
     methods: {
-        getLists () {
-            capsuleHome({
-                success: (res) => {
-                    if (res.status === 200) {
-                        console.log(res.data)
-                        this.dataList = res.data
-                    }
-                }
-            })
-        }
     },
     mounted () {
-        this.getLists()
     },
     components: {
         caphomeList,
-        cartList
+        cartList,
+        bottom
     }
 }
 </script>

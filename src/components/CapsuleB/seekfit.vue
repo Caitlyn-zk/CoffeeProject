@@ -5,6 +5,7 @@
                 <component :changeStep="changeStep" :is="view"></component>
             </transition>
         </div>
+        <bottom></bottom>
     </div>
 </template>
 
@@ -17,6 +18,7 @@ import Fifth from './fifth'
 import Sixth from './sixth'
 import Seventh from './seventh'
 import Eighth from './eighth'
+import bottom from '../service/Footer'
 export default {
     props: {
         changeSt: Function
@@ -55,7 +57,8 @@ export default {
         Fifth,
         Sixth,
         Seventh,
-        Eighth
+        Eighth,
+        bottom
     }
 }
 </script>
