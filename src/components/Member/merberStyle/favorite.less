@@ -47,7 +47,7 @@
 @keyframes myfirst 
 {
 from {
-    transform: translateX(100px);
+    transform: translateX(300px);
     opacity: 0;
 }
 to {
@@ -154,10 +154,17 @@ to {
         padding: 38px;
     }
 }
-.progress-bar-title {
-    margin: 15px;
-    font-weight: 700;
+.progress-bar-box {
+    .el-icon-arrow-left {
+        font-size: 16px;
+        color: #fff;
+    }
+    .progress-bar-title {
+        margin: 15px;
+        font-weight: 700;
+    }
 }
+
 .favorite-gift:hover {
     background: #fff;
     color: #000;
@@ -177,6 +184,9 @@ to {
         width: 498px;
         height: 498px;
     }
+}
+.mathine-detail {
+    background: #fff;
 }
 .mathine-detail-box {
     width: 996px;
@@ -212,7 +222,7 @@ to {
         text-transform: uppercase;
     }
     .order-btn {
-        display: inline-block;
+        display: none;
         font-size: 15px;
         font-weight: bold;
         background: #3d8705;
@@ -220,6 +230,13 @@ to {
         transition: all 0.5s;
         border-radius: 3px;
         color: #fff;
+        i {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    .order-btn.show {
+        display: inline-block;
     }
     .order-btn:hover {
         background: #337204;

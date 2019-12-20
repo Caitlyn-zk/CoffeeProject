@@ -1,12 +1,14 @@
 <template>
-	<div>
+	<div style="background: #fff;">
 		<Title></Title>
 		<!--首页咖啡机列表-->
 		<div class="content clearfix">
 			<div class="fl nps-banner-left">
+				<router-link to="/caphome">
 				<div class="nps-tuijian-img">
 					<img src="../../assets/img-left.png"/>
 				</div>
+				</router-link>
 				<div class="nps-coffee-be">
 					<div class="nps-centent">
 						<img src="../../assets/coffee-img.png" />
@@ -45,27 +47,10 @@
 							<span>14</span>
 							<span>咖啡机</span>
 						</div>
-						<el-popover
-							placement="bottom"
-							width="931"
-							model="visible">
-							<div class="nps-vis">
-								<div class="nps-title-screen-color">颜色</div>
-								<div class="clearfix footer-tab">
-									<div class="tab-item fl margin-l-5 cl-red" title="red"></div>
-									<div class="tab-item fl margin-l-5 cl-white" title="white"></div>
-									<div class="tab-item fl margin-l-5 cl-black" title="black"></div>
-									<div class="tab-item fl margin-l-5 cl-silver" title="silver"></div>
-									<div class="tab-item fl margin-l-5 cl-brown" title="brown"></div>
-									<div class="tab-item fl margin-l-5 cl-green" title="green"></div>
-									<div class="tab-item fl margin-l-5 cl-grey" title="grey"></div>
-									<div class="tab-item fl margin-l-5 cl-crimson" title="crimson"></div>
-								</div>
-							</div>
-							<el-button slot="reference">筛选</el-button>
-						</el-popover>
 					</div>
 					<!--咖啡机商品列表-->
+					<lists></lists>
+					<lists></lists>
 					<lists></lists>
 				</div>
 			</div>
@@ -83,28 +68,28 @@ export default {
 		Title,
 		Spping
   },
-	mounted () {
-		let _this = this
-		document.querySelector('.footer-tab').addEventListener('click', function (e) {
-			let target = e.target
-			let nodeList = e.target.parentNode.children
-			let targetIndex = _this.tabIndex(target, nodeList) + 1
-			console.log(targetIndex)
-		})
-	},
+	// mounted () {
+	// 	let _this = this
+	// 	document.querySelector('.footer-tab').addEventListener('click', function (e) {
+	// 		let target = e.target
+	// 		let nodeList = e.target.parentNode.children
+	// 		let targetIndex = _this.tabIndex(target, nodeList) + 1
+	// 		console.log(targetIndex)
+	// 	})
+	// },
   methods: {
 		open () {
 			this.$alert('<div class="nps-font1">全场机器,最高可减400元。</div><div class="nps-font2">● 全场机器，最高可减400元。</div><div class="nps-font2">● 活动时间：2019年11月1日至2019年12月31日。</div><div class="nps-font2">● 每笔订单中，该活动最多可享受一次优惠。活动期间，每位顾客最多可享受3次优惠。</div><div class="nps-font2">● 符合活动机制，结账时折扣自动生效。</div><div class="nps-font2">● 如发生退款，赠品需一并退还。</div>', {
 			dangerouslyUseHTMLString: true
 			})
-		},
-		tabIndex (target, nodeList) {
-			for (let i = 0; i < nodeList.length; i++) {
-				if (target === nodeList[i]) {
-					return i
-				}
-			}
 		}
+		// tabIndex (target, nodeList) {
+		// 	for (let i = 0; i < nodeList.length; i++) {
+		// 		if (target === nodeList[i]) {
+		// 			return i
+		// 		}
+		// 	}
+		// }
   }
 }
 </script>

@@ -7,13 +7,9 @@
 			<div class="nps-mai-title">Inissia</div>
 			<div class="nps-mai-title1">Inissia C40 红色</div>
 			<div class="font-12">颜色</div>
-			<div class="clearfix">
-				<div class="nps-yuan cl-white fl" title="white">
-					<div class="nps-yuanyuan dis"></div>
-				</div>
-				<div class="nps-yuan cl-grey fl" title="grey">
-					<div class="nps-yuanyuan dis"></div>
-				</div>
+			<div class="clearfix margin-t-10">
+				<div class="margin-lr-5 cl-green fl nps-rop"></div>
+				<div class="margin-lr-5 cl-black fl nps-rop"></div>
 			</div>
 			<div class="nps-btn-lijian margin-t-25">立减100元</div>
 			<div class="text-l nps-sping-jiage">CNY 766.00</div>

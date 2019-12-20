@@ -17,16 +17,17 @@
           <el-checkbox>记住我</el-checkbox>
         </label>
       </p>
-      <el-button class="margin-t-10 nps-login-btn nps-loging " @click="submitLogin('loginform')" type="primary">登陆 <span class="el-icon-arrow-right fr"></span></el-button>
+      <a class="margin-t-10 nps-login-btn nps-loging " @click="submitLogin('loginform')" type="primary">登陆 <span class="el-icon-arrow-right fr"></span></a>
     </el-form>
     <div class="margin-t-10 nps-to-register">
       <span>还没有账户？</span>
-      <el-button class="margin-t-10 nps-login-btn nps-registing" type="primary">立即注册 <span class="el-icon-arrow-right fr"></span></el-button>
+      <router-link to="/register" class="margin-t-10 nps-login-btn nps-registing" type="primary">立即注册 <span class="el-icon-arrow-right fr"></span></router-link>
     </div>
   </div>
 </template>
 
 <script>
+import {login} from 'commonjs/Requestaxios'
 export default {
   data () {
     let emailReg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
@@ -36,7 +37,6 @@ export default {
       } else if (!emailReg.test(value)) {
         return callback(new Error('请输入正确的邮箱'))
       }
-      console.log(emailReg.test(value))
       callback()
     }
     return {
@@ -69,7 +69,39 @@ export default {
     submitLogin (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          console.log(valid)
+          this.$emit('closeLogin')
+          login({
+            data: {
+              email: this.loginform.email,
+              password: this.loginform.passward
+            },
+            success: (res) => {
+              if (res.status === 200) {
+                // 返回的用户信息
+                let infor = res.data.infor
+                infor = JSON.stringify(infor)
+                window.localStorage.setItem('infor', infor)
+                // 返回的token
+                let token = res.data.token
+                window.localStorage.setItem('token', token)
+                this.$router.push('/order')
+                console.log(res.data)
+              } else {
+                this.$message({
+                  type: 'warning',
+                  message: '您还没注册，请注册',
+                  showClose: 'true',
+                  offset: 100,
+                  onClose: () => {
+                    this.$router.push('/register')
+                  }
+                })
+              }
+            },
+            error (err) {
+              console.log(err)
+            }
+          })
         }
       })
     }

@@ -25,7 +25,7 @@
 						<router-link to="/Hellpdetails">
 							<div class="fl" v-for="(item,index) in items" :key="index">
 								<div class="nps-hellp-lists">
-									<img src="../../assets/hellp1.png" />
+									<img :src="item.img" class="image"  />
 									<div class="text-center">{{item.msg}}</div>
 								</div>
 							</div>
@@ -51,18 +51,54 @@ export default {
 			// 存放输入的文字
 			search: '',
 			list: [
-			{msg: 'aaa1'},
-			{msg: 'bbb2'},
-			{msg: 'ccc1'},
-			{msg: 'ddd2'},
-			{msg: 'aaa1'},
-			{msg: 'bbb2'},
-			{msg: 'ccc1'},
-			{msg: 'ddd2'},
-			{msg: 'aaa1'},
-			{msg: 'bbb2'},
-			{msg: 'ccc1'},
-			{msg: 'ddd2'}
+			{
+			msg: 'Inissia',
+			img: require('../../assets/hellp1.png')
+			},
+			{
+			msg: 'Essenza Mini',
+			img: require('../../assets/hellp5.png')
+			},
+			{
+			msg: 'Pixie',
+			img: require('../../assets/hellp6.png')
+			},
+			{
+			msg: 'Pixie Clips',
+			img: require('../../assets/hellp7.png')
+			},
+			{
+			msg: 'Citiz',
+			img: require('../../assets/hellp8.png')
+			},
+			{
+			msg: 'U',
+			img: require('../../assets/hellp9.png')
+			},
+			{
+			msg: 'Expert',
+			img: require('../../assets/hellp10.png')
+			},
+			{
+			msg: 'Lattissima Touch',
+			img: require('../../assets/hellp11.png')
+			},
+			{
+			msg: 'Lattissima Pro',
+			img: require('../../assets/hellp12.png')
+			},
+			{
+			msg: 'Creatista',
+			img: require('../../assets/hellp13.png')
+			},
+			{
+			msg: 'Aeroccino3',
+			img: require('../../assets/hellp14.png')
+			},
+			{
+			msg: 'Aeroccino4',
+			img: require('../../assets/hellp15.png')
+			}
 			]
 		}
 	},

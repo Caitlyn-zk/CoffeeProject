@@ -18,7 +18,7 @@
                 <a>NESPRESSO配方</a>
             </div>
             <div class="nps-middle-cont clearfix">
-                <router-link v-for="(item,index) in count" :key="index" to="/datai">
+                <router-link v-for="(item, index) in count" :key="index" to="/datai">
                     <List></List>
                 </router-link>
             </div>
@@ -52,12 +52,12 @@ export default {
             this.timer = setInterval(() => {
                 this.pick = false
                 this.show = true
-                this.count.push({})
             }, 1000)
-            this.$once('hook:beforeDestroy', () => {
-                clearInterval(this.timer)
-            })
+            this.count.push([List])
         }
+    },
+    mounted () {
+        window.clearInterval(this.timer)
     },
     beforeDestroy () {
         clearInterval(this.timer)

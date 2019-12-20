@@ -32,7 +32,7 @@
                         <p>您有任何疑问吗？请查看常见问题。</p>
                     </div>
                     <div class="nps-support-problem">
-                        <a>常见问题 <span class="el-icon-arrow-right"></span></a>
+                        <router-link to="/problem">常见问题 <span class="el-icon-arrow-right"></span></router-link>
                     </div>
                 </li>
                 <li>
@@ -41,7 +41,7 @@
                         <p>欢迎随时通过电子邮件联系我们，我们将尽快给您回复。</p>
                     </div>
                     <div class="nps-support-problem">
-                        <a>联系我们 <span class="el-icon-arrow-right"></span></a>
+                        <router-link to="/info">联系我们 <span class="el-icon-arrow-right"></span></router-link>
                     </div>
                 </li>
             </ul>

@@ -10,6 +10,7 @@
 			</el-steps>
 		</div>
 		<component :changeStep="changeStep" :is="view"></component>
+    <Orderstepfooter></Orderstepfooter>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import Steptwo from 'components/Orderstep/steptwo'
 import Stepthree from 'components/Orderstep/stepthree'
 import Stepfour from 'components/Orderstep/stepfour'
 import Stepfive from 'components/Orderstep/stepfive'
+import Orderstepfooter from '@/components/service/Footer'
 export default {
   data () {
     return {
@@ -31,7 +33,8 @@ export default {
     Steptwo,
     Stepthree,
     Stepfour,
-    Stepfive
+    Stepfive,
+    Orderstepfooter
   },
   methods: {
     changeStep (step) {

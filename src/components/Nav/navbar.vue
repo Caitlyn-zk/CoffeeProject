@@ -139,36 +139,42 @@
       </li>
       <!-- 会员 -->
       <li class="nps-navbar-list nps-navbar-vipMember">
-        <div class="nps-navbar-img nps-navbar-img-vipMember">
-          <!-- 导航上边，少了白边，使用定位弥补 -->
-          <div class="nps-navbar-filler"></div>
-        </div>
-        <h3>会员有礼</h3>
-        <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-vipMember">
-          <li class="vipMember-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
-            <div class="vipMember-img">
-              <img src="./img/gzt-nav-1.png" alt="">
-            </div>
-          </li>
-          <li class="vipMember-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
-            <div class="vipMember-img">
-              <img src="./img/gzt-nav-1.png" alt="">
-            </div>
-          </li>
-          <li class="vipMember-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
-            <div class="vipMember-img">
-              <img src="./img/gzt-nav-1.png" alt="">
-            </div>
-          </li>
-          <li class="vipMember-list">
-            <div class="vipMember-img">
-              <img class="vipMember-img-4" src="./img/gzt-nav-4.jpg" alt="">
-            </div>
-          </li>
-        </div>
+        <router-link to="/member">
+          <div class="nps-navbar-img nps-navbar-img-vipMember">
+            <!-- 导航上边，少了白边，使用定位弥补 -->
+            <div class="nps-navbar-filler"></div>
+          </div>
+          <h3 class="vipMember-title">会员有礼</h3>
+          <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-vipMember">
+            <li class="vipMember-list">
+              <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
+              <div class="vipMember-img">
+                <img src="./img/gzt-nav-1.png" alt="">
+              </div>
+            </li>
+            <li class="vipMember-list">
+              <router-link to="/polite">
+                <p class="vipMember-list-title">会员礼遇</p>
+                <div class="vipMember-img">
+                  <img src="./img/gzt-nav-1.png" alt="">
+                </div>
+              </router-link>
+            </li>
+            <li class="vipMember-list">
+              <router-link to="/favorite">
+                <p class="vipMember-list-title">专属礼物</p>
+                <div class="vipMember-img">
+                  <img src="./img/gzt-nav-1.png" alt="">
+                </div>
+              </router-link>
+            </li>
+            <li class="vipMember-list">
+              <div class="vipMember-img">
+                <img class="vipMember-img-4" src="./img/gzt-nav-4.jpg" alt="">
+              </div>
+            </li>
+          </div>
+        </router-link>
       </li>
       <!-- 顾客服务 -->
       <li class="nps-navbar-list nps-navbar-customerService">

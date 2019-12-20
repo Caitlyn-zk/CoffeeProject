@@ -30,8 +30,44 @@ let capsuleHome = (params) => {
 		params.error(error)
 	})
 }
+// 登录请求
+let login = (params) => {
+  axiosRequest('login', 'post', params.data).then((res) => {
+    params.success(res)
+  }).catch((error) => {
+    params.error(error)
+  })
+}
+// 邮箱验证
+let backRetrieve = (params) => {
+  axiosRequest('backRetrieve', 'post', params.data).then((res) => {
+    params.success(res)
+  }).catch((error) => {
+    params.error(error)
+  })
+}
+// 用户注册
+let register = (params) => {
+  axiosRequest('register', 'post', params.data).then((res) => {
+    params.success(res)
+  }).catch((error) => {
+    params.error(error)
+  })
+}
+// 添加订单
+let order = (params) => {
+	axiosRequest('addUserOrder', 'post', params.data).then((res) => {
+		params.success(res)
+	}).catch((error) => {
+		params.error(error)
+	})
+}
 export {
 	MachineLists,
 	addInfo,
-	capsuleHome
+  capsuleHome,
+  login,
+  backRetrieve,
+	register,
+	order
 }
