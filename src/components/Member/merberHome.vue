@@ -1,72 +1,62 @@
 <template>
   <div>
-    <div class="banner-box content clearfix">
-      <div class="small-banner-box">
-        <span class="banner one">
+    <div class="banner-box content clearfix" @mouseover="enterBox(1)" :class="{on:isBigHover == 1}" @mouseleave="leave(2)">
+        <span class="banner one" @mouseover="enter($event, 1)" :class="{on:isHover==1}">
           <!-- 图片的小图 -->
           <div class="son-small-banner-box">
             <div>
               <img src="./meberImg/lyk-tree-coffee.png"/>
             </div>
             <div>
-              <p>非比寻常的咖啡选择</p>
+              <div class="coffee-tip-bottom">非比寻常的咖啡选择</div>
               <p class="serch-more">探索更多<span>></span></p>
             </div>
           </div>
         </span>
-      </div>
-      <div class="small-banner-box">
-        <span class="banner two">
+        <span class="banner two" @mouseover="enter($event, 2)" :class="{on:isHover==2}">
           <div class="son-small-banner-box">
             <div>
               <img src="./meberImg/lyk-tree.png"/>
             </div>
             <div>
-              <p>非比寻常的咖啡选择</p>
+              <div class="coffee-tip-bottom">可持续的高咖啡品质</div>
               <p class="serch-more">探索更多<span>></span></p>
             </div>
           </div>
         </span>
-      </div>
-      <div class="small-banner-box">
-        <span class="banner three">
+        <span class="banner three" @mouseover="enter($event, 3)" :class="{on:isHover==3}">
           <div class="son-small-banner-box">
             <div>
               <img src="./meberImg/lyk-coffee-ji.png"/>
             </div>
             <div>
-              <p>非比寻常的咖啡选择</p>
+              <div class="coffee-tip-bottom">不断创新的咖啡机</div>
               <p class="serch-more">探索更多<span>></span></p>
             </div>
           </div>
         </span>
-      </div>
-      <div class="small-banner-box">
-        <span class="banner fove">
+        <span class="banner fove" @mouseover="enter($event, 4)" :class="{on:isHover==4}">
           <div class="son-small-banner-box">
             <div>
               <img src="./meberImg/lyk-Coffee-cut.png"/>
             </div>
             <div>
-              <p>非比寻常的咖啡选择</p>
+              <div class="coffee-tip-bottom">丰富多样的咖啡配件</div>
               <p class="serch-more">探索更多<span>></span></p>
             </div>
           </div>
         </span>
-      </div>
-      <div class="small-banner-box">
-        <span class="banner five">
+        <span class="banner five" @mouseover="enter($event, 5)" :class="{on:isHover==5}">
           <div class="son-small-banner-box">
             <div>
               <img src="./meberImg/Lyk-coffee.svg"/>
             </div>
             <div>
-              <p>非比寻常的咖啡选择</p>
+              <div class="coffee-tip-bottom">您的个性化服务</div>
               <p class="serch-more">探索更多<span>></span></p>
             </div>
           </div>
         </span>
-      </div>
     </div>
     <ul class="coffee-text-box">
       <li class="coffee-text-one"><span class="nespresso">NESPRESSO</span><span class="coffee-text-span">浓醇咖啡</span></li>
@@ -137,7 +127,7 @@
       <!-- 咖啡机 -->
       <div class="content bg-machine-box">
         <div class="introduce">
-          <span>远非轻触按钮这么简单</span>
+          <span class="coffee-introduce-title">远非轻触按钮这么简单</span>
           <ul class="introduce-machine">
             <li>
               <span>有好的操作</span>
@@ -177,7 +167,7 @@
       <!-- 咖啡配件 -->
       <div class="coffee-accessories-box content">
         <div class="coffee-accessories-content">
-          <span>咖啡配件</span>
+          <span class="coffee-accessories-title">咖啡配件</span>
           <ul>
             <li class="coffee-accessories-introduce">不只是实用的功能，更具有优美的外观。您可以根据自己的风格和心情选择喜欢的配件。从咖啡支架到随行杯，从浓缩咖啡套装到卡布奇诺咖啡杯，可从实用的配件和现代设计的系列中随意组合搭配。</li>
             <li class="coffee-accessories-link">
@@ -189,7 +179,7 @@
       <!-- 咖啡房子 -->
       <div class="content coffee-home-box">
         <div class="coffee-home-content">
-          <span class="">专享的个性化服务</span>
+          <span class="coffee-home-title">专享的个性化服务</span>
           <p>Nespresso咖啡专员和专家每天24小时在线。您可以随时通过Nespresso移动应用联系我们，或者拨打我们的免费电话，拜访店铺了解我们的解决方案。</p>
         </div>
       </div>
@@ -218,25 +208,25 @@
           <span class="coffee-order-title">选择您需要的：</span>
           <ul class="order-coffee-content-ul">
             <li class="order-coffee-li">
-              <span class="order-top">Nespresso咖啡机</span>
+              <div class="order-top">Nespresso咖啡机</div>
               <img src="./meberImg/lyk-coffee-order-mathine.png" class="order-img"/>
-              <span class="order-bottom">选择合适您的咖啡机</span>
+              <div class="order-bottom">选择合适您的咖啡机</div>
               <div class="order-buy-btn">
                 <a>立即订购</a>
               </div>
             </li>
             <li class="order-coffee-li border">
-              <span class="order-top">Nespresso咖啡胶囊</span>
+              <div class="order-top">Nespresso咖啡胶囊</div>
               <img src="./meberImg/lyk-coffee-order-mathine2.png" class="order-img"/>
-              <span class="order-bottom">选择合适您喜欢口味的咖啡胶囊</span>
+              <div class="order-bottom">选择合适您喜欢口味的咖啡胶囊</div>
               <div class="order-buy-btn">
                 <a>立即订购</a>
               </div>
             </li>
             <li class="order-coffee-li">
-              <span class="order-top">Nespresso咖啡配件</span>
+              <div class="order-top">Nespresso咖啡配件</div>
               <img src="./meberImg/lyk-coffee-order-mathine1.png" class="order-img"/>
-              <span class="order-bottom">选择合适您最喜爱的咖啡配件</span>
+              <div class="order-bottom">选择合适您最喜爱的咖啡配件</div>
               <div class="order-buy-btn">
                 <a>立即订购</a>
               </div>
@@ -280,6 +270,9 @@
           </ul>
         </div>
       </div>
+      <div class="content">
+        <lastFooter></lastFooter>
+      </div>
   </div>
 </template>
 
@@ -287,16 +280,21 @@
 import movieLok from './movie'
 import slide from './slide'
 import slideMathine from './slideMathine'
+import lastFooter from '../service/Footer'
 export default {
   components: {
     movieLok,
     slide,
-    slideMathine
+    slideMathine,
+    lastFooter
   },
   data () {
     return {
       icon: '+',
       isActive: 0,
+      isHover: 0,
+      isBigHover: 0,
+      isNum: 0,
       dateLists: [
         {
           collapseicon: '+',
@@ -306,7 +304,7 @@ export default {
         {
           collapseicon: '-',
           collapseTitle: '在何处购买Nespresso咖啡胶囊或咖啡机？',
-          collapseDetail: '可通过三种方式购买： 登陆<a>online</a> on the <a>Nespresso网站</a> 或者移动应用、电话订购或者拜访店铺。'
+          collapseDetail: '可通过三种方式购买： 登陆online on the Nespresso网站 或者移动应用、电话订购或者拜访店铺。'
         },
         {
           collapseicon: '+',
@@ -333,10 +331,26 @@ export default {
   },
   methods: {
     changeClass (value) {
-      console.log(value)
       this.isActive = value
-      console.log(this.dateLists.collapseicon)
-      console.log(this.isActive)
+    },
+    enter (e, num) {
+      if (num === 1) {
+        this.isHover = num
+      } else if (num === 2) {
+        this.isHover = num
+      } else if (num === 3) {
+        this.isHover = num
+      } else if (num === 4) {
+        this.isHover = num
+      } else {
+        this.isHover = num
+      }
+    },
+    enterBox (number) {
+      this.isBigHover = number
+    },
+    leave (numberTwo) {
+      this.isBigHover = numberTwo
     }
   },
   // 节点挂载完成
@@ -345,6 +359,6 @@ export default {
 }
 </script>
 
-<style lang="less" scope>
+<style lang="less" scoped>
 @import './merberStyle/meberHome.less';
 </style>

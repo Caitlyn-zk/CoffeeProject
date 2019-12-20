@@ -1,32 +1,116 @@
-.el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-  }
-  .el-carousel__item {
-    overflow: visible;
-  }
-  .el-carousel__item:nth-child(2n) {
-    width: 200px;
-   
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-    width: 200px;
-  }
-.el-carousel__indicators--outside {
-    display: none;
+@import '../../../css/public.less';
+ 
+.btn.pre {
+  left: 230px;
 }
-.slide-banner-title {
-  font-size: 12px;
-  color: #000;
+.btn.next {
+  right: 230px;
+}
+@keyframes myRight {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(42px);
+  }
+}
+@keyframes myLeft {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-42px);
+  }
+}
+.container-lists.on {
+  .btn {
+    z-index: 101;
+  }
+  .btn.next {
+    animation: myRight 0.5s;
+    display: block;
+  }
+  .btn.pre {
+    animation: myLeft 0.5s;
+    display: block;
+  }
+}
+.container-lists {
+  width: 996px;
+  height: 250px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  .btn {
+    background: #dddddd;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: none;
+    line-height: 42px;
+    position: absolute;
+    top: 48%;
+    transition: all 0.5s;
+  }
+  .btn.pre {
+    transform: translate(-42px);
+  }
+  .btn.next {
+    transform: translate(42px);
+  }
+  .btn:hover {
+    background: #c0c4cc;
+    font-size: 38px;
+  }
+  .item {
+    text-align: center;
+    width: 800px;
+    height: 250px;
+    margin: 0 auto;
+    list-style: none;
+    position: absolute;
+    left: 100px;
+    background: #f2f6fc;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+}
+.item.active {
+  z-index: 100;
+  opacity: 1;
+}
+.slide-img {
+  width: 250px;
+  height: 250px;
+}
+.dots-lists {
+  display: block;
+  width: 300px;
+  height: 25px;
+  margin: 0 auto;
+  padding-left: 52px;
+  margin-top: 35px;
+  .dot {
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    float: left;
+    margin: 0 3px;
+    transition: all 0.5s;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: gold;
+    opacity: 1;
+  }
 }
 .slide-tip {
-  width: 100px;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
+  width: 200px;
+  margin: -26px auto;
+  border-radius: 5px;
 }
 

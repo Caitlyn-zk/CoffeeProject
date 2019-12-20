@@ -38,6 +38,9 @@ import Best from '@/components/Coffeemachine/best-sellers'
 import Seekfit from '@/components/CapsuleB/seekfit'
 import Recovery from '@/components/service/Index/assembly/recovery'
 import address from '@/components/service/Index/address'
+import Favorite from '../components/Member/favoriteGift'
+import Polite from '../components/Member/MembersPolite'
+import Member from '../components/Member/merberHome'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -195,5 +198,14 @@ export default new Router({
 		}, {
 			path: '/address',
 			component: address
+		}, {
+			path: '/member',
+			component: Member
+		}, {
+			path: '/polite',
+			component: Polite
+		}, {
+			path: '/favorite',
+			component: Favorite
 		}]
 })
