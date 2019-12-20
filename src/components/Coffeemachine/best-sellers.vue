@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div style="background: #fff;">
 	<Title></Title>
 	<div class="content">
 		<div class="nps-details margin-t-10 clearfix">

@@ -1,4 +1,5 @@
 <template>
+	<router-link to="/best">
 	<div class="content nps-banner">
 		<div class="nps-span">
 			<a class="font-12 color-h">
@@ -6,6 +7,7 @@
 			</a>
 		</div>
 	</div>
+	</router-link>
 </template>
 
 <script>

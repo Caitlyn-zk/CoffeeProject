@@ -39,6 +39,7 @@ import Best from '@/components/Coffeemachine/best-sellers'
 import Seekfit from '@/components/CapsuleB/seekfit'
 import Recovery from '@/components/service/Index/assembly/recovery'
 import address from '@/components/service/Index/address'
+import News from '@/components/Coffeemachine/new'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -199,5 +200,8 @@ export default new Router({
 		}, {
 			path: '/address',
 			component: address
+		}, {
+			path: '/News',
+			component: News
 		}]
 })
