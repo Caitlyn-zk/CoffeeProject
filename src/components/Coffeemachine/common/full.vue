@@ -1,7 +1,7 @@
 <template>
 	<div class="cl-black padding-tb-10">
 		<div class="nps-repair-title text-center content">
-			<a class="nps-repair-title-a">购物满340元即可尊享免费配送</a>
+			<router-link to="/caphome" class="nps-repair-title-a">购物满340元即可尊享免费配送</router-link>
 			<span class="nps-padding">|</span>
 			<span>北京/上海/广州/<a class="nps-repair-title-a1">深圳2个工作日内</a> 急速送达</span>
 		</div>
