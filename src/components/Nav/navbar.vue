@@ -12,21 +12,27 @@
         <h3>特惠活动</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-specialOffers clearfix">
           <li class="specialOffers-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
+            <p class="font-16">购买任意的200颗咖啡胶囊（不含迎新礼盒）即可获赠一套大杯品饮杯</p>
             <div class="specialOffers-img">
-              <img src="./img/gzt-nav-1.png" alt="">
+              <router-link to="/caphome">
+                <img src="./img/gzt-nav-1.png" alt="" width="80%" height="80%">
+              </router-link>
             </div>
           </li>
           <li class="specialOffers-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
+            <p class="font-16">购买CltiZ银色咖啡机立减200元，且送一个价值800元的黑色奶沫机</p>
             <div class="specialOffers-img">
-              <img src="./img/gzt-nav-1.png" alt="">
+              <router-link to="/Best">
+              <img src="./img/gzt111.jpg" alt="" width="80%" height="80%">
+              </router-link>
             </div>
           </li>
           <li class="specialOffers-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
+            <p class="font-16">购买任意Aeroccino 4奶泡机立减200元。</p>
             <div class="specialOffers-img">
-              <img src="./img/gzt-nav-1.png" alt="">
+              <router-link to="/Best">
+              <img src="./img/gzt222.jpg" alt="" width="80%" height="80%">
+              </router-link>
             </div>
           </li>
           <li class="specialOffers-list">
@@ -44,35 +50,40 @@
         </div>
         <h3>咖啡胶囊</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-coffeeCapsule">
+          <router-link to="/caphome">
           <li class="coffeeCapsule-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
+            <p>咖啡胶囊</p>
+            <div class="coffeeCapsule-img padding-80">
+              <img src="./img/gzt333.jpg" alt="">
+            </div>
+          </li></router-link>
+          <li class="coffeeCapsule-list">
+            <div class="coffeeCapsule-list-box">
+              <img src="./img/gzt555.jpg" alt="" width="80%" height="80%">
+              <span class="coffeeCapsule-list-box-text font-12">探索Nespresso优选咖啡胶囊</span>
+            </div>
+            <router-link to="/seefit">
+            <div class="coffeeCapsule-list-box">
+              <img src="./img/gzt666.jpg" alt="" width="80%" height="80%">
+              <span class="coffeeCapsule-list-box-text font-12">测一测您喜欢的咖啡口味</span>
+            </div>
+            </router-link>
+          </li>
+          <li class="coffeeCapsule-list">
+            <router-link to="/formula">
+            <div class="coffeeCapsule-list-box">
+              <img src="./img/gzt777.jpg" alt="" width="80%" height="80%">
+              <span class="coffeeCapsule-list-box-text font-12">Nespresso咖啡配方</span>
+            </div>
+            </router-link>
+            <div class="coffeeCapsule-list-box">
+              <img src="./img/gzt-nav-22.png" alt="" width="80%" height="80%">
+              <span class="coffeeCapsule-list-box-text font-12">Nespresso迎新会员好礼</span>
+            </div>
+          </li>
+          <li class="coffeeCapsule-list">
             <div class="coffeeCapsule-img">
-              <img src="./img/gzt-nav-1.png" alt="">
-            </div>
-          </li>
-          <li class="coffeeCapsule-list">
-            <div class="coffeeCapsule-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="coffeeCapsule-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-            <div class="coffeeCapsule-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="coffeeCapsule-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-          </li>
-          <li class="coffeeCapsule-list">
-            <div class="coffeeCapsule-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="coffeeCapsule-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-            <div class="coffeeCapsule-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="coffeeCapsule-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-          </li>
-          <li class="coffeeCapsule-list">
-            <div class="coffeeCapsule-img">
-              <img class="coffeeCapsule-img-4" src="./img/gzt-nav-4.jpg" alt="">
+              <img class="coffeeCapsule-img-4" src="./img/gzt888.jpg" alt="" width="80%" height="80%">
             </div>
           </li>
         </div>
@@ -85,31 +96,39 @@
         </div>
         <h3>咖啡机</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-coffeeMachine">
+          <router-link to="/Machine">
+            <li class="coffeeMachine-list">
+              <p class="padding-b-60">订购咖啡机</p>
+              <div class="coffeeMachine-img">
+                <img src="./img/gzt999.jpg" alt="">
+              </div>
+             </li>
+          </router-link>
           <li class="coffeeMachine-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
-            <div class="coffeeMachine-img">
-              <img src="./img/gzt-nav-1.png" alt="">
+            <div class="coffeeMachine-list-box">
+              <img src="./img/gzt1000.jpg" alt="">
+              <span class="coffeeMachine-list-box-text font-14">Nespresso探索优选咖啡胶囊</span>
             </div>
+           <router-link to="/Hellp">
+            <div class="coffeeMachine-list-box">
+              <img src="./img/gzt1100.jpg" alt="">
+              <span class="coffeeMachine-list-box-text  font-14">咖啡机使用帮助</span>
+            </div>
+           </router-link>
           </li>
           <li class="coffeeMachine-list">
-            <div class="coffeeMachine-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="coffeeMachine-list-box-text">探索优选咖啡胶囊</span>
+            <router-link to="Repair">
+              <div class="coffeeMachine-list-box">
+              <img src="./img/gzt1200.jpg" alt="">
+              <span class="coffeeMachine-list-box-text  font-14">咖啡机维修及保养</span>
             </div>
+            </router-link>
+           <router-link to="/Best">
             <div class="coffeeMachine-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="coffeeMachine-list-box-text">探索优选咖啡胶囊</span>
+              <img src="./img/gzt1000.jpg" alt="">
+              <span class="coffeeMachine-list-box-text  font-14">热卖咖啡机</span>
             </div>
-          </li>
-          <li class="coffeeMachine-list">
-            <div class="coffeeMachine-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="coffeeMachine-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-            <div class="coffeeMachine-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="coffeeMachine-list-box-text">探索优选咖啡胶囊</span>
-            </div>
+           </router-link>
           </li>
           <li class="coffeeMachine-list">
             <div class="coffeeMachine-img">
