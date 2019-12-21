@@ -1,8 +1,8 @@
 <template>
-	<router-link to="/Details">
-	<div class="nps-title-sping clearfix" :key="index" v-for="(Lists,index) in machineLists">
+	<div>
+	<div class="nps-title-sping clearfix" :key="index" v-for="(Lists,index) in machineLists" @click="gtepush(Lists)">
 		<div class="fl nps-title-sping-img">
-			<img :src="url + JSON.parse(Lists.img)[0]" alt="列表图片" />
+			<img :src="url + JSON.parse(Lists.cMachineImg)[0]" alt="列表图片" />
 		</div>
 		<div class="fl nps-sping-jiao">
 			<div class="nps-sping-font">{{Lists.name}}</div>
@@ -22,7 +22,7 @@
 			<a class="nps-btn-xijie">查看细节&amp;购买</a>
 		</div>
 	</div>
-	</router-link>
+	</div>
 </template>
 
 <script>
@@ -32,7 +32,7 @@ export default {
 		return {
 			machineLists: {},
 			url: 'http://192.168.97.240:3000/',
-			sstt: ['cl-black', 'cl-grey', 'cl-green']
+			sstt: ['cl-black', 'cl-grey', 'cl-green', 'cl-grey']
 		}
 	},
 	methods: {
@@ -44,6 +44,18 @@ export default {
 						console.log(res)
 						this.machineLists = res.data
 					}
+				}
+			})
+		},
+		gtepush (id) {
+			this.$router.push({
+				path: '/details',
+				query: {
+					id: id.id,
+					name: id.name,
+					cMachineImg: id.cMachineImg,
+					price: id.price,
+					discountPrice: id.discountPrice
 				}
 			})
 		}

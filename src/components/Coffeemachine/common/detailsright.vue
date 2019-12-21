@@ -4,7 +4,7 @@
 			<img src="https://www.nespresso.com/ecom/medias/sys_master/public/12078342537246/20181224-200x100-CN.png" alt="赠免费试用装">
 		</div>
 		<div class="fl nps-xiangqing">
-			<div class="nps-mai-title">Inissia</div>
+			<div class="nps-mai-title">{{name}}</div>
 			<div class="nps-mai-title1">Inissia C40 红色</div>
 			<div class="font-12">颜色</div>
 			<div class="clearfix margin-t-10">
@@ -29,6 +29,21 @@ import Spping from '@/components/Coffeemachine/common/shopingbtn'
 export default {
 	components: {
 		Spping
+	},
+	data () {
+		return {
+			name: '',
+			price: '',
+			discountPrice: ''
+		}
+	},
+	methods: {
+		grthub () {
+			this.name = this.$router.history.current.query.name
+		}
+	},
+	mounted () {
+		this.grthub()
 	}
 }
 </script>
