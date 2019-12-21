@@ -3,7 +3,7 @@
         <div class="padding-15">
             <Tips></Tips>
         </div>
-        <div class="nps-block">
+        <div class="nps-block content" style="width:1050px">
         <el-carousel trigger="click" :autoplay="autoname">
             <el-button class="nps-start" @click="start">
                 <div v-show="!show" class="el-icon-video-play"></div>
@@ -11,7 +11,7 @@
             </el-button>
             <el-carousel-item v-for="item in dataimg" :key="item.value">
                 <div class="nps-carousel">
-                    <img :src="item.src" alt="轮播" width="100%">
+                    <img :src="item.src" alt="轮播" width="100%" height="100%">
                     <div class="nps-carouseltxt text-center">
                         <p class="margin-b-20 text-white">{{item.txt}}</p>
                         <p class="margin-b-20 text-topyellow">{{item.txt1}}</p>
@@ -25,18 +25,18 @@
         <div class="nps-banner content">
             <div class="nps-bannerimg clearfix">
                 <a href="">
-                    <img src="./img/banner_1.jpg" alt="" width="100%">
+                    <img src="./img/banner_1.jpg" alt="" width="100%" height="100%">
                 </a>
             </div>
             <div class="nps-bannerimg clearfix">
                 <a href="">
-                    <img src="./img/banner_2.jpg" alt="" width="100%">
+                    <img src="./img/banner_2.jpg" alt="" width="100%" height="100%">
                 </a>
             </div>
             <div class="nps-bannerMid">
                 <div class="nps-bannerleft">
                     <div class="nps-bannerlefttop">
-                        <img src="./img/qrcode.jpg" alt="" width="100%">
+                        <img src="./img/qrcode.jpg" alt="" width="100%" height="100%">
                         <div class="nps-bannerleftcont padding-20">
                             <h2 class="text-white margin-b-20 font-16">
                                 Nespresso浓遇咖啡 iOS APP <br/><br/>您口袋中的咖啡
@@ -47,7 +47,9 @@
                     </div>
                     <div class="nps-bannerleftbottom padding-t-10 padding-l-20 padding-r-20">
                         <p class="margin-b-10 text-white font-16"><span class="margin-r-5">NESPRESSO</span><span>线下活动&咖啡配方</span></p>
-                        <p class="font-12"><a class="text-topyellow" href="">查看您附近的线下活动 ></a></p>
+                        <router-link to="/offline">
+                            <p class="font-12"><a class="text-topyellow" href="">查看您附近的线下活动 ></a></p>
+                        </router-link>
                         <div class="nps-l fl">
                             <img src="./img/bannerbottom1.jpg" alt="" width="100%">
                             <p class="text-white margin-5px font-16">Nespresso @ 设计上海2019</p>
@@ -217,7 +219,6 @@ export default {
         start () {
             this.autoname = !this.autoname
             this.show = !this.show
-            console.log(111)
         }
     }
 }
