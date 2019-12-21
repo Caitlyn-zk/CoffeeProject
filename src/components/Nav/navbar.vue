@@ -52,7 +52,7 @@
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-coffeeCapsule">
           <router-link to="/caphome">
           <li class="coffeeCapsule-list">
-            <p>咖啡胶囊</p>
+            <p class="padding-t-60 text-black">咖啡胶囊</p>
             <div class="coffeeCapsule-img padding-80">
               <img src="./img/gzt333.jpg" alt="">
             </div>
@@ -65,7 +65,7 @@
             <router-link to="/seefit">
             <div class="coffeeCapsule-list-box">
               <img src="./img/gzt666.jpg" alt="" width="80%" height="80%">
-              <span class="coffeeCapsule-list-box-text font-12">测一测您喜欢的咖啡口味</span>
+              <span class="coffeeCapsule-list-box-text font-12 text-black">测一测您喜欢的咖啡口味</span>
             </div>
             </router-link>
           </li>
@@ -73,7 +73,7 @@
             <router-link to="/formula">
             <div class="coffeeCapsule-list-box">
               <img src="./img/gzt777.jpg" alt="" width="80%" height="80%">
-              <span class="coffeeCapsule-list-box-text font-12">Nespresso咖啡配方</span>
+              <span class="coffeeCapsule-list-box-text font-12 text-black">Nespresso咖啡配方</span>
             </div>
             </router-link>
             <div class="coffeeCapsule-list-box">
@@ -98,7 +98,7 @@
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-coffeeMachine">
           <router-link to="/Machine">
             <li class="coffeeMachine-list">
-              <p class="padding-b-60">订购咖啡机</p>
+              <p class="padding-b-60 padding-t-60 text-black">订购咖啡机</p>
               <div class="coffeeMachine-img">
                 <img src="./img/gzt999.jpg" alt="">
               </div>
@@ -112,7 +112,7 @@
            <router-link to="/Hellp">
             <div class="coffeeMachine-list-box">
               <img src="./img/gzt1100.jpg" alt="">
-              <span class="coffeeMachine-list-box-text  font-14">咖啡机使用帮助</span>
+              <span class="coffeeMachine-list-box-text  font-14 text-black">咖啡机使用帮助</span>
             </div>
            </router-link>
           </li>
@@ -120,13 +120,13 @@
             <router-link to="Repair">
               <div class="coffeeMachine-list-box">
               <img src="./img/gzt1200.jpg" alt="">
-              <span class="coffeeMachine-list-box-text  font-14">咖啡机维修及保养</span>
+              <span class="coffeeMachine-list-box-text  font-14 text-black">咖啡机维修及保养</span>
             </div>
             </router-link>
            <router-link to="/Best">
             <div class="coffeeMachine-list-box">
               <img src="./img/gzt1000.jpg" alt="">
-              <span class="coffeeMachine-list-box-text  font-14">热卖咖啡机</span>
+              <span class="coffeeMachine-list-box-text  font-14 text-black">热卖咖啡机</span>
             </div>
            </router-link>
           </li>
@@ -147,30 +147,30 @@
           <h3 class="vipMember-title">会员有礼</h3>
           <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-vipMember">
             <li class="vipMember-list">
-              <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
-              <div class="vipMember-img">
-                <img src="./img/gzt-nav-1.png" alt="">
+              <p class="padding-t-40">为什么选择Nespresso</p>
+              <div class="vipMember-img padding-t-100">
+                <img src="./img/vip1.jpg" alt="">
               </div>
             </li>
             <li class="vipMember-list">
               <router-link to="/polite">
-                <p class="vipMember-list-title">会员礼遇</p>
-                <div class="vipMember-img">
-                  <img src="./img/gzt-nav-1.png" alt="">
+                <p class="vipMember-list-title padding-t-40">新会员专属礼遇</p>
+                <div class="vipMember-img padding-t-100">
+                  <img src="./img/vip2.jpg" alt="">
                 </div>
               </router-link>
             </li>
             <li class="vipMember-list">
               <router-link to="/favorite">
-                <p class="vipMember-list-title">专属礼物</p>
-                <div class="vipMember-img">
-                  <img src="./img/gzt-nav-1.png" alt="">
+                <p class="vipMember-list-title padding-t-40">为不同场合选择礼物</p>
+                <div class="vipMember-img padding-t-100">
+                  <img src="./img/vip3.jpg" alt="">
                 </div>
               </router-link>
             </li>
             <li class="vipMember-list">
               <div class="vipMember-img">
-                <img class="vipMember-img-4" src="./img/gzt-nav-4.jpg" alt="">
+                <img class="vipMember-img-4" src="./img/vip4.jpg" alt="">
               </div>
             </li>
           </div>
@@ -186,33 +186,41 @@
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-customerService">
           <li class="customerService-list">
             <div class="customerService-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="customerService-list-box-text">探索优选咖啡胶囊</span>
+              <img src="./img/serverbuy.jpg" alt="">
+              <span class="customerService-list-box-text">在线订购</span>
             </div>
-            <div class="customerService-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="customerService-list-box-text">探索优选咖啡胶囊</span>
-            </div>
+            <router-link to="/reparation">
+              <div class="customerService-list-box">
+              <img src="./img/servercup.jpg" alt="">
+              <span class="customerService-list-box-text">咖啡机保养</span>
+              </div>
+            </router-link>
           </li>
           <li class="customerService-list">
-            <div class="customerService-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="customerService-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-            <div class="customerService-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="customerService-list-box-text">探索优选咖啡胶囊</span>
-            </div>
+            <router-link to="/delivery">
+              <div class="customerService-list-box">
+              <img src="./img/servering.jpg" alt="">
+              <span class="customerService-list-box-text">运输服务</span>
+              </div>
+            </router-link>
+            <router-link to="/delivery">
+              <div class="customerService-list-box">
+              <img src="./img/serverlook.jpg" alt="">
+              <span class="customerService-list-box-text">客户关怀</span>
+              </div>
+            </router-link>
           </li>
           <li class="customerService-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
+            <router-link to="/recovery">
+              <p class="padding-t-100">咖啡胶囊回收</p>
+              <div class="customerService-img">
+                <img src="./img/serverback.jpg" alt="">
+              </div>
+            </router-link>
+          </li>
+          <li class="customerService-list">
             <div class="customerService-img">
-              <img src="./img/gzt-nav-1.png" alt="">
-            </div>
-          </li>
-          <li class="customerService-list">
-            <div class="customerService-img">
-              <img class="customerService-img-4" src="./img/gzt-nav-4.jpg" alt="">
+              <img class="customerService-img-4" src="./img/server.jpg" alt="">
             </div>
           </li>
         </div>
@@ -226,34 +234,40 @@
         <h3>联系我们</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-contactUs">
           <li class="contactUs-list">
-            <p>购买任意的咖啡胶囊即可获赠一套大杯品饮杯购买任意的咖啡胶囊即可获赠一套大杯品饮杯</p>
+            <p class="padding-t-40 text-black">Nespresso门店</p>
+            <div class="contactUs-img padding-t-100">
+              <img src="./img/connection.jpg" alt="">
+            </div>
+          </li>
+          <li class="contactUs-list">
+           <router-link to="/info">
+              <div class="contactUs-list-box">
+              <img src="./img/email.jpg" alt="">
+              <span class="contactUs-list-box-text text-black">邮件联系我们</span>
+              </div>
+           </router-link>
+           <router-link to="/contact">
+               <div class="contactUs-list-box">
+              <img src="./img/phone.jpg" alt="">
+              <span class="contactUs-list-box-text text-black">拨打热线联系我们</span>
+              </div>
+           </router-link>
+          </li>
+          <li class="contactUs-list">
+            <router-link to="/problem">
+              <div class="contactUs-list-box">
+              <img src="./img/question.jpg" alt="">
+              <span class="contactUs-list-box-text text-black">顾客常见问题</span>
+              </div>
+            </router-link>
+            <div class="contactUs-list-box">
+              <img src="./img/mobilephone.jpg" alt="">
+              <span class="contactUs-list-box-text">下载Nepresso</span>
+            </div>
+          </li>
+          <li class="contactUs-list">
             <div class="contactUs-img">
-              <img src="./img/gzt-nav-1.png" alt="">
-            </div>
-          </li>
-          <li class="contactUs-list">
-            <div class="contactUs-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="contactUs-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-            <div class="contactUs-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="contactUs-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-          </li>
-          <li class="contactUs-list">
-            <div class="contactUs-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="contactUs-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-            <div class="contactUs-list-box">
-              <img src="./img/gzt-nav-22.png" alt="">
-              <span class="contactUs-list-box-text">探索优选咖啡胶囊</span>
-            </div>
-          </li>
-          <li class="contactUs-list">
-            <div class="contactUs-img">
-              <img class="contactUs-img-4" src="./img/gzt-nav-4.jpg" alt="">
+              <img class="contactUs-img-4" src="./img/last.jpg" alt="">
             </div>
           </li>
         </div>
