@@ -18,7 +18,8 @@
                         <div class="nps-b-title">黄砂糖</div>
                         <div class="nps-b-lists">
                             <span>CNY 50.00</span>
-                            <a class="el-icon-plus"></a>
+                            <!-- <a class="el-icon-plus"></a> -->
+                            <addIn></addIn>
                         </div>
                     </div>
                     <div class="nps-left-b">
@@ -26,7 +27,8 @@
                         <div class="nps-b-title">CAILLER巧克力粉</div>
                         <div class="nps-b-lists">
                             <span>CNY 50.00</span>
-                            <a class="el-icon-plus"></a>
+                            <!-- <a class="el-icon-plus"></a> -->
+                            <addIn></addIn>
                         </div>
                     </div>
                 </div>
@@ -94,6 +96,7 @@
 import caphomeList from './Common/caphomeList'
 import cartList from './Common/cartList'
 import bottom from '../service/Footer'
+import addIn from '../Order/shopping-add'
 export default {
     data () {
         return {
@@ -107,7 +110,8 @@ export default {
     components: {
         caphomeList,
         cartList,
-        bottom
+        bottom,
+        addIn
     }
 }
 </script>

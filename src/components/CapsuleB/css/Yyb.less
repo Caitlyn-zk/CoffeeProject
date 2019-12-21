@@ -640,19 +640,25 @@
             .nps-b-lists {
                 color: #986f38;
                 font-size: 12px;
-                a {
-                    font-size: 24px;
-                    width: 40px;
-                    height: 40px;
-                    padding-right: 0;
-                    position: relative;
-                    left: 183px;
-                    top: -9px;
-                    background: #3d8705;
-                    border: 1px solid #3d8705;
-                    line-height: 38px;
-                    color: #fff;
-                    border-radius: 4px;
+                position: relative;
+                // a {
+                //     font-size: 24px;
+                //     width: 40px;
+                //     height: 40px;
+                //     padding-right: 0;
+                //     position: relative;
+                //     left: 183px;
+                //     top: -9px;
+                //     background: #3d8705;
+                //     border: 1px solid #3d8705;
+                //     line-height: 38px;
+                //     color: #fff;
+                //     border-radius: 4px;
+                // }
+                button {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
                 }
             }
         }
@@ -663,6 +669,80 @@
         .nps-right-title {
             margin: 20px 0;
             position: relative;
+            // pop弹出框样式修改
+            .el-popover {
+                border: 1px solid #000;
+                &.el-popper {
+                    .nps-el-pop-cont {
+                        span {
+                            font-weight: bold;
+                            padding: 10px 0;
+                            display: block;
+                        }
+                        ul {
+                            li {
+                                float: left;
+                                padding: 0 5px;
+                            }
+                            .nps-pop-a {
+                                width: 42px;
+                                height: 40px;
+                                display: inline-block;
+                                border: 1px solid #eee;
+                                line-height: 38px;
+                                text-align: center;
+                                border-radius: 4px;
+                                background: #eee;
+                                color: #858585;
+                                opacity: .5;
+                                cursor: initial;
+                            }
+                            .nps-pop-b {
+                                width: 42px;
+                                height: 40px;
+                                display: inline-block;
+                                border: 1px solid #eee;
+                                line-height: 38px;
+                                text-align: center;
+                                border-radius: 4px;
+                                color: #858585;
+                                background: #fff;
+                                &:hover {
+                                    border-color: #000;
+                                    color: #000;
+                                }
+                                &:active {
+                                    border: 1px solid #000;
+                                    color: #fff;
+                                    background-color: #000;
+                                }
+                            }
+                        }
+                    }
+                    .popper__arrow {
+                        border-bottom-color: #000;
+                    }
+                    .nps-cont-a {
+                        display: inline-block;
+                        width: 213px;
+                        height: 40;
+                        border: 1px solid #eee;
+                        border-radius: 3px;
+                        line-height: 38px;
+                        text-align: center;
+                        margin: 8px 7px;
+                        &:hover {
+                            border-color: #000;
+                            color: #000;
+                        }
+                        &:active {
+                            border: 1px solid #000;
+                            color: #fff;
+                            background-color: #000;
+                        }
+                    }
+                }
+            }
             .nps-title-x {
                 position: absolute;
                 right: 90px;
@@ -810,6 +890,7 @@
     display: inline-block;
     border-radius: 4px;
     line-height: 40px;
+    position: relative;
     &:not(:disabled) {
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
     }
@@ -848,8 +929,9 @@
             img {
                 position: absolute;
                 top: 0;
-                right: 215px;
-                height: 608px;
+                width: 547px;
+                height: 500px;
+                top: 45px;
             }
             a {
                 position: absolute;
@@ -1440,80 +1522,7 @@
     }
 }
 
-// pop弹出框样式修改
-.el-popover {
-    border: 1px solid #000;
-    &.el-popper {
-        .nps-el-pop-cont {
-            span {
-                font-weight: bold;
-                padding: 10px 0;
-                display: block;
-            }
-            ul {
-                li {
-                    float: left;
-                    padding: 0 5px;
-                }
-                .nps-pop-a {
-                    width: 42px;
-                    height: 40px;
-                    display: inline-block;
-                    border: 1px solid #eee;
-                    line-height: 38px;
-                    text-align: center;
-                    border-radius: 4px;
-                    background: #eee;
-                    color: #858585;
-                    opacity: .5;
-                    cursor: initial;
-                }
-                .nps-pop-b {
-                    width: 42px;
-                    height: 40px;
-                    display: inline-block;
-                    border: 1px solid #eee;
-                    line-height: 38px;
-                    text-align: center;
-                    border-radius: 4px;
-                    color: #858585;
-                    background: #fff;
-                    &:hover {
-                        border-color: #000;
-                        color: #000;
-                    }
-                    &:active {
-                        border: 1px solid #000;
-                        color: #fff;
-                        background-color: #000;
-                    }
-                }
-            }
-        }
-        .popper__arrow {
-            border-bottom-color: #000;
-        }
-        .nps-cont-a {
-            display: inline-block;
-            width: 213px;
-            height: 40;
-            border: 1px solid #eee;
-            border-radius: 3px;
-            line-height: 38px;
-            text-align: center;
-            margin: 8px 7px;
-            &:hover {
-                border-color: #000;
-                color: #000;
-            }
-            &:active {
-                border: 1px solid #000;
-                color: #fff;
-                background-color: #000;
-            }
-        }
-    }
-}
+
 
 // 配方、配方详情页底部
 .nps-botm {

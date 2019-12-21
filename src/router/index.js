@@ -178,6 +178,7 @@ export default new Router({
 			component: Problem
 		}, {
 			path: '/caplists',
+			name: 'Caplists',
 			component: Caplists
 		}, {
 			path: '/glossary',

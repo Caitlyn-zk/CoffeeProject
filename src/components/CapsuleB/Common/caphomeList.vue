@@ -1,31 +1,35 @@
 <template>
-    <router-link to="/caplists">
+    <div>
         <div class="nps-list-lists" v-for="(item, index) in dataList" :key="index">
-            <div class="nps-lits-conta fl">
-                <span class="nps-icon-t">新品上市</span>
-                <div class="nps-cont-a">
-                    <img :src="url + JSON.parse(item.img)[0] "/>
+            <!-- <router-link to="/Caplists"> -->
+                <div @click="changeGet(item)">
+                    <div class="nps-lits-conta fl">
+                        <span class="nps-icon-t">新品上市</span>
+                        <div class="nps-cont-a">
+                            <img :src="url + JSON.parse(item.img)[0]"/>
+                        </div>
+                    </div>
+                    <div class="nps-list-contb fl">
+                        <p class="nps-contb-p">{{item.name}}</p>
+                        <p>{{item.title}}</p>
+                        <div class="nps-contb-list">
+                            <span class="into-a" v-for="(syl, index) in (item.strength)" :key="index"></span>
+                            <span class="into-c">{{item.strength}}</span>
+                            <!-- <span class="into-b"></span> -->
+                        </div>
+                    </div>
+                    <div class="nps-list-contc fl">
+                        <img src="../img/beizi01.png" />
+                        <img src="../img/beizi01.png" />
+                    </div>
                 </div>
-            </div>
-            <div class="nps-list-contb fl">
-                <p class="nps-contb-p">{{item.name}}</p>
-                <p>{{item.title}}</p>
-                <div class="nps-contb-list">
-                    <span class="into-a" v-for="(syl, index) in (item.strength)" :key="index"></span>
-                    <span class="into-c">{{item.strength}}</span>
-                    <!-- <span class="into-b"></span> -->
-                </div>
-            </div>
-            <div class="nps-list-contc fl">
-                <img src="../img/beizi01.png" />
-                <img src="../img/beizi01.png" />
-            </div>
+            <!-- </router-link> -->
             <div class="nps-list-contd fl">
                 <span class="nps-contd-sp">CNY {{item.price}}</span>
                 <cartList></cartList>
             </div>
         </div>
-    </router-link>
+    </div>
 </template>
 
 <script>
@@ -48,6 +52,17 @@ export default {
                     }
                 }
             })
+        },
+        changeGet (i) {
+            this.$router.push({
+                path: '/caplists',
+                query: {
+                    name: i.name,
+                    img: i.img,
+                    price: i.price,
+                    title: i.title
+                }
+            })
         }
     },
     mounted () {
@@ -58,7 +73,6 @@ export default {
     }
 }
 </script>
-
 <style>
 
 </style>
