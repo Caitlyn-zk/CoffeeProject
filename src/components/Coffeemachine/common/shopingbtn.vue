@@ -23,7 +23,7 @@
 				<div class="fl">
 					<i class="el-icon-goods"></i>
 				</div>
-				<span class="text-center font-20">添加到购物车</span>
+				<span class="text-center font-18">添加到购物车</span>
 				<div class="fr">
 					<i class="el-icon-plus"></i>
 				</div>

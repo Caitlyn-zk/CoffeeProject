@@ -39,11 +39,9 @@ import Best from '@/components/Coffeemachine/best-sellers'
 import Seekfit from '@/components/CapsuleB/seekfit'
 import Recovery from '@/components/service/Index/assembly/recovery'
 import address from '@/components/service/Index/address'
-
 import Favorite from '../components/Member/favoriteGift'
 import Polite from '../components/Member/MembersPolite'
 import Member from '../components/Member/merberHome'
-import News from '@/components/Coffeemachine/new'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -213,8 +211,5 @@ export default new Router({
 		}, {
 			path: '/favorite',
 			component: Favorite
-		}, {
-			path: '/News',
-			component: News
 		}]
 })

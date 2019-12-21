@@ -58,20 +58,25 @@
 					<p class="font-14 margin-b-20"><i class="el-icon-arrow-left"></i>
 					<span>p</span>
 					<i class="el-icon-arrow-right"></i>加入Nespresso俱乐部，享受您的个性化服务。</p>
-					<a>
+					<router-link to="/register">
 						<span class="font-14 nps-repair-btn">现在注册</span>
-					</a>
+					</router-link>
 				</div>
 			</div>
+		</div>
+		<div class="content cl-black">
+			<Footer></Footer>
 		</div>
 	</div>
 </template>
 
 <script>
 import Full from '@/components/Coffeemachine/common/full'
+import Footer from '@/components/service/Footer'
 export default {
 	components: {
-		Full
+		Full,
+		Footer
 	},
 	data () {
 		return {

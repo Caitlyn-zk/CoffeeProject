@@ -13,7 +13,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "element-ui": "^2.13.0",
-    "expess": "0.0.1-security",
+    "expess": "^0.0.1-security",
     "express": "^4.17.1",
     "moment": "^2.24.0",
     "video.js": "^7.6.6",

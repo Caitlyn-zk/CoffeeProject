@@ -129,6 +129,9 @@
 		</div>
 		<Recommend></Recommend>
 		<Hellpbottom></Hellpbottom>
+		<div class="content cl-black">
+			<Footer></Footer>
+		</div>
 	</div>
 </template>
 
@@ -136,11 +139,13 @@
 import Full from '@/components/Coffeemachine/common/full'
 import Hellpbottom from '@/components/Coffeemachine/common/hellpbottom'
 import Recommend from '@/components/Coffeemachine/common/hellprecommend'
+import Footer from '@/components/service/Footer'
  export default {
 	components: {
 		Full,
 		Hellpbottom,
-		Recommend
+		Recommend,
+		Footer
 	},
 	data () {
 		return {

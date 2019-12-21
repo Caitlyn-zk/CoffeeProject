@@ -234,7 +234,7 @@ export default {
     changeS () {
       console.log(222)
       order({
-        data:{
+        data: {
           userId: 1,
           status: 1,
           goods: '[{"npscommodity":36,"commodity":1,"quantity":10}]'
@@ -248,7 +248,7 @@ export default {
               type: 'warning',
               message: '订单生成失败',
               showClose: 'true',
-              offset: 100,
+              offset: 100
             })
           }
         },
