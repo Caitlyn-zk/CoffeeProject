@@ -4,13 +4,13 @@
             <div class="nps-cpslts-table">
                 <div class="nps-table-left">
                     <router-link to="/caphome">＜ 返回至所有咖啡</router-link>
-                    <img src="./img/kafeiMax01.png" />
+                    <img :src="img" />
                 </div>
                 <div class="nps-table-right">
                     <p class="nps-tab-spa">新上市</p>
                     <p class="nps-tab-spb">热卖胶囊咖啡</p>
-                    <p class="nps-tab-spc">Nordic Black</p>
-                    <p class="nps-tab-spd">CNY 4.70</p>
+                    <p class="nps-tab-spc">{{name}}</p>
+                    <p class="nps-tab-spd">CNY {{price}}</p>
                     <cartList></cartList>
                 </div>
             </div>
@@ -71,6 +71,29 @@
 import cartList from './Common/cartList'
 import bottom from '../service/Footer'
 export default {
+    data () {
+        return {
+            name: '',
+            price: '',
+            title: '',
+            img: ''
+        }
+    },
+    methods: {
+        getChange () {
+            this.name = this.$router.history.current.query.name
+            this.price = this.$router.history.current.query.price
+            let aa = this.$router.history.current.query.img
+            let bb = aa.split(',')
+            this.img = 'http://192.168.97.240:3000/' + JSON.parse(bb)
+        }
+    },
+    created () {
+        var seif = this
+        seif.getChange()
+    },
+    mounted () {
+    },
     components: {
         cartList,
         bottom
