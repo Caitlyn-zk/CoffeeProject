@@ -55,7 +55,9 @@ export default {
 					name: id.name,
 					cMachineImg: id.cMachineImg,
 					price: id.price,
-					discountPrice: id.discountPrice
+					discountPrice: id.discountPrice,
+					value: id.value,
+					manual: id.manual
 				}
 			})
 		}

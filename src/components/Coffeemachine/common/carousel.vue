@@ -13,10 +13,22 @@
 export default {
 	data () {
 		return {
-			imagesbox: [{id: 0, idView: require('../../../assets/sping1.png')},
-			{id: 1, idView: require('../../../assets/sping2.png')},
-			{id: 2, idView: require('../../../assets/sping3.png')}]
+			imagesbox: [{id: 0, idView: require('../../../assets/cursor1.png')},
+			{id: 1, idView: require('../../../assets/cursor2.png')},
+			{id: 2, idView: require('../../../assets/cursor3.png')},
+			{id: 3, idView: require('../../../assets/cursor4.png')}
+			],
+			cMachineImg: '',
+			url: 'http://192.168.97.240:3000/'
 		}
+	},
+	methods: {
+		getbush () {
+			this.cMachineImg = this.$router.history.current.query.cMachineImg
+		}
+	},
+	mounted () {
+		this.getbush()
 	}
 }
 </script>
