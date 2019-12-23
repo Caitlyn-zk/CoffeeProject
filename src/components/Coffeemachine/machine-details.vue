@@ -45,23 +45,6 @@ export default {
 		Activity3,
 		Activityone,
 		Footer
-	},
-	data () {
-		return {
-			id: '',
-			cMachineImg: ''
-		}
-	},
-	methods: {
-		getbush () {
-			this.name = this.$router.history.current.query.name
-			this.cMachineImg = this.$router.history.current.query.cMachineImg
-			this.price = this.$router.history.current.query.price
-			this.discountPrice = this.$router.history.current.query.discountPrice
-		}
-	},
-	mounted () {
-		this.getbush()
 	}
 }
 </script>

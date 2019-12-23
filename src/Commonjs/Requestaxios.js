@@ -69,14 +69,22 @@ let getCart = (params) => {
   }).catch((error) => {
     params.error(error)
   })
+// 登陆验证请求
+let isLogin = (params) => {
+	axiosRequest('islogin', 'post', params.data).then((res) => {
+		params.success(res)
+	}).catch((error) => {
+		params.error(error)
+	})
 }
 export {
 	MachineLists,
 	addInfo,
-  capsuleHome,
-  login,
-  backRetrieve,
+	capsuleHome,
+	login,
+	backRetrieve,
 	register,
-  order,
-  getCart
+	getCart,
+	order,
+	isLogin
 }

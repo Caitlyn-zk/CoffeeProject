@@ -3,6 +3,7 @@ import axios from 'axios'
 // 配置公共信息时
 import { api } from './api'
 import qs from 'qs'
+// import { response } from 'express'
 
 // axios.defaults.baseURL = api
 // 请求拦截
@@ -15,6 +16,21 @@ axios.interceptors.request.use(function (config) {
 	return config
 }, function (error) {
 		return error
+})
+// axios响应拦截
+axios.interceptors.response.use((response) => {
+	console.log(response.headers.token)
+	console.log('------------------')
+	// token = 1 表示登陆失败
+	if (response.headers.token === '1') {
+		// 删除locaStorage 的信息
+		window.localStorage.removeItem('infor')
+		window.localStorage.removeItem('token')
+		window.location.href = 'http://localhost:8080/#/'
+	}
+	return response
+}, (error) => {
+	console.log(error)
 })
 // 封装直接post，get 请求都能发送请求的方法
 let axiosRequest = function (url, method = 'get', data = {}, config = {}) {

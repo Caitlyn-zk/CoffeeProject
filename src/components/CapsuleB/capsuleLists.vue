@@ -76,16 +76,21 @@ export default {
             name: '',
             price: '',
             title: '',
-            img: ''
+            img: {}
         }
     },
     methods: {
         getChange () {
             this.name = this.$router.history.current.query.name
             this.price = this.$router.history.current.query.price
-            let aa = this.$router.history.current.query.img
-            let bb = aa.split(',')
-            this.img = 'http://192.168.97.240:3000/' + JSON.parse(bb)
+            let str = this.$router.history.current.query.img
+            var sub
+            if (str.search(',') !== -1) {
+                sub = str.substr(0, str.indexOf(',')) + ']'
+            } else {
+                sub = str
+            }
+            this.img = 'http://192.168.97.240:3000/' + JSON.parse(sub)
         }
     },
     created () {

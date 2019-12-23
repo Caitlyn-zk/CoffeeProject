@@ -5,6 +5,7 @@ import tocart from './tocart'
 import Order from './order'
 const userInfo = 'infor'
 // const isLogin = 'isLogin'
+import Login from './login'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -12,6 +13,7 @@ export default new Vuex.Store({
 	modules: {
     Register: Register,
     Order: Order
+    Login: Login
 	},
 	// 只有通过mutations中的方法去改变state
 	state: {
