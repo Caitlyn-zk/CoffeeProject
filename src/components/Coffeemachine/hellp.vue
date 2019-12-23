@@ -35,16 +35,21 @@
 			</div>
 			<Hellpbottom></Hellpbottom>
 		</div>
+		<div class="content cl-black">
+			<Footer></Footer>
+		</div>
 	</div>
 </template>
 
 <script>
 import Full from '@/components/Coffeemachine/common/full'
 import Hellpbottom from '@/components/Coffeemachine/common/hellpbottom'
+import Footer from '@/components/service/Footer'
 export default {
 	components: {
 		Full,
-		Hellpbottom
+		Hellpbottom,
+		Footer
 	},
 	data () {
 		return {

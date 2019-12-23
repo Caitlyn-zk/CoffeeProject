@@ -25,41 +25,6 @@ export default {
     data () {
         return {
             dataList: [{
-            //     id: 1,
-            //     name: '蓝莓大咖啡',
-            //     list: '兄得，很好喝的就安排的就怕圣诞节啊上看到【怕上看到【1',
-            //     time: '3 分钟',
-            //     difficulty: '简单',
-            //     img: capimg1
-            // }, {
-            //     id: 2,
-            //     name: '云莓芙佳朵',
-            //     list: '这个就不清楚了',
-            //     time: '5 分钟',
-            //     difficulty: '中等',
-            //     img: capimg2
-            // }, {
-            //     id: 3,
-            //     name: '日出的水面',
-            //     list: '这个应该不怎么好喝',
-            //     time: '1 分钟',
-            //     difficulty: '简单',
-            //     img: capimg3
-            // }, {
-            //     id: 4,
-            //     name: '金色海岸',
-            //     list: 'emmmmmm，不错',
-            //     time: '5 分钟',
-            //     difficulty: '中等',
-            //     img: capimg4
-            // }, {
-            //     id: 5,
-            //     name: '冰奥白咖啡',
-            //     list: '用一杯来自澳大利亚的冰奥白给自己降降温，他是夏天的好伙伴。',
-            //     time: '5 分钟',
-            //     difficulty: '中等',
-            //     img: capimg5
-            // }, {
                 id: 6,
                 name: '冰澳式黑咖啡',
                 list: '垃圾，不好喝',

@@ -1,4 +1,5 @@
 <template>
+	<div>
 	<div style="background: #fff;">
 		<Title></Title>
 		<!--首页咖啡机列表-->
@@ -50,11 +51,13 @@
 					</div>
 					<!--咖啡机商品列表-->
 					<lists></lists>
-					<lists></lists>
-					<lists></lists>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="content cl-black">
+		<Footer></Footer>
+	</div>
 	</div>
 </template>
 
@@ -62,11 +65,13 @@
 import Title from '@/components/Coffeemachine/common/title'
 import lists from '@/components/Coffeemachine/common/lists'
 import Spping from '@/components/Order/shopping-add'
+import Footer from '@/components/service/Footer'
 export default {
   components: {
 		lists,
 		Title,
-		Spping
+		Spping,
+		Footer
   },
 	// mounted () {
 	// 	let _this = this

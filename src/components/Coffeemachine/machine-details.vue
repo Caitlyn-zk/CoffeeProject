@@ -1,4 +1,5 @@
 <template>
+	<div>
 	<div style="background: #fff;">
 	<Title></Title>
 	<div class="content">
@@ -15,6 +16,10 @@
 		<Activity3></Activity3>
 	</div>
 	</div>
+	<div class="content cl-black">
+		<Footer></Footer>
+	</div>
+	</div>
 </template>
 
 <script>
@@ -27,6 +32,7 @@ import Activityone from '@/components/Coffeemachine/common/activityone'
 import Carousel from '@/components/Coffeemachine/common/carousel'
 import Detailsright from '@/components/Coffeemachine/common/detailsright'
 import Spping from '@/components/Order/shopping-add'
+import Footer from '@/components/service/Footer'
 export default {
 	components: {
 		Title,
@@ -37,7 +43,8 @@ export default {
 		Detailsright,
 		Activity2,
 		Activity3,
-		Activityone
+		Activityone,
+		Footer
 	}
 }
 </script>

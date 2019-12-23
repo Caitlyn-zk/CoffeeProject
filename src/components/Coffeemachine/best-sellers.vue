@@ -1,4 +1,5 @@
 <template>
+	<div>
 	<div style="background: #fff;">
 	<Title></Title>
 	<div class="content">
@@ -26,6 +27,10 @@
 		<Activity3></Activity3>
 	</div>
 	</div>
+	<div class="content cl-black">
+		<Footer></Footer>
+	</div>
+	</div>
 </template>
 
 <script>
@@ -44,6 +49,7 @@ import Best1 from '@/components/Coffeemachine/common/best1'
 import Best2 from '@/components/Coffeemachine/common/best2'
 import Best3 from '@/components/Coffeemachine/common/best3'
 import Besthover from '@/components/Coffeemachine/common/besthover'
+import Footer from '@/components/service/Footer'
 export default {
 	components: {
 		Title,
@@ -60,7 +66,8 @@ export default {
 		Best1,
 		Best2,
 		Best3,
-		Besthover
+		Besthover,
+		Footer
 	}
 }
 </script>
