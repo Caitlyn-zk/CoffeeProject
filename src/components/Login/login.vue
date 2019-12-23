@@ -82,6 +82,7 @@ export default {
               if (res.status === 200) {
                 // 返回的用户信息
                 let infor = res.data.infor
+                // 将用户信息存到vuex
                 this.addloginInfo(infor)
                 infor = JSON.stringify(infor)
                 window.localStorage.setItem('infor', infor)
@@ -109,7 +110,7 @@ export default {
                 })
               }
             },
-            error (err) {
+            error: (err) => {
               console.log(err)
             }
           })

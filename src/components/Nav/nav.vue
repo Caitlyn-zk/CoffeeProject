@@ -8,11 +8,15 @@
           <Cart></Cart>
         </div>
         <div class="nps-user-btn-group fr">
-          <button v-if="!loginInfo" @click="loginShowF" class="nps-user-btn nps-login-account"><i class="nps-login-account-icon"></i>请登陆你的账户 </button>
+          <button v-if="!loginInfo" @click="loginShowF" class="nps-user-btn nps-login-account"><i class="nps-login-account-icon"></i>
+            请登陆你的账户
+            {{loginInfo}}
+          </button>
           <button v-if="loginInfo" @click="loginShowF" class="nps-user-btn nps-login-account">
             <i class="nps-login-account-icon"></i>
-            <span>{{loginInfor.surname}}</span>
-            <span>{{loginInfor.name}}</span>
+            欢迎
+            <span>{{loginInfo.name}}</span>
+            <span>{{loginInfo.surname}}</span>
           </button>
           <!-- 登陆弹窗 -->
           <transition name = "fade" >
@@ -27,18 +31,13 @@
 <script>
 import Cart from '../ShoppingCart/index'
 import Login from 'components/Login/login.vue'
-import {isLogin} from 'commonjs/Requestaxios.js'
 import {createNamespacedHelpers} from 'vuex'
-const { mapState: loginState } = createNamespacedHelpers('Login')
+const { mapState: loginState, mapMutations: loginMutations } = createNamespacedHelpers('Login')
 export default {
 	data () {
 		return {
       loginShow: false,
-      loginComp: '登录组件',
-      // 登陆信息
-      loginInfor: '',
-      // 登陆状态判断
-      isLogin: false
+      loginComp: '登录组件'
 		}
 	},
 	components: {
@@ -46,6 +45,7 @@ export default {
     Login
   },
   methods: {
+    ...loginMutations(['addloginInfo']),
     closeLogin (data) {
       this.loginShow = false
       let navbtn = document.querySelector('.nps-login-account')
@@ -81,34 +81,11 @@ export default {
     }
   },
   mounted () {
-    let token = window.localStorage.getItem('token')
     let infor = JSON.parse(window.localStorage.getItem('infor'))
-    this.loginInfor = infor
-    console.log(infor)
-    isLogin({
-      data: {
-        token
-      },
-      success: (res) => {
-        console.log(res)
-        if (res.status !== 200) {
-          this.$message({
-            type: 'warning',
-            message: '登陆失效请重新登陆',
-            showClose: 'true',
-            offset: 100,
-            onClose: () => {
-              window.localStorage.removeItem('token')
-              window.localStorage.removeItem('infor')
-              this.$router.push('/')
-            }
-          })
-        }
-      }
-    })
-    // 判断用户是否登陆
-    if (infor || Object.values(this.loginInfo)) {
-      this.isLogin = !this.isLogin
+    if (infor) {
+      console.log(infor)
+      this.addloginInfo(infor)
+      this.isLogin = true
     }
   }
 }
