@@ -181,11 +181,11 @@ export default new Router({
 		}, {
 			path: '/glossary',
 			component: Active
-		}, {
+    }, {
 			path: '/Best',
 			name: 'Best',
 			component: Best
-		}, {
+    }, {
 			path: '/seekfit',
 			component: Seekfit
 		}, {
