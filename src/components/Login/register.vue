@@ -81,7 +81,7 @@ import {register} from 'commonjs/Requestaxios'
 import {createNamespacedHelpers} from 'vuex'
 import Tips from '../service/Tips'
 import Footer from '../service/Footer'
-const {mapState: registerState, mapMutations: registerMutations} = createNamespacedHelpers('Register')
+const {mapState: registerState, mapMutations: registerMutations} = createNamespacedHelpers('Login')
 export default {
   data () {
     var testEmail = (rule, value, callback) => {

@@ -1,131 +1,136 @@
 .nps-mycarousel  {
-  font-size: 20px;
-  position: relative;
-  background: url(.././img/nps-topback.jpg) no-repeat;
-  .back-box {
-    display: block;
-    margin:  0 auto;
-    font-size: 15px;
-    color: #ffffff;
-  }
-  .nps-banner {
-    .nps-bannerMid {
-      width: 100%;
-      display: flex;
-      height: auto;
-      .nps-bannerleft {
-        background-color: #1b1b1b;
-        line-height: 1.125rem;
-        flex: 1;
-        width: 400px;
-        .nps-bannerleftbottom {
-          .nps-l {
-            width: 50%;
-            padding: 10px;
+      font-size: 20px;
+      position: relative;
+      background: url(.././img/nps-topback.jpg) no-repeat;
+      .back-box {
+        display: block;
+        margin:  0 auto;
+        font-size: 15px;
+        color: #ffffff;
+      }
+      .nps-banner {
+        .nps-bannerMid {
+          width: 100%;
+          display: flex;
+          height: auto;
+          .nps-bannerleft {
+            background-color: #1b1b1b;
+            line-height: 1.125rem;
+            flex: 1;
+            width: 400px;
+            .nps-bannerleftbottom {
+              .nps-l {
+                width: 50%;
+                padding: 10px;
+              }
+              .nps-r {
+                width: 50%;
+                padding: 10px;
+              }
+            }
           }
-          .nps-r {
-            width: 50%;
-            padding: 10px;
+          .nps-bannerright {
+            margin-left: 20px;
+            flex: 2;
+            width: 800px;
+            .el-row {
+              
+              .nps-col-two {
+                border-left:1px solid #d3dce6 ;
+              }
+              .nps-col-three {
+                border-left:1px solid #d3dce6 ;
+              }
+              .nps-bottom {
+                border-bottom:none !important ;
+              }
+              .nps-lastbottom {
+                border-bottom:none !important ;
+              }
+              .el-col {  
+                position: relative;
+                padding: 10px;
+                border-bottom: 1px solid #d3dce6;
+                .nps-addshop {
+                  position: absolute;
+                  bottom: 5px;
+                  right: 15px;
+                }
+                .nps-track {
+                  display: block;
+                  text-align: center;
+                  position: relative;
+                  .nps-icon-new {
+                    display: block;
+                    padding: 4px 8px 4px 10px;
+                    height: 26px;
+                    color: white;
+                    font-size: 14px;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    background-color: rgb(187, 75, 49);
+                  }
+                  .nps-icon-new:after {
+                    position: absolute;
+                    top: 0;
+                    right: -14px;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 26px 14px 0 0;
+                    border-color: rgb(187, 75, 49) transparent transparent transparent;
+                  }
+                
+                
+                
+                }
+                .nps-pcont {
+                  font-weight: 700;
+                  color: white !important;
+                  margin-bottom: 5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  line-height: 1.4em;
+                  max-width: 125px;
+                }
+              }
+            }
           }
         }
-      }
-      .nps-bannerright {
-        margin-left: 20px;
-        flex: 2;
-        width: 800px;
-        .el-row {
-          
-          .nps-col-two {
-            border-left:1px solid #d3dce6 ;
-          }
-          .nps-col-three {
-            border-left:1px solid #d3dce6 ;
-          }
-          .nps-bottom {
-            border-bottom:none !important ;
-          }
-          .nps-lastbottom {
-            border-bottom:none !important ;
-          }
-          .el-col {  
-            position: relative;
-            padding: 10px;
-            border-bottom: 1px solid #d3dce6;
-            .nps-addshop {
-              position: absolute;
-              bottom: 5px;
-              right: 15px;
-            }
-            .nps-track {
-              display: block;
-              text-align: center;
-              position: relative;
-              .nps-icon-new {
-                display: block;
-                padding: 4px 8px 4px 10px;
-                height: 26px;
-                color: white;
-                font-size: 14px;
-                font-weight: bold;
-                position: absolute;
-                left: 10px;
-                top: 10px;
-                background-color: rgb(187, 75, 49);
-              }
-              .nps-icon-new:after {
-                position: absolute;
-                top: 0;
-                right: -14px;
-                content: "";
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 26px 14px 0 0;
-                border-color: rgb(187, 75, 49) transparent transparent transparent;
-              }
-            
-            
-            
-            }
-            .nps-pcont {
-              font-weight: 700;
-              color: white !important;
-              margin-bottom: 5px;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              line-height: 1.4em;
-              max-width: 125px;
-            }
-          }
+        .nps-bannerimg {
+          width: 580px;
+          float: left;
+          margin: 10px;
         }
       }
-    }
-    .nps-bannerimg {
-      width: 580px;
-      float: left;
-      margin: 10px;
-    }
-  }
-  .nps-block {
-    .nps-carousel {
-      height: 310px;  
-    }
-  }
-  .nps-carouseltxt {
-    position: absolute;
-    top: 65px;
-    left: 20px;
-    max-width: 360px;
-    .nps-btn {
-      background: black;
-      border: 2px solid white;
-    }
-  }
+      .nps-block {
+        .el-carousel__container{
+          height: 410px !important;
+          max-width: 1200px;
+          margin: 0 auto;
+          position: relative;
+          .nps-carousel {
+            width: 100%;
+            height: 100%;
+          }
+          .nps-carouseltxt {
+            position: absolute;
+            top: 65px;
+            left: 60px;
+            max-width: 360px;
+            .nps-btn {
+              background: black;
+              border: 2px solid white;
+            }
+          }
           .nps-stop {
             position: absolute;
             left: 38%;
-            bottom: 0px;
+            bottom: 10px;
             font-size: 30px;
             height: 50px;
             width: 50px;
@@ -133,11 +138,15 @@
             background: transparent;
             border: none;
             padding: 10px;
+            color: #5b5b5b;
+          }
+          .nps-stop:hover {
+            color: white;
           }
           .nps-start {
             position: absolute;
             left: 38%;
-            bottom: 0px;
+            bottom: 10px;
             font-size: 30px;
             height: 50px;
             width: 50px;
@@ -145,23 +154,33 @@
             background: transparent;
             border: none;
             padding: 10px;
+            color: #5b5b5b;
+          }
+          .nps-start:hover {
+            color: white;
           }
           .nps-btn:hover, .nps-btn:focus {
             color: white;
             background: transparent;
           }
-          .el-carousel__container{
-            height: 410px !important;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            .el-carousel__item h3{
-              color: red;
-              font-size: 14px;
-              opacity: 0.75;
-              line-height: 150px;
-              margin: 0;
-            } 
+          .el-carousel__item h3{
+            color: red;
+            font-size: 14px;
+            opacity: 0.75;
+            line-height: 150px;
+            margin: 0;
+          } 
+        }
+        /deep/.el-carousel__indicators--horizontal {
+          left: 46%;
+          bottom: 12px;
+          .el-carousel__indicator--horizontal {
+            .el-carousel__button {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+            }
           }
-  
-    }
+        }
+      }
+}

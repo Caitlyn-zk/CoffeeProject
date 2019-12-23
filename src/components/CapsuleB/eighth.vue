@@ -56,9 +56,33 @@
                     </div>
                     <div class="nps-list-title">Scuro 斯库诺咖啡</div>
                     <div class="nps-list-store">CNY 3.80</div>
-                    <div class="nps-list-car">
+                    <!-- <div class="nps-list-car">
                         <span class="nps-car-i">+</span>
                         <span class="nps-car-sp">添加到购物车</span>
+                    </div> -->
+                    <div style="width: 138px;height: 33px;margin: 0 auto;">
+                        <el-popover
+                        ref="popover4"
+                        placement="top"
+                        width="220"
+                        trigger="click">
+                        <div class="nps-add-box">
+                            <ul class="nps-add-box-lists clearfix">
+                            <li :key="index" v-for="(item, index) in gridData">
+                                <a  @click="getnumber(index)" class="nps-lists-num"><span>{{item}}</span></a>
+                            </li>
+                            </ul>
+                            <div style="margin-top: 15px;">
+                            <el-input class="nps-add-input" placeholder="选择一种数量" >
+                                <template class="nps-add-confirm" slot="append">好</template>
+                            </el-input>
+                            </div>
+                        </div>
+                        </el-popover>
+                        <el-button v-popover:popover4 class="nps-add-buttons">
+                            <div class="nps-spcar">+</div>
+                            <div class="nps-sptocar">添加到购物车</div>
+                        </el-button>
                     </div>
                 </div>
             </div>
@@ -132,7 +156,7 @@ export default {
     },
     data () {
         return {
-
+            gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300]
         }
     },
     methods: {
@@ -146,6 +170,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="less">
+@import './css/Yyb.less';
 </style>

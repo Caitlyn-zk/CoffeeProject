@@ -93,7 +93,7 @@ export default {
 				title: '如何注册',
 				title1: '我是咖啡机',
 				idView: require('../../assets/lopo1.png'),
-				title2: "<p style='margin-bottom:20px'>作为俱乐部会员，您将终身受益于我们的电话服务支持和机器故障排除服务。当您第一次注册的时候，请提供您的新机的序列号，以帮助我们为您提供个性化的客户帮助。您可以在机器的滴水托盘或机器背面找到这19位数的代码。</p><p style='margin-bottom:20px'>如何注册:</p><p style='margin-bottom:20px;font-size:24px'><i class='el-icon-success' style='font-size:24px;color:#986f38'></i>拨打免费热线电话: 4001 200600</p><p style='margin-bottom:20px;font-size:24px'><i class='el-icon-success' style='font-size:24px;color:#986f38'></i>访问 Nespresso 精品店</p><p style='margin-bottom:20px;font-size:24px'><i class='el-icon-success' style='font-size:24px;color:#986f38'></i>在线注册</p>",
+				title2: "<p style='margin-bottom:20px'>作为俱乐部会员，您将终身受益于我们的电话服务支持和机器故障排除服务。当您第一次注册的时候，请提供您的新机的序列号，以帮助我们为您提供个性化的客户帮助。您可以在机器的滴水托盘或机器背面找到这19位数的代码。</p><p style='margin-bottom:20px'>如何注册:</p><P class='nps-cll'><i class='el-icon-success cl'></i>拨打免费热线电话: 4001 200600</p><P class='nps-cll'><i class='el-icon-success cl'></i>访问 Nespresso 精品店</p><P class='nps-cll'><i class='el-icon-success cl'></i>在线注册</p>",
 				title3: '我为什么需要注册/如何注册我的咖啡机?'
 				},
 				{
@@ -128,6 +128,6 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 	@import './css/machine.less';
 </style>
