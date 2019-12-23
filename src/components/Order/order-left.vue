@@ -9,7 +9,7 @@
       <li class="clearfix">
         <img src="./img/nps-order.svg">
         <div class="nps-order-left-myorder font-12">
-          <router-link class="nps-order-left-router" to='/order/myorder'>我的订单</router-link>
+          <router-link class="nps-order-left-router" to='/order'>我的订单</router-link>
         </div>
       </li>
       <li class="clearfix">

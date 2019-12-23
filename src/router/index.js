@@ -69,15 +69,11 @@ export default new Router({
       component: ShoppingAdd
     }, {
       path: '/order',
-      name: 'Order',
+      // name: 'Order',
       component: Order,
       children: [
         {
           path: '/',
-          name: 'Myorder',
-          component: Myorder
-        }, {
-          path: '/order/myorder',
           name: 'Myorder',
           component: Myorder
         }, {
