@@ -99,6 +99,6 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 	@import './css/machine.less';
 </style>
