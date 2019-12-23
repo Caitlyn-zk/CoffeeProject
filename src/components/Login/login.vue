@@ -28,6 +28,8 @@
 
 <script>
 import {login} from 'commonjs/Requestaxios'
+import {createNamespacedHelpers} from 'vuex'
+const {mapMutations: loginMutations} = createNamespacedHelpers('Login')
 export default {
   data () {
     let emailReg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
@@ -55,6 +57,7 @@ export default {
     }
   },
   methods: {
+    ...loginMutations(['addloginInfo']),
     changetxt (event) {
       let span = event.target.parentNode.parentNode.firstChild
       span.style.bottom = '20px'
@@ -79,13 +82,21 @@ export default {
               if (res.status === 200) {
                 // 返回的用户信息
                 let infor = res.data.infor
+                this.addloginInfo(infor)
                 infor = JSON.stringify(infor)
                 window.localStorage.setItem('infor', infor)
                 // 返回的token
                 let token = res.data.token
                 window.localStorage.setItem('token', token)
-                this.$router.push('/order')
-                console.log(res.data)
+                this.$message({
+                  type: 'success',
+                  message: '登陆成功',
+                  showClose: 'true',
+                  offset: 100,
+                  onClose: () => {
+                    this.$router.push('/order')
+                  }
+                })
               } else {
                 this.$message({
                   type: 'warning',
