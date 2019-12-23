@@ -49,6 +49,9 @@ export default {
                     if (res.status === 200) {
                         this.dataList = res.data
                     }
+                },
+                error: (err) => {
+                    console.log(err)
                 }
             })
         },

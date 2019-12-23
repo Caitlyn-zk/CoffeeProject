@@ -1,5 +1,6 @@
-// 注册的信息
+
 let state = {
+  // 注册的信息
   registerInfo: {
     surname: '',
     name: '',
@@ -16,12 +17,17 @@ let state = {
     shippingNotes: '配送备注',
     deliveryAddress: '0',
     subscription: '0'
-  }
+  },
+  // 登陆信息
+  loginInfo: ''
 }
  // 改变数据的方法
 let mutations = {
   addRegisterinfo (state, data) {
     Object.assign(state.registerInfo, data)
+  },
+  addloginInfo (state, data) {
+    state.loginInfo = data
   }
 }
 
