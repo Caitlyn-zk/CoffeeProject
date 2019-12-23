@@ -47,7 +47,6 @@ export default {
             capsuleHome({
                 success: (res) => {
                     if (res.status === 200) {
-                        console.log(res.data)
                         this.dataList = res.data
                     }
                 }
