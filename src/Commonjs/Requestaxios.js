@@ -62,6 +62,14 @@ let order = (params) => {
 		params.error(error)
 	})
 }
+// 登陆验证请求
+let isLogin = (params) => {
+	axiosRequest('islogin', 'post', params.data).then((res) => {
+		params.success(res)
+	}).catch((error) => {
+		params.error(error)
+	})
+}
 export {
 	MachineLists,
 	addInfo,
@@ -69,5 +77,6 @@ export {
   login,
   backRetrieve,
 	register,
-	order
+	order,
+	isLogin
 }

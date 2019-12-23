@@ -32,7 +32,7 @@ export default {
 		return {
 			machineLists: {},
 			url: 'http://192.168.97.240:3000/',
-			sstt: ['cl-black', 'cl-grey', 'cl-green', 'cl-grey']
+			sstt: ['cl-black', 'cl-grey', 'cl-green', 'cl-grey', 'cl-black', 'cl-grey', 'cl-green', 'cl-grey']
 		}
 	},
 	methods: {
@@ -44,6 +44,9 @@ export default {
 						console.log(res)
 						this.machineLists = res.data
 					}
+				},
+				error (err) {
+					console.log(err)
 				}
 			})
 		},
