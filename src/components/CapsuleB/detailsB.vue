@@ -2,7 +2,7 @@
     <div class="nps-detai content">
         <div class="nps-detai-top clearfix">
             <div class="nps-top-icon el-icon-search"></div>
-            <el-input class="nps-top-inpt" placeholder="输入原材料，心情，配方....."></el-input>
+            <el-input class="nps-top-inpt" v-model="input" placeholder="输入原材料，心情，配方....."></el-input>
             <div class="nps-top-iconb el-icon-place"></div>
             <a class="nps-top-a font-18">搜索</a>
         </div>
@@ -105,11 +105,31 @@
                     </div>
                 </div>
             </div>
-            <a class="nps-recmd-a">
-                <span class="nps-a-sp">+</span>
-                <span class="nps-a-spt">加入购物车</span>
-            </a>
-            <a class="nps-cecmd-ab">发现更多优选咖啡</a>
+            <div style="width: 138px;height: 33px;margin: 0 auto;">
+                <el-popover
+                ref="popover4"
+                placement="top"
+                width="220"
+                trigger="click">
+                <div class="nps-add-box">
+                    <ul class="nps-add-box-lists clearfix">
+                    <li :key="index" v-for="(item, index) in gridData">
+                        <a  @click="getnumber(index)" class="nps-lists-num"><span>{{item}}</span></a>
+                    </li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                    <el-input class="nps-add-input" type="number" min="0" v-model="inputs" placeholder="选择一种数量" >
+                        <template class="nps-add-confirm" slot="append">好</template>
+                    </el-input>
+                    </div>
+                </div>
+                </el-popover>
+                <el-button v-popover:popover4 class="nps-add-buttons">
+                    <div class="nps-spcar">+</div>
+                    <div class="nps-sptocar">添加到购物车</div>
+                </el-button>
+            </div>
+            <router-link class="nps-cecmd-ab" to="/">发现更多优选咖啡</router-link>
         </div>
         <div class="nps-perhaps">
             <div class="nps-perhaps-title">您可能还会喜欢这些配方</div>
@@ -134,8 +154,11 @@ export default {
             starOffImg,
             starOnImg,
             king: 30,
-            stor: 30,
+						stor: 30,
+						input: '',
+						inputs: '',
             yy: 1,
+            gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300],
             stars: [{
                     src: starOffImg,
                     active: false
@@ -215,4 +238,5 @@ export default {
 
 <style lang="less">
 @import './css/Yyb.less';
+@import './css/eighth.less';
 </style>

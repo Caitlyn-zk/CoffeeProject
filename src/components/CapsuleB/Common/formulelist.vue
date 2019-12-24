@@ -54,11 +54,6 @@ export default {
                 img: capimg9
             }]
         }
-    },
-    methods: {
-
-    },
-    mounted () {
     }
 }
 </script>

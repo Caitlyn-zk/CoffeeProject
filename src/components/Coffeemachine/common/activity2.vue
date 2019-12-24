@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div>
+		<div class="nps-p-title-list">
 			<p class="margin-tb-20">(含税价格)</p>
 			<p class="margin-tb-20">规范</p>
 			<p class="margin-tb-20">尺寸（宽x深x高）: 12x30x23cm</p>

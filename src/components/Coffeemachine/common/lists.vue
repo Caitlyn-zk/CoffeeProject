@@ -61,6 +61,9 @@ export default {
 								duration: 3000
 						})
 					}
+				},
+				error: (err) => {
+					console.log(err)
 				}
 			})
 		},

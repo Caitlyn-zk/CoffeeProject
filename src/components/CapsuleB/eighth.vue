@@ -12,54 +12,6 @@
                     </div>
                     <div class="nps-list-title">Scuro 斯库诺咖啡</div>
                     <div class="nps-list-store">CNY 3.80</div>
-                    <div class="nps-list-car">
-                        <span class="nps-car-i">+</span>
-                        <span class="nps-car-sp">添加到购物车</span>
-                    </div>
-                </div>
-                <div class="nps-lists-list fl">
-                    <div class="nps-list-img">
-                        <img class="nps-img" src="./img/hezi01.png" />
-                    </div>
-                    <div class="nps-list-title">Scuro 斯库诺咖啡</div>
-                    <div class="nps-list-store">CNY 3.80</div>
-                    <div class="nps-list-car">
-                        <span class="nps-car-i">+</span>
-                        <span class="nps-car-sp">添加到购物车</span>
-                    </div>
-                </div>
-                <div class="nps-lists-list fl">
-                    <div class="nps-list-img">
-                        <img class="nps-img" src="./img/hezi01.png" />
-                    </div>
-                    <div class="nps-list-title">Scuro 斯库诺咖啡</div>
-                    <div class="nps-list-store">CNY 3.80</div>
-                    <div class="nps-list-car">
-                        <span class="nps-car-i">+</span>
-                        <span class="nps-car-sp">添加到购物车</span>
-                    </div>
-                </div>
-                <div class="nps-lists-list fl">
-                    <div class="nps-list-img">
-                        <img class="nps-img" src="./img/hezi01.png" />
-                    </div>
-                    <div class="nps-list-title">Scuro 斯库诺咖啡</div>
-                    <div class="nps-list-store">CNY 3.80</div>
-                    <div class="nps-list-car">
-                        <span class="nps-car-i">+</span>
-                        <span class="nps-car-sp">添加到购物车</span>
-                    </div>
-                </div>
-                <div class="nps-lists-list fl">
-                    <div class="nps-list-img">
-                        <img class="nps-img" src="./img/hezi01.png" />
-                    </div>
-                    <div class="nps-list-title">Scuro 斯库诺咖啡</div>
-                    <div class="nps-list-store">CNY 3.80</div>
-                    <!-- <div class="nps-list-car">
-                        <span class="nps-car-i">+</span>
-                        <span class="nps-car-sp">添加到购物车</span>
-                    </div> -->
                     <div style="width: 138px;height: 33px;margin: 0 auto;">
                         <el-popover
                         ref="popover4"
@@ -73,13 +25,137 @@
                             </li>
                             </ul>
                             <div style="margin-top: 15px;">
-                            <el-input class="nps-add-input" placeholder="选择一种数量" >
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
                                 <template class="nps-add-confirm" slot="append">好</template>
                             </el-input>
                             </div>
                         </div>
                         </el-popover>
                         <el-button v-popover:popover4 class="nps-add-buttons">
+                            <div class="nps-spcar">+</div>
+                            <div class="nps-sptocar">添加到购物车</div>
+                        </el-button>
+                    </div>
+                </div>
+                <div class="nps-lists-list fl">
+                    <div class="nps-list-img">
+                        <img class="nps-img" src="./img/hezi01.png" />
+                    </div>
+                    <div class="nps-list-title">Scuro 斯库诺咖啡</div>
+                    <div class="nps-list-store">CNY 3.80</div>
+                    <div style="width: 138px;height: 33px;margin: 0 auto;">
+                        <el-popover
+                        ref="popover4"
+                        placement="top"
+                        width="220"
+                        trigger="click">
+                        <div class="nps-add-box">
+                            <ul class="nps-add-box-lists clearfix">
+                            <li :key="index" v-for="(item, index) in gridData">
+                                <a  @click="getnumber(index)" class="nps-lists-num"><span>{{item}}</span></a>
+                            </li>
+                            </ul>
+                            <div style="margin-top: 15px;">
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
+                                <template class="nps-add-confirm" slot="append">好</template>
+                            </el-input>
+                            </div>
+                        </div>
+                        </el-popover>
+                        <el-button v-popover:popover4 class="nps-add-buttons">
+                            <div class="nps-spcar">+</div>
+                            <div class="nps-sptocar">添加到购物车</div>
+                        </el-button>
+                    </div>
+                </div>
+                <div class="nps-lists-list fl">
+                    <div class="nps-list-img">
+                        <img class="nps-img" src="./img/hezi01.png" />
+                    </div>
+                    <div class="nps-list-title">Scuro 斯库诺咖啡</div>
+                    <div class="nps-list-store">CNY 3.80</div>
+                    <div style="width: 138px;height: 33px;margin: 0 auto;">
+                        <el-popover
+                        ref="popover4"
+                        placement="top"
+                        width="220"
+                        trigger="click">
+                        <div class="nps-add-box">
+                            <ul class="nps-add-box-lists clearfix">
+                            <li :key="index" v-for="(item, index) in gridData">
+                                <a  @click="getnumber(index)" class="nps-lists-num"><span>{{item}}</span></a>
+                            </li>
+                            </ul>
+                            <div style="margin-top: 15px;">
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
+                                <template class="nps-add-confirm" slot="append">好</template>
+                            </el-input>
+                            </div>
+                        </div>
+                        </el-popover>
+                        <el-button v-popover:popover4 class="nps-add-buttons">
+                            <div class="nps-spcar">+</div>
+                            <div class="nps-sptocar">添加到购物车</div>
+                        </el-button>
+                    </div>
+                </div>
+                <div class="nps-lists-list fl">
+                    <div class="nps-list-img">
+                        <img class="nps-img" src="./img/hezi01.png" />
+                    </div>
+                    <div class="nps-list-title">Scuro 斯库诺咖啡</div>
+                    <div class="nps-list-store">CNY 3.80</div>
+                    <div style="width: 138px;height: 33px;margin: 0 auto;">
+                        <el-popover
+                        ref="popover4"
+                        placement="top"
+                        width="220"
+                        trigger="click">
+                        <div class="nps-add-box">
+                            <ul class="nps-add-box-lists clearfix">
+                            <li :key="index" v-for="(item, index) in gridData">
+                                <a  @click="getnumber(index)" class="nps-lists-num"><span>{{item}}</span></a>
+                            </li>
+                            </ul>
+                            <div style="margin-top: 15px;">
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
+                                <template class="nps-add-confirm" slot="append">好</template>
+                            </el-input>
+                            </div>
+                        </div>
+                        </el-popover>
+                        <el-button v-popover:popover4 class="nps-add-buttons">
+                            <div class="nps-spcar">+</div>
+                            <div class="nps-sptocar">添加到购物车</div>
+                        </el-button>
+                    </div>
+                </div>
+                <div class="nps-lists-list fl">
+                    <div class="nps-list-img">
+                        <img class="nps-img" src="./img/hezi01.png" />
+                    </div>
+                    <div class="nps-list-title">Scuro 斯库诺咖啡</div>
+                    <div class="nps-list-store">CNY 3.80</div>
+                    <div style="width: 138px;height: 33px;margin: 0 auto;">
+                        <el-popover
+                        ref="popover9"
+                        placement="top"
+                        width="220"
+                        trigger="click">
+                        <div class="nps-add-box">
+                            <ul class="nps-add-box-lists clearfix">
+                            <li :key="index" v-for="(item, index) in gridData">
+                                <a  @click="getnumber(index)" class="nps-lists-num"><span>{{item}}</span></a>
+                            </li>
+                            </ul>
+                            <div style="margin-top: 15px;">
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
+                                <template class="nps-add-confirm" slot="append">好</template>
+                            </el-input>
+                            </div>
+                        </div>
+                        </el-popover>
+                        <el-button v-popover:popover9 class="nps-add-buttons">
                             <div class="nps-spcar">+</div>
                             <div class="nps-sptocar">添加到购物车</div>
                         </el-button>
@@ -114,9 +190,29 @@
                             </div>
                         </div>
                         <div class="nps-content-stor">CNY 192.00</div>
-                        <div class="nps-content-car">
-                            <span class="nps-car-spa">+</span>
-                            <span class="nps-car-spb">添加到购物车</span>
+                        <div style="width: 138px;height: 33px;margin: 0 auto;">
+                            <el-popover
+                            ref="popover5"
+                            placement="top"
+                            width="220"
+                            trigger="click">
+                            <div class="nps-add-box">
+                                <ul class="nps-add-box-lists clearfix">
+                                <li :key="index" v-for="(item, index) in gridData">
+                                    <a  @click="getnumber(index)" class="nps-lists-num"><span>{{item}}</span></a>
+                                </li>
+                                </ul>
+                                <div style="margin-top: 15px;">
+                                <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
+                                    <template class="nps-add-confirm" slot="append">好</template>
+                                </el-input>
+                                </div>
+                            </div>
+                            </el-popover>
+                            <el-button v-popover:popover5 class="nps-add-buttons">
+                                <div class="nps-spcar">+</div>
+                                <div class="nps-sptocar">添加到购物车</div>
+                            </el-button>
                         </div>
                         <div class="nps-contnet-sin">* 上图只是举例。具体包装请以实物为准</div>
                     </div>
@@ -143,7 +239,7 @@
             <div class="nps-bottom-cont">
                 <router-link to="/caphome">继续购物</router-link>
                 <span>或</span>
-                <a class="nps-btm-b">结账</a>
+                <router-link to="/orderstep" class="nps-btm-b">结账</router-link>
             </div>
         </div>
     </div>
@@ -156,7 +252,8 @@ export default {
     },
     data () {
         return {
-            gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300]
+					input: '',
+          gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300]
         }
     },
     methods: {
@@ -170,6 +267,6 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import './css/Yyb.less';
+<style>
+
 </style>

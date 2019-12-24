@@ -1,0 +1,74 @@
+.nps-add-box {
+    width: 100%;
+    height: 100%;
+    background: #f9f9f9;
+    .nps-add-box-lists {
+        width: 100%;
+        li {
+            width: 20%;
+            height: 30px;
+            display: block;
+            float: left;
+            text-align: center;
+            line-height: 26px;
+            border-left: 1px solid #d5d5d5;
+            nps-lists-num {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 3px;
+            }
+        }
+    }
+    .el-input-group__append {
+        background: #3d8705 !important;
+        color: #fff !important;
+        z-index: 15;
+    }
+}
+
+.nps-add-buttons {
+    background: #387d12;
+    width: 100%;
+    height: 33px;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    line-height: 30px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        background: #2c541c;
+        color: #fff;
+        border-color: none;
+        background-color: none;
+    }
+    &:active {
+        background: #2c541c;
+        color: #fff;
+    }
+    &:focus {
+        background: #2c541c;
+        color: #fff;
+    }
+    span {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .nps-spcar {
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+        font-weight: bold;
+        height: 30px;
+        border-right: 1px solid rgba(0, 0, 0, 0.75);
+    }
+    .nps-sptocar {
+        text-align: center;
+        display: inline-block;
+        width: 98px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}

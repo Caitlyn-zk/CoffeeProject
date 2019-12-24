@@ -45,7 +45,7 @@
 						</div>
 					</div>
 					<div class="fl nps-details-right">
-						<el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+						<el-tabs v-model="activeName" type="card">
 							<!-- 介绍指南和视频 -->
 							<el-tab-pane label="介绍指南和视频" name="first">
 								<router-view></router-view>
@@ -150,11 +150,6 @@ import Footer from '@/components/service/Footer'
 	data () {
 		return {
 			activeName: 'first'
-		}
-	},
-	methods: {
-		handleClick (tab, event) {
-			console.log(tab, event)
 		}
 	}
   }
