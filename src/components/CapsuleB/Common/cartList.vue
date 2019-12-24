@@ -10,6 +10,7 @@
 <script>
 import addIn from '../../Coffeemachine/common/shopingbtn'
 export default {
+		props: ['id'],
     components: {
         addIn
     }
