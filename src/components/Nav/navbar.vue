@@ -54,7 +54,7 @@
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-coffeeCapsule">
           <router-link to="/caphome">
           <li class="coffeeCapsule-list">
-            <p class="padding-t-60 text-black">咖啡胶囊</p>
+            <p class="padding-t-45 text-black">咖啡胶囊</p>
             <div class="coffeeCapsule-img padding-20">
               <img src="./img/gzt333.jpg" alt="">
             </div>
@@ -141,15 +141,16 @@
       </li>
       <!-- 会员 -->
       <li class="nps-navbar-list nps-navbar-vipMember">
-        <router-link to="/member">
+          <router-link to="/member" class="text-white">
           <div class="nps-navbar-img nps-navbar-img-vipMember">
             <!-- 导航上边，少了白边，使用定位弥补 -->
             <div class="nps-navbar-filler"></div>
           </div>
           <h3 class="vipMember-title">会员有礼</h3>
+          </router-link>
           <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-vipMember">
             <li class="vipMember-list">
-              <p class="padding-t-40 font-14">为什么选择Nespresso</p>
+              <p class="padding-t-20 font-14">为什么选择Nespresso</p>
               <div class="vipMember-img padding-t-50">
                 <img src="./img/vip1.jpg" alt="">
               </div>
@@ -176,7 +177,6 @@
               </div>
             </li>
           </div>
-        </router-link>
       </li>
       <!-- 顾客服务 -->
       <li class="nps-navbar-list nps-navbar-customerService">

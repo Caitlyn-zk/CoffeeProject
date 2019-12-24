@@ -2,10 +2,10 @@
   <div class="nps-nav">
       <div class="nps-nav-top content clearfix">
         <router-link to="/">
-						<div class="fl nps-logo-img">
-							<img src="./img/xc-logo.png" alt="">
-						</div>
-				</router-link>
+			<div class="fl nps-logo-img">
+				<img src="./img/xc-logo.png" alt="">
+			</div>
+			</router-link>
          <div class="fr margin-18">
           <Cart></Cart>
         </div>
