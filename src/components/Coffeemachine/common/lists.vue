@@ -45,7 +45,7 @@ export default {
 						this.machineLists = res.data
 					}
 				},
-				error (err) {
+				error: (err) => {
 					console.log(err)
 				}
 			})

@@ -95,7 +95,7 @@ export default {
                   showClose: 'true',
                   offset: 100,
                   onClose: () => {
-                    this.$router.push('/order')
+                    this.$router.push('/')
                   }
                 })
               } else {

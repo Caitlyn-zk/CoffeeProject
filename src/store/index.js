@@ -3,9 +3,10 @@ import Vuex from 'vuex'
 import Register from './register'
 import tocart from './tocart'
 import Order from './order'
-const userInfo = 'infor'
-// const isLogin = 'isLogin'
 import Login from './login'
+
+const userInfo = 'infor'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
