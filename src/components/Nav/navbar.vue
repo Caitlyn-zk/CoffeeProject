@@ -4,43 +4,45 @@
       <!-- 特惠活动 -->
       <li class="nps-navbar-list nps-navbar-specialOffers active">
         <!-- 左侧白边突出，加1px左边框 -->
-        <div class="nps-navbar-left-border"></div>
-        <div class="nps-navbar-img nps-navbar-img-specialOffers">
-          <!-- 导航上边，少了白边，使用定位弥补 -->
-          <div class="nps-navbar-filler"></div>
-        </div>
-        <h3>特惠活动</h3>
-        <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-specialOffers clearfix">
-          <li class="specialOffers-list">
-            <p class="font-14">购买任意的200颗咖啡胶囊（不含迎新礼盒）即可获赠一套大杯品饮杯</p>
-            <div class="specialOffers-img">
-              <router-link to="/caphome">
-                <img src="./img/gzt-nav-1.png" alt="" width="80%" height="80%">
-              </router-link>
-            </div>
-          </li>
-          <li class="specialOffers-list">
-            <p class="font-14">购买CltiZ银色咖啡机立减200元，且送一个价值800元的黑色奶沫机</p>
-            <div class="specialOffers-img">
-              <router-link to="/Best">
-              <img src="./img/gzt111.jpg" alt="" width="80%" height="80%">
-              </router-link>
-            </div>
-          </li>
-          <li class="specialOffers-list">
-            <p class="font-14">购买任意Aeroccino 4奶泡机立减200元。</p>
-            <div class="specialOffers-img">
-              <router-link to="/Best">
-              <img src="./img/gzt222.jpg" alt="" width="80%" height="80%">
-              </router-link>
-            </div>
-          </li>
-          <li class="specialOffers-list">
-            <div class="specialOffers-img">
-              <img class="specialOffers-img-4" src="./img/gzt-nav-4.jpg" alt="">
-            </div>
-          </li>
-        </div>
+        <router-link to="/caphome" class="text-white">
+					<div class="nps-navbar-left-border"></div>
+					<div class="nps-navbar-img nps-navbar-img-specialOffers">
+						<!-- 导航上边，少了白边，使用定位弥补 -->
+						<div class="nps-navbar-filler"></div>
+					</div>
+					<h3>特惠活动</h3>
+					<div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-specialOffers clearfix">
+						<li class="specialOffers-list">
+							<p class="font-14">购买任意的200颗咖啡胶囊（不含迎新礼盒）即可获赠一套大杯品饮杯</p>
+							<div class="specialOffers-img">
+								<router-link to="/caphome">
+									<img src="./img/gzt-nav-1.png" alt="" width="80%" height="80%">
+								</router-link>
+							</div>
+						</li>
+						<li class="specialOffers-list">
+							<p class="font-14">购买CltiZ银色咖啡机立减200元，且送一个价值800元的黑色奶沫机</p>
+							<div class="specialOffers-img">
+								<router-link to="/Best">
+								<img src="./img/gzt111.jpg" alt="" width="80%" height="80%">
+								</router-link>
+							</div>
+						</li>
+						<li class="specialOffers-list">
+							<p class="font-14">购买任意Aeroccino 4奶泡机立减200元。</p>
+							<div class="specialOffers-img">
+								<router-link to="/Best">
+								<img src="./img/gzt222.jpg" alt="" width="80%" height="80%">
+								</router-link>
+							</div>
+						</li>
+						<li class="specialOffers-list">
+							<div class="specialOffers-img">
+								<img class="specialOffers-img-4" src="./img/gzt-nav-4.jpg" alt="">
+							</div>
+						</li>
+					</div>
+				</router-link>
       </li>
       <!-- 咖啡胶囊 -->
       <li class="nps-navbar-list nps-navbar-coffeeCapsule">
@@ -51,12 +53,13 @@
         <h3>咖啡胶囊</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-coffeeCapsule">
           <router-link to="/caphome">
-          <li class="coffeeCapsule-list">
-            <p class="padding-t-60 text-black">咖啡胶囊</p>
-            <div class="coffeeCapsule-img padding-20">
-              <img src="./img/gzt333.jpg" alt="">
-            </div>
-          </li></router-link>
+						<li class="coffeeCapsule-list text-white">
+							<p class="padding-t-45 text-black">咖啡胶囊</p>
+							<div class="coffeeCapsule-img padding-20">
+								<img src="./img/gzt333.jpg" alt="">
+							</div>
+						</li>
+					</router-link>
           <li class="coffeeCapsule-list">
             <div class="coffeeCapsule-list-box">
               <img src="./img/gzt555.jpg" alt="" width="80%" height="80%">
@@ -107,7 +110,7 @@
           <li class="coffeeMachine-list">
             <div class="coffeeMachine-list-box">
               <img src="./img/gzt1000.jpg" alt="">
-              <span class="coffeeMachine-list-box-text font-14">Nespresso探索优选咖啡胶囊</span>
+              <span class="coffeeMachine-list-box-text font-14">Nespresso咖啡机系列</span>
             </div>
            <router-link to="/Hellp">
             <div class="coffeeMachine-list-box">
@@ -139,15 +142,16 @@
       </li>
       <!-- 会员 -->
       <li class="nps-navbar-list nps-navbar-vipMember">
-        <router-link to="/member">
+          <router-link to="/member" class="text-white">
           <div class="nps-navbar-img nps-navbar-img-vipMember">
             <!-- 导航上边，少了白边，使用定位弥补 -->
             <div class="nps-navbar-filler"></div>
           </div>
           <h3 class="vipMember-title">会员有礼</h3>
+          </router-link>
           <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-vipMember">
             <li class="vipMember-list">
-              <p class="padding-t-40 font-14">为什么选择Nespresso</p>
+              <p class="padding-t-20 font-14">为什么选择Nespresso</p>
               <div class="vipMember-img padding-t-50">
                 <img src="./img/vip1.jpg" alt="">
               </div>
@@ -174,56 +178,59 @@
               </div>
             </li>
           </div>
-        </router-link>
       </li>
       <!-- 顾客服务 -->
       <li class="nps-navbar-list nps-navbar-customerService">
-        <div class="nps-navbar-img nps-navbar-img-customerService">
-          <!-- 导航上边，少了白边，使用定位弥补 -->
-          <div class="nps-navbar-filler"></div>
-        </div>
-        <h3>顾客服务</h3>
-        <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-customerService">
-          <li class="customerService-list">
-            <div class="customerService-list-box">
-              <img src="./img/serverbuy.jpg" alt="">
-              <span class="customerService-list-box-text">在线订购</span>
-            </div>
-            <router-link to="/reparation">
-              <div class="customerService-list-box">
-              <img src="./img/servercup.jpg" alt="">
-              <span class="customerService-list-box-text">咖啡机保养</span>
-              </div>
-            </router-link>
-          </li>
-          <li class="customerService-list">
-            <router-link to="/delivery">
-              <div class="customerService-list-box">
-              <img src="./img/servering.jpg" alt="">
-              <span class="customerService-list-box-text">运输服务</span>
-              </div>
-            </router-link>
-            <router-link to="/delivery">
-              <div class="customerService-list-box" style="border-top:1px solid #e2e2e2">
-              <img src="./img/serverlook.jpg" alt="">
-              <span class="customerService-list-box-text">客户关怀</span>
-              </div>
-            </router-link>
-          </li>
-          <li class="customerService-list">
-            <router-link to="/recovery">
-              <p class="padding-t-70">咖啡胶囊回收</p>
-              <div class="customerService-img">
-                <img src="./img/serverback.jpg" alt="">
-              </div>
-            </router-link>
-          </li>
-          <li class="customerService-list">
-            <div class="customerService-img">
-              <img class="customerService-img-4" src="./img/server.jpg" alt="">
-            </div>
-          </li>
-        </div>
+        <router-link to="/service" class="text-white">
+						<div class="nps-navbar-img nps-navbar-img-customerService">
+						<!-- 导航上边，少了白边，使用定位弥补 -->
+						<div class="nps-navbar-filler"></div>
+					</div>
+					<h3>顾客服务</h3>
+					<div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-customerService">
+						<li class="customerService-list">
+							<router-link to="/en-ligne">
+									<div class="customerService-list-box">
+											<img src="./img/serverbuy.jpg" alt="">
+											<span class="customerService-list-box-text">在线订购</span>
+									</div>
+							</router-link>
+							<router-link to="/reparation">
+								<div class="customerService-list-box">
+								<img src="./img/servercup.jpg" alt="">
+								<span class="customerService-list-box-text">咖啡机保养</span>
+								</div>
+							</router-link>
+						</li>
+						<li class="customerService-list">
+							<router-link to="/delivery">
+								<div class="customerService-list-box">
+								<img src="./img/servering.jpg" alt="">
+								<span class="customerService-list-box-text">运输服务</span>
+								</div>
+							</router-link>
+							<router-link to="/delivery">
+								<div class="customerService-list-box" style="border-top:1px solid #e2e2e2">
+								<img src="./img/serverlook.jpg" alt="">
+								<span class="customerService-list-box-text">客户关怀</span>
+								</div>
+							</router-link>
+						</li>
+						<li class="customerService-list">
+							<router-link to="/recovery">
+								<p class="padding-t-70">咖啡胶囊回收</p>
+								<div class="customerService-img">
+									<img src="./img/serverback.jpg" alt="">
+								</div>
+							</router-link>
+						</li>
+						<li class="customerService-list">
+							<div class="customerService-img">
+								<img class="customerService-img-4" src="./img/server.jpg" alt="">
+							</div>
+						</li>
+					</div>
+				</router-link>
       </li>
       <!-- 联系我们 -->
       <li class="nps-navbar-list nps-navbar-contactUs">
@@ -234,10 +241,12 @@
         <h3>联系我们</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-contactUs">
           <li class="contactUs-list">
-            <p class="padding-t-20 padding-b-20 text-black">Nespresso门店</p>
-            <div class="contactUs-img">
-              <img src="./img/connection.jpg" alt="" width="120px" height="120px">
-            </div>
+            <router-link to="/address">
+								<p class="padding-t-20 padding-b-20 text-black">Nespresso门店</p>
+								<div class="contactUs-img">
+									<img src="./img/connection.jpg" alt="" width="120px" height="120px">
+								</div>
+						</router-link>
           </li>
           <li class="contactUs-list">
            <router-link to="/info">

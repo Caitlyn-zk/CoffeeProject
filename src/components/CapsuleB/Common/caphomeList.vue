@@ -26,7 +26,7 @@
             <!-- </router-link> -->
             <div class="nps-list-contd fl">
                 <span class="nps-contd-sp">CNY {{item.price}}</span>
-                <cartList></cartList>
+                <cartList :id="item.id"></cartList>
             </div>
         </div>
     </div>
