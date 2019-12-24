@@ -17,6 +17,34 @@ Vue.prototype.$request = axiosRequest
 Vue.prototype.$get = get
 Vue.prototype.$post = post
 
+// const user = {
+//   isLogin () {
+//     return false
+//   }
+// }
+// 路由拦截(路由守卫)
+router.beforeEach((to, from, next) => {
+  // 判断当前用户是否需要登录权限
+  // if (to.matched.some(record => record.meta.requrireLogin)) {
+  //   if (window.localStorage.isLogin === '1') {
+  //     next()
+  //   } else if (to.path !== '/') {
+  //     next({path: '/login'})
+  //     Vue.prototype.$message.warning('请先登录！')
+  //   }
+  // }
+  if (to.path === '/order' || to.path === '/orderstep') {
+    if (window.localStorage.infor != null) {
+      next()
+    } else {
+      // Vue.prototype.$message.warning('您还未登录！')
+      next('/register')
+    }
+  } else {
+    next()
+  }
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -3,7 +3,7 @@
         <div class="padding-15">
             <Tips></Tips>
         </div>
-        <div class="nps-block content" style="width:1050px">
+        <div class="nps-block content">
         <el-carousel trigger="click" :autoplay="autoname">
             <el-button class="nps-start" @click="start">
                 <div v-show="!show" class="el-icon-video-play"></div>
@@ -16,7 +16,9 @@
                         <p class="margin-b-20 text-white">{{item.txt}}</p>
                         <p class="margin-b-20 text-topyellow">{{item.txt1}}</p>
                         <p class="margin-b-25 text-white" v-html="item.txt2"></p>
-                        <el-button class="nps-btn text-white">立即购买</el-button>
+                        <router-link to="/caphome">
+                            <el-button class="nps-btn text-white">立即购买</el-button>
+                        </router-link>
                     </div>
                 </div>
             </el-carousel-item>
@@ -45,20 +47,20 @@
                             <a href=""><p class="text-topyellow margin-b-20 font-12">现在下载Nespresso ios APP ></p></a>
                         </div>
                     </div>
-                    <div class="nps-bannerleftbottom padding-t-10 padding-l-20 padding-r-20">
+                    <div class="nps-bannerleftbottom padding-t-10 padding-l-20 padding-r-20 padding-b-10">
                         <p class="margin-b-10 text-white font-16"><span class="margin-r-5">NESPRESSO</span><span>线下活动&咖啡配方</span></p>
                         <router-link to="/offline">
                             <p class="font-12"><a class="text-topyellow" href="">查看您附近的线下活动 ></a></p>
                         </router-link>
                         <div class="nps-l fl">
                             <img src="./img/bannerbottom1.jpg" alt="" width="100%">
-                            <p class="text-white margin-5px font-16">Nespresso @ 设计上海2019</p>
+                            <p class="text-white margin-5px font-16 padding-t-20 padding-b-20">Nespresso @ 设计上海2019</p>
                             <span class="text-gray font-12 margin-b-10">这个3月，Nespresso咖啡体验馆亮相2019“设计上海”。带您邂逅伊斯坦布尔咖啡馆风情，开启一场穿梭古今的咖啡探索之旅。</span>
                             <p><a class="text-topyellow font-12" href="">立即探索</a></p>
                         </div>
                         <div class="nps-r fl">
                             <img src="./img/bannerbottom2.jpg" alt="" width="100%">
-                            <p class="text-white margin-5px font-16">纵享曼妙的北欧滋味</p>
+                            <p class="text-white margin-5px font-16 padding-t-20 padding-b-20">纵享曼妙的北欧滋味</p>
                             <span class="text-gray font-12 margin-b-10">我们全新限量版咖啡受到北欧传统的启发，带你重新感受与亲朋好友共度美好时光的温暖。</span>
                             <p><a class="text-topyellow font-12" href="">发现更多 ></a></p>
                         </div>

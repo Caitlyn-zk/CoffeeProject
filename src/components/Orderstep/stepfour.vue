@@ -69,24 +69,24 @@
             <li class="text-center">数量</li>
             <li class="text-center">总额</li>
           </ul>
-          <ul class="nps-orderstep-lists nps-orderstep-lists-descript clearfix font-14">
+          <ul :key="item.index" v-for="item of orderInfo" class="nps-orderstep-lists nps-orderstep-lists-descript clearfix font-14">
             <li class="nps-stepone-list clearfix">
               <div class="nps-order-lists-img fl">
-                <img src="./img/nps-orderstep1.jpg">
+                <img :src="api+item.img">
               </div>
               <div class="nps-orderstep-lists-kind font-14">
-                <span>Original咖啡胶囊</span>
+                <span>{{item.name}}</span>
               </div>
             </li>
             <li class="text-center nps-stepone-list nps-stepfour-pop">
               <span class="nps-stepfour-pop">
-                <span>RMB 401.00</span>
+                <span>RMB {{item.price}}</span>
                 <span class="font-20 padding-l-20"><i class="el-icon-close"></i></span>
               </span>
             </li>
-            <li class="text-center nps-stepone-list">1</li>
+            <li class="text-center nps-stepone-list">{{item.quantity}}</li>
             <li class="text-center nps-stepone-list nps-stepfour-pop">
-              <span class="nps-stepfour-pop">RMB 401.00</span>
+              <span class="nps-stepfour-pop">RMB {{item.totalPrice}}</span>
             </li>
           </ul>
           <div class="nps-orderstep-return-box nps-step-next">
@@ -102,7 +102,7 @@
                 <span>小结</span>
               </div>
               <div class="nps-stepone-detail-right text-r fr">
-                <span>RMB 401.00</span>
+                <span>RMB {{allTotalPrice}}</span>
               </div>
             </li>
             <li class="padding-20 clearfix nps-stepone-num">
@@ -118,7 +118,7 @@
                 <span>增值税（包含）</span>
               </div>
               <div class="nps-stepone-detail-right text-r fr">
-                <span>RMB 461.13</span>
+                <span>RMB 00.00</span>
               </div>
             </li>
             <li class="padding-20 clearfix nps-stepone-num last">
@@ -126,7 +126,7 @@
                 <span class="nps-orderstep-total font-16">总计</span>
               </div>
               <div class="nps-stepone-detail-right text-r fr">
-                <span class="font-16">RMB 401.00</span>
+                <span class="font-16">RMB {{allTotalPrice}}</span>
               </div>
             </li>
             <li class="padding-20 nps-stepone-num last nps-stepfour-clause-box">
@@ -212,11 +212,15 @@
 </template>
 
 <script>
+import {apiUrl} from 'commonjs/api.js'
 import Steponeadd from '../Order/shopping-add'
 import {order} from 'commonjs/Requestaxios'
+import {createNamespacedHelpers} from 'vuex'
+const {mapState: orderState} = createNamespacedHelpers('Order')
 export default {
   data () {
     return {
+      api: apiUrl,
       dialogVisible: false,
       disabled: true
     }
@@ -227,17 +231,23 @@ export default {
   props: {
     changeStep: Function
   },
+  computed: {
+    ...orderState(['order', 'orderInfo', 'userId', 'allTotalPrice'])
+  },
   methods: {
     Modify () {
       this.changeStep(3)
     },
     changeS () {
-      console.log(222)
+      // 将订单转换成json字符串
+      console.log(this.order)
+      let goods = JSON.stringify(this.order)
+      console.log(goods)
       order({
         data: {
           userId: 1,
           status: 1,
-          goods: '[{"npscommodity":36,"commodity":1,"quantity":10}]'
+          goods: goods
         },
         success: (res) => {
           console.log(res)

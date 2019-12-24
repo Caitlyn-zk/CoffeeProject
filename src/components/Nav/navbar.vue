@@ -12,7 +12,7 @@
         <h3>特惠活动</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-specialOffers clearfix">
           <li class="specialOffers-list">
-            <p class="font-16">购买任意的200颗咖啡胶囊（不含迎新礼盒）即可获赠一套大杯品饮杯</p>
+            <p class="font-14">购买任意的200颗咖啡胶囊（不含迎新礼盒）即可获赠一套大杯品饮杯</p>
             <div class="specialOffers-img">
               <router-link to="/caphome">
                 <img src="./img/gzt-nav-1.png" alt="" width="80%" height="80%">
@@ -20,7 +20,7 @@
             </div>
           </li>
           <li class="specialOffers-list">
-            <p class="font-16">购买CltiZ银色咖啡机立减200元，且送一个价值800元的黑色奶沫机</p>
+            <p class="font-14">购买CltiZ银色咖啡机立减200元，且送一个价值800元的黑色奶沫机</p>
             <div class="specialOffers-img">
               <router-link to="/Best">
               <img src="./img/gzt111.jpg" alt="" width="80%" height="80%">
@@ -28,7 +28,7 @@
             </div>
           </li>
           <li class="specialOffers-list">
-            <p class="font-16">购买任意Aeroccino 4奶泡机立减200元。</p>
+            <p class="font-14">购买任意Aeroccino 4奶泡机立减200元。</p>
             <div class="specialOffers-img">
               <router-link to="/Best">
               <img src="./img/gzt222.jpg" alt="" width="80%" height="80%">
@@ -53,7 +53,7 @@
           <router-link to="/caphome">
           <li class="coffeeCapsule-list">
             <p class="padding-t-60 text-black">咖啡胶囊</p>
-            <div class="coffeeCapsule-img padding-80">
+            <div class="coffeeCapsule-img padding-20">
               <img src="./img/gzt333.jpg" alt="">
             </div>
           </li></router-link>
@@ -62,7 +62,7 @@
               <img src="./img/gzt555.jpg" alt="" width="80%" height="80%">
               <span class="coffeeCapsule-list-box-text font-12">探索Nespresso优选咖啡胶囊</span>
             </div>
-            <router-link to="/seefit">
+            <router-link to="/seekfit">
             <div class="coffeeCapsule-list-box">
               <img src="./img/gzt666.jpg" alt="" width="80%" height="80%">
               <span class="coffeeCapsule-list-box-text font-12 text-black">测一测您喜欢的咖啡口味</span>
@@ -76,7 +76,7 @@
               <span class="coffeeCapsule-list-box-text font-12 text-black">Nespresso咖啡配方</span>
             </div>
             </router-link>
-            <div class="coffeeCapsule-list-box">
+            <div class="coffeeCapsule-list-box" style="border-top: 1px solid #e2e2e2;">
               <img src="./img/gzt-nav-22.png" alt="" width="80%" height="80%">
               <span class="coffeeCapsule-list-box-text font-12">Nespresso迎新会员好礼</span>
             </div>
@@ -98,7 +98,7 @@
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-coffeeMachine">
           <router-link to="/Machine">
             <li class="coffeeMachine-list">
-              <p class="padding-b-60 padding-t-60 text-black">订购咖啡机</p>
+              <p class="padding-b-60 padding-t-60 text-black font-20">订购咖啡机</p>
               <div class="coffeeMachine-img">
                 <img src="./img/gzt999.jpg" alt="">
               </div>
@@ -124,15 +124,15 @@
             </div>
             </router-link>
            <router-link to="/Best">
-            <div class="coffeeMachine-list-box">
+            <div class="coffeeMachine-list-box" style="border-top: 1px solid #e2e2e2;">
               <img src="./img/gzt1000.jpg" alt="">
               <span class="coffeeMachine-list-box-text  font-14 text-black">热卖咖啡机</span>
             </div>
            </router-link>
           </li>
           <li class="coffeeMachine-list">
-            <div class="coffeeMachine-img">
-              <img class="coffeeMachine-img-4" src="./img/gzt-nav-4.jpg" alt="">
+            <div class="coffeeMachine-img44">
+              <img class="coffeeMachine-img-4" src="./img/gzt-nav-4.jpg" alt="" style="width:100%">
             </div>
           </li>
         </div>
@@ -147,23 +147,23 @@
           <h3 class="vipMember-title">会员有礼</h3>
           <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-vipMember">
             <li class="vipMember-list">
-              <p class="padding-t-40">为什么选择Nespresso</p>
-              <div class="vipMember-img padding-t-100">
+              <p class="padding-t-40 font-14">为什么选择Nespresso</p>
+              <div class="vipMember-img padding-t-50">
                 <img src="./img/vip1.jpg" alt="">
               </div>
             </li>
             <li class="vipMember-list">
               <router-link to="/polite">
-                <p class="vipMember-list-title padding-t-40">新会员专属礼遇</p>
-                <div class="vipMember-img padding-t-100">
+                <p class="vipMember-list-title padding-t-40 font-14">新会员专属礼遇</p>
+                <div class="vipMember-img padding-t-50">
                   <img src="./img/vip2.jpg" alt="">
                 </div>
               </router-link>
             </li>
             <li class="vipMember-list">
               <router-link to="/favorite">
-                <p class="vipMember-list-title padding-t-40">为不同场合选择礼物</p>
-                <div class="vipMember-img padding-t-100">
+                <p class="vipMember-list-title padding-t-40 font-14">为不同场合选择礼物</p>
+                <div class="vipMember-img padding-t-50">
                   <img src="./img/vip3.jpg" alt="">
                 </div>
               </router-link>
@@ -204,7 +204,7 @@
               </div>
             </router-link>
             <router-link to="/delivery">
-              <div class="customerService-list-box">
+              <div class="customerService-list-box" style="border-top:1px solid #e2e2e2">
               <img src="./img/serverlook.jpg" alt="">
               <span class="customerService-list-box-text">客户关怀</span>
               </div>
@@ -212,7 +212,7 @@
           </li>
           <li class="customerService-list">
             <router-link to="/recovery">
-              <p class="padding-t-100">咖啡胶囊回收</p>
+              <p class="padding-t-70">咖啡胶囊回收</p>
               <div class="customerService-img">
                 <img src="./img/serverback.jpg" alt="">
               </div>
@@ -234,34 +234,34 @@
         <h3>联系我们</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-contactUs">
           <li class="contactUs-list">
-            <p class="padding-t-40 text-black">Nespresso门店</p>
-            <div class="contactUs-img padding-t-100">
-              <img src="./img/connection.jpg" alt="">
+            <p class="padding-t-20 padding-b-20 text-black">Nespresso门店</p>
+            <div class="contactUs-img">
+              <img src="./img/connection.jpg" alt="" width="120px" height="120px">
             </div>
           </li>
           <li class="contactUs-list">
            <router-link to="/info">
-              <div class="contactUs-list-box">
-              <img src="./img/email.jpg" alt="">
-              <span class="contactUs-list-box-text text-black">邮件联系我们</span>
+              <div class="contactUs-list-box" style="border-bottom: 1px solid #e2e2e2;">
+              <img src="./img/email.jpg" alt="" width="80px" height="80px">
+              <span class="contactUs-list-box-text text-black" >邮件联系我们</span>
               </div>
            </router-link>
            <router-link to="/contact">
                <div class="contactUs-list-box">
-              <img src="./img/phone.jpg" alt="">
+              <img src="./img/phone.jpg" alt="" width="80px" height="80px">
               <span class="contactUs-list-box-text text-black">拨打热线联系我们</span>
               </div>
            </router-link>
           </li>
           <li class="contactUs-list">
             <router-link to="/problem">
-              <div class="contactUs-list-box">
-              <img src="./img/question.jpg" alt="">
+              <div class="contactUs-list-box" style="border-bottom: 1px solid #e2e2e2;">
+              <img src="./img/question.jpg" alt="" width="80px" height="80px">
               <span class="contactUs-list-box-text text-black">顾客常见问题</span>
               </div>
             </router-link>
             <div class="contactUs-list-box">
-              <img src="./img/mobilephone.jpg" alt="">
+              <img src="./img/mobilephone.jpg" alt="" width="80px" height="80px">
               <span class="contactUs-list-box-text">下载Nepresso</span>
             </div>
           </li>
@@ -282,6 +282,6 @@ export default {
 }
 </script>
 
-<style lang='less'>
+<style lang='less' scoped>
 @import './less/navbar.less';
 </style>
