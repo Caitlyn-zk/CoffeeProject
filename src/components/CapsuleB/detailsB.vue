@@ -105,11 +105,31 @@
                     </div>
                 </div>
             </div>
-            <a class="nps-recmd-a">
-                <span class="nps-a-sp">+</span>
-                <span class="nps-a-spt">加入购物车</span>
-            </a>
-            <a class="nps-cecmd-ab">发现更多优选咖啡</a>
+            <div style="width: 138px;height: 33px;margin: 0 auto;">
+                <el-popover
+                ref="popover4"
+                placement="top"
+                width="220"
+                trigger="click">
+                <div class="nps-add-box">
+                    <ul class="nps-add-box-lists clearfix">
+                    <li :key="index" v-for="(item, index) in gridData">
+                        <a  @click="getnumber(index)" class="nps-lists-num"><span>{{item}}</span></a>
+                    </li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                    <el-input class="nps-add-input" placeholder="选择一种数量" >
+                        <template class="nps-add-confirm" slot="append">好</template>
+                    </el-input>
+                    </div>
+                </div>
+                </el-popover>
+                <el-button v-popover:popover4 class="nps-add-buttons">
+                    <div class="nps-spcar">+</div>
+                    <div class="nps-sptocar">添加到购物车</div>
+                </el-button>
+            </div>
+            <router-link class="nps-cecmd-ab" to="/">发现更多优选咖啡</router-link>
         </div>
         <div class="nps-perhaps">
             <div class="nps-perhaps-title">您可能还会喜欢这些配方</div>
@@ -136,6 +156,7 @@ export default {
             king: 30,
             stor: 30,
             yy: 1,
+            gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300],
             stars: [{
                     src: starOffImg,
                     active: false
@@ -215,4 +236,5 @@ export default {
 
 <style lang="less">
 @import './css/Yyb.less';
+@import './css/eighth.less';
 </style>

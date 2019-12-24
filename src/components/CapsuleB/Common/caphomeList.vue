@@ -59,10 +59,7 @@ export default {
             this.$router.push({
                 path: '/caplists',
                 query: {
-                    name: i.name,
-                    img: i.img,
-                    price: i.price,
-                    title: i.title
+                    stage: i
                 }
             })
         }
