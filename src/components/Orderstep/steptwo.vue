@@ -16,15 +16,18 @@
               <a @click="dialogVisible1 = true">编辑地址</a>
               <i class="el-icon-arrow-right"></i>
             </span>
-            <el-dialog
-              :visible="dialogVisible1"
-              :show-close="true"
-              :close-on-click-modal="true"
-              width="60%">
-              <div class="">
-                <Editaddress></Editaddress>
-              </div>
-            </el-dialog>
+            <div class="buyCart" :class="{isShow:this.showNumIndex == 1}">
+              <el-dialog
+                :visible="dialogVisible1"
+                :show-close="true"
+                :close-on-click-modal="true"
+                :modal-append-to-body="false"
+                width="60%">
+                <div class="">
+                  <Editaddress></Editaddress>
+                </div>
+              </el-dialog>
+            </div>
           </div>
         </div>
         <div class="fr padding-r-40 padding-b-20">
@@ -140,17 +143,18 @@
     </div>
   </div>
 </template>
-
 <script>
 import Steponeadd from '../Order/shopping-add'
 import Editaddress from 'components/Order/myaddress/comeditAddress'
 import Addaddress from 'components/Order/myaddress/comaddAddress'
+import {mapState} from 'vuex'
 export default {
   data () {
     return {
       dialogVisible: false,
-      dialogVisible1: false,
-      dialogVisible2: false
+      // dialogVisible1: false,
+      dialogVisible2: false,
+      on: 1
     }
   },
   components: {
@@ -178,6 +182,11 @@ export default {
     Revise () {
       this.changeStep(1)
     }
+  },
+  computed: {
+    ...mapState(
+      ['showNumIndex']
+    )
   }
 }
 </script>

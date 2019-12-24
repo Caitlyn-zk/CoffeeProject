@@ -1,6 +1,6 @@
 <template>
   <div>
-			<Tips></Tips>
+			<!-- <Tips></Tips> -->
 			<div class="nps-register-back">
 				<div class="nps-register-box content">
 					<div class="nps-register-content">

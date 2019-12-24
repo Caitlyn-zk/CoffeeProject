@@ -8,7 +8,7 @@
           <Cart></Cart>
         </div>
         <div class="nps-user-btn-group fr">
-          <button v-if="!loginInfo" @click="loginShowF" class="nps-user-btn nps-login-account">
+          <button v-if="!loginInfo" @click="loginShowF()" class="nps-user-btn nps-login-account">
             <span class="el-icon-s-custom margin-r-10 font-18"></span>
             请登陆你的账户
           </button>
@@ -36,7 +36,7 @@
 import Cart from '../ShoppingCart/index'
 import Login from 'components/Login/login.vue'
 import Myacount from 'components/Login/myacount.vue'
-import {createNamespacedHelpers} from 'vuex'
+import {createNamespacedHelpers, mapState} from 'vuex'
 const { mapState: loginState, mapMutations: loginMutations } = createNamespacedHelpers('Login')
 export default {
 	data () {
@@ -82,7 +82,7 @@ export default {
         event.target.style.color = '#fff'
       }
     },
-    loginShowF (event) {
+    loginShowF (value) {
       this.loginShow = !this.loginShow
       if (this.loginShow || this.myacountShow) {
         event.target.style.background = '#fff'
@@ -103,7 +103,12 @@ export default {
     ...loginState(['loginInfo']),
     count () {
       return this.$store.state.total
-    }
+    },
+    ...mapState([
+      'total',
+      'info',
+     'showNumIndex'
+    ])
   },
   mounted () {
     let infor = JSON.parse(window.localStorage.getItem('infor'))

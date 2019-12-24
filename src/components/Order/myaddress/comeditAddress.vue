@@ -1,4 +1,4 @@
-<template>
+<template >
   <div class="nps-order-cont nps-edit-main font-12 nps-new-editaddress">
     <h2 class="nps-order-cont-title font-16 padding-20 text-center nps-new-address">编辑我的地址</h2>
     <div class="nps-order-info  padding-20 clearfix">
@@ -131,7 +131,7 @@
         </div>
         <div class="nps-editaddress-bottom clearfix">
           <div class="fl">
-            <router-link to='' class="nps-address-edit-btn btn" v-show="barShow">取消</router-link>
+            <router-link to='' @click.native="turnModule(1)" class="nps-address-edit-btn btn" v-show="barShow">取消</router-link>
           </div>
           <div class="fr">
             <a @click="submitForm('ruleForm')" class="nps-address-edit-btn btn">保存我的信息</a>
@@ -143,6 +143,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   data () {
     var testEmail = (rule, value, callback) => {
@@ -157,6 +158,7 @@ export default {
     }
     return {
       barShow: true,
+      // on: 0,
       radio: '1',
       options: [{
           value: '选项1',
@@ -254,7 +256,19 @@ export default {
           return false
         }
       })
+    },
+    turnModule (value) {
+      console.log(111)
+      // if (value === 1) {
+      //   this.on = value
+      // }
+      this.$store.commit('changeShowIndexNum', value)
     }
+  },
+  computed: {
+    ...mapState(
+      ['showNumIndex']
+    )
   }
 }
 </script>

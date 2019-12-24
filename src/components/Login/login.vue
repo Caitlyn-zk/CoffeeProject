@@ -1,5 +1,5 @@
 <template>
-  <div class="nps-login">
+  <div class="nps-login" v-show="isShow">
     <p class="nps-logintxt">登陆</p>
     <p>登陆账户，订购产品</p>
     <el-form ref="loginform" :rules="loginRules" :model="loginform" class="margin-t-10 nps-login-form" >
@@ -21,16 +21,21 @@
     </el-form>
     <div class="margin-t-10 nps-to-register">
       <span>还没有账户？</span>
-      <router-link to="/register" class="margin-t-10 nps-login-btn nps-registing" type="primary">立即注册 <span class="el-icon-arrow-right fr"></span></router-link>
+      <router-link to="/register" class="margin-t-10 nps-login-btn nps-registing" @click.native="showBlock">立即注册 <span class="el-icon-arrow-right fr"></span></router-link>
     </div>
   </div>
 </template>
 
 <script>
 import {login} from 'commonjs/Requestaxios'
-import {createNamespacedHelpers} from 'vuex'
+import {createNamespacedHelpers, mapState} from 'vuex'
 const {mapMutations: loginMutations} = createNamespacedHelpers('Login')
 export default {
+  props: {
+    loginShowF: {
+      type: Function
+    }
+  },
   data () {
     let emailReg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
     var validateEmail = (rule, value, callback) => {
@@ -42,6 +47,7 @@ export default {
       callback()
     }
     return {
+      isShow: false,
       loginform: {
         email: '',
         passward: ''
@@ -116,7 +122,28 @@ export default {
           })
         }
       })
+    },
+    showBlock () {
+      // this.$emit('loginShowF')
+      // this.$store.commit('changeShowIndexNum', value)
+      this.isShow = !this.isShow
+      console.log(this.$route.query)
+      // if (this.showNumIndex === 1) {
+      //   this.isShow = 1
+      // } else {
+      //   this.isShow = 2
+      // }
     }
+  },
+  computed: {
+    count () {
+      return this.$store.state.showNumIndex
+    },
+    ...mapState([
+      'total',
+      'info',
+      'showNumIndex'
+    ])
   }
 }
 </script>

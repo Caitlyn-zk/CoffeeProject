@@ -9,7 +9,7 @@
       <li class="nps-myAcount-router"><router-link to="/order/mymachines" class="nps-myacount-btn">我的咖啡机</router-link></li>
       <li class="nps-myAcount-router"><router-link to="/order/alerts" class="nps-myacount-btn">提醒和订阅</router-link></li>
       <li class="nps-myAcount-router"><router-link to="/order/fondness" class="nps-myacount-btn">联系偏好设置</router-link></li>
-      <li @click="loginOut()" class="nps-myAcount-router"><router-link to="" class="nps-myacount-nologin">登出</router-link></li>
+      <li @click="loginOut()" class="nps-myAcount-router"><router-link to="/" class="nps-myacount-nologin">登出</router-link></li>
     </ul>
   </div>
 </template>

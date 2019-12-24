@@ -19,9 +19,17 @@ export default new Vuex.Store({
 	// 只有通过mutations中的方法去改变state
 	state: {
     total: 0,
-    info: ''
+    info: '',
+    showNumIndex: 0
 	},
 	mutations: {
+    changeShowIndexNum (state, value) {
+      if (value === 1) {
+        state.showNumIndex = 1
+      } else if (value === 2) {
+        state.showNumIndex = 2
+      }
+    },
 		changeBuyCartIndex (state, btnNum) {
 			console.log(btnNum)
 			console.log(state)

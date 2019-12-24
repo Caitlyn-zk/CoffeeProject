@@ -38,7 +38,7 @@
         <div class="nps-orderstep-return-box">
           <span class="nps-step-next">
             <span><i class="el-icon-arrow-left"></i></span>
-            <a>返回在线商店</a>
+            <router-link to="/caphome" class="nps-step-next">返回在线商店</router-link>
           </span>
         </div>
         <ul class="nps-stepone-detail-lists">
