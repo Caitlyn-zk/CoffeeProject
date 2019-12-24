@@ -4,7 +4,7 @@
       <!-- 特惠活动 -->
       <li class="nps-navbar-list nps-navbar-specialOffers active">
         <!-- 左侧白边突出，加1px左边框 -->
-        <router-link to="/caphome">
+        <router-link to="/caphome" class="text-white">
 					<div class="nps-navbar-left-border"></div>
 					<div class="nps-navbar-img nps-navbar-img-specialOffers">
 						<!-- 导航上边，少了白边，使用定位弥补 -->
@@ -53,12 +53,13 @@
         <h3>咖啡胶囊</h3>
         <div class="nps-navbar-secondaryMenu nps-navbar-secondaryMenu-coffeeCapsule">
           <router-link to="/caphome">
-          <li class="coffeeCapsule-list">
-            <p class="padding-t-45 text-black">咖啡胶囊</p>
-            <div class="coffeeCapsule-img padding-20">
-              <img src="./img/gzt333.jpg" alt="">
-            </div>
-          </li></router-link>
+						<li class="coffeeCapsule-list text-white">
+							<p class="padding-t-45 text-black">咖啡胶囊</p>
+							<div class="coffeeCapsule-img padding-20">
+								<img src="./img/gzt333.jpg" alt="">
+							</div>
+						</li>
+					</router-link>
           <li class="coffeeCapsule-list">
             <div class="coffeeCapsule-list-box">
               <img src="./img/gzt555.jpg" alt="" width="80%" height="80%">
@@ -180,7 +181,7 @@
       </li>
       <!-- 顾客服务 -->
       <li class="nps-navbar-list nps-navbar-customerService">
-        <router-link to="/service">
+        <router-link to="/service" class="text-white">
 						<div class="nps-navbar-img nps-navbar-img-customerService">
 						<!-- 导航上边，少了白边，使用定位弥补 -->
 						<div class="nps-navbar-filler"></div>
