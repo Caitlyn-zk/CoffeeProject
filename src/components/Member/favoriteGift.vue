@@ -34,15 +34,14 @@
                 </li>
             </ul>
         </div>
-         <!-- 第二部分 -->
+         <!-- 第二部分 --><!-- 进度条 -->
+					<div class="progress-bar-box" :class="{on:isActive==on}">
+							<span class="el-icon-arrow-left progress-bar-title">一份礼物祝福：{{message}}</span>
+							<div class="progress-bar">
+									<span class="progress-bar-son" ref="progress"></span>
+							</div>
+					</div>
         <div class="favorite-step seconed"  :class="{active:isActive == 2}">
-            <!-- 进度条 -->
-            <div class="progress-bar-box">
-                <span class="el-icon-arrow-left progress-bar-title">一份礼物祝福：{{message}}</span>
-                <div class="progress-bar">
-                    <span class="progress-bar-son"></span>
-                </div>
-            </div>
             <div class="favorite-title-top-bottom">
                 我认为对方愿意收到
             </div>
@@ -67,13 +66,6 @@
         </div>
         <!-- 第三部分 -->
         <div class="favorite-step thired"  :class="{active:isActive == 3}">
-            <!-- 进度条 -->
-            <div class="progress-bar-box">
-                <span class="el-icon-arrow-left progress-bar-title">更喜欢收到：{{message}}</span>
-                <div class="progress-bar">
-                    <span class="progress-bar-son three"></span>
-                </div>
-            </div>
             <div class="favorite-title-top-bottom">
                 就咖啡而言，TA她愿意收到
             </div>
@@ -98,13 +90,6 @@
         </div>
         <!-- 第四部分 -->
         <div class="favorite-step fove" :class="{active:isActive == 4}">
-            <!-- 进度条 -->
-            <div class="progress-bar-box">
-                <span class="el-icon-arrow-left progress-bar-title">Ta喜欢：{{message}}</span>
-                <div class="progress-bar">
-                    <span class="progress-bar-son fove"></span>
-                </div>
-            </div>
             <div class="favorite-title-top-bottom">
                 就预算方面，我倾向于价位在
             </div>
@@ -215,17 +200,23 @@ export default {
             showBtn: 1,
             showBtnTwo: 1,
             showBtnThree: 1,
-            total: 0
+            total: 0,
+						isOn: 0
         }
     },
     methods: {
         changeTab (value) {
             if (value === 2) {
-                this.isActive = value
+								this.isActive = value
+								this.isOn = value
+								this.$refs.progress.style.width = '300px'
             } else if (value === 3) {
-                this.isActive = value
+								this.isActive = value
+								this.isOn = value
+								this.$refs.progress.style.width = '600px'
             } else {
-                this.isActive = value
+								this.isActive = value
+								this.$refs.progress.style.width = '900px'
             }
         },
         changeMessage (index) {
