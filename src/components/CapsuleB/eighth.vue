@@ -138,7 +138,7 @@
                     <div class="nps-list-store">CNY 3.80</div>
                     <div style="width: 138px;height: 33px;margin: 0 auto;">
                         <el-popover
-                        ref="popover4"
+                        ref="popover9"
                         placement="top"
                         width="220"
                         trigger="click">
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                         </el-popover>
-                        <el-button v-popover:popover4 class="nps-add-buttons">
+                        <el-button v-popover:popover9 class="nps-add-buttons">
                             <div class="nps-spcar">+</div>
                             <div class="nps-sptocar">添加到购物车</div>
                         </el-button>
