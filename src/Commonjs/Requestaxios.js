@@ -78,6 +78,14 @@ let isLogin = (params) => {
 		params.error(error)
 	})
 }
+// 上传购物车
+let addCart = (params) => {
+	axiosRequest('addCart', 'post', params.data).then((res) => {
+		params.success(res)
+	}).catch((error) => {
+		params.error(error)
+	})
+}
 
 export {
 	MachineLists,
@@ -88,5 +96,6 @@ export {
 	register,
 	getCart,
 	order,
-	isLogin
+	isLogin,
+	addCart
 }

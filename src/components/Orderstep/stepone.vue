@@ -197,8 +197,6 @@ export default {
               delete item.title
             }
             if (item.machinePrice) {
-              console.log('1111')
-              console.log(item.machinePrice)
               item.price = item.machinePrice
               delete item.machinePrice
             }
@@ -213,8 +211,6 @@ export default {
             item.img = JSON.parse(item.img)[0]
             allTotalPrice += item.totalPrice
           }
-          console.log(cartInfo)
-          console.log(orderArr)
           this.shoppingCart = cartInfo
           this.allTotal = allTotalPrice
           this.addOrderInfo(cartInfo)

@@ -4,6 +4,7 @@ import Register from './register'
 import tocart from './tocart'
 import Order from './order'
 import Login from './login'
+import addCartList from './addCartList'
 
 const userInfo = 'infor'
 
@@ -14,7 +15,8 @@ export default new Vuex.Store({
 	modules: {
     Register: Register,
     Order: Order,
-    Login: Login
+    Login: Login,
+    addCartList: addCartList
 	},
 	// 只有通过mutations中的方法去改变state
 	state: {
@@ -31,7 +33,8 @@ export default new Vuex.Store({
             state.total -= 1
 		}
 		console.log(state.total)
-		},
+    },
+    // strict: debug,  //开启严格模式
 		changeBuyCartTwoIndex (state, btnNum) {
             if (btnNum === 0) {
             state.total += 1

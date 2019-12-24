@@ -24,7 +24,7 @@ axios.interceptors.response.use((response) => {
 		// 删除locaStorage 的信息
 		window.localStorage.removeItem('infor')
 		window.localStorage.removeItem('token')
-		window.location.href = 'http://localhost:8080/#/'
+		location.reload()
 	}
 	return response
 }, (error) => {

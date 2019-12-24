@@ -13,7 +13,7 @@
                         <p class="nps-contb-p">{{item.name}}</p>
                         <p>{{item.title}}</p>
                         <div class="nps-contb-list">
-                            <span class="into-a" v-for="(syl, index) in (item.strength)" :key="index"></span>
+                            <span class="into-a" v-for="(syl, ind) in (item.strength)" :key="ind"></span>
                             <span class="into-c">{{item.strength}}</span>
                             <!-- <span class="into-b"></span> -->
                         </div>
@@ -26,7 +26,13 @@
             <!-- </router-link> -->
             <div class="nps-list-contd fl">
                 <span class="nps-contd-sp">CNY {{item.price}}</span>
-                <cartList></cartList>
+                <!-- <cartList :capListIndex="index"></cartList> -->
+                <a class="nps-contd-a">
+                    <!-- <span class="nps-a-sp el-icon-shopping-bag-2"></span>
+                    <a>添加至购物车</a>
+                    <span class="nps-contd-spb el-icon-plus"></span> -->
+                    <addIn :capListIndex="index"></addIn>
+                </a>
             </div>
         </div>
     </div>
@@ -35,6 +41,7 @@
 <script>
 import cartList from './cartList'
 import {capsuleHome} from 'commonjs/Requestaxios'
+import addIn from '../../Coffeemachine/common/shopingbtn'
 export default {
     data () {
         return {
@@ -45,14 +52,30 @@ export default {
     methods: {
         getLists () {
             capsuleHome({
-                success: (res) => {
-                    if (res.status === 200) {
+                data: {
+					id: this.dataList.id
+				},
+				error: () => {
+					this.$message({
+						message: '错了错了'
+					})
+				},
+				success: (res) => {
+					if (res.status === 200) {
+						// 存入vuex中
+						this.$store.commit('addCapList', res.data)
+                        console.log(res.data)
+                        window.localStorage.setItem('capList', JSON.stringify(res.data))
                         this.dataList = res.data
-                    }
-                },
-                error: (err) => {
-                    console.log(err)
-                }
+					} else {
+						this.$message({
+							message: res.message,
+							type: 'error',
+							showClose: true,
+							duration: 3000
+						})
+					}
+				}
             })
         },
         changeGet (i) {
@@ -71,7 +94,8 @@ export default {
         this.getLists()
     },
     components: {
-        cartList
+        cartList,
+        addIn
     }
 }
 </script>
