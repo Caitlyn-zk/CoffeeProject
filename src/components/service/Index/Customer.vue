@@ -233,7 +233,7 @@
                                     </li>
                                     <li class="Small-navigation-rigth" >
                                         <p class="navigation-rigth-title">在线订购</p>
-                                        <a class="navigation-rigth-buttom">订购胶囊</a>
+                                        <router-link to="/caphome" class="navigation-rigth-buttom">订购胶囊</router-link>
                                         <div class="Mobile-phone-order">
                                             <p class="font-18 text-weight margin-b-15">手机订购</p>
                                             <p class="font-16 text-weight margin-b-15">口袋里的NESPRESSO精品店</p>

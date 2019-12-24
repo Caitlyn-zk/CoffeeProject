@@ -2,7 +2,7 @@
     <div class="nps-detai content">
         <div class="nps-detai-top clearfix">
             <div class="nps-top-icon el-icon-search"></div>
-            <el-input class="nps-top-inpt" placeholder="输入原材料，心情，配方....."></el-input>
+            <el-input class="nps-top-inpt" v-model="input" placeholder="输入原材料，心情，配方....."></el-input>
             <div class="nps-top-iconb el-icon-place"></div>
             <a class="nps-top-a font-18">搜索</a>
         </div>
@@ -118,7 +118,7 @@
                     </li>
                     </ul>
                     <div style="margin-top: 15px;">
-                    <el-input class="nps-add-input" placeholder="选择一种数量" >
+                    <el-input class="nps-add-input" type="number" min="0" v-model="inputs" placeholder="选择一种数量" >
                         <template class="nps-add-confirm" slot="append">好</template>
                     </el-input>
                     </div>
@@ -154,7 +154,9 @@ export default {
             starOffImg,
             starOnImg,
             king: 30,
-            stor: 30,
+						stor: 30,
+						input: '',
+						inputs: '',
             yy: 1,
             gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300],
             stars: [{

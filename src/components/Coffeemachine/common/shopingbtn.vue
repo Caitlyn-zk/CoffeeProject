@@ -12,7 +12,7 @@
           </li>
         </ul>
         <div style="margin-top: 15px;">
-          <el-input class="nps-add-input" placeholder="选择一种数量" >
+          <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
             <template class="nps-add-confirm" slot="append">好</template>
           </el-input>
         </div>
@@ -36,6 +36,7 @@
 export default {
   data () {
     return {
+			input: '',
       gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300]
     }
   },

@@ -25,7 +25,7 @@
                             </li>
                             </ul>
                             <div style="margin-top: 15px;">
-                            <el-input class="nps-add-input" placeholder="选择一种数量" >
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
                                 <template class="nps-add-confirm" slot="append">好</template>
                             </el-input>
                             </div>
@@ -56,7 +56,7 @@
                             </li>
                             </ul>
                             <div style="margin-top: 15px;">
-                            <el-input class="nps-add-input" placeholder="选择一种数量" >
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
                                 <template class="nps-add-confirm" slot="append">好</template>
                             </el-input>
                             </div>
@@ -87,7 +87,7 @@
                             </li>
                             </ul>
                             <div style="margin-top: 15px;">
-                            <el-input class="nps-add-input" placeholder="选择一种数量" >
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
                                 <template class="nps-add-confirm" slot="append">好</template>
                             </el-input>
                             </div>
@@ -118,7 +118,7 @@
                             </li>
                             </ul>
                             <div style="margin-top: 15px;">
-                            <el-input class="nps-add-input" placeholder="选择一种数量" >
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
                                 <template class="nps-add-confirm" slot="append">好</template>
                             </el-input>
                             </div>
@@ -149,7 +149,7 @@
                             </li>
                             </ul>
                             <div style="margin-top: 15px;">
-                            <el-input class="nps-add-input" placeholder="选择一种数量" >
+                            <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
                                 <template class="nps-add-confirm" slot="append">好</template>
                             </el-input>
                             </div>
@@ -203,7 +203,7 @@
                                 </li>
                                 </ul>
                                 <div style="margin-top: 15px;">
-                                <el-input class="nps-add-input" placeholder="选择一种数量" >
+                                <el-input class="nps-add-input" type="number" min="0" v-model="input" placeholder="选择一种数量" >
                                     <template class="nps-add-confirm" slot="append">好</template>
                                 </el-input>
                                 </div>
@@ -239,7 +239,7 @@
             <div class="nps-bottom-cont">
                 <router-link to="/caphome">继续购物</router-link>
                 <span>或</span>
-                <a class="nps-btm-b">结账</a>
+                <router-link to="/orderstep" class="nps-btm-b">结账</router-link>
             </div>
         </div>
     </div>
@@ -252,7 +252,8 @@ export default {
     },
     data () {
         return {
-            gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300]
+					input: '',
+          gridData: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 250, 300]
         }
     },
     methods: {
