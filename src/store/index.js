@@ -12,7 +12,7 @@ export default new Vuex.Store({
 	// vuex 中存储的数据
 	modules: {
     Register: Register,
-    Order: Order
+    Order: Order,
     Login: Login
 	},
 	// 只有通过mutations中的方法去改变state
