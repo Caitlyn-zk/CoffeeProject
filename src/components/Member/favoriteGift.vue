@@ -158,7 +158,7 @@
     <div class="favorite-people-box content">
         <div class="favorite-people-content">
             <div class="">我们非常乐意为您推荐</div>
-            <a>联系我们</a>
+						<router-link to="/info" class="text-white">联系我们</router-link>
         </div>
     </div>
     <!-- 帮助中心 -->
