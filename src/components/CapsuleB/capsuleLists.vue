@@ -30,18 +30,10 @@
                     </div>
                 </div>
                 <div class="nps-middle-list">
-                    <div class="nps-list-cont">北欧大杯黑咖啡</div>
-                    <div class="nps-list-contb">NORDIC BLACK大杯咖啡以北欧的咖啡文化为灵感之源，采用芳香的非洲和南美Arabica共混，充满优雅甜蜜的果香和丝滑悠长的谷物后味。</div>
+                    <div class="nps-list-cont">{{name}}</div>
+                    <div class="nps-list-contb">{{title}}</div>
                     <div>&nbsp;</div>
-                    <div class="nps-list-contb">这是一杯口感清爽的咖啡，强度中等。无论是否添加牛奶，美味都无法阻挡。</div>
-                    <div class="nps-list-contb">
-                        这是一杯口感清爽的咖啡，强度中等。无论是否添加牛奶，美味都无法阻挡。
-                        这是一杯口感清爽的咖啡，强度中等。无论是否添加牛奶，美味都无法阻挡。
-                        这是一杯口感清爽的咖啡，强度中等。无论是否添加牛奶，美味都无法阻挡。
-                        这是一杯口感清爽的咖啡，强度中等。无论是否添加牛奶，美味都无法阻挡。
-                        这是一杯口感清爽的咖啡，强度中等。无论是否添加牛奶，美味都无法阻挡。
-                        这是一杯口感清爽的咖啡，强度中等。无论是否添加牛奶，美味都无法阻挡。
-                    </div>
+                    <div class="nps-list-contb">{{desc}}</div>
                     <div class="nps-list-contc">(含税价格)</div>
                 </div>
             </div>
@@ -76,14 +68,19 @@ export default {
             name: '',
             price: '',
             title: '',
+            desc: '',
+            baking: '',
             img: {}
         }
     },
     methods: {
         getChange () {
-            this.name = this.$router.history.current.query.name
-            this.price = this.$router.history.current.query.price
-            let str = this.$router.history.current.query.img
+            var stage = this.$router.history.current.query.stage
+            this.name = stage.name
+            this.price = stage.price
+            this.desc = stage.description
+            this.baking = stage.bakingDescription
+            let str = stage.img
             var sub
             if (str.search(',') !== -1) {
                 sub = str.substr(0, str.indexOf(',')) + ']'

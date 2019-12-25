@@ -102,6 +102,7 @@ export default {
                   offset: 100,
                   onClose: () => {
                     this.$router.push('/')
+                    location.reload()
                   }
                 })
               } else {

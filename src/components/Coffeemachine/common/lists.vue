@@ -38,15 +38,29 @@ export default {
 	methods: {
 		datalists () {
 			MachineLists({
-				success: (res) => {
-					console.log(res.data)
-					if (res.status === 200) {
-						console.log(res)
-						this.machineLists = res.data
-					}
+				data: {
+					id: this.machineLists.id
 				},
-				error (err) {
-					console.log(err)
+				error: () => {
+					this.$message({
+						message: '错了错了'
+					})
+				},
+				success: (res) => {
+					console.log(res)
+					if (res.status === 200) {
+							// 存入vuex中
+							this.$store.commit('changeCartcoffee', res.data)
+							console.log(res.data)
+							this.machineLists = res.data
+					} else {
+							this.$message({
+								message: res.message,
+								type: 'error',
+								showClose: true,
+								duration: 3000
+						})
+					}
 				}
 			})
 		},

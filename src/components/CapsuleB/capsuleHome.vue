@@ -118,4 +118,5 @@ export default {
 
 <style lang="less">
 @import './css/Yyb.less';
+@import './css/cap.less';
 </style>

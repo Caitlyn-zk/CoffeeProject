@@ -19,12 +19,13 @@ axios.interceptors.request.use(function (config) {
 })
 // axios响应拦截
 axios.interceptors.response.use((response) => {
+	console.log(response)
 	// token = 1 表示登陆失败
 	if (response.headers.token === '1') {
 		// 删除locaStorage 的信息
 		window.localStorage.removeItem('infor')
 		window.localStorage.removeItem('token')
-		window.location.href = 'http://localhost:8080/#/'
+		location.reload()
 	}
 	return response
 }, (error) => {

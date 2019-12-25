@@ -128,7 +128,7 @@
                             </div>
                         </div>
                         <div class="info-form-Submission font-12 clearfix">
-                            <input  type="checkbox"/>
+                            <input  type="checkbox" checked/>
                             <span>所有信息将被严格保密。欲知详情，请阅读浓遇咖啡<a class="text-brown">隐私保护政策</a>。</span>
                             <a class="info-form-btn" type="primary" @click="submitForm('ruleForm')">发送<span class="el-icon-arrow-right"></span></a>
                         </div>

@@ -68,11 +68,19 @@ let getCart = (params) => {
     params.success(res)
   }).catch((error) => {
     params.error(error)
-	})
+  })
 }
 // 登陆验证请求
 let isLogin = (params) => {
 	axiosRequest('islogin', 'post', params.data).then((res) => {
+		params.success(res)
+	}).catch((error) => {
+		params.error(error)
+	})
+}
+// 上传购物车
+let addCart = (params) => {
+	axiosRequest('addCart', 'post', params.data).then((res) => {
 		params.success(res)
 	}).catch((error) => {
 		params.error(error)
@@ -88,5 +96,6 @@ export {
 	register,
 	getCart,
 	order,
-	isLogin
+	isLogin,
+	addCart
 }
